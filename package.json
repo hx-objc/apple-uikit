@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@hx-objc/apple-shared": "github:hx-objc/apple-shared",
+    "@hx-objc/apple-shared-uikit": "github:hx-objc/apple-shared-uikit"
+  },
+  "description": "Haxe externs for hxmc: iOS: UIKit and every iOS API.",
+  "haxe": {
+    "classPath": "src",
+    "name": "apple-uikit"
+  },
+  "license": "MIT",
+  "name": "@hx-objc/apple-uikit",
+  "repository": "github:hx-objc/apple-uikit",
+  "version": "0.1.0"
+}
