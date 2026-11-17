@@ -41,6 +41,7 @@ import objc.NSObject;
 	static function registerStoreClass(storeClass:ObjCClass, forStoreType:NSStringArg):Void;
 	static overload function metadataForPersistentStoreOfType(storeType:NSStringArg, URL:NSURL, options:Null<NSDictionary>, error:Ptr):Null<NSDictionary<NSString, Id>>;
 	static overload function setMetadata(metadata:Null<NSDictionary<NSString, Id>>, forPersistentStoreOfType:NSStringArg, URL:NSURL, options:Null<NSDictionary>, error:Ptr):Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	static function cachedModelForPersistentStoreAtURL(url:NSURL, options:Null<NSDictionary>, error:Ptr):Null<NSManagedObjectModel>;
 	function migratePersistentStore(store:NSPersistentStore, toURL:NSURL, options:Null<NSDictionary>, withType:NSStringArg, error:Ptr):Null<NSPersistentStore>;
 	function destroyPersistentStoreAtURL(url:NSURL, withType:NSStringArg, options:Null<NSDictionary>, error:Ptr):Bool;
@@ -48,7 +49,9 @@ import objc.NSObject;
 	function performBlock(block:() -> Void):Void;
 	function performBlockAndWait(block:() -> Void):Void;
 	function currentPersistentHistoryTokenFromStores(stores:Null<NSArray>):Null<NSPersistentHistoryToken>;
+	@:hxmc.available(macos >= 11.0)
 	function finishDeferredLightweightMigration(error:Ptr):Bool;
+	@:hxmc.available(macos >= 11.0)
 	function finishDeferredLightweightMigrationTask(error:Ptr):Bool;
 	function managedObjectIDFromUTF8String(utf8string:CString, length:I64):NSManagedObjectID;
 	@:deprecated

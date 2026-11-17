@@ -5,14 +5,20 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEExportOptions extends NSObject implements NSSecureCoding {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEExportOptions extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEExportOptions;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var exportToFiles(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_exportToFiles():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var dataTypes(get, never) : BEExportDataTypes;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_dataTypes():BEExportDataTypes;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithExportToFiles(exportToFiles:Bool, dataTypes:BEExportDataTypes):BEExportOptions;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BEExportOptions>;

@@ -21,6 +21,7 @@ import objc.NSObjectProtocol;
 	@:optional
 	function textViewShouldChangeTextInRangeReplacementText(textView:UITextView, shouldChangeTextInRange:NSRange, replacementText:NSStringArg):Bool;
 	@:selector("textView:shouldChangeTextInRanges:replacementText:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function textViewShouldChangeTextInRangesReplacementText(textView:UITextView, shouldChangeTextInRanges:NSArray<NSValue>, replacementText:NSStringArg):Bool;
 	@:optional
@@ -28,34 +29,45 @@ import objc.NSObjectProtocol;
 	@:optional
 	function textViewDidChangeSelection(textView:UITextView):Void;
 	@:selector("textView:editMenuForTextInRange:suggestedActions:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function textViewEditMenuForTextInRangeSuggestedActions(textView:UITextView, editMenuForTextInRange:NSRange, suggestedActions:NSArray<UIMenuElement>):Null<UIMenu>;
 	@:selector("textView:editMenuForTextInRanges:suggestedActions:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function textViewEditMenuForTextInRangesSuggestedActions(textView:UITextView, editMenuForTextInRanges:NSArray<NSValue>, suggestedActions:NSArray<UIMenuElement>):Null<UIMenu>;
 	@:selector("textView:willPresentEditMenuWithAnimator:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function textViewWillPresentEditMenuWithAnimator(textView:UITextView, willPresentEditMenuWithAnimator:UIEditMenuInteractionAnimating):Void;
 	@:selector("textView:willDismissEditMenuWithAnimator:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function textViewWillDismissEditMenuWithAnimator(textView:UITextView, willDismissEditMenuWithAnimator:UIEditMenuInteractionAnimating):Void;
 	@:selector("textView:primaryActionForTextItem:defaultAction:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function textViewPrimaryActionForTextItemDefaultAction(textView:UITextView, primaryActionForTextItem:UITextItem, defaultAction:UIAction):Null<UIAction>;
 	@:selector("textView:menuConfigurationForTextItem:defaultMenu:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function textViewMenuConfigurationForTextItemDefaultMenu(textView:UITextView, menuConfigurationForTextItem:UITextItem, defaultMenu:UIMenu):Null<UITextItemMenuConfiguration>;
 	@:selector("textView:textItemMenuWillDisplayForTextItem:animator:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function textViewTextItemMenuWillDisplayForTextItemAnimator(textView:UITextView, textItemMenuWillDisplayForTextItem:UITextItem, animator:UIContextMenuInteractionAnimating):Void;
 	@:selector("textView:textItemMenuWillEndForTextItem:animator:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function textViewTextItemMenuWillEndForTextItemAnimator(textView:UITextView, textItemMenuWillEndForTextItem:UITextItem, animator:UIContextMenuInteractionAnimating):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewWritingToolsWillBegin(textView:UITextView):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewWritingToolsDidEnd(textView:UITextView):Void;
 	@:selector("textView:writingToolsIgnoredRangesInEnclosingRange:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewWritingToolsIgnoredRangesInEnclosingRange(textView:UITextView, writingToolsIgnoredRangesInEnclosingRange:NSRange):NSArray<NSValue>;
 	@:selector("textView:shouldInteractWithURL:inRange:interaction:")
@@ -75,18 +87,23 @@ import objc.NSObjectProtocol;
 	@:optional
 	function textViewShouldInteractWithTextAttachmentInRange(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:NSRange):Bool;
 	@:selector("textView:willBeginFormattingWithViewController:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewWillBeginFormattingWithViewController(textView:UITextView, willBeginFormattingWithViewController:UITextFormattingViewController):Void;
 	@:selector("textView:didBeginFormattingWithViewController:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewDidBeginFormattingWithViewController(textView:UITextView, didBeginFormattingWithViewController:UITextFormattingViewController):Void;
 	@:selector("textView:willEndFormattingWithViewController:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewWillEndFormattingWithViewController(textView:UITextView, willEndFormattingWithViewController:UITextFormattingViewController):Void;
 	@:selector("textView:didEndFormattingWithViewController:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textViewDidEndFormattingWithViewController(textView:UITextView, didEndFormattingWithViewController:UITextFormattingViewController):Void;
 	@:selector("textView:insertInputSuggestion:")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function textViewInsertInputSuggestion(textView:UITextView, insertInputSuggestion:UIInputSuggestion):Void;
 }

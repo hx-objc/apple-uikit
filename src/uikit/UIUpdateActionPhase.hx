@@ -3,30 +3,55 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIUpdateActionPhase extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIUpdateActionPhase extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterUpdateScheduled(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterUpdateScheduled():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var beforeEventDispatch(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_beforeEventDispatch():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterEventDispatch(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterEventDispatch():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var beforeCADisplayLinkDispatch(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_beforeCADisplayLinkDispatch():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterCADisplayLinkDispatch(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterCADisplayLinkDispatch():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var beforeCATransactionCommit(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_beforeCATransactionCommit():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterCATransactionCommit(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterCATransactionCommit():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var beforeLowLatencyEventDispatch(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_beforeLowLatencyEventDispatch():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterLowLatencyEventDispatch(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterLowLatencyEventDispatch():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var beforeLowLatencyCATransactionCommit(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_beforeLowLatencyCATransactionCommit():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterLowLatencyCATransactionCommit(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterLowLatencyCATransactionCommit():UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var afterUpdateComplete(get, never) : UIUpdateActionPhase;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_afterUpdateComplete():UIUpdateActionPhase;
 }

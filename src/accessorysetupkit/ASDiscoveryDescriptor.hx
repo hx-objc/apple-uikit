@@ -8,55 +8,105 @@ import foundation.NSStringCompareOptions;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASDiscoveryDescriptor extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASDiscoveryDescriptor extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASDiscoveryDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var supportedOptions(get, set) : ASAccessorySupportOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_supportedOptions():ASAccessorySupportOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_supportedOptions(v:ASAccessorySupportOptions):ASAccessorySupportOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothCompanyIdentifier(get, set) : UInt16;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothCompanyIdentifier():UInt16;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothCompanyIdentifier(v:UInt16):UInt16;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothManufacturerDataBlob(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothManufacturerDataBlob():Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothManufacturerDataBlob(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothManufacturerDataMask(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothManufacturerDataMask():Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothManufacturerDataMask(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var bluetoothNameSubstringCompareOptions(get, set) : NSStringCompareOptions;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_bluetoothNameSubstringCompareOptions():NSStringCompareOptions;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_bluetoothNameSubstringCompareOptions(v:NSStringCompareOptions):NSStringCompareOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothNameSubstring(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothNameSubstring():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothNameSubstring(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothRange(get, set) : ASDiscoveryDescriptorRange;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothRange():ASDiscoveryDescriptorRange;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothRange(v:ASDiscoveryDescriptorRange):ASDiscoveryDescriptorRange;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothServiceDataBlob(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothServiceDataBlob():Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothServiceDataBlob(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothServiceDataMask(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothServiceDataMask():Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothServiceDataMask(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothServiceUUID(get, set) : Null<CBUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothServiceUUID():Null<CBUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothServiceUUID(v:Null<CBUUID>):Null<CBUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SSID(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_SSID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_SSID(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SSIDPrefix(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_SSIDPrefix():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_SSIDPrefix(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareServiceName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareServiceName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareServiceName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareServiceRole(get, set) : ASDiscoveryDescriptorWiFiAwareServiceRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareServiceRole():ASDiscoveryDescriptorWiFiAwareServiceRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareServiceRole(v:ASDiscoveryDescriptorWiFiAwareServiceRole):ASDiscoveryDescriptorWiFiAwareServiceRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareModelNameMatch(get, set) : Null<ASPropertyCompareString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareModelNameMatch():Null<ASPropertyCompareString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareModelNameMatch(v:Null<ASPropertyCompareString>):Null<ASPropertyCompareString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareVendorNameMatch(get, set) : Null<ASPropertyCompareString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareVendorNameMatch():Null<ASPropertyCompareString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareVendorNameMatch(v:Null<ASPropertyCompareString>):Null<ASPropertyCompareString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():ASDiscoveryDescriptor;
 }

@@ -2,6 +2,7 @@
 package foundation;
 
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Id;
 import hxmc.objc.ObjCClass;
 import hxmc.objc.Selector;
@@ -50,14 +51,18 @@ import hxmc.unsafe.Ptr;
 	public static function NSDecimalSubtract(result:Ptr, leftOperand:Ptr, rightOperand:Ptr, roundingMode:NSRoundingMode):NSCalculationError;
 	public static function NSDecrementExtraRefCountWasZero(object:Id):Bool;
 	public static function NSDefaultMallocZone():Ptr;
-	public static function NSEndHashTableEnumeration(enumerator:Ptr):Void;
-	public static function NSEndMapTableEnumeration(enumerator:Ptr):Void;
+	@:hxmc.len(enumerator, 1)
+	public static function NSEndHashTableEnumeration(enumerator:Span<NSHashEnumerator>):Void;
+	@:hxmc.len(enumerator, 1)
+	public static function NSEndMapTableEnumeration(enumerator:Span<NSMapEnumerator>):Void;
 	public static function NSEnumerateHashTable(table:NSHashTable):NSHashEnumerator;
 	public static function NSEnumerateMapTable(table:NSMapTable):NSMapEnumerator;
 	public static function NSExtraRefCount(object:Id):I64;
 	public static function NSFreeHashTable(table:NSHashTable):Void;
 	public static function NSFullUserName():NSString;
-	public static function NSGetSizeAndAlignment(typePtr:CString, sizep:Ptr, alignp:Ptr):CString;
+	@:hxmc.len(sizep, 1)
+	@:hxmc.len(alignp, 1)
+	public static function NSGetSizeAndAlignment(typePtr:CString, sizep:Span<I64>, alignp:Span<I64>):CString;
 	public static function NSGetUncaughtExceptionHandler():Ptr;
 	public static function NSHashGet(table:NSHashTable, pointer:Ptr):Ptr;
 	public static function NSHashInsert(table:NSHashTable, pointer:Ptr):Void;
@@ -76,8 +81,10 @@ import hxmc.unsafe.Ptr;
 	public static function NSMapInsertKnownAbsent(table:NSMapTable, key:Ptr, value:Ptr):Void;
 	public static function NSMapMember(table:NSMapTable, key:Ptr, originalKey:Ptr, value:Ptr):Bool;
 	public static function NSMapRemove(table:NSMapTable, key:Ptr):Void;
-	public static function NSNextHashEnumeratorItem(enumerator:Ptr):Ptr;
-	public static function NSNextMapEnumeratorPair(enumerator:Ptr, key:Ptr, value:Ptr):Bool;
+	@:hxmc.len(enumerator, 1)
+	public static function NSNextHashEnumeratorItem(enumerator:Span<NSHashEnumerator>):Ptr;
+	@:hxmc.len(enumerator, 1)
+	public static function NSNextMapEnumeratorPair(enumerator:Span<NSMapEnumerator>, key:Ptr, value:Ptr):Bool;
 	public static function NSOpenStepRootDirectory():NSString;
 	public static function NSPageSize():I64;
 	public static function NSProtocolFromString(namestr:NSStringArg):Ptr;
@@ -109,6 +116,7 @@ import hxmc.unsafe.Ptr;
 	public static function NSZoneMalloc(zone:Ptr, size:I64):Ptr;
 	public static function NSZoneName(zone:Ptr):NSString;
 	public static function NSZoneRealloc(zone:Ptr, ptr:Ptr, size:I64):Ptr;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSAlternateDescriptionAttributeName : NSString;
 	public static final NSArgumentDomain : NSString;
 	public static final NSAssertionHandlerKey : NSString;
@@ -121,14 +129,17 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static final NSBundleResourceRequestLowDiskSpaceNotification : NSString;
 	public static final NSCalendarDayChangedNotification : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierBangla : NSString;
 	public static final NSCalendarIdentifierBuddhist : NSString;
 	public static final NSCalendarIdentifierChinese : NSString;
 	public static final NSCalendarIdentifierCoptic : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierDangi : NSString;
 	public static final NSCalendarIdentifierEthiopicAmeteAlem : NSString;
 	public static final NSCalendarIdentifierEthiopicAmeteMihret : NSString;
 	public static final NSCalendarIdentifierGregorian : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierGujarati : NSString;
 	public static final NSCalendarIdentifierHebrew : NSString;
 	public static final NSCalendarIdentifierISO8601 : NSString;
@@ -138,15 +149,23 @@ import hxmc.unsafe.Ptr;
 	public static final NSCalendarIdentifierIslamicTabular : NSString;
 	public static final NSCalendarIdentifierIslamicUmmAlQura : NSString;
 	public static final NSCalendarIdentifierJapanese : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierKannada : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierMalayalam : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierMarathi : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierOdia : NSString;
 	public static final NSCalendarIdentifierPersian : NSString;
 	public static final NSCalendarIdentifierRepublicOfChina : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierTamil : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierTelugu : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierVietnamese : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSCalendarIdentifierVikram : NSString;
 	public static final NSCharacterConversionException : NSString;
 	@:deprecated
@@ -205,6 +224,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSFileProtectionComplete : NSString;
 	public static final NSFileProtectionCompleteUnlessOpen : NSString;
 	public static final NSFileProtectionCompleteUntilFirstUserAuthentication : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSFileProtectionCompleteWhenUserInactive : NSString;
 	public static final NSFileProtectionKey : NSString;
 	public static final NSFileProtectionNone : NSString;
@@ -246,6 +266,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSHTTPCookieSameSitePolicy : NSString;
 	public static final NSHTTPCookieSameSiteStrict : NSString;
 	public static final NSHTTPCookieSecure : NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static final NSHTTPCookieSetByJavaScript : NSString;
 	public static final NSHTTPCookieValue : NSString;
 	public static final NSHTTPCookieVersion : NSString;
@@ -254,16 +275,24 @@ import hxmc.unsafe.Ptr;
 	public static final NSHelpAnchorErrorKey : NSString;
 	@:deprecated
 	public static final NSISO8601Calendar : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSImageURLAttributeName : NSString;
 	public static final NSInconsistentArchiveException : NSString;
 	@:deprecated
 	public static final NSIndianCalendar : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSInflectionAgreementArgumentAttributeName : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSInflectionAgreementConceptAttributeName : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSInflectionAlternativeAttributeName : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSInflectionConceptsKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSInflectionReferentConceptAttributeName : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSInflectionRuleAttributeName : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSInlinePresentationIntentAttributeName : NSString;
 	@:deprecated
 	public static final NSIntMapKeyCallBacks : NSMapTableKeyCallBacks;
@@ -295,6 +324,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSKeyedArchiveRootObjectKey : NSString;
 	@:deprecated
 	public static final NSKeyedUnarchiveFromDataTransformerName : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSLanguageIdentifierAttributeName : NSString;
 	public static final NSLinguisticTagAdjective : NSString;
 	public static final NSLinguisticTagAdverb : NSString;
@@ -334,6 +364,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSLinguisticTagWhitespace : NSString;
 	public static final NSLinguisticTagWord : NSString;
 	public static final NSLinguisticTagWordJoiner : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSListItemDelimiterAttributeName : NSString;
 	public static final NSLoadedClasses : NSString;
 	public static final NSLocaleAlternateQuotationBeginDelimiterKey : NSString;
@@ -358,11 +389,13 @@ import hxmc.unsafe.Ptr;
 	public static final NSLocalizedDescriptionKey : NSString;
 	public static final NSLocalizedFailureErrorKey : NSString;
 	public static final NSLocalizedFailureReasonErrorKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSLocalizedNumberFormatAttributeName : NSString;
 	public static final NSLocalizedRecoveryOptionsErrorKey : NSString;
 	public static final NSLocalizedRecoverySuggestionErrorKey : NSString;
 	public static final NSMachErrorDomain : NSString;
 	public static final NSMallocException : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final NSMarkdownSourcePositionAttributeName : NSString;
 	public static final NSMaximumKeyValueOperator : NSString;
 	public static final NSMetadataItemContentTypeKey : NSString;
@@ -414,7 +447,9 @@ import hxmc.unsafe.Ptr;
 	public static final NSMetadataUbiquitousSharedItemRoleOwner : NSString;
 	public static final NSMetadataUbiquitousSharedItemRoleParticipant : NSString;
 	public static final NSMinimumKeyValueOperator : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSMorphologyAttributeName : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final NSMultipleUnderlyingErrorsKey : NSString;
 	public static final NSNegateBooleanTransformerName : NSString;
 	public static final NSNetServicesErrorCode : NSString;
@@ -454,7 +489,9 @@ import hxmc.unsafe.Ptr;
 	public static final NSPortReceiveException : NSString;
 	public static final NSPortSendException : NSString;
 	public static final NSPortTimeoutException : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSPresentationIntentAttributeName : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSProcessInfoPowerStateDidChangeNotification : NSString;
 	public static final NSProcessInfoThermalStateDidChangeNotification : NSString;
 	public static final NSProgressEstimatedTimeRemainingKey : NSString;
@@ -462,6 +499,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSProgressFileOperationKindCopying : NSString;
 	public static final NSProgressFileOperationKindDecompressingAfterDownloading : NSString;
 	public static final NSProgressFileOperationKindDownloading : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSProgressFileOperationKindDuplicating : NSString;
 	public static final NSProgressFileOperationKindKey : NSString;
 	public static final NSProgressFileOperationKindReceiving : NSString;
@@ -473,6 +511,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSRangeException : NSString;
 	public static final NSRecoveryAttempterErrorKey : NSString;
 	public static final NSRegistrationDomain : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSReplacementIndexAttributeName : NSString;
 	@:deprecated
 	public static final NSRepublicOfChinaCalendar : NSString;
@@ -557,12 +596,14 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLCanonicalPathKey : NSString;
 	public static final NSURLContentAccessDateKey : NSString;
 	public static final NSURLContentModificationDateKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLContentTypeKey : NSString;
 	public static final NSURLCreationDateKey : NSString;
 	@:deprecated
 	public static final NSURLCredentialStorageChangedNotification : NSString;
 	public static final NSURLCredentialStorageRemoveSynchronizableCredentials : NSString;
 	public static final NSURLCustomIconKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSURLDirectoryEntryCountKey : NSString;
 	public static final NSURLDocumentIdentifierKey : NSString;
 	public static final NSURLEffectiveIconKey : NSString;
@@ -575,13 +616,20 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLErrorKey : NSString;
 	public static final NSURLErrorNetworkUnavailableReasonKey : NSString;
 	public static final NSURLFileAllocatedSizeKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLFileContentIdentifierKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final NSURLFileIdentifierKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLFileProtectionComplete : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLFileProtectionCompleteUnlessOpen : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLFileProtectionCompleteUntilFirstUserAuthentication : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSURLFileProtectionCompleteWhenUserInactive : NSString;
 	public static final NSURLFileProtectionKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLFileProtectionNone : NSString;
 	public static final NSURLFileResourceIdentifierKey : NSString;
 	public static final NSURLFileResourceTypeBlockSpecial : NSString;
@@ -606,9 +654,11 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLIsHiddenKey : NSString;
 	public static final NSURLIsMountTriggerKey : NSString;
 	public static final NSURLIsPackageKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLIsPurgeableKey : NSString;
 	public static final NSURLIsReadableKey : NSString;
 	public static final NSURLIsRegularFileKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLIsSparseKey : NSString;
 	public static final NSURLIsSymbolicLinkKey : NSString;
 	public static final NSURLIsSystemImmutableKey : NSString;
@@ -623,7 +673,9 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLLocalizedLabelKey : NSString;
 	public static final NSURLLocalizedNameKey : NSString;
 	public static final NSURLLocalizedTypeDescriptionKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLMayHaveExtendedAttributesKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLMayShareFileContentKey : NSString;
 	public static final NSURLNameKey : NSString;
 	public static final NSURLParentDirectoryURLKey : NSString;
@@ -643,6 +695,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLSessionTaskPriorityHigh : Float32;
 	public static final NSURLSessionTaskPriorityLow : Float32;
 	public static final NSURLSessionTransferSizeUnknown : I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSURLSessionUploadTaskResumeData : NSString;
 	@:deprecated
 	public static final NSURLThumbnailDictionaryKey : NSString;
@@ -660,8 +713,10 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static final NSURLUbiquitousItemIsDownloadedKey : NSString;
 	public static final NSURLUbiquitousItemIsDownloadingKey : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final NSURLUbiquitousItemIsExcludedFromSyncKey : NSString;
 	public static final NSURLUbiquitousItemIsSharedKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSURLUbiquitousItemIsSyncPausedKey : NSString;
 	public static final NSURLUbiquitousItemIsUploadedKey : NSString;
 	public static final NSURLUbiquitousItemIsUploadingKey : NSString;
@@ -669,6 +724,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLUbiquitousItemPercentDownloadedKey : NSString;
 	@:deprecated
 	public static final NSURLUbiquitousItemPercentUploadedKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSURLUbiquitousItemSupportedSyncControlsKey : NSString;
 	public static final NSURLUbiquitousItemUploadingErrorKey : NSString;
 	public static final NSURLUbiquitousSharedItemCurrentUserPermissionsKey : NSString;
@@ -697,9 +753,11 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLVolumeLocalizedFormatDescriptionKey : NSString;
 	public static final NSURLVolumeLocalizedNameKey : NSString;
 	public static final NSURLVolumeMaximumFileSizeKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final NSURLVolumeMountFromLocationKey : NSString;
 	public static final NSURLVolumeNameKey : NSString;
 	public static final NSURLVolumeResourceCountKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final NSURLVolumeSubtypeKey : NSString;
 	public static final NSURLVolumeSupportsAccessPermissionsKey : NSString;
 	public static final NSURLVolumeSupportsAdvisoryFileLockingKey : NSString;
@@ -709,6 +767,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLVolumeSupportsExclusiveRenamingKey : NSString;
 	public static final NSURLVolumeSupportsExtendedSecurityKey : NSString;
 	public static final NSURLVolumeSupportsFileCloningKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSURLVolumeSupportsFileProtectionKey : NSString;
 	public static final NSURLVolumeSupportsHardLinksKey : NSString;
 	public static final NSURLVolumeSupportsImmutableFilesKey : NSString;
@@ -722,6 +781,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSURLVolumeSupportsVolumeSizesKey : NSString;
 	public static final NSURLVolumeSupportsZeroRunsKey : NSString;
 	public static final NSURLVolumeTotalCapacityKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final NSURLVolumeTypeNameKey : NSString;
 	public static final NSURLVolumeURLForRemountingKey : NSString;
 	public static final NSURLVolumeURLKey : NSString;

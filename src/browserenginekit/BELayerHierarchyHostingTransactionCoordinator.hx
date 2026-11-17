@@ -7,17 +7,26 @@ import foundation.NSSecureCoding;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BELayerHierarchyHostingTransactionCoordinator extends NSObject implements NSSecureCoding {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BELayerHierarchyHostingTransactionCoordinator extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BELayerHierarchyHostingTransactionCoordinator;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function coordinatorWithError(error:Ptr):Null<BELayerHierarchyHostingTransactionCoordinator>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function coordinatorWithXPCRepresentation(xpcRepresentation:Null<NSObject>, error:Ptr):Null<BELayerHierarchyHostingTransactionCoordinator>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function createXPCRepresentation():NSObject;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addLayerHierarchy(layerHierarchy:BELayerHierarchy):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addLayerHierarchyHostingView(hostingView:BELayerHierarchyHostingView):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function commit():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function coordinatorWithPort(port:Int, data:NSData, error:Ptr):Null<BELayerHierarchyHostingTransactionCoordinator>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function encodeWithBlock(block:(Int, NSData) -> Void):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BELayerHierarchyHostingTransactionCoordinator>;

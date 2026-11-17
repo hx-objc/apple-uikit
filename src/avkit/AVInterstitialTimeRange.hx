@@ -9,14 +9,18 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVInterstitialTimeRange extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class AVInterstitialTimeRange extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AVInterstitialTimeRange;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var timeRange(get, never) : CMTimeRange;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_timeRange():CMTimeRange;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<AVInterstitialTimeRange>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():AVInterstitialTimeRange;
 }

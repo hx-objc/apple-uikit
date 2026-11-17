@@ -4,17 +4,23 @@ package screencapturekit;
 import foundation.NSError;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("SCStreamDelegate") extern interface SCStreamDelegate extends NSObjectProtocol {
+@:hxmc.objc("SCStreamDelegate") @:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2) extern interface SCStreamDelegate extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	@:optional
 	function stream(stream:SCStream, didStopWithError:NSError):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	@:optional
 	function outputVideoEffectDidStartForStream(stream:SCStream):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	@:optional
 	function outputVideoEffectDidStopForStream(stream:SCStream):Void;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	@:optional
 	function outputVideoEffectDidFailForStream(stream:SCStream, withError:NSError):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 27.0, maccatalyst >= 18.2)
 	@:optional
 	function streamDidBecomeActive(stream:SCStream):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 27.0, maccatalyst >= 18.2)
 	@:optional
 	function streamDidBecomeInactive(stream:SCStream):Void;
 }

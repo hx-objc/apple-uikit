@@ -15,39 +15,70 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextFormattingViewControllerFormattingDescriptor extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITextFormattingViewControllerFormattingDescriptor extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITextFormattingViewControllerFormattingDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var fonts(get, set) : Null<NSArray<UIFont>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_fonts():Null<NSArray<UIFont>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_fonts(v:Null<NSArray<UIFont>>):Null<NSArray<UIFont>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textColors(get, set) : Null<NSArray<UIColor>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textColors():Null<NSArray<UIColor>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_textColors(v:Null<NSArray<UIColor>>):Null<NSArray<UIColor>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var lineHeight(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_lineHeight():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_lineHeight(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var underlinePresent(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_underlinePresent():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_underlinePresent(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var strikethroughPresent(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_strikethroughPresent():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_strikethroughPresent(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textAlignments(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textAlignments():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_textAlignments(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textLists(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textLists():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_textLists(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var highlights(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_highlights():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_highlights(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var formattingStyleKey(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_formattingStyleKey():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_formattingStyleKey(v:Null<NSStringArg>):Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UITextFormattingViewControllerFormattingDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithString(string:NSAttributedString, range:NSRange):UITextFormattingViewControllerFormattingDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithAttributes(attributes:NSDictionary<NSString, Id>):UITextFormattingViewControllerFormattingDescriptor;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

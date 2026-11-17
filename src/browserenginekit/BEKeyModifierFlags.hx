@@ -4,8 +4,11 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEKeyModifierFlags(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var None = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Shift = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var CapsLock = 2;
 	inline function new(v:I64) this = v;
 }

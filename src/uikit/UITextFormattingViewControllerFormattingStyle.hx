@@ -11,19 +11,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextFormattingViewControllerFormattingStyle extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITextFormattingViewControllerFormattingStyle extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITextFormattingViewControllerFormattingStyle;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var styleKey(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_styleKey():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var attributes(get, never) : NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_attributes():NSDictionary<NSString, Id>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithStyleKey(styleKey:NSStringArg, title:NSStringArg, attributes:NSDictionary<NSString, Id>):UITextFormattingViewControllerFormattingStyle;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UITextFormattingViewControllerFormattingStyle>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UITextFormattingViewControllerFormattingStyle;
 }

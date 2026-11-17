@@ -2,9 +2,14 @@
 package exposurenotification;
 
 @:deprecated enum abstract ENVariantOfConcernType(Int) to Int {
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var TypeUnknown = 0;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var Type1 = 1;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var Type2 = 2;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var Type3 = 3;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var Type4 = 4;
 }

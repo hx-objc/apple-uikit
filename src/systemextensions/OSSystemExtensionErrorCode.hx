@@ -4,18 +4,31 @@ package systemextensions;
 import hxmc.I64;
 
 enum abstract OSSystemExtensionErrorCode(I64) to I64 {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Unknown = 1;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var MissingEntitlement = 2;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var UnsupportedParentBundleLocation = 3;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var ExtensionNotFound = 4;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var ExtensionMissingIdentifier = 5;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var DuplicateExtensionIdentifer = 6;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var UnknownExtensionCategory = 7;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var CodeSignatureInvalid = 8;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var ValidationFailed = 9;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var ForbiddenBySystemPolicy = 10;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var RequestCanceled = 11;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var RequestSuperseded = 12;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var AuthorizationRequired = 13;
 	inline function new(v:I64) this = v;
 }

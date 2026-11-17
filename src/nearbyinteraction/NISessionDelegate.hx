@@ -24,11 +24,14 @@ import objc.NSObjectProtocol;
 	@:optional
 	function sessionDidGenerateShareableConfigurationDataForObject(session:NISession, didGenerateShareableConfigurationData:NSData, forObject:NINearbyObject):Void;
 	@:selector("session:didUpdateAlgorithmConvergence:forObject:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function sessionDidUpdateAlgorithmConvergenceForObject(session:NISession, didUpdateAlgorithmConvergence:NIAlgorithmConvergence, forObject:Null<NINearbyObject>):Void;
 	@:selector("session:didUpdateDLTDOAMeasurements:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function sessionDidUpdateDLTDOAMeasurements(session:NISession, didUpdateDLTDOAMeasurements:NSArray<NIDLTDOAMeasurement>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function sessionDidStartRunning(session:NISession):Void;
 }

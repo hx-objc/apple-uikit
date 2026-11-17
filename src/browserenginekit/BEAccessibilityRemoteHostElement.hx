@@ -5,10 +5,15 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEAccessibilityRemoteHostElement extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class BEAccessibilityRemoteHostElement extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():BEAccessibilityRemoteHostElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var accessibilityContainer(get, set) : Null<Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_accessibilityContainer():Null<Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_accessibilityContainer(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithIdentifier(identifier:NSStringArg, remotePid:Int):Id;
 }

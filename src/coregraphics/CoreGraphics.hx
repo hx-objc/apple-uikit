@@ -12,6 +12,8 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import foundation.NSURL;
 import hxmc.I64;
+import hxmc.ReadOnlySpan;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.CString;
@@ -21,6 +23,7 @@ import hxmc.unsafe.UInt16;
 
 @:hxmc.c @:hxmc.framework("CoreGraphics") extern class CoreGraphics {
 	public static function CGAffineTransformConcat(t1:CGAffineTransform, t2:CGAffineTransform):CGAffineTransform;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function CGAffineTransformDecompose(transform:CGAffineTransform):CGAffineTransformComponents;
 	public static function CGAffineTransformEqualToTransform(t1:CGAffineTransform, t2:CGAffineTransform):Bool;
 	public static function CGAffineTransformInvert(t:CGAffineTransform):CGAffineTransform;
@@ -29,12 +32,14 @@ import hxmc.unsafe.UInt16;
 	public static function CGAffineTransformMakeRotation(angle:Float):CGAffineTransform;
 	public static function CGAffineTransformMakeScale(sx:Float, sy:Float):CGAffineTransform;
 	public static function CGAffineTransformMakeTranslation(tx:Float, ty:Float):CGAffineTransform;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function CGAffineTransformMakeWithComponents(components:CGAffineTransformComponents):CGAffineTransform;
 	public static function CGAffineTransformRotate(t:CGAffineTransform, angle:Float):CGAffineTransform;
 	public static function CGAffineTransformScale(t:CGAffineTransform, sx:Float, sy:Float):CGAffineTransform;
 	public static function CGAffineTransformTranslate(t:CGAffineTransform, tx:Float, ty:Float):CGAffineTransform;
 	@:hxmc.retained
 	public static function CGBitmapContextCreate(data:Ptr, width:I64, height:I64, bitsPerComponent:I64, bytesPerRow:I64, space:Null<CGColorSpace>, bitmapInfo:CGBitmapInfo):Null<CGContext>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGBitmapContextCreateAdaptive(width:I64, height:I64, auxiliaryInfo:Null<NSDictionary>, onResolve:Null<Block<(Ptr, Ptr) -> Bool>>, onAllocate:Null<Block<(Ptr, Ptr) -> Null<CGRenderingBufferProvider>>>, onFree:Null<Block<(CGRenderingBufferProvider, Ptr, Ptr) -> Void>>, onError:Null<Block<(NSError, Ptr, Ptr) -> Void>>):Null<CGContext>;
 	@:hxmc.retained
@@ -50,9 +55,11 @@ import hxmc.unsafe.UInt16;
 	public static function CGBitmapContextGetData(context:Null<CGContext>):Ptr;
 	public static function CGBitmapContextGetHeight(context:Null<CGContext>):I64;
 	public static function CGBitmapContextGetWidth(context:Null<CGContext>):I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGColorConversionInfoConvertData(info:CGColorConversionInfo, width:I64, height:I64, dst_data:Ptr, dst_format:CGColorBufferFormat, src_data:Ptr, src_format:CGColorBufferFormat, options:Null<NSDictionary>):Bool;
 	@:hxmc.retained
 	public static function CGColorConversionInfoCreate(src:Null<CGColorSpace>, dst:Null<CGColorSpace>):Null<CGColorConversionInfo>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:hxmc.retained
 	public static function CGColorConversionInfoCreateForToneMapping(source:CGColorSpace, source_headroom:Float32, target:CGColorSpace, target_headroom:Float32, method:CGToneMapping, options:Null<NSDictionary>, error:Ptr):Null<CGColorConversionInfo>;
 	@:hxmc.retained
@@ -78,6 +85,7 @@ import hxmc.unsafe.UInt16;
 	public static function CGColorCreateGenericRGB(red:Float, green:Float, blue:Float, alpha:Float):CGColor;
 	@:hxmc.retained
 	public static function CGColorCreateSRGB(red:Float, green:Float, blue:Float, alpha:Float):CGColor;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGColorCreateWithContentHeadroom(headroom:Float32, space:Null<CGColorSpace>, red:Float, green:Float, blue:Float, alpha:Float):Null<CGColor>;
 	@:hxmc.retained
@@ -87,10 +95,12 @@ import hxmc.unsafe.UInt16;
 	public static function CGColorGetColorSpace(color:Null<CGColor>):Null<CGColorSpace>;
 	public static function CGColorGetComponents(color:Null<CGColor>):Ptr;
 	public static function CGColorGetConstantColor(colorName:Null<NSStringArg>):Null<CGColor>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGColorGetContentHeadroom(color:Null<CGColor>):Float32;
 	public static function CGColorGetNumberOfComponents(color:Null<CGColor>):I64;
 	public static function CGColorGetPattern(color:Null<CGColor>):Null<CGPattern>;
 	public static function CGColorGetTypeID():I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:hxmc.retained
 	public static function CGColorSpaceCopyBaseColorSpace(space:CGColorSpace):CGColorSpace;
 	@:hxmc.retained
@@ -102,9 +112,12 @@ import hxmc.unsafe.UInt16;
 	public static function CGColorSpaceCopyName(space:Null<CGColorSpace>):Null<NSString>;
 	public static function CGColorSpaceCopyPropertyList(space:CGColorSpace):Ptr;
 	@:hxmc.retained
-	public static function CGColorSpaceCreateCalibratedGray(whitePoint:Ptr, blackPoint:Ptr, gamma:Float):Null<CGColorSpace>;
+	@:hxmc.len(whitePoint, 3)
+	public static function CGColorSpaceCreateCalibratedGray(whitePoint:ReadOnlySpan<Float>, blackPoint:Ptr, gamma:Float):Null<CGColorSpace>;
 	@:hxmc.retained
-	public static function CGColorSpaceCreateCalibratedRGB(whitePoint:Ptr, blackPoint:Ptr, gamma:Ptr, matrix:Ptr):Null<CGColorSpace>;
+	@:hxmc.len(whitePoint, 3)
+	public static function CGColorSpaceCreateCalibratedRGB(whitePoint:ReadOnlySpan<Float>, blackPoint:Ptr, gamma:Ptr, matrix:Ptr):Null<CGColorSpace>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGColorSpaceCreateCopyWithStandardRange(space:Null<CGColorSpace>):CGColorSpace;
 	@:hxmc.retained
@@ -113,8 +126,10 @@ import hxmc.unsafe.UInt16;
 	public static function CGColorSpaceCreateDeviceGray():Null<CGColorSpace>;
 	@:hxmc.retained
 	public static function CGColorSpaceCreateDeviceRGB():Null<CGColorSpace>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function CGColorSpaceCreateExtended(space:Null<CGColorSpace>):Null<CGColorSpace>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function CGColorSpaceCreateExtendedLinearized(space:Null<CGColorSpace>):Null<CGColorSpace>;
 	@:hxmc.retained
@@ -122,11 +137,14 @@ import hxmc.unsafe.UInt16;
 	@:hxmc.retained
 	public static function CGColorSpaceCreateIndexed(baseSpace:Null<CGColorSpace>, lastIndex:I64, colorTable:Ptr):Null<CGColorSpace>;
 	@:hxmc.retained
-	public static function CGColorSpaceCreateLab(whitePoint:Ptr, blackPoint:Ptr, range:Ptr):Null<CGColorSpace>;
+	@:hxmc.len(whitePoint, 3)
+	public static function CGColorSpaceCreateLab(whitePoint:ReadOnlySpan<Float>, blackPoint:Ptr, range:Ptr):Null<CGColorSpace>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function CGColorSpaceCreateLinearized(space:Null<CGColorSpace>):Null<CGColorSpace>;
 	@:hxmc.retained
 	public static function CGColorSpaceCreatePattern(baseSpace:Null<CGColorSpace>):Null<CGColorSpace>;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function CGColorSpaceCreateWithColorSyncProfile(p0:Null<ColorSyncProfile>, options:Null<NSDictionary>):Null<CGColorSpace>;
 	@:hxmc.retained
@@ -149,22 +167,27 @@ import hxmc.unsafe.UInt16;
 	public static function CGColorSpaceGetNumberOfComponents(space:Null<CGColorSpace>):I64;
 	public static function CGColorSpaceGetTypeID():I64;
 	public static function CGColorSpaceIsHDR(p0:CGColorSpace):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function CGColorSpaceIsHLGBased(s:CGColorSpace):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function CGColorSpaceIsPQBased(s:CGColorSpace):Bool;
 	public static function CGColorSpaceIsWideGamutRGB(p0:CGColorSpace):Bool;
 	public static function CGColorSpaceSupportsOutput(space:Null<CGColorSpace>):Bool;
 	public static function CGColorSpaceUsesExtendedRange(space:Null<CGColorSpace>):Bool;
+	@:hxmc.available(macos >= 11.0)
 	public static function CGColorSpaceUsesITUR_2100TF(p0:CGColorSpace):Bool;
 	public static function CGContextAddArc(c:Null<CGContext>, x:Float, y:Float, radius:Float, startAngle:Float, endAngle:Float, clockwise:Int):Void;
 	public static function CGContextAddArcToPoint(c:Null<CGContext>, x1:Float, y1:Float, x2:Float, y2:Float, radius:Float):Void;
 	public static function CGContextAddCurveToPoint(c:Null<CGContext>, cp1x:Float, cp1y:Float, cp2x:Float, cp2y:Float, x:Float, y:Float):Void;
 	public static function CGContextAddEllipseInRect(c:Null<CGContext>, rect:CGRect):Void;
 	public static function CGContextAddLineToPoint(c:Null<CGContext>, x:Float, y:Float):Void;
-	public static function CGContextAddLines(c:Null<CGContext>, points:Ptr, count:I64):Void;
+	@:hxmc.len(points, count)
+	public static function CGContextAddLines(c:Null<CGContext>, points:ReadOnlySpan<CGPoint>, count:I64):Void;
 	public static function CGContextAddPath(c:Null<CGContext>, path:Null<CGPath>):Void;
 	public static function CGContextAddQuadCurveToPoint(c:Null<CGContext>, cpx:Float, cpy:Float, x:Float, y:Float):Void;
 	public static function CGContextAddRect(c:Null<CGContext>, rect:CGRect):Void;
-	public static function CGContextAddRects(c:Null<CGContext>, rects:Ptr, count:I64):Void;
+	@:hxmc.len(rects, count)
+	public static function CGContextAddRects(c:Null<CGContext>, rects:ReadOnlySpan<CGRect>, count:I64):Void;
 	public static function CGContextBeginPage(c:Null<CGContext>, mediaBox:Ptr):Void;
 	public static function CGContextBeginPath(c:Null<CGContext>):Void;
 	public static function CGContextBeginTransparencyLayer(c:Null<CGContext>, auxiliaryInfo:Null<NSDictionary>):Void;
@@ -173,7 +196,8 @@ import hxmc.unsafe.UInt16;
 	public static function CGContextClip(c:Null<CGContext>):Void;
 	public static function CGContextClipToMask(c:Null<CGContext>, rect:CGRect, mask:Null<CGImage>):Void;
 	public static function CGContextClipToRect(c:Null<CGContext>, rect:CGRect):Void;
-	public static function CGContextClipToRects(c:Null<CGContext>, rects:Ptr, count:I64):Void;
+	@:hxmc.len(rects, count)
+	public static function CGContextClipToRects(c:Null<CGContext>, rects:ReadOnlySpan<CGRect>, count:I64):Void;
 	public static function CGContextClosePath(c:Null<CGContext>):Void;
 	public static function CGContextConcatCTM(c:Null<CGContext>, transform:CGAffineTransform):Void;
 	public static function CGContextConvertPointToDeviceSpace(c:Null<CGContext>, point:CGPoint):CGPoint;
@@ -184,8 +208,10 @@ import hxmc.unsafe.UInt16;
 	public static function CGContextConvertSizeToUserSpace(c:Null<CGContext>, size:CGSize):CGSize;
 	@:hxmc.retained
 	public static function CGContextCopyPath(c:Null<CGContext>):Null<CGPath>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CGContextDrawConicGradient(c:CGContext, gradient:Null<CGGradient>, center:CGPoint, angle:Float):Void;
 	public static function CGContextDrawImage(c:Null<CGContext>, rect:CGRect, image:Null<CGImage>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGContextDrawImageApplyingToneMapping(c:CGContext, r:CGRect, image:CGImage, method:CGToneMapping, options:Null<NSDictionary>):Bool;
 	public static function CGContextDrawLayerAtPoint(context:Null<CGContext>, point:CGPoint, layer:Null<CGLayer>):Void;
 	public static function CGContextDrawLayerInRect(context:Null<CGContext>, rect:CGRect, layer:Null<CGLayer>):Void;
@@ -202,11 +228,14 @@ import hxmc.unsafe.UInt16;
 	public static function CGContextFillEllipseInRect(c:Null<CGContext>, rect:CGRect):Void;
 	public static function CGContextFillPath(c:Null<CGContext>):Void;
 	public static function CGContextFillRect(c:Null<CGContext>, rect:CGRect):Void;
-	public static function CGContextFillRects(c:Null<CGContext>, rects:Ptr, count:I64):Void;
+	@:hxmc.len(rects, count)
+	public static function CGContextFillRects(c:Null<CGContext>, rects:ReadOnlySpan<CGRect>, count:I64):Void;
 	public static function CGContextFlush(c:Null<CGContext>):Void;
 	public static function CGContextGetCTM(c:Null<CGContext>):CGAffineTransform;
 	public static function CGContextGetClipBoundingBox(c:Null<CGContext>):CGRect;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGContextGetContentToneMappingInfo(c:CGContext):CGContentToneMappingInfo;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGContextGetEDRTargetHeadroom(c:CGContext):Float32;
 	public static function CGContextGetInterpolationQuality(c:Null<CGContext>):CGInterpolationQuality;
 	public static function CGContextGetPathBoundingBox(c:Null<CGContext>):CGRect;
@@ -235,7 +264,9 @@ import hxmc.unsafe.UInt16;
 	public static function CGContextSetCMYKFillColor(c:Null<CGContext>, cyan:Float, magenta:Float, yellow:Float, black:Float, alpha:Float):Void;
 	public static function CGContextSetCMYKStrokeColor(c:Null<CGContext>, cyan:Float, magenta:Float, yellow:Float, black:Float, alpha:Float):Void;
 	public static function CGContextSetCharacterSpacing(c:Null<CGContext>, spacing:Float):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGContextSetContentToneMappingInfo(c:CGContext, info:CGContentToneMappingInfo):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGContextSetEDRTargetHeadroom(c:CGContext, headroom:Float32):Bool;
 	public static function CGContextSetFillColor(c:Null<CGContext>, components:Ptr):Void;
 	public static function CGContextSetFillColorSpace(c:Null<CGContext>, space:Null<CGColorSpace>):Void;
@@ -248,7 +279,8 @@ import hxmc.unsafe.UInt16;
 	public static function CGContextSetGrayStrokeColor(c:Null<CGContext>, gray:Float, alpha:Float):Void;
 	public static function CGContextSetInterpolationQuality(c:Null<CGContext>, quality:CGInterpolationQuality):Void;
 	public static function CGContextSetLineCap(c:Null<CGContext>, cap:CGLineCap):Void;
-	public static function CGContextSetLineDash(c:Null<CGContext>, phase:Float, lengths:Ptr, count:I64):Void;
+	@:hxmc.len(lengths, count)
+	public static function CGContextSetLineDash(c:Null<CGContext>, phase:Float, lengths:ReadOnlySpan<Float>, count:I64):Void;
 	public static function CGContextSetLineJoin(c:Null<CGContext>, join:CGLineJoin):Void;
 	public static function CGContextSetLineWidth(c:Null<CGContext>, width:Float):Void;
 	public static function CGContextSetMiterLimit(c:Null<CGContext>, limit:Float):Void;
@@ -273,7 +305,9 @@ import hxmc.unsafe.UInt16;
 	public static function CGContextShowGlyphs(c:Null<CGContext>, g:Ptr, count:I64):Void;
 	@:deprecated
 	public static function CGContextShowGlyphsAtPoint(c:Null<CGContext>, x:Float, y:Float, glyphs:Ptr, count:I64):Void;
-	public static function CGContextShowGlyphsAtPositions(c:Null<CGContext>, glyphs:Ptr, Lpositions:Ptr, count:I64):Void;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(Lpositions, count)
+	public static function CGContextShowGlyphsAtPositions(c:Null<CGContext>, glyphs:ReadOnlySpan<UInt16>, Lpositions:ReadOnlySpan<CGPoint>, count:I64):Void;
 	@:deprecated
 	public static function CGContextShowGlyphsWithAdvances(c:Null<CGContext>, glyphs:Ptr, advances:Ptr, count:I64):Void;
 	@:deprecated
@@ -281,11 +315,13 @@ import hxmc.unsafe.UInt16;
 	@:deprecated
 	public static function CGContextShowTextAtPoint(c:Null<CGContext>, x:Float, y:Float, string:CString, length:I64):Void;
 	public static function CGContextStrokeEllipseInRect(c:Null<CGContext>, rect:CGRect):Void;
-	public static function CGContextStrokeLineSegments(c:Null<CGContext>, points:Ptr, count:I64):Void;
+	@:hxmc.len(points, count)
+	public static function CGContextStrokeLineSegments(c:Null<CGContext>, points:ReadOnlySpan<CGPoint>, count:I64):Void;
 	public static function CGContextStrokePath(c:Null<CGContext>):Void;
 	public static function CGContextStrokeRect(c:Null<CGContext>, rect:CGRect):Void;
 	public static function CGContextStrokeRectWithWidth(c:Null<CGContext>, rect:CGRect, width:Float):Void;
 	public static function CGContextSynchronize(c:Null<CGContext>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGContextSynchronizeAttributes(c:CGContext):Void;
 	public static function CGContextTranslateCTM(c:Null<CGContext>, tx:Float, ty:Float):Void;
 	public static function CGConvertColorDataWithFormat(width:I64, height:I64, dst_data:Ptr, dst_format:CGColorDataFormat, src_data:Ptr, src_format:CGColorDataFormat, options:NSDictionary):Bool;
@@ -312,8 +348,9 @@ import hxmc.unsafe.UInt16;
 	public static function CGDataProviderCreateWithURL(url:Null<NSURL>):Null<CGDataProvider>;
 	public static function CGDataProviderGetInfo(provider:Null<CGDataProvider>):Ptr;
 	public static function CGDataProviderGetTypeID():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGEXRToneMappingGammaGetDefaultOptions():NSDictionary;
-	public static function CGErrorSetCallback(callback:Ptr):Void;
+	public static function CGErrorSetCallback(callback:() -> Void):Void;
 	public static function CGFontCanCreatePostScriptSubset(font:Null<CGFont>, format:CGFontPostScriptFormat):Bool;
 	@:hxmc.retained
 	public static function CGFontCopyFullName(font:Null<CGFont>):Null<NSString>;
@@ -343,8 +380,12 @@ import hxmc.unsafe.UInt16;
 	public static function CGFontGetCapHeight(font:Null<CGFont>):Int;
 	public static function CGFontGetDescent(font:Null<CGFont>):Int;
 	public static function CGFontGetFontBBox(font:Null<CGFont>):CGRect;
-	public static function CGFontGetGlyphAdvances(font:Null<CGFont>, glyphs:Ptr, count:I64, advances:Ptr):Bool;
-	public static function CGFontGetGlyphBBoxes(font:Null<CGFont>, glyphs:Ptr, count:I64, bboxes:Ptr):Bool;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(advances, count)
+	public static function CGFontGetGlyphAdvances(font:Null<CGFont>, glyphs:ReadOnlySpan<UInt16>, count:I64, advances:Span<Int>):Bool;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(bboxes, count)
+	public static function CGFontGetGlyphBBoxes(font:Null<CGFont>, glyphs:ReadOnlySpan<UInt16>, count:I64, bboxes:Span<CGRect>):Bool;
 	public static function CGFontGetGlyphWithGlyphName(font:Null<CGFont>, name:Null<NSStringArg>):UInt16;
 	public static function CGFontGetItalicAngle(font:Null<CGFont>):Float;
 	public static function CGFontGetLeading(font:Null<CGFont>):Int;
@@ -357,28 +398,38 @@ import hxmc.unsafe.UInt16;
 	public static function CGFunctionCreate(info:Ptr, domainDimension:I64, domain:Ptr, rangeDimension:I64, range:Ptr, callbacks:Ptr):Null<CGFunction>;
 	public static function CGFunctionGetTypeID():I64;
 	@:hxmc.retained
-	public static function CGGradientCreateWithColorComponents(space:Null<CGColorSpace>, components:Ptr, locations:Ptr, count:I64):Null<CGGradient>;
+	@:hxmc.len(locations, count)
+	public static function CGGradientCreateWithColorComponents(space:Null<CGColorSpace>, components:Ptr, locations:ReadOnlySpan<Float>, count:I64):Null<CGGradient>;
 	@:hxmc.retained
 	public static function CGGradientCreateWithColors(space:Null<CGColorSpace>, colors:Null<NSArray>, locations:Ptr):Null<CGGradient>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGGradientCreateWithContentHeadroom(headroom:Float32, space:Null<CGColorSpace>, components:Ptr, locations:Ptr, count:I64):Null<CGGradient>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGGradientGetContentHeadroom(gradient:Null<CGGradient>):Float32;
 	public static function CGGradientGetTypeID():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGImageCalculateContentAverageLightLevel(image:Null<CGImage>):Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGImageCalculateContentHeadroom(image:Null<CGImage>):Float32;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGImageContainsImageSpecificToneMappingMetadata(image:Null<CGImage>):Bool;
 	@:hxmc.retained
 	public static function CGImageCreate(width:I64, height:I64, bitsPerComponent:I64, bitsPerPixel:I64, bytesPerRow:I64, space:Null<CGColorSpace>, bitmapInfo:CGBitmapInfo, provider:Null<CGDataProvider>, decode:Ptr, shouldInterpolate:Bool, intent:CGColorRenderingIntent):Null<CGImage>;
 	@:hxmc.retained
 	public static function CGImageCreateCopy(image:Null<CGImage>):Null<CGImage>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGImageCreateCopyWithCalculatedHDRStats(image:Null<CGImage>):Null<CGImage>;
 	@:hxmc.retained
 	public static function CGImageCreateCopyWithColorSpace(image:Null<CGImage>, space:Null<CGColorSpace>):Null<CGImage>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGImageCreateCopyWithContentAverageLightLevel(image:Null<CGImage>, avll:Float32):Null<CGImage>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:hxmc.retained
 	public static function CGImageCreateCopyWithContentHeadroom(headroom:Float32, image:Null<CGImage>):Null<CGImage>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:hxmc.retained
 	public static function CGImageCreateWithContentHeadroom(headroom:Float32, width:I64, height:I64, bitsPerComponent:I64, bitsPerPixel:I64, bytesPerRow:I64, space:Null<CGColorSpace>, bitmapInfo:CGBitmapInfo, provider:Null<CGDataProvider>, decode:Ptr, shouldInterpolate:Bool, intent:CGColorRenderingIntent):Null<CGImage>;
 	@:hxmc.retained
@@ -398,7 +449,9 @@ import hxmc.unsafe.UInt16;
 	public static function CGImageGetByteOrderInfo(image:Null<CGImage>):CGImageByteOrderInfo;
 	public static function CGImageGetBytesPerRow(image:Null<CGImage>):I64;
 	public static function CGImageGetColorSpace(image:Null<CGImage>):Null<CGColorSpace>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGImageGetContentAverageLightLevel(image:Null<CGImage>):Float32;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGImageGetContentHeadroom(image:Null<CGImage>):Float32;
 	public static function CGImageGetDataProvider(image:Null<CGImage>):Null<CGDataProvider>;
 	public static function CGImageGetDecode(image:Null<CGImage>):Ptr;
@@ -412,6 +465,7 @@ import hxmc.unsafe.UInt16;
 	public static function CGImageIsMask(image:Null<CGImage>):Bool;
 	@:hxmc.retained
 	public static function CGImageMaskCreate(width:I64, height:I64, bitsPerComponent:I64, bitsPerPixel:I64, bytesPerRow:I64, provider:Null<CGDataProvider>, decode:Ptr, shouldInterpolate:Bool):Null<CGImage>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CGImageShouldToneMap(image:Null<CGImage>):Bool;
 	@:hxmc.retained
 	public static function CGLayerCreateWithContext(context:Null<CGContext>, size:CGSize, auxiliaryInfo:Null<NSDictionary>):Null<CGLayer>;
@@ -423,10 +477,12 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFArrayGetBoolean(array:Ptr, index:I64, value:Ptr):Bool;
 	public static function CGPDFArrayGetCount(array:Ptr):I64;
 	public static function CGPDFArrayGetDictionary(array:Ptr, index:I64, value:Ptr):Bool;
-	public static function CGPDFArrayGetInteger(array:Ptr, index:I64, value:Ptr):Bool;
+	@:hxmc.len(value, 1)
+	public static function CGPDFArrayGetInteger(array:Ptr, index:I64, value:Span<I64>):Bool;
 	public static function CGPDFArrayGetName(array:Ptr, index:I64, value:Ptr):Bool;
 	public static function CGPDFArrayGetNull(array:Ptr, index:I64):Bool;
-	public static function CGPDFArrayGetNumber(array:Ptr, index:I64, value:Ptr):Bool;
+	@:hxmc.len(value, 1)
+	public static function CGPDFArrayGetNumber(array:Ptr, index:I64, value:Span<Float>):Bool;
 	public static function CGPDFArrayGetObject(array:Ptr, index:I64, value:Ptr):Bool;
 	public static function CGPDFArrayGetStream(array:Ptr, index:I64, value:Ptr):Bool;
 	public static function CGPDFArrayGetString(array:Ptr, index:I64, value:Ptr):Bool;
@@ -438,10 +494,14 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFContentStreamRetain(cs:Ptr):Ptr;
 	public static function CGPDFContextAddDestinationAtPoint(context:Null<CGContext>, name:NSStringArg, point:CGPoint):Void;
 	public static function CGPDFContextAddDocumentMetadata(context:Null<CGContext>, metadata:Null<NSData>):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFContextAddStructureTreeRootChild(context:CGContext, structureElement:CGPDFStructureElement):Int;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function CGPDFContextBeginMarkedContentSequence(context:CGContext, tagType:CGPDFTagType):Null<CGPDFMarkedContentItem>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFContextBeginNonStructuralMarkedContentSequence(context:CGContext, tagType:CGPDFTagType):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function CGPDFContextBeginObjectReference(context:CGContext):Null<CGPDFMarkedContentItem>;
 	public static function CGPDFContextBeginPage(context:Null<CGContext>, pageInfo:Null<NSDictionary>):Void;
@@ -451,7 +511,9 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFContextCreate(consumer:Null<CGDataConsumer>, mediaBox:Ptr, auxiliaryInfo:Null<NSDictionary>):Null<CGContext>;
 	@:hxmc.retained
 	public static function CGPDFContextCreateWithURL(url:Null<NSURL>, mediaBox:Ptr, auxiliaryInfo:Null<NSDictionary>):Null<CGContext>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFContextEndMarkedContentSequence(context:CGContext):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFContextEndObjectReference(context:CGContext):Void;
 	public static function CGPDFContextEndPage(context:Null<CGContext>):Void;
 	public static function CGPDFContextEndTag(context:CGContext):Void;
@@ -467,9 +529,11 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFDictionaryGetBoolean(dict:Ptr, key:CString, value:Ptr):Bool;
 	public static function CGPDFDictionaryGetCount(dict:Ptr):I64;
 	public static function CGPDFDictionaryGetDictionary(dict:Ptr, key:CString, value:Ptr):Bool;
-	public static function CGPDFDictionaryGetInteger(dict:Ptr, key:CString, value:Ptr):Bool;
+	@:hxmc.len(value, 1)
+	public static function CGPDFDictionaryGetInteger(dict:Ptr, key:CString, value:Span<I64>):Bool;
 	public static function CGPDFDictionaryGetName(dict:Ptr, key:CString, value:Ptr):Bool;
-	public static function CGPDFDictionaryGetNumber(dict:Ptr, key:CString, value:Ptr):Bool;
+	@:hxmc.len(value, 1)
+	public static function CGPDFDictionaryGetNumber(dict:Ptr, key:CString, value:Span<Float>):Bool;
 	public static function CGPDFDictionaryGetObject(dict:Ptr, key:CString, value:Ptr):Bool;
 	public static function CGPDFDictionaryGetStream(dict:Ptr, key:CString, value:Ptr):Bool;
 	public static function CGPDFDictionaryGetString(dict:Ptr, key:CString, value:Ptr):Bool;
@@ -487,7 +551,9 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFDocumentGetOutline(document:CGPDFDocument):Null<NSDictionary>;
 	public static function CGPDFDocumentGetPage(document:Null<CGPDFDocument>, pageNumber:I64):Null<CGPDFPage>;
 	public static function CGPDFDocumentGetTypeID():I64;
-	public static function CGPDFDocumentGetVersion(document:Null<CGPDFDocument>, majorVersion:Ptr, minorVersion:Ptr):Void;
+	@:hxmc.len(majorVersion, 1)
+	@:hxmc.len(minorVersion, 1)
+	public static function CGPDFDocumentGetVersion(document:Null<CGPDFDocument>, majorVersion:Span<Int>, minorVersion:Span<Int>):Void;
 	public static function CGPDFDocumentIsEncrypted(document:Null<CGPDFDocument>):Bool;
 	public static function CGPDFDocumentIsUnlocked(document:Null<CGPDFDocument>):Bool;
 	public static function CGPDFDocumentUnlockWithPassword(document:Null<CGPDFDocument>, password:CString):Bool;
@@ -509,9 +575,11 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFScannerPopArray(scanner:Ptr, value:Ptr):Bool;
 	public static function CGPDFScannerPopBoolean(scanner:Ptr, value:Ptr):Bool;
 	public static function CGPDFScannerPopDictionary(scanner:Ptr, value:Ptr):Bool;
-	public static function CGPDFScannerPopInteger(scanner:Ptr, value:Ptr):Bool;
+	@:hxmc.len(value, 1)
+	public static function CGPDFScannerPopInteger(scanner:Ptr, value:Span<I64>):Bool;
 	public static function CGPDFScannerPopName(scanner:Ptr, value:Ptr):Bool;
-	public static function CGPDFScannerPopNumber(scanner:Ptr, value:Ptr):Bool;
+	@:hxmc.len(value, 1)
+	public static function CGPDFScannerPopNumber(scanner:Ptr, value:Span<Float>):Bool;
 	public static function CGPDFScannerPopObject(scanner:Ptr, value:Ptr):Bool;
 	public static function CGPDFScannerPopStream(scanner:Ptr, value:Ptr):Bool;
 	public static function CGPDFScannerPopString(scanner:Ptr, value:Ptr):Bool;
@@ -520,7 +588,8 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFScannerScan(scanner:Ptr):Bool;
 	public static function CGPDFScannerStop(s:Ptr):Void;
 	@:hxmc.retained
-	public static function CGPDFStreamCopyData(stream:Ptr, format:Ptr):Null<NSData>;
+	@:hxmc.len(format, 1)
+	public static function CGPDFStreamCopyData(stream:Ptr, format:Span<Int>):Null<NSData>;
 	public static function CGPDFStreamGetDictionary(stream:Ptr):Ptr;
 	@:hxmc.retained
 	public static function CGPDFStringCopyDate(string:Ptr):Null<NSDate>;
@@ -528,54 +597,88 @@ import hxmc.unsafe.UInt16;
 	public static function CGPDFStringCopyTextString(string:Ptr):Null<NSString>;
 	public static function CGPDFStringGetBytePtr(string:Ptr):Ptr;
 	public static function CGPDFStringGetLength(string:Ptr):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementAddMarkedContentItem(structureElement:CGPDFStructureElement, markedContentItem:CGPDFMarkedContentItem):Int;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementAddStructureElement(structureElement:CGPDFStructureElement, childStructureElement:CGPDFStructureElement):Int;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function CGPDFStructureElementCreate(type:CGPDFTagType):CGPDFStructureElement;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementSetActualText(structureElement:CGPDFStructureElement, actualText:NSStringArg):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementSetAlternativeText(structureElement:CGPDFStructureElement, alternativeText:NSStringArg):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementSetExpansionText(structureElement:CGPDFStructureElement, expansionText:NSStringArg):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementSetLanguageIdentifier(structureElement:CGPDFStructureElement, languageID:NSStringArg):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CGPDFStructureElementSetTitle(structureElement:CGPDFStructureElement, title:NSStringArg):Void;
-	public static function CGPDFTagTypeGetName(tagType:CGPDFTagType):CString;
-	public static function CGPathAddArc(path:Null<CGMutablePath>, m:Ptr, x:Float, y:Float, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Void;
-	public static function CGPathAddArcToPoint(path:Null<CGMutablePath>, m:Ptr, x1:Float, y1:Float, x2:Float, y2:Float, radius:Float):Void;
-	public static function CGPathAddCurveToPoint(path:Null<CGMutablePath>, m:Ptr, cp1x:Float, cp1y:Float, cp2x:Float, cp2y:Float, x:Float, y:Float):Void;
-	public static function CGPathAddEllipseInRect(path:Null<CGMutablePath>, m:Ptr, rect:CGRect):Void;
-	public static function CGPathAddLineToPoint(path:Null<CGMutablePath>, m:Ptr, x:Float, y:Float):Void;
-	public static function CGPathAddLines(path:Null<CGMutablePath>, m:Ptr, points:Ptr, count:I64):Void;
-	public static function CGPathAddPath(path1:Null<CGMutablePath>, m:Ptr, path2:Null<CGPath>):Void;
-	public static function CGPathAddQuadCurveToPoint(path:Null<CGMutablePath>, m:Ptr, cpx:Float, cpy:Float, x:Float, y:Float):Void;
-	public static function CGPathAddRect(path:Null<CGMutablePath>, m:Ptr, rect:CGRect):Void;
-	public static function CGPathAddRects(path:Null<CGMutablePath>, m:Ptr, rects:Ptr, count:I64):Void;
+	@:hxmc.safe
+	public static function CGPDFTagTypeGetName(tagType:CGPDFTagType):String;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddArc(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, x:Float, y:Float, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddArcToPoint(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, x1:Float, y1:Float, x2:Float, y2:Float, radius:Float):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddCurveToPoint(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, cp1x:Float, cp1y:Float, cp2x:Float, cp2y:Float, x:Float, y:Float):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddEllipseInRect(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, rect:CGRect):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddLineToPoint(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, x:Float, y:Float):Void;
+	@:hxmc.len(m, 1)
+	@:hxmc.len(points, count)
+	public static function CGPathAddLines(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, points:ReadOnlySpan<CGPoint>, count:I64):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddPath(path1:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, path2:Null<CGPath>):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddQuadCurveToPoint(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, cpx:Float, cpy:Float, x:Float, y:Float):Void;
+	@:hxmc.len(m, 1)
+	public static function CGPathAddRect(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, rect:CGRect):Void;
+	@:hxmc.len(m, 1)
+	@:hxmc.len(rects, count)
+	public static function CGPathAddRects(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, rects:ReadOnlySpan<CGRect>, count:I64):Void;
 	public static function CGPathAddRelativeArc(path:Null<CGMutablePath>, matrix:Ptr, x:Float, y:Float, radius:Float, startAngle:Float, delta:Float):Void;
 	public static function CGPathAddRoundedRect(path:Null<CGMutablePath>, transform:Ptr, rect:CGRect, cornerWidth:Float, cornerHeight:Float):Void;
 	public static function CGPathApply(path:Null<CGPath>, info:Ptr, function_:Ptr):Void;
 	public static function CGPathApplyWithBlock(path:CGPath, block:Block<Ptr -> Void>):Void;
 	public static function CGPathCloseSubpath(path:Null<CGMutablePath>):Void;
-	public static function CGPathContainsPoint(path:Null<CGPath>, m:Ptr, point:CGPoint, eoFill:Bool):Bool;
+	@:hxmc.len(m, 1)
+	public static function CGPathContainsPoint(path:Null<CGPath>, m:ReadOnlySpan<CGAffineTransform>, point:CGPoint, eoFill:Bool):Bool;
 	@:hxmc.retained
 	public static function CGPathCreateCopy(path:Null<CGPath>):Null<CGPath>;
 	@:hxmc.retained
-	public static function CGPathCreateCopyByDashingPath(path:Null<CGPath>, transform:Ptr, phase:Float, lengths:Ptr, count:I64):Null<CGPath>;
+	@:hxmc.len(transform, 1)
+	@:hxmc.len(lengths, count)
+	public static function CGPathCreateCopyByDashingPath(path:Null<CGPath>, transform:ReadOnlySpan<CGAffineTransform>, phase:Float, lengths:ReadOnlySpan<Float>, count:I64):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyByFlattening(path:Null<CGPath>, flatteningThreshold:Float):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyByIntersectingPath(path:Null<CGPath>, maskPath:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyByNormalizing(path:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
 	@:hxmc.retained
-	public static function CGPathCreateCopyByStrokingPath(path:Null<CGPath>, transform:Ptr, lineWidth:Float, lineCap:CGLineCap, lineJoin:CGLineJoin, miterLimit:Float):Null<CGPath>;
+	@:hxmc.len(transform, 1)
+	public static function CGPathCreateCopyByStrokingPath(path:Null<CGPath>, transform:ReadOnlySpan<CGAffineTransform>, lineWidth:Float, lineCap:CGLineCap, lineJoin:CGLineJoin, miterLimit:Float):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyBySubtractingPath(path:Null<CGPath>, maskPath:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyBySymmetricDifferenceOfPath(path:Null<CGPath>, maskPath:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
 	@:hxmc.retained
-	public static function CGPathCreateCopyByTransformingPath(path:Null<CGPath>, transform:Ptr):Null<CGPath>;
+	@:hxmc.len(transform, 1)
+	public static function CGPathCreateCopyByTransformingPath(path:Null<CGPath>, transform:ReadOnlySpan<CGAffineTransform>):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyByUnioningPath(path:Null<CGPath>, maskPath:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyOfLineByIntersectingPath(path:Null<CGPath>, maskPath:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateCopyOfLineBySubtractingPath(path:Null<CGPath>, maskPath:Null<CGPath>, evenOddFillRule:Bool):Null<CGPath>;
 	@:hxmc.retained
@@ -583,24 +686,32 @@ import hxmc.unsafe.UInt16;
 	@:hxmc.retained
 	public static function CGPathCreateMutableCopy(path:Null<CGPath>):Null<CGMutablePath>;
 	@:hxmc.retained
-	public static function CGPathCreateMutableCopyByTransformingPath(path:Null<CGPath>, transform:Ptr):Null<CGMutablePath>;
+	@:hxmc.len(transform, 1)
+	public static function CGPathCreateMutableCopyByTransformingPath(path:Null<CGPath>, transform:ReadOnlySpan<CGAffineTransform>):Null<CGMutablePath>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CGPathCreateSeparateComponents(path:Null<CGPath>, evenOddFillRule:Bool):Null<NSArray>;
 	@:hxmc.retained
-	public static function CGPathCreateWithEllipseInRect(rect:CGRect, transform:Ptr):CGPath;
+	@:hxmc.len(transform, 1)
+	public static function CGPathCreateWithEllipseInRect(rect:CGRect, transform:ReadOnlySpan<CGAffineTransform>):CGPath;
 	@:hxmc.retained
-	public static function CGPathCreateWithRect(rect:CGRect, transform:Ptr):CGPath;
+	@:hxmc.len(transform, 1)
+	public static function CGPathCreateWithRect(rect:CGRect, transform:ReadOnlySpan<CGAffineTransform>):CGPath;
 	@:hxmc.retained
-	public static function CGPathCreateWithRoundedRect(rect:CGRect, cornerWidth:Float, cornerHeight:Float, transform:Ptr):CGPath;
+	@:hxmc.len(transform, 1)
+	public static function CGPathCreateWithRoundedRect(rect:CGRect, cornerWidth:Float, cornerHeight:Float, transform:ReadOnlySpan<CGAffineTransform>):CGPath;
 	public static function CGPathEqualToPath(path1:Null<CGPath>, path2:Null<CGPath>):Bool;
 	public static function CGPathGetBoundingBox(path:Null<CGPath>):CGRect;
 	public static function CGPathGetCurrentPoint(path:Null<CGPath>):CGPoint;
 	public static function CGPathGetPathBoundingBox(path:Null<CGPath>):CGRect;
 	public static function CGPathGetTypeID():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function CGPathIntersectsPath(path1:Null<CGPath>, path2:Null<CGPath>, evenOddFillRule:Bool):Bool;
 	public static function CGPathIsEmpty(path:Null<CGPath>):Bool;
-	public static function CGPathIsRect(path:Null<CGPath>, rect:Ptr):Bool;
-	public static function CGPathMoveToPoint(path:Null<CGMutablePath>, m:Ptr, x:Float, y:Float):Void;
+	@:hxmc.len(rect, 1)
+	public static function CGPathIsRect(path:Null<CGPath>, rect:Span<CGRect>):Bool;
+	@:hxmc.len(m, 1)
+	public static function CGPathMoveToPoint(path:Null<CGMutablePath>, m:ReadOnlySpan<CGAffineTransform>, x:Float, y:Float):Void;
 	@:hxmc.retained
 	public static function CGPatternCreate(info:Ptr, bounds:CGRect, matrix:CGAffineTransform, xStep:Float, yStep:Float, tiling:CGPatternTiling, isColored:Bool, callbacks:Ptr):Null<CGPattern>;
 	public static function CGPatternGetTypeID():I64;
@@ -608,13 +719,16 @@ import hxmc.unsafe.UInt16;
 	@:hxmc.retained
 	public static function CGPointCreateDictionaryRepresentation(point:CGPoint):NSDictionary;
 	public static function CGPointEqualToPoint(point1:CGPoint, point2:CGPoint):Bool;
-	public static function CGPointMakeWithDictionaryRepresentation(dict:Null<NSDictionary>, point:Ptr):Bool;
+	@:hxmc.len(point, 1)
+	public static function CGPointMakeWithDictionaryRepresentation(dict:Null<NSDictionary>, point:Span<CGPoint>):Bool;
 	public static function CGRectApplyAffineTransform(rect:CGRect, t:CGAffineTransform):CGRect;
 	public static function CGRectContainsPoint(rect:CGRect, point:CGPoint):Bool;
 	public static function CGRectContainsRect(rect1:CGRect, rect2:CGRect):Bool;
 	@:hxmc.retained
 	public static function CGRectCreateDictionaryRepresentation(p0:CGRect):NSDictionary;
-	public static function CGRectDivide(rect:CGRect, slice:Ptr, remainder:Ptr, amount:Float, edge:CGRectEdge):Void;
+	@:hxmc.len(slice, 1)
+	@:hxmc.len(remainder, 1)
+	public static function CGRectDivide(rect:CGRect, slice:Span<CGRect>, remainder:Span<CGRect>, amount:Float, edge:CGRectEdge):Void;
 	public static function CGRectEqualToRect(rect1:CGRect, rect2:CGRect):Bool;
 	public static function CGRectGetHeight(rect:CGRect):Float;
 	public static function CGRectGetMaxX(rect:CGRect):Float;
@@ -631,33 +745,44 @@ import hxmc.unsafe.UInt16;
 	public static function CGRectIsEmpty(rect:CGRect):Bool;
 	public static function CGRectIsInfinite(rect:CGRect):Bool;
 	public static function CGRectIsNull(rect:CGRect):Bool;
-	public static function CGRectMakeWithDictionaryRepresentation(dict:Null<NSDictionary>, rect:Ptr):Bool;
+	@:hxmc.len(rect, 1)
+	public static function CGRectMakeWithDictionaryRepresentation(dict:Null<NSDictionary>, rect:Span<CGRect>):Bool;
 	public static function CGRectOffset(rect:CGRect, dx:Float, dy:Float):CGRect;
 	public static function CGRectStandardize(rect:CGRect):CGRect;
 	public static function CGRectUnion(r1:CGRect, r2:CGRect):CGRect;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGRenderingBufferLockBytePtr(provider:CGRenderingBufferProvider):Ptr;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGRenderingBufferProviderCreate(info:Ptr, size:I64, lockPointer:Block<Ptr -> Ptr>, unlockPointer:Null<Block<(Ptr, Ptr) -> Void>>, releaseInfo:Null<Block<Ptr -> Void>>):Null<CGRenderingBufferProvider>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGRenderingBufferProviderCreateWithCFData(data:NSMutableData):Null<CGRenderingBufferProvider>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGRenderingBufferProviderGetSize(provider:CGRenderingBufferProvider):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGRenderingBufferProviderGetTypeID():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGRenderingBufferUnlockBytePtr(provider:CGRenderingBufferProvider):Void;
 	@:hxmc.retained
 	public static function CGShadingCreateAxial(space:Null<CGColorSpace>, start:CGPoint, end:CGPoint, function_:Null<CGFunction>, extendStart:Bool, extendEnd:Bool):Null<CGShading>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGShadingCreateAxialWithContentHeadroom(headroom:Float32, space:Null<CGColorSpace>, start:CGPoint, end:CGPoint, function_:Null<CGFunction>, extendStart:Bool, extendEnd:Bool):Null<CGShading>;
 	@:hxmc.retained
 	public static function CGShadingCreateRadial(space:Null<CGColorSpace>, start:CGPoint, startRadius:Float, end:CGPoint, endRadius:Float, function_:Null<CGFunction>, extendStart:Bool, extendEnd:Bool):Null<CGShading>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CGShadingCreateRadialWithContentHeadroom(headroom:Float32, space:Null<CGColorSpace>, start:CGPoint, startRadius:Float, end:CGPoint, endRadius:Float, function_:Null<CGFunction>, extendStart:Bool, extendEnd:Bool):Null<CGShading>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CGShadingGetContentHeadroom(shading:Null<CGShading>):Float32;
 	public static function CGShadingGetTypeID():I64;
 	public static function CGSizeApplyAffineTransform(size:CGSize, t:CGAffineTransform):CGSize;
 	@:hxmc.retained
 	public static function CGSizeCreateDictionaryRepresentation(size:CGSize):NSDictionary;
 	public static function CGSizeEqualToSize(size1:CGSize, size2:CGSize):Bool;
-	public static function CGSizeMakeWithDictionaryRepresentation(dict:Null<NSDictionary>, size:Ptr):Bool;
+	@:hxmc.len(size, 1)
+	public static function CGSizeMakeWithDictionaryRepresentation(dict:Null<NSDictionary>, size:Span<CGSize>):Bool;
 	public static final CGAffineTransformIdentity : CGAffineTransform;
 	public static final CGPointZero : CGPoint;
 	public static final CGRectInfinite : CGRect;
@@ -671,15 +796,19 @@ import hxmc.unsafe.UInt16;
 	public static final kCGColorConversionTRCSize : NSString;
 	public static final kCGColorSpaceACESCGLinear : NSString;
 	public static final kCGColorSpaceAdobeRGB1998 : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGColorSpaceCoreMedia709 : NSString;
 	public static final kCGColorSpaceDCIP3 : NSString;
 	public static final kCGColorSpaceDisplayP3 : NSString;
 	public static final kCGColorSpaceDisplayP3_HLG : NSString;
+	@:hxmc.available(macos >= version("10.15.4"))
 	public static final kCGColorSpaceDisplayP3_PQ : NSString;
 	@:deprecated
 	public static final kCGColorSpaceDisplayP3_PQ_EOTF : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCGColorSpaceExtendedDisplayP3 : NSString;
 	public static final kCGColorSpaceExtendedGray : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCGColorSpaceExtendedITUR_2020 : NSString;
 	public static final kCGColorSpaceExtendedLinearDisplayP3 : NSString;
 	public static final kCGColorSpaceExtendedLinearGray : NSString;
@@ -696,33 +825,52 @@ import hxmc.unsafe.UInt16;
 	public static final kCGColorSpaceGenericXYZ : NSString;
 	public static final kCGColorSpaceITUR_2020 : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= version("10.15.6"))
 	public static final kCGColorSpaceITUR_2020_HLG : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= version("10.15.4"))
 	public static final kCGColorSpaceITUR_2020_PQ : NSString;
 	@:deprecated
 	public static final kCGColorSpaceITUR_2020_PQ_EOTF : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 15.1, maccatalyst >= 15.1)
 	public static final kCGColorSpaceITUR_2020_sRGBGamma : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCGColorSpaceITUR_2100_HLG : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCGColorSpaceITUR_2100_PQ : NSString;
 	public static final kCGColorSpaceITUR_709 : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 15.1, maccatalyst >= 15.1)
 	public static final kCGColorSpaceITUR_709_HLG : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 15.1, maccatalyst >= 15.1)
 	public static final kCGColorSpaceITUR_709_PQ : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCGColorSpaceLinearDisplayP3 : NSString;
 	public static final kCGColorSpaceLinearGray : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCGColorSpaceLinearITUR_2020 : NSString;
 	public static final kCGColorSpaceLinearSRGB : NSString;
 	public static final kCGColorSpaceROMMRGB : NSString;
 	public static final kCGColorSpaceSRGB : NSString;
 	public static final kCGColorWhite : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCGContentAverageLightLevel : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCGContentAverageLightLevelNits : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static var kCGDefaultHDRImageContentHeadroom : Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCGDynamicRangeConstrained : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCGDynamicRangeHigh : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCGDynamicRangeStandard : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGEXRToneMappingGammaDefog : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGEXRToneMappingGammaExposure : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGEXRToneMappingGammaKneeHigh : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGEXRToneMappingGammaKneeLow : NSString;
 	public static final kCGFontVariationAxisDefaultValue : NSString;
 	public static final kCGFontVariationAxisMaxValue : NSString;
@@ -734,7 +882,9 @@ import hxmc.unsafe.UInt16;
 	public static final kCGPDFContextArtBox : NSString;
 	public static final kCGPDFContextAuthor : NSString;
 	public static final kCGPDFContextBleedBox : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCGPDFContextCreateLinearizedPDF : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCGPDFContextCreatePDFA : NSString;
 	public static final kCGPDFContextCreator : NSString;
 	public static final kCGPDFContextCropBox : NSString;
@@ -762,9 +912,14 @@ import hxmc.unsafe.UInt16;
 	public static final kCGPDFXOutputConditionIdentifier : NSString;
 	public static final kCGPDFXOutputIntentSubtype : NSString;
 	public static final kCGPDFXRegistryName : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCGPreferredDynamicRange : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGSkipBoostToHDR : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGUse100nitsHLGOOTF : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCGUseBT1886ForCoreVideoGamma : NSString;
+	@:hxmc.available(macos >= 15.1, ios >= 18.1, maccatalyst >= 18.1)
 	public static final kCGUseLegacyHDREcosystem : NSString;
 }

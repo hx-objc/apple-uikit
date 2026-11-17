@@ -4,11 +4,17 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BETextDocumentRequestOptions(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OptionNone = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OptionText = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OptionAttributedText = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OptionTextRects = 4;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OptionMarkedTextRects = 32;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OptionAutocorrectedRanges = 128;
 	inline function new(v:I64) this = v;
 	var None = 0;

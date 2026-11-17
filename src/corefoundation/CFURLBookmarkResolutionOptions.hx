@@ -6,6 +6,7 @@ import hxmc.I64;
 enum abstract CFURLBookmarkResolutionOptions(I64) to I64 {
 	var kCFURLBookmarkResolutionWithoutUIMask = 256;
 	var kCFURLBookmarkResolutionWithoutMountingMask = 512;
+	@:hxmc.available(macos >= 11.2)
 	var kCFURLBookmarkResolutionWithoutImplicitStartAccessing = 32768;
 	var kCFBookmarkResolutionWithoutUIMask = 256;
 	var kCFBookmarkResolutionWithoutMountingMask = 512;

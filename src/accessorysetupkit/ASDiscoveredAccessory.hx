@@ -4,11 +4,17 @@ package accessorysetupkit;
 import foundation.NSDictionary;
 import foundation.NSNumberArg;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASDiscoveredAccessory extends ASAccessory {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 26.1, maccatalyst >= 26.1) extern class ASDiscoveredAccessory extends ASAccessory {
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	static function alloc():ASDiscoveredAccessory;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var bluetoothAdvertisementData(get, never) : Null<NSDictionary>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_bluetoothAdvertisementData():Null<NSDictionary>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var bluetoothRSSI(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_bluetoothRSSI():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	override function init():ASDiscoveredAccessory;
 }

@@ -14,7 +14,9 @@ enum abstract AVAudioSessionCategoryOptions(I64) to I64 {
 	var AllowBluetoothA2DP = 32;
 	var AllowAirPlay = 64;
 	var OverrideMutedMicrophoneInterruption = 128;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var FarFieldInput = 262144;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var BluetoothHighQualityRecording = 524288;
 	inline function new(v:I64) this = v;
 	var None = 0;

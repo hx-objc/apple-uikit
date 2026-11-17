@@ -5,7 +5,9 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("BEExtensionProcess") extern interface BEExtensionProcess extends NSObjectProtocol {
+@:hxmc.objc("BEExtensionProcess") @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern interface BEExtensionProcess extends NSObjectProtocol {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function invalidate():Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function makeLibXPCConnectionError(error:Ptr):Null<NSObject>;
 }

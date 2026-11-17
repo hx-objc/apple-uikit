@@ -5,13 +5,21 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import quartzcore.CALayer;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BELayerHierarchy extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BELayerHierarchy extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BELayerHierarchy;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var handle(get, never) : BELayerHierarchyHandle;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_handle():BELayerHierarchyHandle;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var layer(get, set) : Null<CALayer>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_layer():Null<CALayer>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_layer(v:Null<CALayer>):Null<CALayer>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function layerHierarchyWithError(error:Ptr):Null<BELayerHierarchy>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function invalidate():Void;
 }

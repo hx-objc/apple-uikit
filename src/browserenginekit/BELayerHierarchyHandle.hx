@@ -7,13 +7,18 @@ import foundation.NSSecureCoding;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BELayerHierarchyHandle extends NSObject implements NSSecureCoding {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BELayerHierarchyHandle extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BELayerHierarchyHandle;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function handleWithXPCRepresentation(xpcRepresentation:Null<NSObject>, error:Ptr):Null<BELayerHierarchyHandle>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function createXPCRepresentation():NSObject;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function handleWithPort(port:Int, data:NSData, error:Ptr):Null<BELayerHierarchyHandle>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function encodeWithBlock(block:(Int, NSData) -> Void):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BELayerHierarchyHandle>;

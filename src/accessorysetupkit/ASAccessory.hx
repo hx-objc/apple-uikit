@@ -7,21 +7,37 @@ import foundation.NSUUID;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASAccessory extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASAccessory extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASAccessory;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var state(get, never) : ASAccessoryState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_state():ASAccessoryState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothIdentifier(get, never) : Null<NSUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothIdentifier():Null<NSUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothTransportBridgingIdentifier(get, never) : Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothTransportBridgingIdentifier():Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var displayName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_displayName():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SSID(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_SSID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwarePairedDeviceID(get, never) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwarePairedDeviceID():I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var descriptor(get, never) : ASDiscoveryDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_descriptor():ASDiscoveryDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():ASAccessory;
 }

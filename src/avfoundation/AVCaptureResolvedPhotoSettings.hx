@@ -31,7 +31,9 @@ import objc.NSObject;
 	var redEyeReductionEnabled(get, never) : Bool;
 	@:selector("isRedEyeReductionEnabled")
 	function get_redEyeReductionEnabled():Bool;
+	@:hxmc.available(ios >= 17.0)
 	var deferredPhotoProxyDimensions(get, never) : CMVideoDimensions;
+	@:hxmc.available(ios >= 17.0)
 	function get_deferredPhotoProxyDimensions():CMVideoDimensions;
 	@:deprecated
 	var stillImageStabilizationEnabled(get, never) : Bool;
@@ -51,8 +53,10 @@ import objc.NSObject;
 	var contentAwareDistortionCorrectionEnabled(get, never) : Bool;
 	@:selector("isContentAwareDistortionCorrectionEnabled")
 	function get_contentAwareDistortionCorrectionEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var fastCapturePrioritizationEnabled(get, never) : Bool;
 	@:selector("isFastCapturePrioritizationEnabled")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_fastCapturePrioritizationEnabled():Bool;
 	function dimensionsForSemanticSegmentationMatteOfType(semanticSegmentationMatteType:NSStringArg):CMVideoDimensions;
 }

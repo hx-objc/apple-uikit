@@ -7,11 +7,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("NearbyInteraction") @:hxmc.objc extern class NIDLTDOAMeasurementFloorElevation extends NSObject implements NSCopying {
+@:hxmc.framework("NearbyInteraction") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class NIDLTDOAMeasurementFloorElevation extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():NIDLTDOAMeasurementFloorElevation;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var floorNumber(get, never) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_floorNumber():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var height(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_height():Float;
 	function copyWithZone(zone:Ptr):Id;
 }

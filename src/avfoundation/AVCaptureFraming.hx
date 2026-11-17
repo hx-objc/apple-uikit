@@ -5,10 +5,15 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Float32;
 import objc.NSObject;
 
-@:hxmc.framework("AVFoundation") @:hxmc.objc extern class AVCaptureFraming extends NSObject {
+@:hxmc.framework("AVFoundation") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVCaptureFraming extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVCaptureFraming;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var aspectRatio(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_aspectRatio():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var zoomFactor(get, never) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_zoomFactor():Float32;
 }

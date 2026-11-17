@@ -84,8 +84,11 @@ import objc.NSObject;
 	var videoApertureMode(get, set) : NSStringArg;
 	function get_videoApertureMode():NSStringArg;
 	function set_videoApertureMode(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var appliesPerFrameHDRDisplayMetadata(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_appliesPerFrameHDRDisplayMetadata():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_appliesPerFrameHDRDisplayMetadata(v:Bool):Bool;
 	var audioTimePitchAlgorithm(get, set) : NSStringArg;
 	function get_audioTimePitchAlgorithm():NSStringArg;
@@ -95,8 +98,11 @@ import objc.NSObject;
 	@:selector("isAudioSpatializationAllowed")
 	function get_audioSpatializationAllowed():Bool;
 	function set_audioSpatializationAllowed(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var allowedAudioSpatializationFormats(get, set) : AVAudioSpatializationFormats;
+	@:hxmc.available(macos >= 11.0)
 	function get_allowedAudioSpatializationFormats():AVAudioSpatializationFormats;
+	@:hxmc.available(macos >= 11.0)
 	function set_allowedAudioSpatializationFormats(v:AVAudioSpatializationFormats):AVAudioSpatializationFormats;
 	var audioMix(get, set) : Null<AVAudioMix>;
 	function get_audioMix():Null<AVAudioMix>;
@@ -121,51 +127,80 @@ import objc.NSObject;
 	var preferredPeakBitRate(get, set) : Float;
 	function get_preferredPeakBitRate():Float;
 	function set_preferredPeakBitRate(v:Float):Float;
+	@:hxmc.available(macos >= 12.0)
 	var preferredPeakBitRateForExpensiveNetworks(get, set) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_preferredPeakBitRateForExpensiveNetworks():Float;
+	@:hxmc.available(macos >= 12.0)
 	function set_preferredPeakBitRateForExpensiveNetworks(v:Float):Float;
 	var preferredMaximumResolution(get, set) : CGSize;
 	function get_preferredMaximumResolution():CGSize;
 	function set_preferredMaximumResolution(v:CGSize):CGSize;
+	@:hxmc.available(macos >= 12.0)
 	var preferredMaximumResolutionForExpensiveNetworks(get, set) : CGSize;
+	@:hxmc.available(macos >= 12.0)
 	function get_preferredMaximumResolutionForExpensiveNetworks():CGSize;
+	@:hxmc.available(macos >= 12.0)
 	function set_preferredMaximumResolutionForExpensiveNetworks(v:CGSize):CGSize;
+	@:hxmc.available(macos >= 11.0)
 	var startsOnFirstEligibleVariant(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_startsOnFirstEligibleVariant():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_startsOnFirstEligibleVariant(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.3)
 	var variantPreferences(get, set) : AVVariantPreferences;
+	@:hxmc.available(macos >= 11.3)
 	function get_variantPreferences():AVVariantPreferences;
+	@:hxmc.available(macos >= 11.3)
 	function set_variantPreferences(v:AVVariantPreferences):AVVariantPreferences;
 	var currentMediaSelection(get, never) : AVMediaSelection;
 	function get_currentMediaSelection():AVMediaSelection;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var preferredCustomMediaSelectionSchemes(get, set) : NSArray<AVCustomMediaSelectionScheme>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredCustomMediaSelectionSchemes():NSArray<AVCustomMediaSelectionScheme>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredCustomMediaSelectionSchemes(v:NSArray<AVCustomMediaSelectionScheme>):NSArray<AVCustomMediaSelectionScheme>;
 	var outputs(get, never) : NSArray<AVPlayerItemOutput>;
 	function get_outputs():NSArray<AVPlayerItemOutput>;
 	var mediaDataCollectors(get, never) : NSArray<AVPlayerItemMediaDataCollector>;
 	function get_mediaDataCollectors():NSArray<AVPlayerItemMediaDataCollector>;
+	@:hxmc.available(macos >= 12.0)
 	var automaticallyHandlesInterstitialEvents(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_automaticallyHandlesInterstitialEvents():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_automaticallyHandlesInterstitialEvents(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var templatePlayerItem(get, never) : Null<AVPlayerItem>;
+	@:hxmc.available(macos >= 12.0)
 	function get_templatePlayerItem():Null<AVPlayerItem>;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var interstitialEventIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_interstitialEventIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var integratedTimeline(get, never) : AVPlayerItemIntegratedTimeline;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_integratedTimeline():AVPlayerItemIntegratedTimeline;
 	var externalMetadata(get, set) : NSArray<AVMetadataItem>;
 	@:hxmc.framework("AVKit")
 	function get_externalMetadata():NSArray<AVMetadataItem>;
 	@:hxmc.framework("AVKit")
 	function set_externalMetadata(v:NSArray<AVMetadataItem>):NSArray<AVMetadataItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var interstitialTimeRanges(get, never) : NSArray<AVInterstitialTimeRange>;
 	@:hxmc.framework("AVKit")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_interstitialTimeRanges():NSArray<AVInterstitialTimeRange>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var nowPlayingInfo(get, set) : Null<NSDictionary<NSString, Id>>;
 	@:hxmc.framework("MediaPlayer")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_nowPlayingInfo():Null<NSDictionary<NSString, Id>>;
 	@:hxmc.framework("MediaPlayer")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_nowPlayingInfo(v:Null<NSDictionary<NSString, Id>>):Null<NSDictionary<NSString, Id>>;
 	static function playerItemWithURL(URL:NSURL):AVPlayerItem;
 	static overload function playerItemWithAsset(asset:AVAsset):AVPlayerItem;
@@ -183,17 +218,25 @@ import objc.NSObject;
 	function stepByCount(stepCount:I64):Void;
 	function selectMediaOption(mediaSelectionOption:Null<AVMediaSelectionOption>, inMediaSelectionGroup:AVMediaSelectionGroup):Void;
 	function selectMediaOptionAutomaticallyInMediaSelectionGroup(mediaSelectionGroup:AVMediaSelectionGroup):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function selectableMediaSelectionOptionsInMediaSelectionGroup(mediaSelectionGroup:AVMediaSelectionGroup):NSArray<AVMediaSelectionOption>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function selectMediaPresentationLanguage(language:NSStringArg, forMediaSelectionGroup:AVMediaSelectionGroup):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function selectedMediaPresentationLanguageForMediaSelectionGroup(mediaSelectionGroup:AVMediaSelectionGroup):Null<NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function selectMediaPresentationSetting(mediaPresentationSetting:AVMediaPresentationSetting, forMediaSelectionGroup:AVMediaSelectionGroup):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function selectedMediaPresentationSettingsForMediaSelectionGroup(mediaSelectionGroup:AVMediaSelectionGroup):NSDictionary<AVMediaPresentationSelector, Id>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function effectiveMediaPresentationSettingsForMediaSelectionGroup(mediaSelectionGroup:AVMediaSelectionGroup):NSDictionary<AVMediaPresentationSelector, Id>;
 	@:deprecated
 	function accessLog():Null<AVPlayerItemAccessLog>;
 	@:deprecated
 	function errorLog():Null<AVPlayerItemErrorLog>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function fetchAccessLogWithCompletionHandler(completionHandler:Null<AVPlayerItemAccessLog> -> Void):Void;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function fetchErrorLogWithCompletionHandler(completionHandler:Null<AVPlayerItemErrorLog> -> Void):Void;
 	function addOutput(output:AVPlayerItemOutput):Void;
 	function removeOutput(output:AVPlayerItemOutput):Void;

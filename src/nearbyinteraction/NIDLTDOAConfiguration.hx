@@ -4,15 +4,25 @@ package nearbyinteraction;
 import foundation.NSCoder;
 import hxmc.I64;
 
-@:hxmc.framework("NearbyInteraction") @:hxmc.objc extern class NIDLTDOAConfiguration extends NIConfiguration {
+@:hxmc.framework("NearbyInteraction") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class NIDLTDOAConfiguration extends NIConfiguration {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():NIDLTDOAConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var networkIdentifier(get, set) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_networkIdentifier():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_networkIdentifier(v:I64):I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var discoveryMethod(get, set) : NIDLTDOADiscoveryMethod;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_discoveryMethod():NIDLTDOADiscoveryMethod;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_discoveryMethod(v:NIDLTDOADiscoveryMethod):NIDLTDOADiscoveryMethod;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithNetworkIdentifier(networkIdentifier:I64):NIDLTDOAConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithNetworkIdentifier(networkIdentifier:I64, discoveryMethod:NIDLTDOADiscoveryMethod):NIDLTDOAConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithCoder(coder:NSCoder):Null<NIDLTDOAConfiguration>;
 }

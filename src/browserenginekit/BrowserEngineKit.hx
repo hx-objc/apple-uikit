@@ -4,11 +4,18 @@ package browserenginekit;
 import hxmc.I64;
 
 @:hxmc.c @:hxmc.framework("BrowserEngineKit") extern class BrowserEngineKit {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilitySelectionChangedNotification : Int;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilityTraitMenuItem : I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilityTraitPopUpButton : I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilityTraitRadioButton : I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilityTraitReadOnly : I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilityTraitVisited : I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static var BEAccessibilityValueChangedNotification : Int;
 }

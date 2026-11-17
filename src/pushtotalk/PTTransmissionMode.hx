@@ -4,8 +4,11 @@ package pushtotalk;
 import hxmc.I64;
 
 enum abstract PTTransmissionMode(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var FullDuplex = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var HalfDuplex = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ListenOnly = 2;
 	inline function new(v:I64) this = v;
 }

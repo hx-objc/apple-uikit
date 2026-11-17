@@ -4,8 +4,11 @@ package metalfx;
 import hxmc.I64;
 
 enum abstract MTLFXSpatialScalerColorProcessingMode(I64) to I64 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var Perceptual = 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var Linear = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var HDR = 2;
 	inline function new(v:I64) this = v;
 }

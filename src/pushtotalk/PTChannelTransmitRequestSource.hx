@@ -4,9 +4,13 @@ package pushtotalk;
 import hxmc.I64;
 
 enum abstract PTChannelTransmitRequestSource(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Unknown = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var UserRequest = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var DeveloperRequest = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var HandsfreeButton = 3;
 	inline function new(v:I64) this = v;
 }

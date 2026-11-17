@@ -3,6 +3,7 @@ package passkit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("PKPayLaterViewDelegate") extern interface PKPayLaterViewDelegate extends NSObjectProtocol {
+@:hxmc.objc("PKPayLaterViewDelegate") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface PKPayLaterViewDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function payLaterViewDidUpdateHeight(view:PKPayLaterView):Void;
 }

@@ -15,7 +15,9 @@ import objc.NSObject;
 	function get_slotNames():NSArray<NSString>;
 	function getSlotWithName(name:NSStringArg, reply:Null<TKSmartCardSlot> -> Void):Void;
 	function slotNamed(name:NSStringArg):Null<TKSmartCardSlot>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function createNFCSlotWithMessage(message:Null<NSStringArg>, completion:(Null<TKSmartCardSlotNFCSession>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function isNFCSupported():Bool;
 	override function init():TKSmartCardSlotManager;
 }

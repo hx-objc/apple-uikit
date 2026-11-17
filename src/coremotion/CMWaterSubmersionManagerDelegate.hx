@@ -4,17 +4,21 @@ package coremotion;
 import foundation.NSError;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("CMWaterSubmersionManagerDelegate") extern interface CMWaterSubmersionManagerDelegate extends NSObjectProtocol {
+@:hxmc.objc("CMWaterSubmersionManagerDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface CMWaterSubmersionManagerDelegate extends NSObjectProtocol {
 	@:selector("manager:didUpdateEvent:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function managerDidUpdateEvent(manager:CMWaterSubmersionManager, didUpdateEvent:CMWaterSubmersionEvent):Void;
 	@:selector("manager:didUpdateMeasurement:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function managerDidUpdateMeasurement(manager:CMWaterSubmersionManager, didUpdateMeasurement:CMWaterSubmersionMeasurement):Void;
 	@:selector("manager:didUpdateTemperature:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function managerDidUpdateTemperature(manager:CMWaterSubmersionManager, didUpdateTemperature:CMWaterTemperature):Void;
 	@:selector("manager:errorOccurred:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function managerErrorOccurred(manager:CMWaterSubmersionManager, errorOccurred:NSError):Void;
 }

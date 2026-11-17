@@ -5,12 +5,18 @@ import hxmc.I64;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.objc("MTLResourceStateCommandEncoder") extern interface MTLResourceStateCommandEncoder extends MTLCommandEncoder {
+	@:hxmc.available(macos >= 11.0)
 	function updateTextureMappings(texture:MTLTexture, mode:MTLSparseTextureMappingMode, regions:Ptr, mipLevels:Ptr, slices:Ptr, numRegions:I64):Void;
 	@:selector("updateTextureMapping:mode:region:mipLevel:slice:")
+	@:hxmc.available(macos >= 11.0)
 	function updateTextureMappingModeRegionMipLevelSlice(texture:MTLTexture, mode:MTLSparseTextureMappingMode, region:MTLRegion, mipLevel:I64, slice:I64):Void;
 	@:selector("updateTextureMapping:mode:indirectBuffer:indirectBufferOffset:")
+	@:hxmc.available(macos >= 11.0)
 	function updateTextureMappingModeIndirectBufferIndirectBufferOffset(texture:MTLTexture, mode:MTLSparseTextureMappingMode, indirectBuffer:MTLBuffer, indirectBufferOffset:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function updateFence(fence:MTLFence):Void;
+	@:hxmc.available(macos >= 11.0)
 	function waitForFence(fence:MTLFence):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function moveTextureMappingsFromTexture(sourceTexture:MTLTexture, sourceSlice:I64, sourceLevel:I64, sourceOrigin:MTLOrigin, sourceSize:MTLSize, toTexture:MTLTexture, destinationSlice:I64, destinationLevel:I64, destinationOrigin:MTLOrigin):Void;
 }

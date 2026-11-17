@@ -11,12 +11,18 @@ import objc.NSObject;
 
 @:hxmc.framework("CoreLocation") @:hxmc.objc extern class CLLocationManager extends NSObject {
 	static function alloc():CLLocationManager;
+	@:hxmc.available(macos >= 11.0)
 	var authorizationStatus(get, never) : CLAuthorizationStatus;
+	@:hxmc.available(macos >= 11.0)
 	function get_authorizationStatus():CLAuthorizationStatus;
+	@:hxmc.available(macos >= 11.0)
 	var accuracyAuthorization(get, never) : CLAccuracyAuthorization;
+	@:hxmc.available(macos >= 11.0)
 	function get_accuracyAuthorization():CLAccuracyAuthorization;
+	@:hxmc.available(macos >= 11.0)
 	var authorizedForWidgetUpdates(get, never) : Bool;
 	@:selector("isAuthorizedForWidgetUpdates")
+	@:hxmc.available(macos >= 11.0)
 	function get_authorizedForWidgetUpdates():Bool;
 	var delegate(get, set) : Null<CLLocationManagerDelegate>;
 	function get_delegate():Null<CLLocationManagerDelegate>;
@@ -58,8 +64,11 @@ import objc.NSObject;
 	var headingOrientation(get, set) : CLDeviceOrientation;
 	function get_headingOrientation():CLDeviceOrientation;
 	function set_headingOrientation(v:CLDeviceOrientation):CLDeviceOrientation;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var headingBody(get, set) : Null<CLBodyIdentifiable>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_headingBody():Null<CLBodyIdentifiable>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_headingBody(v:Null<CLBodyIdentifiable>):Null<CLBodyIdentifiable>;
 	var heading(get, never) : Null<CLHeading>;
 	function get_heading():Null<CLHeading>;
@@ -85,7 +94,9 @@ import objc.NSObject;
 	static function authorizationStatus():CLAuthorizationStatus;
 	function requestWhenInUseAuthorization():Void;
 	function requestAlwaysAuthorization():Void;
+	@:hxmc.available(macos >= 11.0)
 	overload function requestTemporaryFullAccuracyAuthorizationWithPurposeKey(purposeKey:NSStringArg, completion:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	overload function requestTemporaryFullAccuracyAuthorizationWithPurposeKey(purposeKey:NSStringArg):Void;
 	function startUpdatingLocation():Void;
 	function stopUpdatingLocation():Void;
@@ -103,8 +114,10 @@ import objc.NSObject;
 	overload function startMonitoringForRegion(region:CLRegion):Void;
 	function requestStateForRegion(region:CLRegion):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function startRangingBeaconsInRegion(region:CLBeaconRegion):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function stopRangingBeaconsInRegion(region:CLBeaconRegion):Void;
 	function startRangingBeaconsSatisfyingConstraint(constraint:CLBeaconIdentityConstraint):Void;
 	function stopRangingBeaconsSatisfyingConstraint(constraint:CLBeaconIdentityConstraint):Void;

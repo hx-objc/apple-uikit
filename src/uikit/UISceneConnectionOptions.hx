@@ -26,9 +26,13 @@ import usernotifications.UNNotificationResponse;
 	function get_shortcutItem():Null<UIApplicationShortcutItem>;
 	var cloudKitShareMetadata(get, never) : Null<CKShareMetadata>;
 	function get_cloudKitShareMetadata():Null<CKShareMetadata>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var sceneAccessoryUserInfo(get, never) : Null<Id>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_sceneAccessoryUserInfo():Null<Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var gameControllerActivationContext(get, never) : Null<GCGameControllerActivationContext>;
 	@:hxmc.framework("GameController")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_gameControllerActivationContext():Null<GCGameControllerActivationContext>;
 }

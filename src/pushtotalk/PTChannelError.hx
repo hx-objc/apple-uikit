@@ -4,15 +4,25 @@ package pushtotalk;
 import hxmc.I64;
 
 enum abstract PTChannelError(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Unknown = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ChannelNotFound = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ChannelLimitReached = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var CallActive = 3;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransmissionInProgress = 4;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransmissionNotFound = 5;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var AppNotForeground = 6;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var DeviceManagementRestriction = 7;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ScreenTimeRestriction = 8;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransmissionNotAllowed = 9;
 	inline function new(v:I64) this = v;
 }

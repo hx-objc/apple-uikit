@@ -4,9 +4,13 @@ package browserenginekit;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BETextSuggestion extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BETextSuggestion extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BETextSuggestion;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var inputText(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_inputText():NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithInputText(inputText:NSStringArg):BETextSuggestion;
 }

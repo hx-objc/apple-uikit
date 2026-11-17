@@ -4,15 +4,24 @@ package browserenginekit;
 import objc.NSObject;
 import uikit.UIKey;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEKeyEntry extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEKeyEntry extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEKeyEntry;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var key(get, never) : UIKey;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_key():UIKey;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var state(get, never) : BEKeyPressState;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_state():BEKeyPressState;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var keyRepeating(get, never) : Bool;
 	@:selector("isKeyRepeating")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_keyRepeating():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var timestamp(get, never) : Float;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_timestamp():Float;
 }

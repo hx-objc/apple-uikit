@@ -4,6 +4,7 @@ package screencapturekit;
 import hxmc.I64;
 
 enum abstract SCStreamConfigurationPreset(I64) to I64 {
+	@:hxmc.available(macos >= 26.0, ios >= 27.0, maccatalyst >= 26.0)
 	var CaptureHDRRecordingPreservedSDRHDR10 = 4;
 	inline function new(v:I64) this = v;
 }

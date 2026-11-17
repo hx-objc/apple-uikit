@@ -4,8 +4,10 @@ package accessorysetupkit;
 import foundation.NSStringArg;
 import uikit.UIImage;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASDiscoveredDisplayItem extends ASPickerDisplayItem {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 26.1, maccatalyst >= 26.1) extern class ASDiscoveredDisplayItem extends ASPickerDisplayItem {
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	static function alloc():ASDiscoveredDisplayItem;
 	@:selector("initWithName:productImage:accessory:")
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function initWithNameProductImageAccessory(name:NSStringArg, productImage:UIImage, accessory:ASDiscoveredAccessory):ASDiscoveredDisplayItem;
 }

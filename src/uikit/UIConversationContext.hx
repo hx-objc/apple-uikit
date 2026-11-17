@@ -9,22 +9,39 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIConversationContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class UIConversationContext extends NSObject {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():UIConversationContext;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var threadIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_threadIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_threadIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var entries(get, set) : NSArray<UIConversationEntry>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_entries():NSArray<UIConversationEntry>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_entries(v:NSArray<UIConversationEntry>):NSArray<UIConversationEntry>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var selfIdentifiers(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_selfIdentifiers():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_selfIdentifiers(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var responsePrimaryRecipientIdentifiers(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_responsePrimaryRecipientIdentifiers():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_responsePrimaryRecipientIdentifiers(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var participantNameByIdentifier(get, set) : NSDictionary<NSString, NSPersonNameComponents>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_participantNameByIdentifier():NSDictionary<NSString, NSPersonNameComponents>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_participantNameByIdentifier(v:NSDictionary<NSString, NSPersonNameComponents>):NSDictionary<NSString, NSPersonNameComponents>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():UIConversationContext;
 }

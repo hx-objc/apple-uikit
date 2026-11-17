@@ -9,16 +9,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMWaterSubmersionEvent extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("CoreMotion") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class CMWaterSubmersionEvent extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():CMWaterSubmersionEvent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var date(get, never) : NSDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_date():NSDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var state(get, never) : CMWaterSubmersionState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_state():CMWaterSubmersionState;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CMWaterSubmersionEvent>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():CMWaterSubmersionEvent;
 }

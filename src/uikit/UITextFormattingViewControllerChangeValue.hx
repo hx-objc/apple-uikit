@@ -10,23 +10,40 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextFormattingViewControllerChangeValue extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITextFormattingViewControllerChangeValue extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITextFormattingViewControllerChangeValue;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var changeType(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_changeType():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var formattingStyleKey(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_formattingStyleKey():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var font(get, never) : Null<UIFont>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_font():Null<UIFont>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var color(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_color():Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var numberValue(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_numberValue():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textList(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textList():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textAlignment(get, never) : NSTextAlignment;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textAlignment():NSTextAlignment;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var highlight(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_highlight():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

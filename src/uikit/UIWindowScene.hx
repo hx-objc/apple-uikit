@@ -20,7 +20,9 @@ import uiutilities.UICoordinateSpace;
 	function get_coordinateSpace():UICoordinateSpace;
 	var traitCollection(get, never) : UITraitCollection;
 	function get_traitCollection():UITraitCollection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var effectiveGeometry(get, never) : UIWindowSceneGeometry;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_effectiveGeometry():UIWindowSceneGeometry;
 	var sizeRestrictions(get, never) : Null<UISceneSizeRestrictions>;
 	function get_sizeRestrictions():Null<UISceneSizeRestrictions>;
@@ -31,15 +33,24 @@ import uiutilities.UICoordinateSpace;
 	var activityItemsConfigurationSource(get, set) : Null<UIActivityItemsConfigurationProviding>;
 	function get_activityItemsConfigurationSource():Null<UIActivityItemsConfigurationProviding>;
 	function set_activityItemsConfigurationSource(v:Null<UIActivityItemsConfigurationProviding>):Null<UIActivityItemsConfigurationProviding>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var windowingBehaviors(get, never) : Null<UISceneWindowingBehaviors>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_windowingBehaviors():Null<UISceneWindowingBehaviors>;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var fullScreen(get, never) : Bool;
 	@:selector("isFullScreen")
+	@:hxmc.available(maccatalyst >= 16.0)
 	function get_fullScreen():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var closureConfirmation(get, set) : Null<UISceneClosureConfirmation>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_closureConfirmation():Null<UISceneClosureConfirmation>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_closureConfirmation(v:Null<UISceneClosureConfirmation>):Null<UISceneClosureConfirmation>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var traitOverrides(get, never) : UITraitOverrides;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_traitOverrides():UITraitOverrides;
 	var focusSystem(get, never) : Null<UIFocusSystem>;
 	function get_focusSystem():Null<UIFocusSystem>;
@@ -47,19 +58,28 @@ import uiutilities.UICoordinateSpace;
 	function get_statusBarManager():Null<UIStatusBarManager>;
 	var screenshotService(get, never) : Null<UIScreenshotService>;
 	function get_screenshotService():Null<UIScreenshotService>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function requestGeometryUpdateWithPreferences(geometryPreferences:UIWindowSceneGeometryPreferences, errorHandler:Null<NSError -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function displayLinkWithTarget(target:Id, selector:Selector):Null<CADisplayLink>;
 	@:deprecated
 	function traitCollectionDidChange(previousTraitCollection:Null<UITraitCollection>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function unregisterForTraitChanges(registration:UITraitChangeRegistration):Void;
 	override function initWithSession(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIWindowScene;
 	@:selector("registerForTraitChanges:withHandler:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithHandler(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withTarget:action:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithTargetAction(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withAction:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithAction(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
 }

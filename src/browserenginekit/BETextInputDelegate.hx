@@ -4,13 +4,19 @@ package browserenginekit;
 import foundation.NSArray;
 import hxmc.objc.Id;
 
-@:hxmc.objc("BETextInputDelegate") extern interface BETextInputDelegate extends hxmc.objc.Id {
+@:hxmc.objc("BETextInputDelegate") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BETextInputDelegate extends hxmc.objc.Id {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function shouldDeferEventHandlingToSystemForTextInput(textInput:BETextInput, context:BEKeyEntryContext):Bool;
 	@:selector("textInput:setCandidateSuggestions:")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function textInputSetCandidateSuggestions(textInput:BETextInput, setCandidateSuggestions:Null<NSArray<BETextSuggestion>>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectionWillChangeForTextInput(textInput:BETextInput):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectionDidChangeForTextInput(textInput:BETextInput):Void;
 	@:selector("textInput:deferReplaceTextActionToSystem:")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function textInputDeferReplaceTextActionToSystem(textInput:BETextInput, deferReplaceTextActionToSystem:Id):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function invalidateTextEntryContextForTextInput(textInput:BETextInput):Void;
 }

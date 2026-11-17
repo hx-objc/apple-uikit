@@ -10,6 +10,7 @@ import foundation.NSError;
 import foundation.NSString;
 import foundation.NSStringArg;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.CString;
@@ -31,46 +32,60 @@ import objc.NSObject;
 	@:deprecated
 	public static function SSLCopyPeerTrust(context:SSLContext, trust:Ptr):Int;
 	@:deprecated
-	public static function SSLCopyRequestedPeerName(context:SSLContext, peerName:Ptr, peerNameLen:Ptr):Int;
+	@:hxmc.len(peerNameLen, 1)
+	public static function SSLCopyRequestedPeerName(context:SSLContext, peerName:Ptr, peerNameLen:Span<I64>):Int;
 	@:deprecated
-	public static function SSLCopyRequestedPeerNameLength(ctx:SSLContext, peerNameLen:Ptr):Int;
+	@:hxmc.len(peerNameLen, 1)
+	public static function SSLCopyRequestedPeerNameLength(ctx:SSLContext, peerNameLen:Span<I64>):Int;
 	@:deprecated
 	@:hxmc.retained
 	public static function SSLCreateContext(alloc:Null<CFAllocator>, protocolSide:SSLProtocolSide, connectionType:SSLConnectionType):Null<SSLContext>;
 	@:deprecated
-	public static function SSLGetBufferedReadSize(context:SSLContext, bufferSize:Ptr):Int;
+	@:hxmc.len(bufferSize, 1)
+	public static function SSLGetBufferedReadSize(context:SSLContext, bufferSize:Span<I64>):Int;
 	@:deprecated
-	public static function SSLGetClientCertificateState(context:SSLContext, clientState:Ptr):Int;
+	@:hxmc.len(clientState, 1)
+	public static function SSLGetClientCertificateState(context:SSLContext, clientState:Span<Int>):Int;
 	@:deprecated
 	public static function SSLGetConnection(context:SSLContext, connection:Ptr):Int;
 	@:deprecated
-	public static function SSLGetDatagramWriteSize(dtlsContext:SSLContext, bufSize:Ptr):Int;
+	@:hxmc.len(bufSize, 1)
+	public static function SSLGetDatagramWriteSize(dtlsContext:SSLContext, bufSize:Span<I64>):Int;
 	@:deprecated
 	public static function SSLGetEnabledCiphers(context:SSLContext, ciphers:Ptr, numCiphers:Ptr):Int;
 	@:deprecated
-	public static function SSLGetMaxDatagramRecordSize(dtlsContext:SSLContext, maxSize:Ptr):Int;
+	@:hxmc.len(maxSize, 1)
+	public static function SSLGetMaxDatagramRecordSize(dtlsContext:SSLContext, maxSize:Span<I64>):Int;
 	@:deprecated
 	public static function SSLGetNegotiatedCipher(context:SSLContext, cipherSuite:Ptr):Int;
 	@:deprecated
-	public static function SSLGetNegotiatedProtocolVersion(context:SSLContext, protocol:Ptr):Int;
+	@:hxmc.len(protocol, 1)
+	public static function SSLGetNegotiatedProtocolVersion(context:SSLContext, protocol:Span<Int>):Int;
 	@:deprecated
 	public static function SSLGetNumberEnabledCiphers(context:SSLContext, numCiphers:Ptr):Int;
 	@:deprecated
 	public static function SSLGetNumberSupportedCiphers(context:SSLContext, numCiphers:Ptr):Int;
 	@:deprecated
-	public static function SSLGetPeerDomainName(context:SSLContext, peerName:Ptr, peerNameLen:Ptr):Int;
+	@:hxmc.len(peerNameLen, 1)
+	public static function SSLGetPeerDomainName(context:SSLContext, peerName:Ptr, peerNameLen:Span<I64>):Int;
 	@:deprecated
-	public static function SSLGetPeerDomainNameLength(context:SSLContext, peerNameLen:Ptr):Int;
+	@:hxmc.len(peerNameLen, 1)
+	public static function SSLGetPeerDomainNameLength(context:SSLContext, peerNameLen:Span<I64>):Int;
 	@:deprecated
-	public static function SSLGetPeerID(context:SSLContext, peerID:Ptr, peerIDLen:Ptr):Int;
+	@:hxmc.len(peerIDLen, 1)
+	public static function SSLGetPeerID(context:SSLContext, peerID:Ptr, peerIDLen:Span<I64>):Int;
 	@:deprecated
-	public static function SSLGetProtocolVersionMax(context:SSLContext, maxVersion:Ptr):Int;
+	@:hxmc.len(maxVersion, 1)
+	public static function SSLGetProtocolVersionMax(context:SSLContext, maxVersion:Span<Int>):Int;
 	@:deprecated
-	public static function SSLGetProtocolVersionMin(context:SSLContext, minVersion:Ptr):Int;
+	@:hxmc.len(minVersion, 1)
+	public static function SSLGetProtocolVersionMin(context:SSLContext, minVersion:Span<Int>):Int;
 	@:deprecated
-	public static function SSLGetSessionOption(context:SSLContext, option:SSLSessionOption, value:Ptr):Int;
+	@:hxmc.len(value, 1)
+	public static function SSLGetSessionOption(context:SSLContext, option:SSLSessionOption, value:Span<Bool>):Int;
 	@:deprecated
-	public static function SSLGetSessionState(context:SSLContext, state:Ptr):Int;
+	@:hxmc.len(state, 1)
+	public static function SSLGetSessionState(context:SSLContext, state:Span<Int>):Int;
 	@:deprecated
 	public static function SSLGetSupportedCiphers(context:SSLContext, ciphers:Ptr, numCiphers:Ptr):Int;
 	@:deprecated
@@ -96,7 +111,7 @@ import objc.NSObject;
 	@:deprecated
 	public static function SSLSetError(context:SSLContext, status:Int):Int;
 	@:deprecated
-	public static function SSLSetIOFuncs(context:SSLContext, readFunc:Ptr, writeFunc:Ptr):Int;
+	public static function SSLSetIOFuncs(context:SSLContext, readFunc:(Ptr, Ptr, Ptr) -> Int, writeFunc:(Ptr, Ptr, Ptr) -> Int):Int;
 	@:deprecated
 	public static function SSLSetMaxDatagramRecordSize(dtlsContext:SSLContext, maxSize:I64):Int;
 	@:deprecated
@@ -121,6 +136,7 @@ import objc.NSObject;
 	public static function SecAccessControlCreateWithFlags(allocator:Null<CFAllocator>, protection:Id, flags:SecAccessControlCreateFlags, error:Ptr):Null<SecAccessControl>;
 	public static function SecAccessControlGetTypeID():I64;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static function SecAddSharedWebCredential(fqdn:NSStringArg, account:NSStringArg, password:Null<NSStringArg>, completionHandler:Block<Null<NSError> -> Void>):Void;
 	public static function SecCertificateCopyCommonName(certificate:SecCertificate, commonName:Ptr):Int;
 	@:hxmc.retained
@@ -132,8 +148,10 @@ import objc.NSObject;
 	public static function SecCertificateCopyNormalizedIssuerSequence(certificate:SecCertificate):Null<NSData>;
 	@:hxmc.retained
 	public static function SecCertificateCopyNormalizedSubjectSequence(certificate:SecCertificate):Null<NSData>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:hxmc.retained
 	public static function SecCertificateCopyNotValidAfterDate(certificate:SecCertificate):Null<NSDate>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:hxmc.retained
 	public static function SecCertificateCopyNotValidBeforeDate(certificate:SecCertificate):Null<NSDate>;
 	@:deprecated
@@ -151,6 +169,7 @@ import objc.NSObject;
 	public static function SecCertificateGetTypeID():I64;
 	@:hxmc.retained
 	public static function SecCopyErrorMessageString(status:Int, reserved:Ptr):Null<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function SecCreateSharedWebCredentialPassword():Null<NSString>;
 	public static function SecIdentityCopyCertificate(identityRef:SecIdentity, certificateRef:Ptr):Int;
@@ -181,16 +200,19 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function SecKeyCreateWithData(keyData:NSData, attributes:NSDictionary, error:Ptr):Null<SecKey>;
 	@:deprecated
-	public static function SecKeyDecrypt(key:SecKey, padding:SecPadding, cipherText:Ptr, cipherTextLen:I64, plainText:Ptr, plainTextLen:Ptr):Int;
+	@:hxmc.len(plainTextLen, 1)
+	public static function SecKeyDecrypt(key:SecKey, padding:SecPadding, cipherText:Ptr, cipherTextLen:I64, plainText:Ptr, plainTextLen:Span<I64>):Int;
 	@:deprecated
-	public static function SecKeyEncrypt(key:SecKey, padding:SecPadding, plainText:Ptr, plainTextLen:I64, cipherText:Ptr, cipherTextLen:Ptr):Int;
+	@:hxmc.len(cipherTextLen, 1)
+	public static function SecKeyEncrypt(key:SecKey, padding:SecPadding, plainText:Ptr, plainTextLen:I64, cipherText:Ptr, cipherTextLen:Span<I64>):Int;
 	@:deprecated
 	public static function SecKeyGeneratePair(parameters:NSDictionary, publicKey:Ptr, privateKey:Ptr):Int;
 	public static function SecKeyGetBlockSize(key:SecKey):I64;
 	public static function SecKeyGetTypeID():I64;
 	public static function SecKeyIsAlgorithmSupported(key:SecKey, operation:SecKeyOperationType, algorithm:NSStringArg):Bool;
 	@:deprecated
-	public static function SecKeyRawSign(key:SecKey, padding:SecPadding, dataToSign:Ptr, dataToSignLen:I64, sig:Ptr, sigLen:Ptr):Int;
+	@:hxmc.len(sigLen, 1)
+	public static function SecKeyRawSign(key:SecKey, padding:SecPadding, dataToSign:Ptr, dataToSignLen:I64, sig:Ptr, sigLen:Span<I64>):Int;
 	@:deprecated
 	public static function SecKeyRawVerify(key:SecKey, padding:SecPadding, signedData:Ptr, signedDataLen:I64, sig:Ptr, sigLen:I64):Int;
 	public static function SecKeyVerifySignature(key:SecKey, algorithm:NSStringArg, signedData:NSData, signature:NSData, error:Ptr):Bool;
@@ -208,12 +230,15 @@ import objc.NSObject;
 	public static function SecPolicyGetTypeID():I64;
 	public static function SecRandomCopyBytes(rnd:Ptr, count:I64, bytes:Ptr):Int;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static function SecRequestSharedWebCredential(fqdn:Null<NSStringArg>, account:Null<NSStringArg>, completionHandler:Block<(Null<NSArray>, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function SecTrustCopyCertificateChain(trust:SecTrust):NSArray;
 	public static function SecTrustCopyCustomAnchorCertificates(trust:SecTrust, anchors:Ptr):Int;
 	@:hxmc.retained
 	public static function SecTrustCopyExceptions(trust:SecTrust):Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function SecTrustCopyKey(trust:SecTrust):Null<SecKey>;
 	public static function SecTrustCopyPolicies(trust:SecTrust, policies:Ptr):Int;
@@ -227,7 +252,8 @@ import objc.NSObject;
 	public static function SecTrustCopyResult(trust:SecTrust):Null<NSDictionary>;
 	public static function SecTrustCreateWithCertificates(certificates:Id, policies:Null<Id>, trust:Ptr):Int;
 	@:deprecated
-	public static function SecTrustEvaluate(trust:SecTrust, result:Ptr):Int;
+	@:hxmc.len(result, 1)
+	public static function SecTrustEvaluate(trust:SecTrust, result:Span<Int>):Int;
 	@:deprecated
 	public static function SecTrustEvaluateAsync(trust:SecTrust, queue:Null<NSObject>, result:Block<(SecTrust, SecTrustResultType) -> Void>):Int;
 	public static function SecTrustEvaluateAsyncWithError(trust:SecTrust, queue:NSObject, result:Block<(SecTrust, Bool, Null<NSError>) -> Void>):Int;
@@ -235,8 +261,10 @@ import objc.NSObject;
 	@:deprecated
 	public static function SecTrustGetCertificateAtIndex(trust:SecTrust, ix:I64):Null<SecCertificate>;
 	public static function SecTrustGetCertificateCount(trust:SecTrust):I64;
-	public static function SecTrustGetNetworkFetchAllowed(trust:SecTrust, allowFetch:Ptr):Int;
-	public static function SecTrustGetTrustResult(trust:SecTrust, result:Ptr):Int;
+	@:hxmc.len(allowFetch, 1)
+	public static function SecTrustGetNetworkFetchAllowed(trust:SecTrust, allowFetch:Span<Bool>):Int;
+	@:hxmc.len(result, 1)
+	public static function SecTrustGetTrustResult(trust:SecTrust, result:Span<Int>):Int;
 	public static function SecTrustGetTypeID():I64;
 	public static function SecTrustGetVerifyTime(trust:SecTrust):Float;
 	public static function SecTrustSetAnchorCertificates(trust:SecTrust, anchorCertificates:Null<NSArray>):Int;
@@ -260,9 +288,11 @@ import objc.NSObject;
 	public static function sec_protocol_metadata_access_pre_shared_keys(metadata:NSObject, handler:Block<(NSObject, NSObject) -> Void>):Bool;
 	public static function sec_protocol_metadata_access_supported_signature_algorithms(metadata:NSObject, handler:Block<UInt16 -> Void>):Bool;
 	public static function sec_protocol_metadata_challenge_parameters_are_equal(metadataA:NSObject, metadataB:NSObject):Bool;
+	@:hxmc.available(macos >= 15.5, ios >= 18.5, maccatalyst >= 18.5)
 	public static function sec_protocol_metadata_copy_negotiated_protocol(metadata:NSObject):CString;
 	@:hxmc.retained
 	public static function sec_protocol_metadata_copy_peer_public_key(metadata:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 15.5, ios >= 18.5, maccatalyst >= 18.5)
 	public static function sec_protocol_metadata_copy_server_name(metadata:NSObject):CString;
 	@:hxmc.retained
 	public static function sec_protocol_metadata_create_secret(metadata:NSObject, label_len:I64, label:CString, exporter_length:I64):Null<NSObject>;
@@ -462,6 +492,7 @@ import objc.NSObject;
 	public static final kSecImportItemKeyID : NSString;
 	public static final kSecImportItemLabel : NSString;
 	public static final kSecImportItemTrust : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kSecImportToMemoryOnly : NSString;
 	public static final kSecKeyAlgorithmECDHKeyExchangeCofactor : NSString;
 	public static final kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA1 : NSString;
@@ -475,11 +506,17 @@ import objc.NSObject;
 	public static final kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA256 : NSString;
 	public static final kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA384 : NSString;
 	public static final kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA512 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureDigestRFC4754 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA1 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA224 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA256 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA384 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA512 : NSString;
 	public static final kSecKeyAlgorithmECDSASignatureDigestX962 : NSString;
 	public static final kSecKeyAlgorithmECDSASignatureDigestX962SHA1 : NSString;
@@ -487,10 +524,15 @@ import objc.NSObject;
 	public static final kSecKeyAlgorithmECDSASignatureDigestX962SHA256 : NSString;
 	public static final kSecKeyAlgorithmECDSASignatureDigestX962SHA384 : NSString;
 	public static final kSecKeyAlgorithmECDSASignatureDigestX962SHA512 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA1 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA224 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA256 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA384 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA512 : NSString;
 	public static final kSecKeyAlgorithmECDSASignatureMessageX962SHA1 : NSString;
 	public static final kSecKeyAlgorithmECDSASignatureMessageX962SHA224 : NSString;
@@ -555,6 +597,7 @@ import objc.NSObject;
 	public static final kSecKeyKeyExchangeParameterSharedInfo : NSString;
 	public static final kSecMatchCaseInsensitive : NSString;
 	public static final kSecMatchEmailAddressIfPresent : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kSecMatchHostOrSubdomainOfHost : NSString;
 	public static final kSecMatchIssuers : NSString;
 	public static final kSecMatchItemList : NSString;
@@ -568,10 +611,14 @@ import objc.NSObject;
 	public static final kSecMatchValidOnDate : NSString;
 	public static final kSecPolicyAppleCodeSigning : NSString;
 	public static final kSecPolicyAppleEAP : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecPolicyAppleEAPClient : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecPolicyAppleEAPServer : NSString;
 	public static final kSecPolicyAppleIDValidation : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecPolicyAppleIPSecClient : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecPolicyAppleIPSecServer : NSString;
 	public static final kSecPolicyAppleIPsec : NSString;
 	public static final kSecPolicyApplePassbookSigning : NSString;
@@ -579,7 +626,9 @@ import objc.NSObject;
 	public static final kSecPolicyAppleRevocation : NSString;
 	public static final kSecPolicyAppleSMIME : NSString;
 	public static final kSecPolicyAppleSSL : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecPolicyAppleSSLClient : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecPolicyAppleSSLServer : NSString;
 	public static final kSecPolicyAppleTimeStamping : NSString;
 	public static final kSecPolicyAppleX509Basic : NSString;
@@ -598,6 +647,7 @@ import objc.NSObject;
 	public static final kSecReturnData : NSString;
 	public static final kSecReturnPersistentRef : NSString;
 	public static final kSecReturnRef : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kSecSharedPassword : NSString;
 	public static final kSecTrustCertificateTransparency : NSString;
 	@:deprecated
@@ -605,7 +655,9 @@ import objc.NSObject;
 	public static final kSecTrustEvaluationDate : NSString;
 	public static final kSecTrustExtendedValidation : NSString;
 	public static final kSecTrustOrganizationName : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecTrustQCStatements : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final kSecTrustQWACValidation : NSString;
 	public static final kSecTrustResultValue : NSString;
 	public static final kSecTrustRevocationChecked : NSString;

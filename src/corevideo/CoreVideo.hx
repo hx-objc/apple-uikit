@@ -9,6 +9,7 @@ import foundation.NSDictionary;
 import foundation.NSString;
 import foundation.NSStringArg;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import iosurface.IOSurface;
@@ -19,12 +20,16 @@ import metal.MTLTexture;
 import opengles.EAGLContext;
 
 @:hxmc.c @:hxmc.framework("CoreVideo") extern class CoreVideo {
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
-	public static function CVBufferCopyAttachment(buffer:CVBuffer, key:NSStringArg, attachmentMode:Ptr):Id;
+	@:hxmc.len(attachmentMode, 1)
+	public static function CVBufferCopyAttachment(buffer:CVBuffer, key:NSStringArg, attachmentMode:Span<Int>):Id;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function CVBufferCopyAttachments(buffer:CVBuffer, attachmentMode:CVAttachmentMode):Null<NSDictionary>;
 	@:deprecated
 	public static function CVBufferGetAttachments(buffer:CVBuffer, attachmentMode:CVAttachmentMode):Null<NSDictionary>;
+	@:hxmc.available(macos >= 12.0)
 	public static function CVBufferHasAttachment(buffer:CVBuffer, key:NSStringArg):Bool;
 	public static function CVBufferPropagateAttachments(sourceBuffer:CVBuffer, destinationBuffer:CVBuffer):Void;
 	public static function CVBufferRemoveAllAttachments(buffer:CVBuffer):Void;
@@ -36,12 +41,19 @@ import opengles.EAGLContext;
 	public static function CVImageBufferGetDisplaySize(imageBuffer:CVBuffer):CGSize;
 	public static function CVImageBufferGetEncodedSize(imageBuffer:CVBuffer):CGSize;
 	public static function CVImageBufferIsFlipped(imageBuffer:CVBuffer):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function CVIsCompressedPixelFormatAvailable(pixelFormatType:Int):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CVMetalBufferCacheCreate(allocator:Null<CFAllocator>, cacheAttributes:Null<NSDictionary>, metalDevice:MTLDevice, cacheOut:Ptr):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CVMetalBufferCacheCreateBufferFromImage(allocator:Null<CFAllocator>, bufferCache:CVMetalBufferCache, imageBuffer:CVBuffer, bufferOut:Ptr):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CVMetalBufferCacheFlush(bufferCache:CVMetalBufferCache, options:I64):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CVMetalBufferCacheGetTypeID():I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CVMetalBufferGetBuffer(buffer:CVBuffer):Null<MTLBuffer>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CVMetalBufferGetTypeID():I64;
 	public static function CVMetalTextureCacheCreate(allocator:Null<CFAllocator>, cacheAttributes:Null<NSDictionary>, metalDevice:MTLDevice, textureAttributes:Null<NSDictionary>, cacheOut:Ptr):Int;
 	public static function CVMetalTextureCacheCreateTextureFromImage(allocator:Null<CFAllocator>, textureCache:CVMetalTextureCache, sourceImage:CVBuffer, textureAttributes:Null<NSDictionary>, pixelFormat:MTLPixelFormat, width:I64, height:I64, planeIndex:I64, textureOut:Ptr):Int;
@@ -69,6 +81,7 @@ import opengles.EAGLContext;
 	public static function CVOpenGLESTextureGetTypeID():I64;
 	@:deprecated
 	public static function CVOpenGLESTextureIsFlipped(image:CVBuffer):Bool;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function CVPixelBufferCopyCreationAttributes(pixelBuffer:CVBuffer):NSDictionary;
 	public static function CVPixelBufferCreate(allocator:Null<CFAllocator>, width:I64, height:I64, pixelFormatType:Int, pixelBufferAttributes:Null<NSDictionary>, pixelBufferOut:Ptr):Int;
@@ -82,7 +95,11 @@ import opengles.EAGLContext;
 	public static function CVPixelBufferGetBytesPerRow(pixelBuffer:CVBuffer):I64;
 	public static function CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer:CVBuffer, planeIndex:I64):I64;
 	public static function CVPixelBufferGetDataSize(pixelBuffer:CVBuffer):I64;
-	public static function CVPixelBufferGetExtendedPixels(pixelBuffer:CVBuffer, extraColumnsOnLeft:Ptr, extraColumnsOnRight:Ptr, extraRowsOnTop:Ptr, extraRowsOnBottom:Ptr):Void;
+	@:hxmc.len(extraColumnsOnLeft, 1)
+	@:hxmc.len(extraColumnsOnRight, 1)
+	@:hxmc.len(extraRowsOnTop, 1)
+	@:hxmc.len(extraRowsOnBottom, 1)
+	public static function CVPixelBufferGetExtendedPixels(pixelBuffer:CVBuffer, extraColumnsOnLeft:Span<I64>, extraColumnsOnRight:Span<I64>, extraRowsOnTop:Span<I64>, extraRowsOnBottom:Span<I64>):Void;
 	public static function CVPixelBufferGetHeight(pixelBuffer:CVBuffer):I64;
 	public static function CVPixelBufferGetHeightOfPlane(pixelBuffer:CVBuffer, planeIndex:I64):I64;
 	public static function CVPixelBufferGetPixelFormatType(pixelBuffer:CVBuffer):Int;
@@ -106,6 +123,7 @@ import opengles.EAGLContext;
 	@:hxmc.retained
 	public static function CVPixelFormatDescriptionCreateWithPixelFormatType(allocator:Null<CFAllocator>, pixelFormat:Int):Null<NSDictionary>;
 	public static function CVPixelFormatDescriptionRegisterDescriptionWithPixelFormatType(description:NSDictionary, pixelFormat:Int):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function CVPixelFormatTypeCopyFourCharCodeString(pixelFormat:Int):NSString;
 	public static function CVTransferFunctionGetIntegerCodePointForString(transferFunctionString:Null<NSStringArg>):Int;
@@ -119,6 +137,7 @@ import opengles.EAGLContext;
 	public static final kCVImageBufferAlphaChannelModeKey : NSString;
 	public static final kCVImageBufferAlphaChannelMode_PremultipliedAlpha : NSString;
 	public static final kCVImageBufferAlphaChannelMode_StraightAlpha : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCVImageBufferAmbientViewingEnvironmentKey : NSString;
 	public static final kCVImageBufferCGColorSpaceKey : NSString;
 	public static final kCVImageBufferChromaLocationBottomFieldKey : NSString;
@@ -150,16 +169,27 @@ import opengles.EAGLContext;
 	public static final kCVImageBufferContentLightLevelInfoKey : NSString;
 	public static final kCVImageBufferDisplayDimensionsKey : NSString;
 	public static final kCVImageBufferDisplayHeightKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangleKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangleStereoLeftKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangleStereoRightKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_LeftEdgePointsKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_RectangleHeightKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_RectangleLeftKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_RectangleTopKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_RectangleWidthKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_ReferenceRasterHeightKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_ReferenceRasterWidthKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferDisplayMaskRectangle_RightEdgePointsKey : NSString;
 	public static final kCVImageBufferDisplayWidthKey : NSString;
 	public static final kCVImageBufferFieldCountKey : NSString;
@@ -169,17 +199,23 @@ import opengles.EAGLContext;
 	public static final kCVImageBufferFieldDetailTemporalBottomFirst : NSString;
 	public static final kCVImageBufferFieldDetailTemporalTopFirst : NSString;
 	public static final kCVImageBufferGammaLevelKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCVImageBufferHorizontalDisparityAdjustmentKey : NSString;
 	public static final kCVImageBufferICCProfileKey : NSString;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	public static final kCVImageBufferLogTransferFunctionKey : NSString;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	public static final kCVImageBufferLogTransferFunction_AppleLog : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCVImageBufferLogTransferFunction_AppleLog2 : NSString;
 	public static final kCVImageBufferMasteringDisplayColorVolumeKey : NSString;
 	public static final kCVImageBufferPixelAspectRatioHorizontalSpacingKey : NSString;
 	public static final kCVImageBufferPixelAspectRatioKey : NSString;
 	public static final kCVImageBufferPixelAspectRatioVerticalSpacingKey : NSString;
 	public static final kCVImageBufferPreferredCleanApertureKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCVImageBufferRegionOfInterestKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCVImageBufferSceneIlluminationKey : NSString;
 	public static final kCVImageBufferTransferFunctionKey : NSString;
 	public static final kCVImageBufferTransferFunction_ITU_R_2020 : NSString;
@@ -201,6 +237,7 @@ import opengles.EAGLContext;
 	public static final kCVImageBufferYCbCrMatrix_P3_D65 : NSString;
 	public static final kCVImageBufferYCbCrMatrix_SMPTE_240M_1995 : NSString;
 	public static final kCVIndefiniteTime : CVTime;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCVMetalBufferCacheMaximumBufferAgeKey : NSString;
 	public static final kCVMetalTextureCacheMaximumTextureAgeKey : NSString;
 	public static final kCVMetalTextureStorageMode : NSString;
@@ -219,6 +256,7 @@ import opengles.EAGLContext;
 	public static final kCVPixelBufferIOSurfaceOpenGLESFBOCompatibilityKey : NSString;
 	public static final kCVPixelBufferIOSurfaceOpenGLESTextureCompatibilityKey : NSString;
 	public static final kCVPixelBufferIOSurfacePropertiesKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCVPixelBufferIOSurfacePurgeableKey : NSString;
 	public static final kCVPixelBufferMemoryAllocatorKey : NSString;
 	public static final kCVPixelBufferMetalCompatibilityKey : NSString;
@@ -231,19 +269,31 @@ import opengles.EAGLContext;
 	public static final kCVPixelBufferPoolFreeBufferNotification : NSString;
 	public static final kCVPixelBufferPoolMaximumBufferAgeKey : NSString;
 	public static final kCVPixelBufferPoolMinimumBufferCountKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_BlackLevel : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_ColorMatrix : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_GainFactor : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCVPixelBufferProResRAWKey_MetadataExtension : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_RecommendedCrop : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_SenselSitingOffsets : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_WhiteBalanceBlueFactor : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_WhiteBalanceCCT : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_WhiteBalanceRedFactor : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferProResRAWKey_WhiteLevel : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCVPixelBufferVersatileBayerKey_BayerPattern : NSString;
 	public static final kCVPixelBufferWidthKey : NSString;
 	public static final kCVPixelFormatBitsPerBlock : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCVPixelFormatBitsPerComponent : NSString;
 	public static final kCVPixelFormatBlackBlock : NSString;
 	public static final kCVPixelFormatBlockHeight : NSString;
@@ -262,6 +312,7 @@ import opengles.EAGLContext;
 	public static final kCVPixelFormatContainsAlpha : NSString;
 	public static final kCVPixelFormatContainsGrayscale : NSString;
 	public static final kCVPixelFormatContainsRGB : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kCVPixelFormatContainsSenselArray : NSString;
 	public static final kCVPixelFormatContainsYCbCr : NSString;
 	public static final kCVPixelFormatFillExtendedPixelsCallback : NSString;

@@ -8,9 +8,12 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.UIPhotoSearchSuggestion;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHPickerSearchText extends NSObject implements NSCopying {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27) extern class PHPickerSearchText extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	static function alloc():PHPickerSearchText;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function initWithString(string:NSStringArg):PHPickerSearchText;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function initWithPhotoSearchSuggestion(suggestion:UIPhotoSearchSuggestion):PHPickerSearchText;
 	function copyWithZone(zone:Ptr):Id;
 }

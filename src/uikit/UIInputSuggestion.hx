@@ -3,7 +3,9 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIInputSuggestion extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class UIInputSuggestion extends NSObject {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():UIInputSuggestion;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():UIInputSuggestion;
 }

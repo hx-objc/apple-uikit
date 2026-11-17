@@ -9,17 +9,29 @@ import foundation.NSUUID;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEDownloadMonitor extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class BEDownloadMonitor extends NSObject {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():BEDownloadMonitor;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var identifier(get, never) : NSUUID;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_identifier():NSUUID;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var sourceURL(get, never) : NSURL;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_sourceURL():NSURL;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var destinationURL(get, never) : NSURL;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_destinationURL():NSURL;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function initWithSourceURL(sourceURL:NSURL, destinationURL:NSURL, observedProgress:NSProgress, liveActivityAccessToken:NSData):BEDownloadMonitor;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function useDownloadsFolderWithPlaceholderType(type:Null<UTType>, finalFileCreatedHandler:Null<BEDownloadMonitorLocation> -> Void):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function beginMonitoring(completion:(Null<BEDownloadMonitorLocation>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function resumeMonitoring(url:NSURL, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function createAccessToken():Null<NSData>;
 }

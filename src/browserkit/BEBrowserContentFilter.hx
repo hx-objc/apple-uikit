@@ -4,8 +4,11 @@ package browserkit;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserContentFilter extends NSObject {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0) extern class BEBrowserContentFilter extends NSObject {
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():BEBrowserContentFilter;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function evaluateURL(url:NSURL, completionHandler:Bool -> Void):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	override function init():BEBrowserContentFilter;
 }

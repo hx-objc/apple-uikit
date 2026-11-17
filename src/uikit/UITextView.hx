@@ -37,8 +37,11 @@ import hxmc.objc.ObjCClass;
 	var selectedRange(get, set) : NSRange;
 	function get_selectedRange():NSRange;
 	function set_selectedRange(v:NSRange):NSRange;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var selectedRanges(get, set) : Null<NSArray<NSValue>>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_selectedRanges():Null<NSArray<NSValue>>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_selectedRanges(v:Null<NSArray<NSValue>>):Null<NSArray<NSValue>>;
 	var editable(get, set) : Bool;
 	@:selector("isEditable")
@@ -72,7 +75,9 @@ import hxmc.objc.ObjCClass;
 	var textContainerInset(get, set) : UIEdgeInsets;
 	function get_textContainerInset():UIEdgeInsets;
 	function set_textContainerInset(v:UIEdgeInsets):UIEdgeInsets;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var textLayoutManager(get, never) : Null<NSTextLayoutManager>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_textLayoutManager():Null<NSTextLayoutManager>;
 	var layoutManager(get, never) : NSLayoutManager;
 	function get_layoutManager():NSLayoutManager;
@@ -84,33 +89,59 @@ import hxmc.objc.ObjCClass;
 	var usesStandardTextScaling(get, set) : Bool;
 	function get_usesStandardTextScaling():Bool;
 	function set_usesStandardTextScaling(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findInteraction(get, never) : Null<UIFindInteraction>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findInteraction():Null<UIFindInteraction>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findInteractionEnabled(get, set) : Bool;
 	@:selector("isFindInteractionEnabled")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findInteractionEnabled():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_findInteractionEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var borderStyle(get, set) : UITextViewBorderStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_borderStyle():UITextViewBorderStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_borderStyle(v:UITextViewBorderStyle):UITextViewBorderStyle;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textHighlightAttributes(get, set) : Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textHighlightAttributes():Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_textHighlightAttributes(v:Null<NSDictionary<NSString, Id>>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var writingToolsActive(get, never) : Bool;
 	@:selector("isWritingToolsActive")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_writingToolsActive():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var writingToolsBehavior(get, set) : UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_writingToolsBehavior():UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_writingToolsBehavior(v:UIWritingToolsBehavior):UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var allowedWritingToolsResultOptions(get, set) : UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_allowedWritingToolsResultOptions():UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowedWritingToolsResultOptions(v:UIWritingToolsResultOptions):UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var subclassForWritingToolsCoordinator(get, never) : ObjCClass;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_subclassForWritingToolsCoordinator():ObjCClass;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var writingToolsCoordinator(get, never) : UIWritingToolsCoordinator;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_writingToolsCoordinator():UIWritingToolsCoordinator;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var textFormattingConfiguration(get, set) : Null<UITextFormattingViewControllerConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_textFormattingConfiguration():Null<UITextFormattingViewControllerConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_textFormattingConfiguration(v:Null<UITextFormattingViewControllerConfiguration>):Null<UITextFormattingViewControllerConfiguration>;
 	var interactionState(get, set) : Id;
 	function get_interactionState():Id;
@@ -137,8 +168,11 @@ import hxmc.objc.ObjCClass;
 	var adjustsFontForContentSizeCategory(get, set) : Bool;
 	function get_adjustsFontForContentSizeCategory():Bool;
 	function set_adjustsFontForContentSizeCategory(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sizingRule(get, set) : UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sizingRule():UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_sizingRule(v:UILetterformAwareSizingRule):UILetterformAwareSizingRule;
 	var textDragDelegate(get, set) : Null<UITextDragDelegate>;
 	function get_textDragDelegate():Null<UITextDragDelegate>;
@@ -165,14 +199,22 @@ import hxmc.objc.ObjCClass;
 	function scrollRangeToVisible(range:NSRange):Void;
 	@:selector("initWithFrame:textContainer:")
 	function initWithFrameTextContainer(frame:CGRect, textContainer:Null<NSTextContainer>):UITextView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function textViewUsingTextLayoutManager(usingTextLayoutManager:Bool):UITextView;
 	override function initWithCoder(coder:NSCoder):Null<UITextView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function drawTextHighlightBackgroundForTextRange(textRange:NSTextRange, origin:CGPoint):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function registerTextAttachmentViewProviderReusePolicy(policy:UITextAttachmentViewProviderReusePolicy, forTextAttachmentViewProviderType:ObjCClass):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function textViewportLayoutController(textViewportLayoutController:NSTextViewportLayoutController, configureRenderingSurfaceForTextLayoutFragment:NSTextLayoutFragment):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function viewportBoundsForTextViewportLayoutController(textViewportLayoutController:NSTextViewportLayoutController):CGRect;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function textViewportLayoutControllerWillLayout(textViewportLayoutController:NSTextViewportLayoutController):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function textViewportLayoutControllerDidLayout(textViewportLayoutController:NSTextViewportLayoutController):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function textViewportLayoutControllerReceivedSetNeedsLayout(textViewportLayoutController:NSTextViewportLayoutController):Void;
 	function textInRange(range:UITextRange):Null<NSString>;
 	function replaceRange(range:UITextRange, withText:NSStringArg):Void;
@@ -196,10 +238,15 @@ import hxmc.objc.ObjCClass;
 	function insertText(text:NSStringArg):Void;
 	function deleteBackward():Void;
 	@:selector("findInteraction:sessionForView:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function findInteractionSessionForView(interaction:UIFindInteraction, sessionForView:UIView):Null<UIFindSession>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function compareFoundRange(foundRange:UITextRange, toRange:UITextRange, inDocument:Null<NSCopying>):NSComparisonResult;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performTextSearchWithQueryString(string:NSStringArg, usingOptions:UITextSearchOptions, resultAggregator:UITextSearchAggregator):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function decorateFoundTextRange(range:UITextRange, inDocument:Null<NSCopying>, usingStyle:UITextSearchFoundTextStyle):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function clearAllDecoratedFoundText():Void;
 	override function init():UITextView;
 	override function initWithFrame(frame:CGRect):UITextView;
@@ -214,5 +261,6 @@ import hxmc.objc.ObjCClass;
 	@:selector("closestPositionToPoint:withinRange:")
 	function closestPositionToPointWithinRange(point:CGPoint, withinRange:UITextRange):Null<UITextPosition>;
 	@:selector("textViewportLayoutController:configureRenderingSurfaceForTextLayoutFragment:")
+	@:hxmc.available(macos >= 12.0)
 	function textViewportLayoutControllerConfigureRenderingSurfaceForTextLayoutFragment(textViewportLayoutController:NSTextViewportLayoutController, configureRenderingSurfaceForTextLayoutFragment:NSTextLayoutFragment):Void;
 }

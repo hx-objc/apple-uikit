@@ -4,29 +4,53 @@ package screencapturekit;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCStreamConfiguration extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2) extern class SCStreamConfiguration extends NSObject {
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	static function alloc():SCStreamConfiguration;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	var width(get, set) : I64;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function get_width():I64;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function set_width(v:I64):I64;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	var height(get, set) : I64;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function get_height():I64;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function set_height(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	var capturesAudio(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_capturesAudio():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_capturesAudio(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	var sampleRate(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_sampleRate():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_sampleRate(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	var channelCount(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_channelCount():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_channelCount(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	var excludesCurrentProcessAudio(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_excludesCurrentProcessAudio():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_excludesCurrentProcessAudio(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	var captureDynamicRange(get, set) : SCCaptureDynamicRange;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_captureDynamicRange():SCCaptureDynamicRange;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_captureDynamicRange(v:SCCaptureDynamicRange):SCCaptureDynamicRange;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	static function streamConfigurationWithPreset(preset:SCStreamConfigurationPreset):SCStreamConfiguration;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	override function init():SCStreamConfiguration;
 }

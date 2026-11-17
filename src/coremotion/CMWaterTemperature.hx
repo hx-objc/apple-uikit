@@ -11,18 +11,26 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMWaterTemperature extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("CoreMotion") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class CMWaterTemperature extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():CMWaterTemperature;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var date(get, never) : NSDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_date():NSDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var temperature(get, never) : NSMeasurement<NSUnitTemperature>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_temperature():NSMeasurement<NSUnitTemperature>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var temperatureUncertainty(get, never) : NSMeasurement<NSUnitTemperature>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_temperatureUncertainty():NSMeasurement<NSUnitTemperature>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CMWaterTemperature>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():CMWaterTemperature;
 }

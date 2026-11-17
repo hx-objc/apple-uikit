@@ -4,6 +4,7 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderDomainRemovalMode(I64) to I64 {
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	var RemoveAll = 0;
 	inline function new(v:I64) this = v;
 }

@@ -5,16 +5,27 @@ import foundation.NSMeasurement;
 import foundation.NSUnitLength;
 import objc.NSObject;
 
-@:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMWaterSubmersionManager extends NSObject {
+@:hxmc.framework("CoreMotion") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class CMWaterSubmersionManager extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():CMWaterSubmersionManager;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<CMWaterSubmersionManagerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<CMWaterSubmersionManagerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<CMWaterSubmersionManagerDelegate>):Null<CMWaterSubmersionManagerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var waterSubmersionAvailable(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_waterSubmersionAvailable():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var authorizationStatus(get, never) : CMAuthorizationStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_authorizationStatus():CMAuthorizationStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var maximumDepth(get, never) : Null<NSMeasurement<NSUnitLength>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_maximumDepth():Null<NSMeasurement<NSUnitLength>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():CMWaterSubmersionManager;
 }

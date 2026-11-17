@@ -4,14 +4,23 @@ package touchcontroller;
 import hxmc.I64;
 
 enum abstract TCControlLayoutAnchor(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var TopLeft = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var TopCenter = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var TopRight = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var CenterLeft = 3;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Center = 4;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var CenterRight = 5;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var BottomLeft = 6;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var BottomCenter = 7;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var BottomRight = 8;
 	inline function new(v:I64) this = v;
 }

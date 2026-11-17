@@ -5,7 +5,9 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEAccessibilityRemoteElement extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class BEAccessibilityRemoteElement extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():BEAccessibilityRemoteElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithIdentifier(identifier:NSStringArg, hostPid:Int):Id;
 }

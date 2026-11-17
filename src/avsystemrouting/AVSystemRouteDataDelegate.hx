@@ -5,6 +5,7 @@ import foundation.NSData;
 import foundation.NSError;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVSystemRouteDataDelegate") extern interface AVSystemRouteDataDelegate extends NSObjectProtocol {
+@:hxmc.objc("AVSystemRouteDataDelegate") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVSystemRouteDataDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function receiveData(data:NSData, completionHandler:Null<NSError> -> Void):Void;
 }

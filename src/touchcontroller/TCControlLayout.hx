@@ -6,22 +6,39 @@ import coregraphics.CGSize;
 import hxmc.I64;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("TCControlLayout") extern interface TCControlLayout extends NSObjectProtocol {
+@:hxmc.objc("TCControlLayout") @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern interface TCControlLayout extends NSObjectProtocol {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var anchor(get, set) : TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_anchor():TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_anchor(v:TCControlLayoutAnchor):TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var anchorCoordinateSystem(get, set) : TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_anchorCoordinateSystem():TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_anchorCoordinateSystem(v:TCControlLayoutAnchorCoordinateSystem):TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var offset(get, set) : CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_offset():CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_offset(v:CGPoint):CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var zIndex(get, set) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_zIndex():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_zIndex(v:I64):I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_size():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var position(get, never) : CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_position():CGPoint;
 }

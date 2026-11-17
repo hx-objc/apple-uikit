@@ -4,9 +4,13 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKPayLaterDisplayStyle(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Standard = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Badge = 1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Checkout = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Price = 3;
 	inline function new(v:I64) this = v;
 }

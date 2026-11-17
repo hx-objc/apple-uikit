@@ -7,6 +7,7 @@ import foundation.NSProgress;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderServicing") extern interface NSFileProviderServicing extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderServicing") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderServicing extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function supportedServiceSourcesForItemIdentifier(itemIdentifier:NSStringArg, completionHandler:(Null<NSArray<NSFileProviderServiceSource>>, Null<NSError>) -> Void):NSProgress;
 }

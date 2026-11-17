@@ -4,14 +4,23 @@ package fileprovider;
 import foundation.NSData;
 import objc.NSObject;
 
-@:hxmc.framework("FileProvider") @:hxmc.objc extern class NSFileProviderItemVersion extends NSObject {
+@:hxmc.framework("FileProvider") @:hxmc.objc @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern class NSFileProviderItemVersion extends NSObject {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():NSFileProviderItemVersion;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	static var beforeFirstSyncComponent(get, never) : NSData;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function get_beforeFirstSyncComponent():NSData;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var contentVersion(get, never) : NSData;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_contentVersion():NSData;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var metadataVersion(get, never) : NSData;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_metadataVersion():NSData;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function initWithContentVersion(contentVersion:NSData, metadataVersion:NSData):NSFileProviderItemVersion;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():NSFileProviderItemVersion;
 }

@@ -17,13 +17,17 @@ import objc.NSObjectProtocol;
 	function get_name():NSStringArg;
 	var registryID(get, never) : I64;
 	function get_registryID():I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var architecture(get, never) : MTLArchitecture;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_architecture():MTLArchitecture;
 	var maxThreadsPerThreadgroup(get, never) : MTLSize;
 	function get_maxThreadsPerThreadgroup():MTLSize;
 	var hasUnifiedMemory(get, never) : Bool;
 	function get_hasUnifiedMemory():Bool;
+	@:hxmc.available(ios >= 16.0)
 	var recommendedMaxWorkingSetSize(get, never) : I64;
+	@:hxmc.available(ios >= 16.0)
 	function get_recommendedMaxWorkingSetSize():I64;
 	var readWriteTextureSupport(get, never) : MTLReadWriteTextureTier;
 	function get_readWriteTextureSupport():MTLReadWriteTextureTier;
@@ -32,15 +36,25 @@ import objc.NSObjectProtocol;
 	var rasterOrderGroupsSupported(get, never) : Bool;
 	@:selector("areRasterOrderGroupsSupported")
 	function get_rasterOrderGroupsSupported():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supports32BitFloatFiltering(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supports32BitFloatFiltering():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supports32BitMSAA(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supports32BitMSAA():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supportsQueryTextureLOD(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportsQueryTextureLOD():Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.4, maccatalyst >= 16.4)
 	var supportsBCTextureCompression(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.4, maccatalyst >= 16.4)
 	function get_supportsBCTextureCompression():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supportsPullModelInterpolation(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportsPullModelInterpolation():Bool;
 	var barycentricCoordsSupported(get, never) : Bool;
 	@:selector("areBarycentricCoordsSupported")
@@ -57,33 +71,55 @@ import objc.NSObjectProtocol;
 	var programmableSamplePositionsSupported(get, never) : Bool;
 	@:selector("areProgrammableSamplePositionsSupported")
 	function get_programmableSamplePositionsSupported():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var sparseTileSizeInBytes(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_sparseTileSizeInBytes():I64;
 	var maxBufferLength(get, never) : I64;
 	function get_maxBufferLength():I64;
 	var counterSets(get, never) : Null<NSArray<MTLCounterSet>>;
 	function get_counterSets():Null<NSArray<MTLCounterSet>>;
+	@:hxmc.available(macos >= 11.0)
 	var supportsDynamicLibraries(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportsDynamicLibraries():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var supportsRenderDynamicLibraries(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_supportsRenderDynamicLibraries():Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var supportsPlacementSparse(get, never) : Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_supportsPlacementSparse():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supportsRaytracing(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportsRaytracing():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supportsFunctionPointers(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportsFunctionPointers():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var supportsFunctionPointersFromRender(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_supportsFunctionPointersFromRender():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var supportsRaytracingFromRender(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_supportsRaytracingFromRender():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var supportsPrimitiveMotionBlur(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportsPrimitiveMotionBlur():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 26.0, maccatalyst >= 26.0)
 	var maximumConcurrentCompilationTaskCount(get, never) : I64;
+	@:hxmc.available(macos >= 13.3, ios >= 26.0, maccatalyst >= 26.0)
 	function get_maximumConcurrentCompilationTaskCount():I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function newLogStateWithDescriptor(descriptor:MTLLogStateDescriptor, error:Ptr):Null<MTLLogState>;
 	function newCommandQueue():Null<MTLCommandQueue>;
 	function newCommandQueueWithMaxCommandBufferCount(maxCommandBufferCount:I64):Null<MTLCommandQueue>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function newCommandQueueWithDescriptor(descriptor:MTLCommandQueueDescriptor):Null<MTLCommandQueue>;
 	function heapTextureSizeAndAlignWithDescriptor(desc:MTLTextureDescriptor):MTLSizeAndAlign;
 	function heapBufferSizeAndAlignWithLength(length:I64, options:MTLResourceOptions):MTLSizeAndAlign;
@@ -110,8 +146,10 @@ import objc.NSObjectProtocol;
 	@:selector("newLibraryWithSource:options:completionHandler:")
 	function newLibraryWithSourceOptionsCompletionHandler(source:NSStringArg, options:Null<MTLCompileOptions>, completionHandler:(Null<MTLLibrary>, Null<NSError>) -> Void):Void;
 	@:selector("newLibraryWithStitchedDescriptor:error:")
+	@:hxmc.available(macos >= 12.0)
 	function newLibraryWithStitchedDescriptorError(descriptor:MTLStitchedLibraryDescriptor, error:Ptr):Null<MTLLibrary>;
 	@:selector("newLibraryWithStitchedDescriptor:completionHandler:")
+	@:hxmc.available(macos >= 12.0)
 	function newLibraryWithStitchedDescriptorCompletionHandler(descriptor:MTLStitchedLibraryDescriptor, completionHandler:(Null<MTLLibrary>, Null<NSError>) -> Void):Void;
 	@:selector("newRenderPipelineStateWithDescriptor:error:")
 	function newRenderPipelineStateWithDescriptorError(descriptor:MTLRenderPipelineDescriptor, error:Ptr):Null<MTLRenderPipelineState>;
@@ -141,16 +179,22 @@ import objc.NSObjectProtocol;
 	function minimumLinearTextureAlignmentForPixelFormat(format:MTLPixelFormat):I64;
 	function minimumTextureBufferAlignmentForPixelFormat(format:MTLPixelFormat):I64;
 	@:selector("newRenderPipelineStateWithTileDescriptor:options:reflection:error:")
+	@:hxmc.available(macos >= 11.0)
 	function newRenderPipelineStateWithTileDescriptorOptionsReflectionError(descriptor:MTLTileRenderPipelineDescriptor, options:MTLPipelineOption, reflection:Ptr, error:Ptr):Null<MTLRenderPipelineState>;
 	@:selector("newRenderPipelineStateWithTileDescriptor:options:completionHandler:")
+	@:hxmc.available(macos >= 11.0)
 	function newRenderPipelineStateWithTileDescriptorOptionsCompletionHandler(descriptor:MTLTileRenderPipelineDescriptor, options:MTLPipelineOption, completionHandler:(Null<MTLRenderPipelineState>, Null<MTLRenderPipelineReflection>, Null<NSError>) -> Void):Void;
 	@:selector("newRenderPipelineStateWithMeshDescriptor:options:reflection:error:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function newRenderPipelineStateWithMeshDescriptorOptionsReflectionError(descriptor:MTLMeshRenderPipelineDescriptor, options:MTLPipelineOption, reflection:Ptr, error:Ptr):Null<MTLRenderPipelineState>;
 	@:selector("newRenderPipelineStateWithMeshDescriptor:options:completionHandler:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function newRenderPipelineStateWithMeshDescriptorOptionsCompletionHandler(descriptor:MTLMeshRenderPipelineDescriptor, options:MTLPipelineOption, completionHandler:(Null<MTLRenderPipelineState>, Null<MTLRenderPipelineReflection>, Null<NSError>) -> Void):Void;
 	function getDefaultSamplePositions(positions:Ptr, count:I64):Void;
 	function newArgumentEncoderWithArguments(arguments:NSArray<MTLArgumentDescriptor>):Null<MTLArgumentEncoder>;
+	@:hxmc.available(macos >= version("10.15.4"))
 	function supportsRasterizationRateMapWithLayerCount(layerCount:I64):Bool;
+	@:hxmc.available(macos >= version("10.15.4"))
 	function newRasterizationRateMapWithDescriptor(descriptor:MTLRasterizationRateMapDescriptor):Null<MTLRasterizationRateMap>;
 	function newIndirectCommandBufferWithDescriptor(descriptor:MTLIndirectCommandBufferDescriptor, maxCommandCount:I64, options:MTLResourceOptions):Null<MTLIndirectCommandBuffer>;
 	function newEvent():Null<MTLEvent>;
@@ -158,58 +202,99 @@ import objc.NSObjectProtocol;
 	function newSharedEventWithHandle(sharedEventHandle:MTLSharedEventHandle):Null<MTLSharedEvent>;
 	@:selector("newIOHandleWithURL:error:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function newIOHandleWithURLError(url:NSURL, error:Ptr):Null<MTLIOFileHandle>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function newIOCommandQueueWithDescriptor(descriptor:MTLIOCommandQueueDescriptor, error:Ptr):Null<MTLIOCommandQueue>;
 	@:selector("newIOHandleWithURL:compressionMethod:error:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function newIOHandleWithURLCompressionMethodError(url:NSURL, compressionMethod:MTLIOCompressionMethod, error:Ptr):Null<MTLIOFileHandle>;
 	@:selector("newIOFileHandleWithURL:error:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function newIOFileHandleWithURLError(url:NSURL, error:Ptr):Null<MTLIOFileHandle>;
 	@:selector("newIOFileHandleWithURL:compressionMethod:error:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function newIOFileHandleWithURLCompressionMethodError(url:NSURL, compressionMethod:MTLIOCompressionMethod, error:Ptr):Null<MTLIOFileHandle>;
 	@:selector("sparseTileSizeWithTextureType:pixelFormat:sampleCount:")
+	@:hxmc.available(macos >= 11.0)
 	function sparseTileSizeWithTextureTypePixelFormatSampleCount(textureType:MTLTextureType, pixelFormat:MTLPixelFormat, sampleCount:I64):MTLSize;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function convertSparsePixelRegions(pixelRegions:Ptr, toTileRegions:Ptr, withTileSize:MTLSize, alignmentMode:MTLSparseTextureRegionAlignmentMode, numRegions:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function convertSparseTileRegions(tileRegions:Ptr, toPixelRegions:Ptr, withTileSize:MTLSize, numRegions:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function sparseTileSizeInBytesForSparsePageSize(sparsePageSize:MTLSparsePageSize):I64;
 	@:selector("sparseTileSizeWithTextureType:pixelFormat:sampleCount:sparsePageSize:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function sparseTileSizeWithTextureTypePixelFormatSampleCountSparsePageSize(textureType:MTLTextureType, pixelFormat:MTLPixelFormat, sampleCount:I64, sparsePageSize:MTLSparsePageSize):MTLSize;
 	function newCounterSampleBufferWithDescriptor(descriptor:MTLCounterSampleBufferDescriptor, error:Ptr):Null<MTLCounterSampleBuffer>;
 	function sampleTimestamps(cpuTimestamp:Ptr, gpuTimestamp:Ptr):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function newArgumentEncoderWithBufferBinding(bufferBinding:MTLBufferBinding):MTLArgumentEncoder;
+	@:hxmc.available(macos >= 11.0)
 	function supportsCounterSampling(samplingPoint:MTLCounterSamplingPoint):Bool;
+	@:hxmc.available(macos >= version("10.15.4"))
 	function supportsVertexAmplificationCount(count:I64):Bool;
+	@:hxmc.available(macos >= 11.0)
 	function newDynamicLibrary(library:MTLLibrary, error:Ptr):Null<MTLDynamicLibraryProtocol>;
+	@:hxmc.available(macos >= 11.0)
 	function newDynamicLibraryWithURL(url:NSURL, error:Ptr):Null<MTLDynamicLibraryProtocol>;
+	@:hxmc.available(macos >= 11.0)
 	function newBinaryArchiveWithDescriptor(descriptor:MTLBinaryArchiveDescriptor, error:Ptr):Null<MTLBinaryArchive>;
+	@:hxmc.available(macos >= 11.0)
 	function accelerationStructureSizesWithDescriptor(descriptor:MTLAccelerationStructureDescriptor):MTLAccelerationStructureSizes;
+	@:hxmc.available(macos >= 11.0)
 	function newAccelerationStructureWithSize(size:I64):Null<MTLAccelerationStructure>;
+	@:hxmc.available(macos >= 11.0)
 	function newAccelerationStructureWithDescriptor(descriptor:MTLAccelerationStructureDescriptor):Null<MTLAccelerationStructure>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function heapAccelerationStructureSizeAndAlignWithSize(size:I64):MTLSizeAndAlign;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function heapAccelerationStructureSizeAndAlignWithDescriptor(descriptor:MTLAccelerationStructureDescriptor):MTLSizeAndAlign;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function newResidencySetWithDescriptor(desc:MTLResidencySetDescriptor, error:Ptr):Null<MTLResidencySet>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function tensorSizeAndAlignWithDescriptor(descriptor:MTLTensorDescriptor):MTLSizeAndAlign;
 	@:selector("newTensorWithDescriptor:error:")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newTensorWithDescriptorError(descriptor:MTLTensorDescriptor, error:Ptr):Null<MTLTensor>;
 	@:selector("newTensorWithDescriptor:attachments:error:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function newTensorWithDescriptorAttachmentsError(descriptor:MTLTensorDescriptor, attachments:MTLTensorBufferAttachments, error:Ptr):Null<MTLTensor>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function functionHandleWithFunction(function_:MTLFunction):Null<MTLFunctionHandle>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newCommandAllocator():Null<MTL4CommandAllocator>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newCommandAllocatorWithDescriptor(descriptor:MTL4CommandAllocatorDescriptor, error:Ptr):Null<MTL4CommandAllocator>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newMTL4CommandQueue():Null<MTL4CommandQueue>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newMTL4CommandQueueWithDescriptor(descriptor:MTL4CommandQueueDescriptor, error:Ptr):Null<MTL4CommandQueue>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newCommandBuffer():Null<MTL4CommandBuffer>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newArgumentTableWithDescriptor(descriptor:MTL4ArgumentTableDescriptor, error:Ptr):Null<MTL4ArgumentTable>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newTextureViewPoolWithDescriptor(descriptor:MTLResourceViewPoolDescriptor, error:Ptr):Null<MTLTextureViewPool>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newCompilerWithDescriptor(descriptor:MTL4CompilerDescriptor, error:Ptr):Null<MTL4Compiler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newArchiveWithURL(url:NSURL, error:Ptr):Null<MTL4Archive>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newPipelineDataSetSerializerWithDescriptor(descriptor:MTL4PipelineDataSetSerializerDescriptor):MTL4PipelineDataSetSerializer;
 	@:selector("newBufferWithLength:options:placementSparsePageSize:")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newBufferWithLengthOptionsPlacementSparsePageSize(length:I64, options:MTLResourceOptions, placementSparsePageSize:MTLSparsePageSize):Null<MTLBuffer>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newCounterHeapWithDescriptor(descriptor:MTL4CounterHeapDescriptor, error:Ptr):Null<MTL4CounterHeap>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function sizeOfCounterHeapEntry(type:MTL4CounterHeapType):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function queryTimestampFrequency():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function functionHandleWithBinaryFunction(function_:MTL4BinaryFunctionProtocol):Null<MTLFunctionHandle>;
 }

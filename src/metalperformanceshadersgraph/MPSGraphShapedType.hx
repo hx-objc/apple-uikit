@@ -4,15 +4,25 @@ package metalperformanceshadersgraph;
 import hxmc.unsafe.Ptr;
 import mpscore.MPSDataType;
 
-@:hxmc.framework("MetalPerformanceShadersGraph") @:hxmc.objc extern class MPSGraphShapedType extends MPSGraphType {
+@:hxmc.framework("MetalPerformanceShadersGraph") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class MPSGraphShapedType extends MPSGraphType {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():MPSGraphShapedType;
+	@:hxmc.available(macos >= 11.0)
 	var shape(get, set) : Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function get_shape():Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function set_shape(v:Ptr):Ptr;
+	@:hxmc.available(macos >= 11.0)
 	var dataType(get, set) : MPSDataType;
+	@:hxmc.available(macos >= 11.0)
 	function get_dataType():MPSDataType;
+	@:hxmc.available(macos >= 11.0)
 	function set_dataType(v:MPSDataType):MPSDataType;
+	@:hxmc.available(macos >= 11.0)
 	function initWithShape(shape:Ptr, dataType:MPSDataType):MPSGraphShapedType;
+	@:hxmc.available(macos >= 11.0)
 	function isEqualTo(object:Null<MPSGraphShapedType>):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function init():MPSGraphShapedType;
 }

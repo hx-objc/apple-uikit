@@ -6,28 +6,49 @@ import hxmc.objc.Selector;
 import objc.NSObject;
 import quartzcore.CAFrameRateRange;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIUpdateLink extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIUpdateLink extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIUpdateLink;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var requiresContinuousUpdates(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_requiresContinuousUpdates():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_requiresContinuousUpdates(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var wantsLowLatencyEventDispatch(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_wantsLowLatencyEventDispatch():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_wantsLowLatencyEventDispatch(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var wantsImmediatePresentation(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_wantsImmediatePresentation():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_wantsImmediatePresentation(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var preferredFrameRateRange(get, set) : CAFrameRateRange;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_preferredFrameRateRange():CAFrameRateRange;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_preferredFrameRateRange(v:CAFrameRateRange):CAFrameRateRange;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function updateLinkForWindowScene(windowScene:UIWindowScene):UIUpdateLink;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function updateLinkForView(view:UIView):UIUpdateLink;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function addActionToPhase(phase:UIUpdateActionPhase, handler:(UIUpdateLink, UIUpdateInfo) -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function addActionToPhase(phase:UIUpdateActionPhase, target:Id, selector:Selector):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function currentUpdateInfo():Null<UIUpdateInfo>;
 	function addActionWithHandler(handler:(UIUpdateLink, UIUpdateInfo) -> Void):Void;
 	function addActionWithTarget(target:Id, selector:Selector):Void;

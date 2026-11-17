@@ -5,9 +5,13 @@ import foundation.NSError;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("AVSystemRouting") @:hxmc.objc extern class AVSystemRouteSession extends NSObject {
+@:hxmc.framework("AVSystemRouting") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVSystemRouteSession extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVSystemRouteSession;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithURL(url:NSURL, mode:AVSystemRouteLaunchMode):AVSystemRouteSession;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function startWithCompletionHandler(completionHandler:(Null<NSError>, Null<AVSystemRouteMediaSession>) -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function stop():Void;
 }

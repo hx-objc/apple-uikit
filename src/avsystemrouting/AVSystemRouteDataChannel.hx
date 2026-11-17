@@ -5,10 +5,15 @@ import foundation.NSData;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("AVSystemRouting") @:hxmc.objc extern class AVSystemRouteDataChannel extends NSObject {
+@:hxmc.framework("AVSystemRouting") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVSystemRouteDataChannel extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVSystemRouteDataChannel;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var dataDelegate(get, set) : Null<AVSystemRouteDataDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_dataDelegate():Null<AVSystemRouteDataDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_dataDelegate(v:Null<AVSystemRouteDataDelegate>):Null<AVSystemRouteDataDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function sendData(data:NSData, completionHandler:Null<NSError> -> Void):Void;
 }

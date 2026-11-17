@@ -3,13 +3,17 @@ package avkit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVInputPickerInteractionDelegate") extern interface AVInputPickerInteractionDelegate extends NSObjectProtocol {
+@:hxmc.objc("AVInputPickerInteractionDelegate") @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern interface AVInputPickerInteractionDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function inputPickerInteractionWillBeginPresenting(inputPickerInteraction:AVInputPickerInteraction):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function inputPickerInteractionDidEndPresenting(inputPickerInteraction:AVInputPickerInteraction):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function inputPickerInteractionWillBeginDismissing(inputPickerInteraction:AVInputPickerInteraction):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function inputPickerInteractionDidEndDismissing(inputPickerInteraction:AVInputPickerInteraction):Void;
 }

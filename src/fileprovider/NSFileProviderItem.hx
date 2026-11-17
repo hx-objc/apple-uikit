@@ -12,144 +12,212 @@ import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.objc("NSFileProviderItem") extern interface NSFileProviderItem extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderItem") @:hxmc.available(macos >= 11.0) extern interface NSFileProviderItem extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0)
 	var itemIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_itemIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var parentItemIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_parentItemIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var filename(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_filename():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var contentType(get, never) : UTType;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_contentType():UTType;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var typeIdentifier(get, never) : NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_typeIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var typeAndCreator(get, never) : NSFileProviderTypeAndCreator;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_typeAndCreator():NSFileProviderTypeAndCreator;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var capabilities(get, never) : NSFileProviderItemCapabilities;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_capabilities():NSFileProviderItemCapabilities;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var fileSystemFlags(get, never) : NSFileProviderFileSystemFlags;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_fileSystemFlags():NSFileProviderFileSystemFlags;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var documentSize(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_documentSize():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var childItemCount(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_childItemCount():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var creationDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_creationDate():Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var contentModificationDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_contentModificationDate():Null<NSDate>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var extendedAttributes(get, never) : NSDictionary<NSString, NSData>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_extendedAttributes():NSDictionary<NSString, NSData>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var lastUsedDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_lastUsedDate():Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var tagData(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_tagData():Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var favoriteRank(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_favoriteRank():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var trashed(get, never) : Bool;
 	@:selector("isTrashed")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_trashed():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var uploaded(get, never) : Bool;
 	@:selector("isUploaded")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_uploaded():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var uploading(get, never) : Bool;
 	@:selector("isUploading")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_uploading():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var uploadingError(get, never) : Null<NSError>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_uploadingError():Null<NSError>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var downloaded(get, never) : Bool;
 	@:selector("isDownloaded")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_downloaded():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var downloading(get, never) : Bool;
 	@:selector("isDownloading")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_downloading():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var downloadingError(get, never) : Null<NSError>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_downloadingError():Null<NSError>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var mostRecentVersionDownloaded(get, never) : Bool;
 	@:selector("isMostRecentVersionDownloaded")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_mostRecentVersionDownloaded():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var shared(get, never) : Bool;
 	@:selector("isShared")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_shared():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var sharedByCurrentUser(get, never) : Bool;
 	@:selector("isSharedByCurrentUser")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_sharedByCurrentUser():Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var ownerNameComponents(get, never) : Null<NSPersonNameComponents>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_ownerNameComponents():Null<NSPersonNameComponents>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var mostRecentEditorNameComponents(get, never) : Null<NSPersonNameComponents>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_mostRecentEditorNameComponents():Null<NSPersonNameComponents>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var versionIdentifier(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_versionIdentifier():Null<NSData>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var itemVersion(get, never) : NSFileProviderItemVersion;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_itemVersion():NSFileProviderItemVersion;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var symlinkTargetPath(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_symlinkTargetPath():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var userInfo(get, never) : Null<NSDictionary>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_userInfo():Null<NSDictionary>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var contentPolicy(get, never) : NSFileProviderContentPolicy;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_contentPolicy():NSFileProviderContentPolicy;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	@:optional
 	var namespacePolicy(get, never) : NSFileProviderNamespacePolicy;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	@:optional
 	function get_namespacePolicy():NSFileProviderNamespacePolicy;
 }

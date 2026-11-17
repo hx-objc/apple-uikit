@@ -15,10 +15,14 @@ import metal.MTLTextureUsage;
 	function get_depthTextureUsage():MTLTextureUsage;
 	var motionTextureUsage(get, never) : MTLTextureUsage;
 	function get_motionTextureUsage():MTLTextureUsage;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var reactiveMaskTextureUsage(get, never) : MTLTextureUsage;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_reactiveMaskTextureUsage():MTLTextureUsage;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var reactiveTextureUsage(get, never) : MTLTextureUsage;
 	@:deprecated
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_reactiveTextureUsage():MTLTextureUsage;
 	var outputTextureUsage(get, never) : MTLTextureUsage;
 	function get_outputTextureUsage():MTLTextureUsage;
@@ -28,35 +32,65 @@ import metal.MTLTextureUsage;
 	var inputContentHeight(get, set) : I64;
 	function get_inputContentHeight():I64;
 	function set_inputContentHeight(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var colorContentOffsetX(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_colorContentOffsetX():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_colorContentOffsetX(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var colorContentOffsetY(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_colorContentOffsetY():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_colorContentOffsetY(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var depthContentOffsetX(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_depthContentOffsetX():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_depthContentOffsetX(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var depthContentOffsetY(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_depthContentOffsetY():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_depthContentOffsetY(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var motionContentOffsetX(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_motionContentOffsetX():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_motionContentOffsetX(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var motionContentOffsetY(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_motionContentOffsetY():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_motionContentOffsetY(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var reactiveMaskContentOffsetX(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_reactiveMaskContentOffsetX():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_reactiveMaskContentOffsetX(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var reactiveMaskContentOffsetY(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_reactiveMaskContentOffsetY():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_reactiveMaskContentOffsetY(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var outputOffsetX(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_outputOffsetX():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_outputOffsetX(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var outputOffsetY(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_outputOffsetY():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_outputOffsetY(v:I64):I64;
 	var colorTexture(get, set) : Null<MTLTexture>;
 	function get_colorTexture():Null<MTLTexture>;

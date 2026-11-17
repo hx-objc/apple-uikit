@@ -6,43 +6,81 @@ import coregraphics.CGSize;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCThumbstickDescriptor extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCThumbstickDescriptor extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCThumbstickDescriptor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var label(get, set) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_label():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_label(v:TCControlLabel):TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var backgroundContents(get, set) : Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_backgroundContents():Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_backgroundContents(v:Null<TCControlContents>):Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var stickContents(get, set) : Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_stickContents():Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_stickContents(v:Null<TCControlContents>):Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var hidesWhenNotPressed(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_hidesWhenNotPressed():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_hidesWhenNotPressed(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var stickSize(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_stickSize():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_stickSize(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_size():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var anchor(get, set) : TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_anchor():TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_anchor(v:TCControlLayoutAnchor):TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var anchorCoordinateSystem(get, set) : TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_anchorCoordinateSystem():TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_anchorCoordinateSystem(v:TCControlLayoutAnchorCoordinateSystem):TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var offset(get, set) : CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_offset():CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_offset(v:CGPoint):CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var zIndex(get, set) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_zIndex():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_zIndex(v:I64):I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var colliderShape(get, set) : TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_colliderShape():TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_colliderShape(v:TCColliderShape):TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var highlightDuration(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_highlightDuration():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_highlightDuration(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():TCThumbstickDescriptor;
 }

@@ -4,8 +4,11 @@ package gamecontroller;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("GameController") @:hxmc.objc extern class GCGameControllerActivationContext extends NSObject {
+@:hxmc.framework("GameController") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class GCGameControllerActivationContext extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():GCGameControllerActivationContext;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var previousApplicationBundleID(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_previousApplicationBundleID():Null<NSStringArg>;
 }

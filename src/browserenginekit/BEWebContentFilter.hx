@@ -7,13 +7,21 @@ import foundation.NSURL;
 import objc.NSObject;
 import uikit.UIView;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEWebContentFilter extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 26.2, maccatalyst >= 26.2) extern class BEWebContentFilter extends NSObject {
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function alloc():BEWebContentFilter;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static var shouldEvaluateURLs(get, never) : Bool;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function get_shouldEvaluateURLs():Bool;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	overload function evaluateURL(url:NSURL, completionHandler:(Bool, Null<NSData>) -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function evaluateURL(url:NSURL, mainFrameURL:NSURL, isMainFrame:Bool, completionHandler:(Bool, Null<NSData>) -> Void):Void;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function allowURL(url:NSURL, completionHandler:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function requestPermissionForURL(url:NSURL, referrerURL:Null<NSURL>, presentingView:Null<UIView>, completionHandler:(BEWebContentFilterPermissionDecision, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	override function init():BEWebContentFilter;
 }

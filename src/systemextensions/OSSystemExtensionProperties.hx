@@ -4,15 +4,25 @@ package systemextensions;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("SystemExtensions") @:hxmc.objc extern class OSSystemExtensionProperties extends NSObject {
+@:hxmc.framework("SystemExtensions") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class OSSystemExtensionProperties extends NSObject {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():OSSystemExtensionProperties;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var bundleIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_bundleIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var bundleVersion(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_bundleVersion():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var bundleShortVersion(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_bundleShortVersion():NSStringArg;
+	@:hxmc.available(macos >= 12.0, ios >= 18.4, maccatalyst >= 18.4)
 	var isEnabled(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0, ios >= 18.4, maccatalyst >= 18.4)
 	function get_isEnabled():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():OSSystemExtensionProperties;
 }

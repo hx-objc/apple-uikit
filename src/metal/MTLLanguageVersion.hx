@@ -11,12 +11,19 @@ enum abstract MTLLanguageVersion(I64) to I64 {
 	var Version2_0 = 131072;
 	var Version2_1 = 131073;
 	var Version2_2 = 131074;
+	@:hxmc.available(macos >= 11.0)
 	var Version2_3 = 131075;
+	@:hxmc.available(macos >= 12.0)
 	var Version2_4 = 131076;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var Version3_0 = 196608;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Version3_1 = 196609;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var Version3_2 = 196610;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var Version4_0 = 262144;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var Version4_1 = 262145;
 	inline function new(v:I64) this = v;
 }

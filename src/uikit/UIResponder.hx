@@ -47,8 +47,10 @@ import pencilkit.PKResponderState;
 	var activityItemsConfiguration(get, set) : Null<UIActivityItemsConfigurationReading>;
 	function get_activityItemsConfiguration():Null<UIActivityItemsConfigurationReading>;
 	function set_activityItemsConfiguration(v:Null<UIActivityItemsConfigurationReading>):Null<UIActivityItemsConfigurationReading>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var pencilKitResponderState(get, never) : PKResponderState;
 	@:hxmc.framework("PencilKit")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_pencilKitResponderState():PKResponderState;
 	var pasteConfiguration(get, set) : Null<UIPasteConfiguration>;
 	function get_pasteConfiguration():Null<UIPasteConfiguration>;
@@ -72,6 +74,7 @@ import pencilkit.PKResponderState;
 	function targetForAction(action:Selector, withSender:Null<Id>):Null<Id>;
 	function buildMenuWithBuilder(builder:UIMenuBuilder):Void;
 	function validateCommand(command:UICommand):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function providerForDeferredMenuElement(deferredElement:UIDeferredMenuElement):Null<UIDeferredMenuElementProvider>;
 	static function clearTextInputContextIdentifier(identifier:NSStringArg):Void;
 	function reloadInputViews():Void;

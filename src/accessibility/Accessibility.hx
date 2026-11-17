@@ -9,37 +9,62 @@ import foundation.NSUUID;
 import hxmc.objc.Block;
 
 @:hxmc.c @:hxmc.framework("Accessibility") extern class Accessibility {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function AXAnimatedImagesEnabled():Bool;
 	public static function AXApplicationAccessibilityEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function AXAssistiveAccessEnabled():Bool;
 	public static function AXMFiHearingDevicePairedUUIDs():NSArray<NSUUID>;
 	public static function AXMFiHearingDeviceStreamingEar():AXHearingDeviceEar;
+	@:hxmc.available(macos >= 11.0)
 	public static function AXNameFromColor(color:CGColor):NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function AXOpenSettingsFeature(feature:AXSettingsFeature, completionHandler:Null<Block<Null<NSError> -> Void>>):Void;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static function AXOpenSettingsFeatureIsSupported(feature:AXSettingsFeature):Bool;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	public static function AXPrefersActionSliderAlternative():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function AXPrefersHorizontalTextLayout():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function AXPrefersNonBlinkingTextInsertionIndicator():Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static function AXReduceHighlightingEffectsEnabled():Bool;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	public static function AXShowBordersEnabled():Bool;
 	public static function AXSupportsBidirectionalAXMFiHearingDeviceStreaming():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AXAnimatedImagesEnabledDidChangeNotification : NSString;
 	public static final AXApplicationAccessibilityEnabledDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static final AXFeatureOverrideSessionErrorDomain : NSString;
 	public static final AXMFiHearingDevicePairedUUIDsDidChangeNotification : NSString;
 	public static final AXMFiHearingDeviceStreamingEarDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	public static final AXPrefersActionSliderAlternativeDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AXPrefersHorizontalTextLayoutDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXPrefersNonBlinkingTextInsertionIndicatorDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AXReduceHighlightingEffectsEnabledDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	public static final AXShowBordersEnabledStatusDidChangeNotification : NSString;
 	public static final AXSpeechAttributeSSML : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologyAutomation : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologyFullKeyboardAccess : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologyHoverText : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologySpeakScreen : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologySwitchControl : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologyVoiceControl : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologyVoiceOver : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AXTechnologyZoom : NSString;
 }

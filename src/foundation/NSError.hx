@@ -27,7 +27,9 @@ import objc.NSObject;
 	function get_recoveryAttempter():Null<Id>;
 	var helpAnchor(get, never) : Null<NSStringArg>;
 	function get_helpAnchor():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.3)
 	var underlyingErrors(get, never) : NSArray<NSError>;
+	@:hxmc.available(macos >= 11.3)
 	function get_underlyingErrors():NSArray<NSError>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
@@ -41,10 +43,13 @@ import objc.NSObject;
 	static function setUserInfoValueProviderForDomain(errorDomain:NSStringArg, provider:Null<(NSError, NSString) -> Null<Id>>):Void;
 	static function userInfoValueProviderForDomain(errorDomain:NSStringArg):Null<(NSError, NSString) -> Null<Id>>;
 	@:hxmc.framework("FileProvider")
+	@:hxmc.available(macos >= 11.0)
 	static function fileProviderErrorForCollisionWithItem(existingItem:NSFileProviderItem):NSError;
 	@:hxmc.framework("FileProvider")
+	@:hxmc.available(macos >= 11.0)
 	static function fileProviderErrorForNonExistentItemWithIdentifier(itemIdentifier:NSStringArg):NSError;
 	@:hxmc.framework("FileProvider")
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function fileProviderErrorForRejectedDeletionOfItem(updatedVersion:NSFileProviderItem):NSError;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

@@ -7,15 +7,25 @@ import foundation.NSCoder;
 import uikit.UITraitCollection;
 import uikit.UIView;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BELayerHierarchyHostingView extends UIView {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BELayerHierarchyHostingView extends UIView {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BELayerHierarchyHostingView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function appearance():BELayerHierarchyHostingView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):BELayerHierarchyHostingView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):BELayerHierarchyHostingView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var handle(get, set) : Null<BELayerHierarchyHandle>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_handle():Null<BELayerHierarchyHandle>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_handle(v:Null<BELayerHierarchyHandle>):Null<BELayerHierarchyHandle>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():BELayerHierarchyHostingView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithCoder(coder:NSCoder):Null<BELayerHierarchyHostingView>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithFrame(frame:CGRect):BELayerHierarchyHostingView;
 }

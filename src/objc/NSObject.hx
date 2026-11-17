@@ -75,20 +75,26 @@ import uikit.UITextInput;
 	function get_accessibilityContainerType():UIAccessibilityContainerType;
 	@:hxmc.framework("UIKit")
 	function set_accessibilityContainerType(v:UIAccessibilityContainerType):UIAccessibilityContainerType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var automationElements(get, set) : Null<NSArray>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_automationElements():Null<NSArray>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_automationElements(v:Null<NSArray>):Null<NSArray>;
 	var accessibilityCustomRotors(get, set) : Null<NSArray<UIAccessibilityCustomRotor>>;
 	@:hxmc.framework("UIKit")
 	function get_accessibilityCustomRotors():Null<NSArray<UIAccessibilityCustomRotor>>;
 	@:hxmc.framework("UIKit")
 	function set_accessibilityCustomRotors(v:Null<NSArray<UIAccessibilityCustomRotor>>):Null<NSArray<UIAccessibilityCustomRotor>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityCustomRotorsBlock(get, set) : Null<() -> Null<NSArray<UIAccessibilityCustomRotor>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityCustomRotorsBlock():Null<() -> Null<NSArray<UIAccessibilityCustomRotor>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityCustomRotorsBlock(v:Null<() -> Null<NSArray<UIAccessibilityCustomRotor>>>):Null<() -> Null<NSArray<UIAccessibilityCustomRotor>>>;
 	var isAccessibilityElement(get, set) : Bool;
 	@:hxmc.framework("UIKit")
@@ -190,170 +196,269 @@ import uikit.UITextInput;
 	function get_accessibilityTextualContext():Null<NSStringArg>;
 	@:hxmc.framework("UIKit")
 	function set_accessibilityTextualContext(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityDirectTouchOptions(get, set) : UIAccessibilityDirectTouchOptions;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityDirectTouchOptions():UIAccessibilityDirectTouchOptions;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityDirectTouchOptions(v:UIAccessibilityDirectTouchOptions):UIAccessibilityDirectTouchOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessibilityExpandedStatus(get, set) : UIAccessibilityExpandedStatus;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessibilityExpandedStatus():UIAccessibilityExpandedStatus;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessibilityExpandedStatus(v:UIAccessibilityExpandedStatus):UIAccessibilityExpandedStatus;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var isAccessibilityElementBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_isAccessibilityElementBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_isAccessibilityElementBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityLabelBlock(get, set) : Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityLabelBlock():Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityLabelBlock(v:Null<() -> Null<NSString>>):Null<() -> Null<NSString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityValueBlock(get, set) : Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityValueBlock():Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityValueBlock(v:Null<() -> Null<NSString>>):Null<() -> Null<NSString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityHintBlock(get, set) : Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityHintBlock():Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityHintBlock(v:Null<() -> Null<NSString>>):Null<() -> Null<NSString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityTraitsBlock(get, set) : Null<() -> I64>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityTraitsBlock():Null<() -> I64>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityTraitsBlock(v:Null<() -> I64>):Null<() -> I64>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityIdentifierBlock(get, set) : Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityIdentifierBlock():Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityIdentifierBlock(v:Null<() -> Null<NSString>>):Null<() -> Null<NSString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityHeaderElementsBlock(get, set) : Null<() -> Null<NSArray>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityHeaderElementsBlock():Null<() -> Null<NSArray>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityHeaderElementsBlock(v:Null<() -> Null<NSArray>>):Null<() -> Null<NSArray>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityAttributedLabelBlock(get, set) : Null<() -> Null<NSAttributedString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityAttributedLabelBlock():Null<() -> Null<NSAttributedString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityAttributedLabelBlock(v:Null<() -> Null<NSAttributedString>>):Null<() -> Null<NSAttributedString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityAttributedHintBlock(get, set) : Null<() -> Null<NSAttributedString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityAttributedHintBlock():Null<() -> Null<NSAttributedString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityAttributedHintBlock(v:Null<() -> Null<NSAttributedString>>):Null<() -> Null<NSAttributedString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityLanguageBlock(get, set) : Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityLanguageBlock():Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityLanguageBlock(v:Null<() -> Null<NSString>>):Null<() -> Null<NSString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityTextualContextBlock(get, set) : Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityTextualContextBlock():Null<() -> Null<NSString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityTextualContextBlock(v:Null<() -> Null<NSString>>):Null<() -> Null<NSString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityUserInputLabelsBlock(get, set) : Null<() -> Null<NSArray<NSString>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityUserInputLabelsBlock():Null<() -> Null<NSArray<NSString>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityUserInputLabelsBlock(v:Null<() -> Null<NSArray<NSString>>>):Null<() -> Null<NSArray<NSString>>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityAttributedUserInputLabelsBlock(get, set) : Null<() -> Null<NSArray<NSAttributedString>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityAttributedUserInputLabelsBlock():Null<() -> Null<NSArray<NSAttributedString>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityAttributedUserInputLabelsBlock(v:Null<() -> Null<NSArray<NSAttributedString>>>):Null<() -> Null<NSArray<NSAttributedString>>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityAttributedValueBlock(get, set) : Null<() -> Null<NSAttributedString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityAttributedValueBlock():Null<() -> Null<NSAttributedString>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityAttributedValueBlock(v:Null<() -> Null<NSAttributedString>>):Null<() -> Null<NSAttributedString>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityElementsHiddenBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityElementsHiddenBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityElementsHiddenBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityRespondsToUserInteractionBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityRespondsToUserInteractionBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityRespondsToUserInteractionBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityViewIsModalBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityViewIsModalBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityViewIsModalBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityShouldGroupAccessibilityChildrenBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityShouldGroupAccessibilityChildrenBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityShouldGroupAccessibilityChildrenBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityElementsBlock(get, set) : Null<() -> Null<NSArray>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityElementsBlock():Null<() -> Null<NSArray>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityElementsBlock(v:Null<() -> Null<NSArray>>):Null<() -> Null<NSArray>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var automationElementsBlock(get, set) : Null<() -> Null<NSArray>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_automationElementsBlock():Null<() -> Null<NSArray>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_automationElementsBlock(v:Null<() -> Null<NSArray>>):Null<() -> Null<NSArray>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityContainerTypeBlock(get, set) : Null<() -> UIAccessibilityContainerType>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityContainerTypeBlock():Null<() -> UIAccessibilityContainerType>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityContainerTypeBlock(v:Null<() -> UIAccessibilityContainerType>):Null<() -> UIAccessibilityContainerType>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityActivationPointBlock(get, set) : Null<() -> CGPoint>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityActivationPointBlock():Null<() -> CGPoint>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityActivationPointBlock(v:Null<() -> CGPoint>):Null<() -> CGPoint>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityFrameBlock(get, set) : Null<() -> CGRect>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityFrameBlock():Null<() -> CGRect>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityFrameBlock(v:Null<() -> CGRect>):Null<() -> CGRect>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityNavigationStyleBlock(get, set) : Null<() -> UIAccessibilityNavigationStyle>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityNavigationStyleBlock():Null<() -> UIAccessibilityNavigationStyle>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityNavigationStyleBlock(v:Null<() -> UIAccessibilityNavigationStyle>):Null<() -> UIAccessibilityNavigationStyle>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityPathBlock(get, set) : Null<() -> Null<UIBezierPath>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityPathBlock():Null<() -> Null<UIBezierPath>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityPathBlock(v:Null<() -> Null<UIBezierPath>>):Null<() -> Null<UIBezierPath>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityActivateBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityActivateBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityActivateBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityIncrementBlock(get, set) : Null<() -> Void>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityIncrementBlock():Null<() -> Void>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityIncrementBlock(v:Null<() -> Void>):Null<() -> Void>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityDecrementBlock(get, set) : Null<() -> Void>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityDecrementBlock():Null<() -> Void>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityDecrementBlock(v:Null<() -> Void>):Null<() -> Void>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityPerformEscapeBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityPerformEscapeBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityPerformEscapeBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityMagicTapBlock(get, set) : Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityMagicTapBlock():Null<() -> Bool>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityMagicTapBlock(v:Null<() -> Bool>):Null<() -> Bool>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityCustomActionsBlock(get, set) : Null<() -> Null<NSArray<UIAccessibilityCustomAction>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityCustomActionsBlock():Null<() -> Null<NSArray<UIAccessibilityCustomAction>>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityCustomActionsBlock(v:Null<() -> Null<NSArray<UIAccessibilityCustomAction>>>):Null<() -> Null<NSArray<UIAccessibilityCustomAction>>>;
 	var accessibilityCustomActions(get, set) : Null<NSArray<UIAccessibilityCustomAction>>;
 	@:hxmc.framework("UIKit")
@@ -370,85 +475,133 @@ import uikit.UITextInput;
 	function get_accessibilityDropPointDescriptors():Null<NSArray<UIAccessibilityLocationDescriptor>>;
 	@:hxmc.framework("UIKit")
 	function set_accessibilityDropPointDescriptors(v:Null<NSArray<UIAccessibilityLocationDescriptor>>):Null<NSArray<UIAccessibilityLocationDescriptor>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessibilityPreviousTextNavigationElement(get, set) : Null<Id>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessibilityPreviousTextNavigationElement():Null<Id>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessibilityPreviousTextNavigationElement(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessibilityNextTextNavigationElement(get, set) : Null<Id>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessibilityNextTextNavigationElement():Null<Id>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessibilityNextTextNavigationElement(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessibilityPreviousTextNavigationElementBlock(get, set) : Null<() -> Null<Id>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessibilityPreviousTextNavigationElementBlock():Null<() -> Null<Id>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessibilityPreviousTextNavigationElementBlock(v:Null<() -> Null<Id>>):Null<() -> Null<Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessibilityNextTextNavigationElementBlock(get, set) : Null<() -> Null<Id>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessibilityNextTextNavigationElementBlock():Null<() -> Null<Id>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessibilityNextTextNavigationElementBlock(v:Null<() -> Null<Id>>):Null<() -> Null<Id>>;
+	@:hxmc.available(ios >= 18.1, maccatalyst >= 18.1)
 	var accessibilityTextInputResponder(get, set) : Null<UITextInput>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.1, maccatalyst >= 18.1)
 	function get_accessibilityTextInputResponder():Null<UITextInput>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.1, maccatalyst >= 18.1)
 	function set_accessibilityTextInputResponder(v:Null<UITextInput>):Null<UITextInput>;
+	@:hxmc.available(ios >= 18.1, maccatalyst >= 18.1)
 	var accessibilityTextInputResponderBlock(get, set) : Null<() -> Null<UITextInput>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.1, maccatalyst >= 18.1)
 	function get_accessibilityTextInputResponderBlock():Null<() -> Null<UITextInput>>;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.1, maccatalyst >= 18.1)
 	function set_accessibilityTextInputResponderBlock(v:Null<() -> Null<UITextInput>>):Null<() -> Null<UITextInput>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilityCurrentStatus(get, set) : Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilityCurrentStatus():Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilityCurrentStatus(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilitySortDirection(get, set) : Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilitySortDirection():Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilitySortDirection(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilityRoleDescription(get, set) : Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilityRoleDescription():Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilityRoleDescription(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilityIsRequired(get, set) : Bool;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilityIsRequired():Bool;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilityIsRequired(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilityPressedState(get, set) : BEAccessibilityPressedState;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilityPressedState():BEAccessibilityPressedState;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilityPressedState(v:BEAccessibilityPressedState):BEAccessibilityPressedState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilityHasDOMFocus(get, set) : Bool;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilityHasDOMFocus():Bool;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilityHasDOMFocus(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserAccessibilityContainerType(get, set) : BEAccessibilityContainerType;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserAccessibilityContainerType():BEAccessibilityContainerType;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserAccessibilityContainerType(v:BEAccessibilityContainerType):BEAccessibilityContainerType;
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	var browserAccessibilityKeyboardShortcuts(get, set) : Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function get_browserAccessibilityKeyboardShortcuts():Null<NSStringArg>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function set_browserAccessibilityKeyboardShortcuts(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	var browserAccessibilityDetailsElements(get, set) : NSArray<NSObject>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function get_browserAccessibilityDetailsElements():NSArray<NSObject>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function set_browserAccessibilityDetailsElements(v:NSArray<NSObject>):NSArray<NSObject>;
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	var browserAccessibilityOrientation(get, set) : BEAccessibilityOrientation;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function get_browserAccessibilityOrientation():BEAccessibilityOrientation;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function set_browserAccessibilityOrientation(v:BEAccessibilityOrientation):BEAccessibilityOrientation;
 	var hash(get, never) : I64;
 	function get_hash():I64;
@@ -603,6 +756,7 @@ import uikit.UITextInput;
 	@:hxmc.framework("Foundation")
 	static function automaticallyNotifiesObserversForKey(key:NSStringArg):Bool;
 	@:hxmc.framework("Foundation")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function setSharedObservers(sharedObservers:Null<NSKeyValueSharedObserversSnapshot>):Void;
 	@:hxmc.framework("Foundation")
 	function replacementObjectForKeyedArchiver(archiver:NSKeyedArchiver):Null<Id>;
@@ -624,6 +778,7 @@ import uikit.UITextInput;
 	@:hxmc.framework("CoreImage")
 	function provideImageDataBytesPerRowOriginSizeUserInfo(data:Ptr, bytesPerRow:I64, origin:I64, originy:I64, size:I64, height:I64, userInfo:Null<Id>):Void;
 	@:hxmc.framework("CoreImage")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function provideImageToMTLTexture(texture:MTLTexture, commandBuffer:MTLCommandBuffer, originx:I64, originy:I64, width:I64, height:I64, userInfo:Null<Id>):Void;
 	@:hxmc.framework("UIKit")
 	function accessibilityElementCount():I64;
@@ -646,8 +801,10 @@ import uikit.UITextInput;
 	@:hxmc.framework("UIKit")
 	function accessibilityDecrement():Void;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function accessibilityZoomInAtPoint(point:CGPoint):Bool;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function accessibilityZoomOutAtPoint(point:CGPoint):Bool;
 	@:hxmc.framework("UIKit")
 	function accessibilityScroll(direction:UIAccessibilityScrollDirection):Bool;
@@ -656,32 +813,44 @@ import uikit.UITextInput;
 	@:hxmc.framework("UIKit")
 	function accessibilityPerformMagicTap():Bool;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function accessibilityHitTest(point:CGPoint, withEvent:Null<UIEvent>):Null<Id>;
 	@:hxmc.framework("UIKit")
 	function awakeFromNib():Void;
 	@:hxmc.framework("UIKit")
 	function prepareForInterfaceBuilder():Void;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function browserAccessibilitySelectedTextRange():NSRange;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function browserAccessibilitySetSelectedTextRange(range:NSRange):Void;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function browserAccessibilityValueInRange(range:NSRange):NSString;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function browserAccessibilityAttributedValueInRange(range:NSRange):NSAttributedString;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function browserAccessibilityInsertTextAtCursor(text:NSStringArg):Void;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function browserAccessibilityDeleteTextAtCursor(numberOfCharacters:I64):Void;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityLineEndPositionFromCurrentSelection():I64;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityLineStartPositionFromCurrentSelection():I64;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityLineRangeForPosition(position:I64):NSRange;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function browserAccessibilityImageDataSize():Null<NSValue>;
 	@:hxmc.framework("BrowserEngineKit")
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	function browserAccessibilityImageData(attributes:NSDictionary):Null<CVBuffer>;
 	function isEqual(object:Id):Bool;
 	@:selector("class")

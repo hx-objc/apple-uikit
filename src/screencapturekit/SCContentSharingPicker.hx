@@ -3,24 +3,41 @@ package screencapturekit;
 
 import objc.NSObject;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCContentSharingPicker extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2) extern class SCContentSharingPicker extends NSObject {
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	static function alloc():SCContentSharingPicker;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	static var sharedPicker(get, never) : SCContentSharingPicker;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	static function get_sharedPicker():SCContentSharingPicker;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var defaultConfiguration(get, set) : SCContentSharingPickerConfiguration;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_defaultConfiguration():SCContentSharingPickerConfiguration;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_defaultConfiguration(v:SCContentSharingPickerConfiguration):SCContentSharingPickerConfiguration;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var active(get, set) : Bool;
 	@:selector("isActive")
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_active():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_active(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var available(get, never) : Bool;
 	@:selector("isAvailable")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_available():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function addObserver(observer:SCContentSharingPickerObserver):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function removeObserver(observer:SCContentSharingPickerObserver):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function setConfiguration(pickerConfig:Null<SCContentSharingPickerConfiguration>, forStream:SCStream):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function present():Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function presentPickerUsingContentStyle(contentStyle:SCShareableContentStyle):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function presentPickerForCurrentApplication():Void;
 }

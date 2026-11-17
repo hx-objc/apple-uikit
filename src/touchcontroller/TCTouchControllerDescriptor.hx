@@ -8,29 +8,53 @@ import metal.MTLPixelFormat;
 import metalkit.MTKView;
 import objc.NSObject;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCTouchControllerDescriptor extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCTouchControllerDescriptor extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCTouchControllerDescriptor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var device(get, set) : MTLDevice;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_device():MTLDevice;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_device(v:MTLDevice):MTLDevice;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_size():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var drawableSize(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_drawableSize():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_drawableSize(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var colorPixelFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_colorPixelFormat():MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_colorPixelFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var depthAttachmentPixelFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_depthAttachmentPixelFormat():MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_depthAttachmentPixelFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var stencilAttachmentPixelFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_stencilAttachmentPixelFormat():MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_stencilAttachmentPixelFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var sampleCount(get, set) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_sampleCount():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_sampleCount(v:I64):I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():TCTouchControllerDescriptor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithMTKView(mtkView:MTKView):TCTouchControllerDescriptor;
 }

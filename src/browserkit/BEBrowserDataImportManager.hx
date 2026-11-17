@@ -6,10 +6,15 @@ import foundation.NSUUID;
 import objc.NSObject;
 import uikit.UIWindowScene;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserDataImportManager extends NSObject {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserDataImportManager extends NSObject {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserDataImportManager;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function init():BEBrowserDataImportManager;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithScene(scene:Null<UIWindowScene>):BEBrowserDataImportManager;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function importBrowserDataWithToken(token:NSUUID, importBlock:(Null<BEBrowserData>, Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function requestImportForMetadata(metadata:BEImportMetadata, completionHandler:(Null<BEImportOptions>, Null<NSError>) -> Void):Void;
 }

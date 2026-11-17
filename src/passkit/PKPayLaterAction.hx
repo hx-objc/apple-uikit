@@ -4,7 +4,9 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKPayLaterAction(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var LearnMore = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Calculator = 1;
 	inline function new(v:I64) this = v;
 }

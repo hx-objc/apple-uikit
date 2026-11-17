@@ -4,21 +4,35 @@ package passkit;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKPayment extends NSObject {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class PKPayment extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():PKPayment;
+	@:hxmc.available(macos >= 11.0)
 	var token(get, never) : PKPaymentToken;
+	@:hxmc.available(macos >= 11.0)
 	function get_token():PKPaymentToken;
+	@:hxmc.available(macos >= 11.0)
 	var billingContact(get, never) : Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	function get_billingContact():Null<PKContact>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var billingAddress(get, never) : Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function get_billingAddress():Ptr;
+	@:hxmc.available(macos >= 11.0)
 	var shippingContact(get, never) : Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingContact():Null<PKContact>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var shippingAddress(get, never) : Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingAddress():Ptr;
+	@:hxmc.available(macos >= 11.0)
 	var shippingMethod(get, never) : Null<PKShippingMethod>;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingMethod():Null<PKShippingMethod>;
+	@:hxmc.available(macos >= 11.0)
 	override function init():PKPayment;
 }

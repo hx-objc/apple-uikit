@@ -5,11 +5,17 @@ import foundation.NSStringArg;
 import foundation.NSStringCompareOptions;
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASPropertyCompareString extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class ASPropertyCompareString extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():ASPropertyCompareString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var string(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_string():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var compareOptions(get, never) : NSStringCompareOptions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_compareOptions():NSStringCompareOptions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithString(string:NSStringArg, compareOptions:NSStringCompareOptions):ASPropertyCompareString;
 }

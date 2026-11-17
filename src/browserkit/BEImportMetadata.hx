@@ -5,12 +5,16 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEImportMetadata extends NSObject implements NSSecureCoding {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEImportMetadata extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEImportMetadata;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var supportImportFromFiles(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_supportImportFromFiles():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithSupportForImportFromFiles(supportImportFromFiles:Bool):BEImportMetadata;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BEImportMetadata>;

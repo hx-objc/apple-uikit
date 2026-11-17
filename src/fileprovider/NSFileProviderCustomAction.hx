@@ -8,6 +8,7 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderCustomAction") extern interface NSFileProviderCustomAction extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderCustomAction") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderCustomAction extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function performActionWithIdentifier(actionIdentifier:NSStringArg, onItemsWithIdentifiers:NSArray<NSString>, completionHandler:Null<NSError> -> Void):NSProgress;
 }

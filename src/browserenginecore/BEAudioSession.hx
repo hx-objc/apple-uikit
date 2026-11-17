@@ -7,13 +7,21 @@ import foundation.NSArray;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineCore") @:hxmc.objc extern class BEAudioSession extends NSObject {
+@:hxmc.framework("BrowserEngineCore") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class BEAudioSession extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():BEAudioSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var availableOutputs(get, never) : Null<NSArray<AVAudioSessionPortDescription>>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_availableOutputs():Null<NSArray<AVAudioSessionPortDescription>>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredOutput(get, never) : Null<AVAudioSessionPortDescription>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredOutput():Null<AVAudioSessionPortDescription>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithAudioSession(audioSession:AVAudioSession):BEAudioSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setPreferredOutput(outPort:Null<AVAudioSessionPortDescription>, error:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():BEAudioSession;
 }

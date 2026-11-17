@@ -45,31 +45,49 @@ import objc.NSObject;
 	var activeVideoMaxFrameDuration(get, set) : CMTime;
 	function get_activeVideoMaxFrameDuration():CMTime;
 	function set_activeVideoMaxFrameDuration(v:CMTime):CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var videoFrameDurationLocked(get, never) : Bool;
 	@:selector("isVideoFrameDurationLocked")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_videoFrameDurationLocked():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var minSupportedLockedVideoFrameDuration(get, never) : CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_minSupportedLockedVideoFrameDuration():CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var followingExternalSyncDevice(get, never) : Bool;
 	@:selector("isFollowingExternalSyncDevice")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_followingExternalSyncDevice():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var minSupportedExternalSyncFrameDuration(get, never) : CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_minSupportedExternalSyncFrameDuration():CMTime;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var adjustingSignalCompensationDelayWhileRunningSupported(get, never) : Bool;
 	@:selector("isAdjustingSignalCompensationDelayWhileRunningSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_adjustingSignalCompensationDelayWhileRunningSupported():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var autoVideoFrameRateEnabled(get, set) : Bool;
 	@:selector("isAutoVideoFrameRateEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_autoVideoFrameRateEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_autoVideoFrameRateEnabled(v:Bool):Bool;
 	var position(get, never) : AVCaptureDevicePosition;
 	function get_position():AVCaptureDevicePosition;
 	var deviceType(get, never) : NSStringArg;
 	function get_deviceType():NSStringArg;
+	@:hxmc.available(macos >= 13.0, ios >= 17.0, maccatalyst >= 16.0)
 	static var userPreferredCamera(get, set) : Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 13.0, ios >= 17.0, maccatalyst >= 16.0)
 	static function get_userPreferredCamera():Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 13.0, ios >= 17.0, maccatalyst >= 16.0)
 	static function set_userPreferredCamera(v:Null<AVCaptureDevice>):Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 13.0, ios >= 17.0, maccatalyst >= 16.0)
 	static var systemPreferredCamera(get, never) : Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 13.0, ios >= 17.0, maccatalyst >= 16.0)
 	static function get_systemPreferredCamera():Null<AVCaptureDevice>;
 	var systemPressureState(get, never) : AVCaptureSystemPressureState;
 	function get_systemPressureState():AVCaptureSystemPressureState;
@@ -80,23 +98,40 @@ import objc.NSObject;
 	function get_constituentDevices():NSArray<AVCaptureDevice>;
 	var virtualDeviceSwitchOverVideoZoomFactors(get, never) : NSArray<NSNumber>;
 	function get_virtualDeviceSwitchOverVideoZoomFactors():NSArray<NSNumber>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var primaryConstituentDeviceSwitchingBehaviorLockedWithDeviceSupported(get, never) : Bool;
 	@:selector("isPrimaryConstituentDeviceSwitchingBehaviorLockedWithDeviceSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_primaryConstituentDeviceSwitchingBehaviorLockedWithDeviceSupported():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var primaryConstituentDeviceSwitchingBehavior(get, never) : AVCapturePrimaryConstituentDeviceSwitchingBehavior;
+	@:hxmc.available(macos >= 12.0)
 	function get_primaryConstituentDeviceSwitchingBehavior():AVCapturePrimaryConstituentDeviceSwitchingBehavior;
+	@:hxmc.available(macos >= 12.0)
 	var primaryConstituentDeviceRestrictedSwitchingBehaviorConditions(get, never) : AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions;
+	@:hxmc.available(macos >= 12.0)
 	function get_primaryConstituentDeviceRestrictedSwitchingBehaviorConditions():AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions;
+	@:hxmc.available(macos >= 12.0)
 	var activePrimaryConstituentDeviceSwitchingBehavior(get, never) : AVCapturePrimaryConstituentDeviceSwitchingBehavior;
+	@:hxmc.available(macos >= 12.0)
 	function get_activePrimaryConstituentDeviceSwitchingBehavior():AVCapturePrimaryConstituentDeviceSwitchingBehavior;
+	@:hxmc.available(macos >= 12.0)
 	var activePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions(get, never) : AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions;
+	@:hxmc.available(macos >= 12.0)
 	function get_activePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions():AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions;
+	@:hxmc.available(macos >= 12.0)
 	var activePrimaryConstituentDevice(get, never) : Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	function get_activePrimaryConstituentDevice():Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	var supportedFallbackPrimaryConstituentDevices(get, never) : NSArray<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	function get_supportedFallbackPrimaryConstituentDevices():NSArray<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	var fallbackPrimaryConstituentDevices(get, set) : NSArray<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	function get_fallbackPrimaryConstituentDevices():NSArray<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	function set_fallbackPrimaryConstituentDevices(v:NSArray<AVCaptureDevice>):NSArray<AVCaptureDevice>;
 	var hasFlash(get, never) : Bool;
 	function get_hasFlash():Bool;
@@ -136,13 +171,20 @@ import objc.NSObject;
 	var focusPointOfInterest(get, set) : CGPoint;
 	function get_focusPointOfInterest():CGPoint;
 	function set_focusPointOfInterest(v:CGPoint):CGPoint;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var focusRectOfInterestSupported(get, never) : Bool;
 	@:selector("isFocusRectOfInterestSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_focusRectOfInterestSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var minFocusRectOfInterestSize(get, never) : CGSize;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_minFocusRectOfInterestSize():CGSize;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var focusRectOfInterest(get, set) : CGRect;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_focusRectOfInterest():CGRect;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_focusRectOfInterest(v:CGRect):CGRect;
 	var adjustingFocus(get, never) : Bool;
 	@:selector("isAdjustingFocus")
@@ -160,16 +202,24 @@ import objc.NSObject;
 	@:selector("isSmoothAutoFocusEnabled")
 	function get_smoothAutoFocusEnabled():Bool;
 	function set_smoothAutoFocusEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var automaticallyAdjustsFaceDrivenAutoFocusEnabled(get, set) : Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_automaticallyAdjustsFaceDrivenAutoFocusEnabled():Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_automaticallyAdjustsFaceDrivenAutoFocusEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var faceDrivenAutoFocusEnabled(get, set) : Bool;
 	@:selector("isFaceDrivenAutoFocusEnabled")
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_faceDrivenAutoFocusEnabled():Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_faceDrivenAutoFocusEnabled(v:Bool):Bool;
 	var lensPosition(get, never) : Float32;
 	function get_lensPosition():Float32;
+	@:hxmc.available(macos >= 12.0)
 	var minimumFocusDistance(get, never) : I64;
+	@:hxmc.available(macos >= 12.0)
 	function get_minimumFocusDistance():I64;
 	var exposureMode(get, set) : AVCaptureExposureMode;
 	function get_exposureMode():AVCaptureExposureMode;
@@ -180,20 +230,33 @@ import objc.NSObject;
 	var exposurePointOfInterest(get, set) : CGPoint;
 	function get_exposurePointOfInterest():CGPoint;
 	function set_exposurePointOfInterest(v:CGPoint):CGPoint;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var exposureRectOfInterestSupported(get, never) : Bool;
 	@:selector("isExposureRectOfInterestSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_exposureRectOfInterestSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var minExposureRectOfInterestSize(get, never) : CGSize;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_minExposureRectOfInterestSize():CGSize;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var exposureRectOfInterest(get, set) : CGRect;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_exposureRectOfInterest():CGRect;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_exposureRectOfInterest(v:CGRect):CGRect;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var automaticallyAdjustsFaceDrivenAutoExposureEnabled(get, set) : Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_automaticallyAdjustsFaceDrivenAutoExposureEnabled():Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_automaticallyAdjustsFaceDrivenAutoExposureEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var faceDrivenAutoExposureEnabled(get, set) : Bool;
 	@:selector("isFaceDrivenAutoExposureEnabled")
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_faceDrivenAutoExposureEnabled():Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_faceDrivenAutoExposureEnabled(v:Bool):Bool;
 	var activeMaxExposureDuration(get, set) : CMTime;
 	function get_activeMaxExposureDuration():CMTime;
@@ -207,14 +270,23 @@ import objc.NSObject;
 	function get_exposureDuration():CMTime;
 	var ISO(get, never) : Float32;
 	function get_ISO():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var autoExposureLensApertureRateLimit(get, set) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_autoExposureLensApertureRateLimit():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_autoExposureLensApertureRateLimit(v:Float32):Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var automaticallyAdjustsLensAperture(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_automaticallyAdjustsLensAperture():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var automaticallyAdjustsExposureDuration(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_automaticallyAdjustsExposureDuration():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var automaticallyAdjustsISO(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_automaticallyAdjustsISO():Bool;
 	var exposureTargetOffset(get, never) : Float32;
 	function get_exposureTargetOffset():Float32;
@@ -224,15 +296,25 @@ import objc.NSObject;
 	function get_minExposureTargetBias():Float32;
 	var maxExposureTargetBias(get, never) : Float32;
 	function get_maxExposureTargetBias():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var activeExposureSignals(get, never) : Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_activeExposureSignals():Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var enabledExposureSignals(get, set) : Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_enabledExposureSignals():Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_enabledExposureSignals(v:Null<NSSet<NSString>>):Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var supportedExposureSignals(get, never) : Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_supportedExposureSignals():Null<NSSet<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var automaticallyEnablesExposureSignals(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_automaticallyEnablesExposureSignals():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_automaticallyEnablesExposureSignals(v:Bool):Bool;
 	var globalToneMappingEnabled(get, set) : Bool;
 	@:selector("isGlobalToneMappingEnabled")
@@ -275,7 +357,9 @@ import objc.NSObject;
 	@:deprecated
 	var dualCameraSwitchOverVideoZoomFactor(get, never) : Float;
 	function get_dualCameraSwitchOverVideoZoomFactor():Float;
+	@:hxmc.available(macos >= 14.0, ios >= 18.0)
 	var displayVideoZoomFactorMultiplier(get, never) : Float;
+	@:hxmc.available(macos >= 14.0, ios >= 18.0)
 	function get_displayVideoZoomFactorMultiplier():Float;
 	var automaticallyAdjustsVideoHDREnabled(get, set) : Bool;
 	function get_automaticallyAdjustsVideoHDREnabled():Bool;
@@ -304,90 +388,161 @@ import objc.NSObject;
 	@:selector("isGeometricDistortionCorrectionEnabled")
 	function get_geometricDistortionCorrectionEnabled():Bool;
 	function set_geometricDistortionCorrectionEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.3)
 	static var centerStageControlMode(get, set) : AVCaptureCenterStageControlMode;
+	@:hxmc.available(macos >= 12.3)
 	static function get_centerStageControlMode():AVCaptureCenterStageControlMode;
+	@:hxmc.available(macos >= 12.3)
 	static function set_centerStageControlMode(v:AVCaptureCenterStageControlMode):AVCaptureCenterStageControlMode;
+	@:hxmc.available(macos >= 12.3)
 	static var centerStageEnabled(get, set) : Bool;
 	@:selector("isCenterStageEnabled")
+	@:hxmc.available(macos >= 12.3)
 	static function get_centerStageEnabled():Bool;
+	@:hxmc.available(macos >= 12.3)
 	static function set_centerStageEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.3)
 	var centerStageActive(get, never) : Bool;
 	@:selector("isCenterStageActive")
+	@:hxmc.available(macos >= 12.3)
 	function get_centerStageActive():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var centerStageRectOfInterest(get, set) : CGRect;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_centerStageRectOfInterest():CGRect;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_centerStageRectOfInterest(v:CGRect):CGRect;
+	@:hxmc.available(macos >= 12.0)
 	static var portraitEffectEnabled(get, never) : Bool;
 	@:selector("isPortraitEffectEnabled")
+	@:hxmc.available(macos >= 12.0)
 	static function get_portraitEffectEnabled():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var portraitEffectActive(get, never) : Bool;
 	@:selector("isPortraitEffectActive")
+	@:hxmc.available(macos >= 12.0)
 	function get_portraitEffectActive():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static var reactionEffectsEnabled(get, never) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function get_reactionEffectsEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static var reactionEffectGesturesEnabled(get, never) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function get_reactionEffectGesturesEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var canPerformReactionEffects(get, never) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_canPerformReactionEffects():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var availableReactionTypes(get, never) : NSSet<NSString>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_availableReactionTypes():NSSet<NSString>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var reactionEffectsInProgress(get, never) : NSArray<AVCaptureReactionEffectState>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_reactionEffectsInProgress():NSArray<AVCaptureReactionEffectState>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static var backgroundReplacementEnabled(get, never) : Bool;
 	@:selector("isBackgroundReplacementEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function get_backgroundReplacementEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var backgroundReplacementActive(get, never) : Bool;
 	@:selector("isBackgroundReplacementActive")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_backgroundReplacementActive():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var continuityCamera(get, never) : Bool;
 	@:selector("isContinuityCamera")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_continuityCamera():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var companionDeskViewCamera(get, never) : Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_companionDeskViewCamera():Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 12.0)
 	static var preferredMicrophoneMode(get, never) : AVCaptureMicrophoneMode;
+	@:hxmc.available(macos >= 12.0)
 	static function get_preferredMicrophoneMode():AVCaptureMicrophoneMode;
+	@:hxmc.available(macos >= 12.0)
 	static var activeMicrophoneMode(get, never) : AVCaptureMicrophoneMode;
+	@:hxmc.available(macos >= 12.0)
 	static function get_activeMicrophoneMode():AVCaptureMicrophoneMode;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var spatialCaptureDiscomfortReasons(get, never) : NSSet<NSString>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_spatialCaptureDiscomfortReasons():NSSet<NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cinematicVideoCaptureSceneMonitoringStatuses(get, never) : NSSet<NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cinematicVideoCaptureSceneMonitoringStatuses():NSSet<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var dynamicAspectRatio(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_dynamicAspectRatio():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var dynamicDimensions(get, never) : CMVideoDimensions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_dynamicDimensions():CMVideoDimensions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var smartFramingMonitor(get, never) : Null<AVCaptureSmartFramingMonitor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_smartFramingMonitor():Null<AVCaptureSmartFramingMonitor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var nominalFocalLengthIn35mmFilm(get, never) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_nominalFocalLengthIn35mmFilm():Float32;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var continuousAutoFocusTrackingEnabled(get, set) : Bool;
 	@:selector("isContinuousAutoFocusTrackingEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_continuousAutoFocusTrackingEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_continuousAutoFocusTrackingEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var continuousAutoFocusTrackingLensPositionBias(get, set) : Float32;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_continuousAutoFocusTrackingLensPositionBias():Float32;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_continuousAutoFocusTrackingLensPositionBias(v:Float32):Float32;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var continuousAutoFocusTrackingSubjectAcquired(get, never) : Bool;
 	@:selector("isContinuousAutoFocusTrackingSubjectAcquired")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_continuousAutoFocusTrackingSubjectAcquired():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static var studioLightEnabled(get, never) : Bool;
 	@:selector("isStudioLightEnabled")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function get_studioLightEnabled():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var studioLightActive(get, never) : Bool;
 	@:selector("isStudioLightActive")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_studioLightActive():Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	static var edgeLightEnabled(get, never) : Bool;
 	@:selector("isEdgeLightEnabled")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	static function get_edgeLightEnabled():Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	static var edgeLightActive(get, never) : Bool;
 	@:selector("isEdgeLightActive")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	static function get_edgeLightActive():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cameraLensSmudgeDetectionEnabled(get, never) : Bool;
 	@:selector("isCameraLensSmudgeDetectionEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cameraLensSmudgeDetectionEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cameraLensSmudgeDetectionInterval(get, never) : CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cameraLensSmudgeDetectionInterval():CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cameraLensSmudgeDetectionStatus(get, never) : AVCaptureCameraLensSmudgeDetectionStatus;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cameraLensSmudgeDetectionStatus():AVCaptureCameraLensSmudgeDetectionStatus;
 	@:deprecated
 	static function devices():NSArray<AVCaptureDevice>;
@@ -400,24 +555,33 @@ import objc.NSObject;
 	function unlockForConfiguration():Void;
 	function supportsAVCaptureSessionPreset(preset:NSStringArg):Bool;
 	static function defaultDeviceWithDeviceType(deviceType:NSStringArg, mediaType:Null<NSStringArg>, position:AVCaptureDevicePosition):Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function setPrimaryConstituentDeviceSwitchingBehaviorLockedWithDevice(device:AVCaptureDevice):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setPrimaryConstituentDeviceSwitchingBehavior(switchingBehavior:AVCapturePrimaryConstituentDeviceSwitchingBehavior, restrictedSwitchingBehaviorConditions:AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions):Void;
 	@:deprecated
 	function isFlashModeSupported(flashMode:AVCaptureFlashMode):Bool;
 	function isTorchModeSupported(torchMode:AVCaptureTorchMode):Bool;
 	function setTorchModeOnWithLevel(torchLevel:Float32, error:Ptr):Bool;
 	function isFocusModeSupported(focusMode:AVCaptureFocusMode):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function defaultRectForFocusPointOfInterest(pointOfInterest:CGPoint):CGRect;
 	function setFocusModeLockedWithLensPosition(lensPosition:Float32, completionHandler:Null<CMTime -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function setCinematicVideoTrackingFocusWithDetectedObjectID(detectedObjectID:I64, focusMode:AVCaptureCinematicVideoFocusMode):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function setCinematicVideoTrackingFocusAtPoint(point:CGPoint, focusMode:AVCaptureCinematicVideoFocusMode):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function setCinematicVideoFixedFocusAtPoint(point:CGPoint, focusMode:AVCaptureCinematicVideoFocusMode):Void;
 	function isExposureModeSupported(exposureMode:AVCaptureExposureMode):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function defaultRectForExposurePointOfInterest(pointOfInterest:CGPoint):CGRect;
 	function setExposureModeCustomWithDuration(duration:CMTime, ISO:Float32, completionHandler:Null<CMTime -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function setExposureModeCustomWithLensAperture(lensAperture:Float32, duration:CMTime, ISO:Float32, completionHandler:Null<CMTime -> Void>):Void;
 	function setExposureTargetBias(bias:Float32, completionHandler:Null<CMTime -> Void>):Void;
 	function isWhiteBalanceModeSupported(whiteBalanceMode:AVCaptureWhiteBalanceMode):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setWhiteBalanceModeLockedWithDeviceWhiteBalanceTemperatureAndTintValues(whiteBalanceTemperatureAndTintValues:AVCaptureWhiteBalanceTemperatureAndTintValues, completionHandler:Null<CMTime -> Void>):Void;
 	function setWhiteBalanceModeLockedWithDeviceWhiteBalanceGains(whiteBalanceGains:AVCaptureWhiteBalanceGains, completionHandler:Null<CMTime -> Void>):Void;
 	function chromaticityValuesForDeviceWhiteBalanceGains(whiteBalanceGains:AVCaptureWhiteBalanceGains):AVCaptureWhiteBalanceChromaticityValues;
@@ -429,8 +593,12 @@ import objc.NSObject;
 	static function authorizationStatusForMediaType(mediaType:NSStringArg):AVAuthorizationStatus;
 	static function requestAccessForMediaType(mediaType:NSStringArg, completionHandler:Bool -> Void):Void;
 	static function extrinsicMatrixFromDevice(fromDevice:AVCaptureDevice, toDevice:AVCaptureDevice):Null<NSData>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function performEffectForReaction(reactionType:NSStringArg):Void;
+	@:hxmc.available(macos >= 12.0)
 	static function showSystemUserInterface(systemUserInterface:AVCaptureSystemUserInterface):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setDynamicAspectRatio(dynamicAspectRatio:NSStringArg, completionHandler:Null<(CMTime, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function setCameraLensSmudgeDetectionEnabled(cameraLensSmudgeDetectionEnabled:Bool, detectionInterval:CMTime):Void;
 }

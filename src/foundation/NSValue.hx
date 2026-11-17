@@ -39,8 +39,10 @@ import uikit.UIOffset;
 	var CATransform3DValue(get, never) : CATransform3D;
 	@:hxmc.framework("QuartzCore")
 	function get_CATransform3DValue():CATransform3D;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var CMVideoDimensionsValue(get, never) : CMVideoDimensions;
 	@:hxmc.framework("AVFoundation")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_CMVideoDimensionsValue():CMVideoDimensions;
 	var CMTimeValue(get, never) : CMTime;
 	@:hxmc.framework("AVFoundation")
@@ -90,8 +92,10 @@ import uikit.UIOffset;
 	var MKCoordinateSpanValue(get, never) : MKCoordinateSpan;
 	@:hxmc.framework("MapKit")
 	function get_MKCoordinateSpanValue():MKCoordinateSpan;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	var GCPoint2Value(get, never) : GCPoint2;
 	@:hxmc.framework("GameController")
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	function get_GCPoint2Value():GCPoint2;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
@@ -108,6 +112,7 @@ import uikit.UIOffset;
 	@:hxmc.framework("QuartzCore")
 	static function valueWithCATransform3D(t:CATransform3D):NSValue;
 	@:hxmc.framework("AVFoundation")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function valueWithCMVideoDimensions(dimensions:CMVideoDimensions):NSValue;
 	@:hxmc.framework("AVFoundation")
 	static function valueWithCMTime(time:CMTime):NSValue;
@@ -142,6 +147,7 @@ import uikit.UIOffset;
 	@:hxmc.framework("MapKit")
 	static function valueWithMKCoordinateSpan(span:MKCoordinateSpan):NSValue;
 	@:hxmc.framework("GameController")
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function valueWithGCPoint2(point:GCPoint2):NSValue;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

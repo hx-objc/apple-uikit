@@ -47,19 +47,26 @@ import hxmc.objc.Id;
 	var insertDictationResultPlaceholder(get, never) : Id;
 	@:optional
 	function get_insertDictationResultPlaceholder():Id;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	var supportsAdaptiveImageGlyph(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function get_supportsAdaptiveImageGlyph():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function set_supportsAdaptiveImageGlyph(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	var editable(get, never) : Bool;
 	@:selector("isEditable")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function get_editable():Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	var unobscuredContentRect(get, never) : CGRect;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function get_unobscuredContentRect():CGRect;
 	function textInRange(range:UITextRange):Null<NSString>;
@@ -120,14 +127,19 @@ import hxmc.objc.Id;
 	function updateFloatingCursorAtPoint(point:CGPoint):Void;
 	@:optional
 	function endFloatingCursor():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function caretTransformForPosition(position:UITextPosition):CGAffineTransform;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function editMenuForTextRange(textRange:UITextRange, suggestedActions:NSArray<UIMenuElement>):Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function willPresentEditMenuWithAnimator(animator:UIEditMenuInteractionAnimating):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function willDismissEditMenuWithAnimator(animator:UIEditMenuInteractionAnimating):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function insertAdaptiveImageGlyph(adaptiveImageGlyph:NSAdaptiveImageGlyph, replacementRange:UITextRange):Void;
 	@:optional
@@ -137,10 +149,13 @@ import hxmc.objc.Id;
 	@:selector("replaceRange:withAttributedText:")
 	@:optional
 	function replaceRangeWithAttributedText(range:UITextRange, withAttributedText:NSAttributedString):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function willPresentWritingTools():Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function didDismissWritingTools():Void;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function insertInputSuggestion(inputSuggestion:UIInputSuggestion):Void;
 }

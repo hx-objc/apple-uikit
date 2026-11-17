@@ -6,10 +6,15 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SystemExtensions") @:hxmc.objc extern class OSSystemExtensionsWorkspace extends NSObject {
+@:hxmc.framework("SystemExtensions") @:hxmc.objc @:hxmc.available(macos >= 15.1, ios >= 18.4, maccatalyst >= 18.4) extern class OSSystemExtensionsWorkspace extends NSObject {
+	@:hxmc.available(macos >= 15.1, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():OSSystemExtensionsWorkspace;
+	@:hxmc.available(macos >= 15.1, ios >= 18.4, maccatalyst >= 18.4)
 	static var sharedWorkspace(get, never) : OSSystemExtensionsWorkspace;
+	@:hxmc.available(macos >= 15.1, ios >= 18.4, maccatalyst >= 18.4)
 	static function get_sharedWorkspace():OSSystemExtensionsWorkspace;
+	@:hxmc.available(macos >= 15.1, ios >= 18.4, maccatalyst >= 18.4)
 	function systemExtensionsForApplicationWithBundleID(bundleID:NSStringArg, error:Ptr):Null<NSSet<OSSystemExtensionProperties>>;
+	@:hxmc.available(macos >= 15.1, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():OSSystemExtensionsWorkspace;
 }

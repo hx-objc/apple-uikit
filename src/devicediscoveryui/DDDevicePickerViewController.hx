@@ -3,6 +3,7 @@ package devicediscoveryui;
 
 import uikit.UIViewController;
 
-@:hxmc.framework("DeviceDiscoveryUI") @:hxmc.objc extern class DDDevicePickerViewController extends UIViewController {
+@:hxmc.framework("DeviceDiscoveryUI") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class DDDevicePickerViewController extends UIViewController {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():DDDevicePickerViewController;
 }

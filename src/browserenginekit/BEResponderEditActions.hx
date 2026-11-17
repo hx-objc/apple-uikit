@@ -4,21 +4,29 @@ package browserenginekit;
 import hxmc.objc.Id;
 import uikit.UIResponderStandardEditActions;
 
-@:hxmc.objc("BEResponderEditActions") extern interface BEResponderEditActions extends UIResponderStandardEditActions {
+@:hxmc.objc("BEResponderEditActions") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BEResponderEditActions extends UIResponderStandardEditActions {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function share(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function addShortcut(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function lookup(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function findSelected(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function promptForReplace(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function replace(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function translate(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function transliterateChinese(sender:Null<Id>):Void;
 }

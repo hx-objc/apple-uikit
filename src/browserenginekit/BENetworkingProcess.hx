@@ -6,12 +6,19 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BENetworkingProcess extends NSObject implements BEExtensionProcess {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4) extern class BENetworkingProcess extends NSObject implements BEExtensionProcess {
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BENetworkingProcess;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function networkProcessWithInterruptionHandler(interruptionHandler:() -> Void, completion:(Null<BENetworkingProcess>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.3, ios >= 18.2, maccatalyst >= 18.2)
 	static function networkProcessWithBundleID(bundleID:NSStringArg, interruptionHandler:() -> Void, completion:(Null<BENetworkingProcess>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	function invalidate():Void;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	function makeLibXPCConnectionError(error:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	overload function grantCapability(capability:BEProcessCapability, error:Ptr):Null<BEProcessCapabilityGrant>;
+	@:hxmc.available(ios >= 17.6, maccatalyst >= 17.6)
 	overload function grantCapability(capability:BEProcessCapability, error:Ptr, invalidationHandler:() -> Void):Null<BEProcessCapabilityGrant>;
 }

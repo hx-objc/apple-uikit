@@ -27,8 +27,11 @@ import uikit.UIView;
 	var centerOffset(get, set) : CGPoint;
 	function get_centerOffset():CGPoint;
 	function set_centerOffset(v:CGPoint):CGPoint;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var accessoryOffset(get, set) : CGPoint;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessoryOffset():CGPoint;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessoryOffset(v:CGPoint):CGPoint;
 	var calloutOffset(get, set) : CGPoint;
 	function get_calloutOffset():CGPoint;
@@ -72,11 +75,17 @@ import uikit.UIView;
 	var displayPriority(get, set) : Float32;
 	function get_displayPriority():Float32;
 	function set_displayPriority(v:Float32):Float32;
+	@:hxmc.available(macos >= 11.0)
 	var zPriority(get, set) : Float32;
+	@:hxmc.available(macos >= 11.0)
 	function get_zPriority():Float32;
+	@:hxmc.available(macos >= 11.0)
 	function set_zPriority(v:Float32):Float32;
+	@:hxmc.available(macos >= 11.0)
 	var selectedZPriority(get, set) : Float32;
+	@:hxmc.available(macos >= 11.0)
 	function get_selectedZPriority():Float32;
+	@:hxmc.available(macos >= 11.0)
 	function set_selectedZPriority(v:Float32):Float32;
 	var collisionMode(get, set) : MKAnnotationViewCollisionMode;
 	function get_collisionMode():MKAnnotationViewCollisionMode;

@@ -4,9 +4,13 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEAccessibilityPressedState(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Undefined = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var False = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var True = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Mixed = 3;
 	inline function new(v:I64) this = v;
 }

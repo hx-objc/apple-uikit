@@ -7,12 +7,19 @@ import foundation.NSCoder;
 import uikit.UIScrollView;
 import uikit.UITraitCollection;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEScrollView extends UIScrollView {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEScrollView extends UIScrollView {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEScrollView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function appearance():BEScrollView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):BEScrollView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):BEScrollView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():BEScrollView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithCoder(coder:NSCoder):Null<BEScrollView>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithFrame(frame:CGRect):BEScrollView;
 }

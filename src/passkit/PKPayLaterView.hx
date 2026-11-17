@@ -7,25 +7,45 @@ import foundation.NSStringArg;
 import uikit.UITraitCollection;
 import uikit.UIView;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKPayLaterView extends UIView {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class PKPayLaterView extends UIView {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():PKPayLaterView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function appearance():PKPayLaterView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):PKPayLaterView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):PKPayLaterView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var delegate(get, set) : PKPayLaterViewDelegate;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_delegate():PKPayLaterViewDelegate;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_delegate(v:PKPayLaterViewDelegate):PKPayLaterViewDelegate;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var amount(get, set) : NSDecimalNumber;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_amount():NSDecimalNumber;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_amount(v:NSDecimalNumber):NSDecimalNumber;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var currencyCode(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_currencyCode():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_currencyCode(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var displayStyle(get, set) : PKPayLaterDisplayStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_displayStyle():PKPayLaterDisplayStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_displayStyle(v:PKPayLaterDisplayStyle):PKPayLaterDisplayStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var action(get, set) : PKPayLaterAction;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_action():PKPayLaterAction;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_action(v:PKPayLaterAction):PKPayLaterAction;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithAmount(amount:NSDecimalNumber, currencyCode:NSStringArg):PKPayLaterView;
 }

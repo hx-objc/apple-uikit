@@ -4,7 +4,9 @@ package touchcontroller;
 import hxmc.I64;
 
 enum abstract TCControlLayoutAnchorCoordinateSystem(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Relative = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Absolute = 1;
 	inline function new(v:I64) this = v;
 }

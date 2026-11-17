@@ -5,15 +5,25 @@ import hxmc.I64;
 import objc.NSObject;
 import uikit.UITextGranularity;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BETextDocumentRequest extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BETextDocumentRequest extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BETextDocumentRequest;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var options(get, set) : BETextDocumentRequestOptions;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_options():BETextDocumentRequestOptions;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_options(v:BETextDocumentRequestOptions):BETextDocumentRequestOptions;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var surroundingGranularity(get, set) : UITextGranularity;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_surroundingGranularity():UITextGranularity;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_surroundingGranularity(v:UITextGranularity):UITextGranularity;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var granularityCount(get, set) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_granularityCount():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_granularityCount(v:I64):I64;
 }

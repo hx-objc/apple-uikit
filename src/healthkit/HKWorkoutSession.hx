@@ -12,39 +12,70 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKWorkoutSession extends NSObject implements NSSecureCoding {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class HKWorkoutSession extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():HKWorkoutSession;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var activityType(get, never) : HKWorkoutActivityType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_activityType():HKWorkoutActivityType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var locationType(get, never) : HKWorkoutSessionLocationType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_locationType():HKWorkoutSessionLocationType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var workoutConfiguration(get, never) : HKWorkoutConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_workoutConfiguration():HKWorkoutConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var delegate(get, set) : Null<HKWorkoutSessionDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_delegate():Null<HKWorkoutSessionDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_delegate(v:Null<HKWorkoutSessionDelegate>):Null<HKWorkoutSessionDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var state(get, never) : HKWorkoutSessionState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_state():HKWorkoutSessionState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var type(get, never) : HKWorkoutSessionType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_type():HKWorkoutSessionType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var startDate(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_startDate():Null<NSDate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var endDate(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_endDate():Null<NSDate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var currentActivity(get, never) : HKWorkoutActivity;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_currentActivity():HKWorkoutActivity;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithHealthStore(healthStore:HKHealthStore, configuration:HKWorkoutConfiguration, error:Ptr):Null<HKWorkoutSession>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function prepare():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function startActivityWithDate(date:Null<NSDate>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function stopActivityWithDate(date:Null<NSDate>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function end():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function pause():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function resume():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function associatedWorkoutBuilder():HKLiveWorkoutBuilder;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function beginNewActivityWithConfiguration(workoutConfiguration:HKWorkoutConfiguration, date:NSDate, metadata:Null<NSDictionary<NSString, Id>>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function endCurrentActivityOnDate(date:NSDate):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function sendDataToRemoteWorkoutSession(data:NSData, completion:(Bool, Null<NSError>) -> Void):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<HKWorkoutSession>;

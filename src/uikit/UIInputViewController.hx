@@ -29,6 +29,7 @@ import foundation.NSStringArg;
 	function selectionDidChange(textInput:Null<UITextInput>):Void;
 	function textWillChange(textInput:Null<UITextInput>):Void;
 	function textDidChange(textInput:Null<UITextInput>):Void;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function conversationContext(context:Null<UIConversationContext>, didChange:Null<UITextInput>):Void;
 	override function init():UIInputViewController;
 	override function initWithCoder(coder:NSCoder):Null<UIInputViewController>;

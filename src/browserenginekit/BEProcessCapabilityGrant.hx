@@ -3,9 +3,12 @@ package browserenginekit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("BEProcessCapabilityGrant") extern interface BEProcessCapabilityGrant extends NSObjectProtocol {
+@:hxmc.objc("BEProcessCapabilityGrant") @:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4) extern interface BEProcessCapabilityGrant extends NSObjectProtocol {
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	var valid(get, never) : Bool;
 	@:selector("isValid")
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	function get_valid():Bool;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	function invalidate():Bool;
 }

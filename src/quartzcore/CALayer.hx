@@ -86,17 +86,29 @@ import objc.NSObject;
 	function get_contentsFormat():NSStringArg;
 	function set_contentsFormat(v:NSStringArg):NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var wantsExtendedDynamicRangeContent(get, set) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_wantsExtendedDynamicRangeContent():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_wantsExtendedDynamicRangeContent(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var toneMapMode(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_toneMapMode():NSStringArg;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_toneMapMode(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var preferredDynamicRange(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredDynamicRange():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredDynamicRange(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var contentsHeadroom(get, set) : Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentsHeadroom():Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_contentsHeadroom(v:Float):Float;
 	var minificationFilter(get, set) : NSStringArg;
 	function get_minificationFilter():NSStringArg;

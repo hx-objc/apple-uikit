@@ -4,13 +4,21 @@ package uikit;
 import objc.NSObject;
 import uiutilities.UIRectEdge;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIViewLayoutRegion extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIViewLayoutRegion extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIViewLayoutRegion;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function safeAreaLayoutRegionWithCornerAdaptation(adaptivityAxis:UIViewLayoutRegionAdaptivityAxis):UIViewLayoutRegion;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function marginsLayoutRegionWithCornerAdaptation(adaptivityAxis:UIViewLayoutRegionAdaptivityAxis):UIViewLayoutRegion;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function readableContentLayoutRegionWithCornerAdaptation(adaptivityAxis:UIViewLayoutRegionAdaptivityAxis):UIViewLayoutRegion;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static overload function layoutRegionForBarOnEdge(edge:UIRectEdge, extent:Float):UIViewLayoutRegion;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static overload function layoutRegionForBarOnDirectionalEdge(edge:NSDirectionalRectEdge, extent:Float):UIViewLayoutRegion;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	static overload function layoutRegionForBarOnEdge(edge:UIRectEdge):UIViewLayoutRegion;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	static overload function layoutRegionForBarOnDirectionalEdge(edge:NSDirectionalRectEdge):UIViewLayoutRegion;
 }

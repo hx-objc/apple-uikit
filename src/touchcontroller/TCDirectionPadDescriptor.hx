@@ -6,67 +6,126 @@ import coregraphics.CGSize;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCDirectionPadDescriptor extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCDirectionPadDescriptor extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCDirectionPadDescriptor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var compositeLabel(get, set) : Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_compositeLabel():Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_compositeLabel(v:Null<TCControlLabel>):Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var upLabel(get, set) : Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_upLabel():Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_upLabel(v:Null<TCControlLabel>):Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var downLabel(get, set) : Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_downLabel():Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_downLabel(v:Null<TCControlLabel>):Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var leftLabel(get, set) : Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_leftLabel():Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_leftLabel(v:Null<TCControlLabel>):Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var rightLabel(get, set) : Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_rightLabel():Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_rightLabel(v:Null<TCControlLabel>):Null<TCControlLabel>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var upContents(get, set) : Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_upContents():Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_upContents(v:Null<TCControlContents>):Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var downContents(get, set) : Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_downContents():Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_downContents(v:Null<TCControlContents>):Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var leftContents(get, set) : Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_leftContents():Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_leftContents(v:Null<TCControlContents>):Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var rightContents(get, set) : Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_rightContents():Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_rightContents(v:Null<TCControlContents>):Null<TCControlContents>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var anchor(get, set) : TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_anchor():TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_anchor(v:TCControlLayoutAnchor):TCControlLayoutAnchor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var anchorCoordinateSystem(get, set) : TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_anchorCoordinateSystem():TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_anchorCoordinateSystem(v:TCControlLayoutAnchorCoordinateSystem):TCControlLayoutAnchorCoordinateSystem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var offset(get, set) : CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_offset():CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_offset(v:CGPoint):CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var zIndex(get, set) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_zIndex():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_zIndex(v:I64):I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_size():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var colliderShape(get, set) : TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_colliderShape():TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_colliderShape(v:TCColliderShape):TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var highlightDuration(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_highlightDuration():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_highlightDuration(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var radial(get, set) : Bool;
 	@:selector("isRadial")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_radial():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_radial(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var digital(get, set) : Bool;
 	@:selector("isDigital")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_digital():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_digital(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var mutuallyExclusiveInput(get, set) : Bool;
 	@:selector("inputIsMutuallyExclusive")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_mutuallyExclusiveInput():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_mutuallyExclusiveInput(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():TCDirectionPadDescriptor;
 }

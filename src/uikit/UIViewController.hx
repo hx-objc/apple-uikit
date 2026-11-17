@@ -55,8 +55,11 @@ import uiutilities.UIRectEdge;
 	var focusGroupIdentifier(get, set) : Null<NSStringArg>;
 	function get_focusGroupIdentifier():Null<NSStringArg>;
 	function set_focusGroupIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var interactionActivityTrackingBaseName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_interactionActivityTrackingBaseName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_interactionActivityTrackingBaseName(v:Null<NSStringArg>):Null<NSStringArg>;
 	var beingPresented(get, never) : Bool;
 	@:selector("isBeingPresented")
@@ -73,8 +76,11 @@ import uiutilities.UIRectEdge;
 	var modalTransitionStyle(get, set) : UIModalTransitionStyle;
 	function get_modalTransitionStyle():UIModalTransitionStyle;
 	function set_modalTransitionStyle(v:UIModalTransitionStyle):UIModalTransitionStyle;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var preferredTransition(get, set) : Null<UIViewControllerTransition>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_preferredTransition():Null<UIViewControllerTransition>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_preferredTransition(v:Null<UIViewControllerTransition>):Null<UIViewControllerTransition>;
 	var modalPresentationStyle(get, set) : UIModalPresentationStyle;
 	function get_modalPresentationStyle():UIModalPresentationStyle;
@@ -170,7 +176,9 @@ import uiutilities.UIRectEdge;
 	function get_sheetPresentationController():Null<UISheetPresentationController>;
 	var popoverPresentationController(get, never) : Null<UIPopoverPresentationController>;
 	function get_popoverPresentationController():Null<UIPopoverPresentationController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var activePresentationController(get, never) : Null<UIPresentationController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_activePresentationController():Null<UIPresentationController>;
 	var modalInPresentation(get, set) : Bool;
 	@:selector("isModalInPresentation")
@@ -188,25 +196,44 @@ import uiutilities.UIRectEdge;
 	function get_childViewControllerForPointerLock():Null<UIViewController>;
 	var prefersPointerLocked(get, never) : Bool;
 	function get_prefersPointerLocked():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var contentUnavailableConfiguration(get, set) : Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_contentUnavailableConfiguration():Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_contentUnavailableConfiguration(v:Null<UIContentConfiguration>):Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var contentUnavailableConfigurationState(get, never) : UIContentUnavailableConfigurationState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_contentUnavailableConfigurationState():UIContentUnavailableConfigurationState;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var childViewControllerForInterfaceOrientationLock(get, never) : Null<UIViewController>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_childViewControllerForInterfaceOrientationLock():Null<UIViewController>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var prefersInterfaceOrientationLocked(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_prefersInterfaceOrientationLocked():Bool;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var preferredVerticalBarBehavior(get, never) : UIVerticalBarBehavior;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_preferredVerticalBarBehavior():UIVerticalBarBehavior;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var childViewControllerForPreferredVerticalBarBehavior(get, never) : Null<UIViewController>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_childViewControllerForPreferredVerticalBarBehavior():Null<UIViewController>;
 	@:deprecated
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var previewActionItems(get, never) : NSArray<UIPreviewActionItem>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_previewActionItems():NSArray<UIPreviewActionItem>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var traitOverrides(get, never) : UITraitOverrides;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_traitOverrides():UITraitOverrides;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var arrangementViewController(get, never) : Null<UIArrangementViewController>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_arrangementViewController():Null<UIArrangementViewController>;
 	var navigationItem(get, never) : UINavigationItem;
 	function get_navigationItem():UINavigationItem;
@@ -236,7 +263,9 @@ import uiutilities.UIRectEdge;
 	function set_tabBarItem(v:UITabBarItem):UITabBarItem;
 	var tabBarController(get, never) : Null<UITabBarController>;
 	function get_tabBarController():Null<UITabBarController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var tab(get, never) : Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_tab():Null<UITab>;
 	var traitCollection(get, never) : UITraitCollection;
 	function get_traitCollection():UITraitCollection;
@@ -274,8 +303,11 @@ import uiutilities.UIRectEdge;
 	function viewDidAppear(animated:Bool):Void;
 	function viewWillDisappear(animated:Bool):Void;
 	function viewDidDisappear(animated:Bool):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setNeedsUpdateProperties():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateProperties():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updatePropertiesIfNeeded():Void;
 	function viewWillLayoutSubviews():Void;
 	function viewDidLayoutSubviews():Void;
@@ -292,12 +324,15 @@ import uiutilities.UIRectEdge;
 	function targetViewControllerForAction(action:Selector, sender:Null<Id>):Null<UIViewController>;
 	function showViewController(vc:UIViewController, sender:Null<Id>):Void;
 	function showDetailViewController(vc:UIViewController, sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function registerSceneAccessory(accessory:UISceneAccessory):UISceneAccessoryRegistration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function unregisterSceneAccessory(registration:UISceneAccessoryRegistration):Void;
 	@:deprecated
 	static function attemptRotationToDeviceOrientation():Void;
 	@:deprecated
 	function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setNeedsUpdateOfSupportedInterfaceOrientations():Void;
 	@:deprecated
 	function rotatingHeaderView():Null<UIView>;
@@ -346,10 +381,15 @@ import uiutilities.UIRectEdge;
 	function setNeedsUpdateOfScreenEdgesDeferringSystemGestures():Void;
 	function setNeedsUpdateOfHomeIndicatorAutoHidden():Void;
 	function setNeedsUpdateOfPrefersPointerLocked():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setNeedsUpdateContentUnavailableConfiguration():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function updateContentUnavailableConfigurationUsingState(state:UIContentUnavailableConfigurationState):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setNeedsUpdateOfPrefersInterfaceOrientationLocked():Void;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function setNeedsUpdateOfVerticalBarConfiguration():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function updateTraitsIfNeeded():Void;
 	function setToolbarItems(toolbarItems:Null<NSArray<UIBarButtonItem>>, animated:Bool):Void;
 	function collapseSecondaryViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
@@ -373,15 +413,22 @@ import uiutilities.UIRectEdge;
 	function shouldUpdateFocusInContext(context:UIFocusUpdateContext):Bool;
 	function didUpdateFocusInContext(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 	function beginRequestWithExtensionContext(context:NSExtensionContext):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function unregisterForTraitChanges(registration:UITraitChangeRegistration):Void;
 	override function init():UIViewController;
 	@:selector("registerForTraitChanges:withHandler:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithHandler(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withTarget:action:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithTargetAction(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withAction:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithAction(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
 }

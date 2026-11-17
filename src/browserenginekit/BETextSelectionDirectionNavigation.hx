@@ -5,9 +5,13 @@ import uikit.UITextGranularity;
 import uikit.UITextLayoutDirection;
 import uikit.UITextStorageDirection;
 
-@:hxmc.objc("BETextSelectionDirectionNavigation") extern interface BETextSelectionDirectionNavigation extends hxmc.objc.Id {
+@:hxmc.objc("BETextSelectionDirectionNavigation") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BETextSelectionDirectionNavigation extends hxmc.objc.Id {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function moveInLayoutDirection(direction:UITextLayoutDirection):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function extendInLayoutDirection(direction:UITextLayoutDirection):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function moveInStorageDirection(direction:UITextStorageDirection, byGranularity:UITextGranularity):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function extendInStorageDirection(direction:UITextStorageDirection, byGranularity:UITextGranularity):Void;
 }

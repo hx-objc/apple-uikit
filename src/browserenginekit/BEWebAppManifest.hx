@@ -5,11 +5,17 @@ import foundation.NSData;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEWebAppManifest extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.5, maccatalyst >= 17.5) extern class BEWebAppManifest extends NSObject {
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function alloc():BEWebAppManifest;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var jsonData(get, never) : NSData;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_jsonData():NSData;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var manifestURL(get, never) : NSURL;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_manifestURL():NSURL;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function initWithJSONData(jsonData:NSData, manifestURL:NSURL):Null<BEWebAppManifest>;
 }

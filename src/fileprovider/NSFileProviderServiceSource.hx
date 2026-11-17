@@ -5,13 +5,18 @@ import foundation.NSStringArg;
 import foundation.NSXPCListenerEndpoint;
 import hxmc.unsafe.Ptr;
 
-@:hxmc.objc("NSFileProviderServiceSource") extern interface NSFileProviderServiceSource extends hxmc.objc.Id {
+@:hxmc.objc("NSFileProviderServiceSource") @:hxmc.available(macos >= 11.0) extern interface NSFileProviderServiceSource extends hxmc.objc.Id {
+	@:hxmc.available(macos >= 11.0)
 	var serviceName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_serviceName():NSStringArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var restricted(get, never) : Bool;
 	@:selector("isRestricted")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_restricted():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function makeListenerEndpointAndReturnError(error:Ptr):Null<NSXPCListenerEndpoint>;
 }

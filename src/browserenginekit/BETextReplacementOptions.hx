@@ -4,7 +4,9 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BETextReplacementOptions(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var None = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var AddUnderline = 1;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

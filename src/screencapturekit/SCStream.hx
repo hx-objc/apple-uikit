@@ -6,22 +6,38 @@ import foundation.NSError;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCStream extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2) extern class SCStream extends NSObject {
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	static function alloc():SCStream;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	var synchronizationClock(get, never) : Null<CMClock>;
+	@:hxmc.available(macos >= 13.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_synchronizationClock():Null<CMClock>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var capturing(get, never) : Bool;
 	@:selector("isCapturing")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_capturing():Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function initWithFilter(contentFilter:SCContentFilter, configuration:SCStreamConfiguration, delegate:Null<SCStreamDelegate>):SCStream;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function addStreamOutput(output:SCStreamOutput, type:SCStreamOutputType, sampleHandlerQueue:Null<NSObject>, error:Ptr):Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function removeStreamOutput(output:SCStreamOutput, type:SCStreamOutputType, error:Ptr):Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function startCaptureWithCompletionHandler(completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function stopCaptureWithCompletionHandler(completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	function addRecordingOutput(recordingOutput:SCRecordingOutput, error:Ptr):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	function removeRecordingOutput(recordingOutput:SCRecordingOutput, error:Ptr):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function addClipBufferingOutput(clipBufferingOutput:SCClipBufferingOutput, error:Ptr):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function removeClipBufferingOutput(clipBufferingOutput:SCClipBufferingOutput, error:Ptr):Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function addVideoEffectOutput(videoEffectOutput:SCVideoEffectOutput, error:Ptr):Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function removeVideoEffectOutput(videoEffectOutput:SCVideoEffectOutput, error:Ptr):Bool;
 }

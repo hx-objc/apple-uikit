@@ -6,10 +6,15 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BETextAlternatives extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BETextAlternatives extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BETextAlternatives;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var primaryString(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_primaryString():NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var alternativeStrings(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_alternativeStrings():NSArray<NSString>;
 }

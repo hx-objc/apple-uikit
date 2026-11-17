@@ -5,12 +5,19 @@ import coremedia.CMAudioFormatDescription;
 import coremedia.CMSampleBuffer;
 import objc.NSObject;
 
-@:hxmc.framework("AVFoundation") @:hxmc.objc extern class AVCaptureSpatialAudioMetadataSampleGenerator extends NSObject {
+@:hxmc.framework("AVFoundation") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVCaptureSpatialAudioMetadataSampleGenerator extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVCaptureSpatialAudioMetadataSampleGenerator;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var timedMetadataSampleBufferFormatDescription(get, never) : CMAudioFormatDescription;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_timedMetadataSampleBufferFormatDescription():CMAudioFormatDescription;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function analyzeAudioSample(sbuf:CMSampleBuffer):Int;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function newTimedMetadataSampleBufferAndResetAnalyzer():Null<CMSampleBuffer>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function resetAnalyzer():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():AVCaptureSpatialAudioMetadataSampleGenerator;
 }

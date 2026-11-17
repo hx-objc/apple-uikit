@@ -4,16 +4,25 @@ package audiotoolbox;
 import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 
-@:hxmc.framework("AudioToolbox") @:hxmc.objc extern class AUHeadTrackingBinauralRenderer extends AUAudioUnit {
+@:hxmc.framework("AudioToolbox") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AUHeadTrackingBinauralRenderer extends AUAudioUnit {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AUHeadTrackingBinauralRenderer;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var headTracking(get, never) : Bool;
 	@:selector("isHeadTracking")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_headTracking():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var disabled(get, never) : Bool;
 	@:selector("isDisabled")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_disabled():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var deviceUID(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_deviceUID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override overload function initWithComponentDescription(componentDescription:AudioComponentDescription, error:Ptr):Null<AUHeadTrackingBinauralRenderer>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override overload function initWithComponentDescription(componentDescription:AudioComponentDescription, options:AudioComponentInstantiationOptions, error:Ptr):Null<AUHeadTrackingBinauralRenderer>;
 }

@@ -11,70 +11,129 @@ import metal.MTLDevice;
 import metal.MTLPixelFormat;
 import objc.NSObject;
 
-@:hxmc.framework("MetalFX") @:hxmc.objc extern class MTLFXTemporalScalerDescriptor extends NSObject implements NSCopying {
+@:hxmc.framework("MetalFX") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class MTLFXTemporalScalerDescriptor extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MTLFXTemporalScalerDescriptor;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var colorTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_colorTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_colorTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var depthTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_depthTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_depthTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var motionTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_motionTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_motionTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var outputTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_outputTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_outputTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputWidth():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputHeight():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var outputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_outputWidth():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_outputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var outputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_outputHeight():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_outputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var autoExposureEnabled(get, set) : Bool;
 	@:selector("isAutoExposureEnabled")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_autoExposureEnabled():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_autoExposureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var requiresSynchronousInitialization(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_requiresSynchronousInitialization():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_requiresSynchronousInitialization(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputContentPropertiesEnabled(get, set) : Bool;
 	@:selector("isInputContentPropertiesEnabled")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputContentPropertiesEnabled():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputContentPropertiesEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputContentMinScale(get, set) : Float32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputContentMinScale():Float32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputContentMinScale(v:Float32):Float32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputContentMaxScale(get, set) : Float32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputContentMaxScale():Float32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputContentMaxScale(v:Float32):Float32;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var outputResolutionMotionVectorsEnabled(get, set) : Bool;
 	@:selector("isOutputResolutionMotionVectorsEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_outputResolutionMotionVectorsEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_outputResolutionMotionVectorsEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var jitteredMotionVectorsEnabled(get, set) : Bool;
 	@:selector("isJitteredMotionVectorsEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_jitteredMotionVectorsEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_jitteredMotionVectorsEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var reactiveMaskTextureEnabled(get, set) : Bool;
 	@:selector("isReactiveMaskTextureEnabled")
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_reactiveMaskTextureEnabled():Bool;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_reactiveMaskTextureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var reactiveMaskTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_reactiveMaskTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_reactiveMaskTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function newTemporalScalerWithDevice(device:MTLDevice):Null<MTLFXTemporalScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function newTemporalScalerWithDevice(device:MTLDevice, compiler:MTL4Compiler):Null<MTL4FXTemporalScaler>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function supportedInputContentMinScaleForDevice(device:MTLDevice):Float32;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function supportedInputContentMaxScaleForDevice(device:MTLDevice):Float32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function supportsDevice(device:MTLDevice):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function supportsMetal4FX(device:MTLDevice):Bool;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():MTLFXTemporalScalerDescriptor;
 }

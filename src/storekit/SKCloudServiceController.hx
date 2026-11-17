@@ -6,21 +6,30 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("StoreKit") @:hxmc.objc @:deprecated extern class SKCloudServiceController extends NSObject {
+@:hxmc.framework("StoreKit") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 11.0) extern class SKCloudServiceController extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():SKCloudServiceController;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	static function authorizationStatus():SKCloudServiceAuthorizationStatus;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	static function requestAuthorization(completionHandler:SKCloudServiceAuthorizationStatus -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function requestCapabilitiesWithCompletionHandler(completionHandler:(SKCloudServiceCapability, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function requestStorefrontCountryCodeWithCompletionHandler(completionHandler:(Null<NSString>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function requestStorefrontIdentifierWithCompletionHandler(completionHandler:(Null<NSString>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function requestUserTokenForDeveloperToken(developerToken:NSStringArg, completionHandler:(Null<NSString>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function requestPersonalizationTokenForClientToken(clientToken:NSStringArg, withCompletionHandler:(Null<NSString>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():SKCloudServiceController;
 }

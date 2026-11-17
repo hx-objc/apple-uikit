@@ -4,18 +4,31 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEAccessibilityContainerType(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var None = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Landmark = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Table = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var List = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Fieldset = 8;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Dialog = 16;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Tree = 32;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Frame = 64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Article = 128;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SemanticGroup = 256;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ScrollArea = 512;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Alert = 1024;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var DescriptionList = 2048;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

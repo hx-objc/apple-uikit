@@ -4,5 +4,6 @@ package touchcontroller;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("TouchController") extern class TouchController {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final TCGameControllerProductCategoryTouchController : NSString;
 }

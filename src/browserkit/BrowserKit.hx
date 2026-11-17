@@ -5,8 +5,12 @@ import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("BrowserKit") extern class BrowserKit {
 	public static final BEBrowserDataExchangeErrorDomain : NSString;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	public static final BEBrowserDataExchangeExportActivity : NSString;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	public static final BEBrowserDataExchangeExportToken : NSString;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	public static final BEBrowserDataExchangeImportActivity : NSString;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	public static final BEBrowserDataExchangeImportToken : NSString;
 }

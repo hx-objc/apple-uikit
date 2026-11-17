@@ -4,7 +4,9 @@ package touchcontroller;
 import hxmc.I64;
 
 enum abstract TCControlLabelRole(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Button = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var DirectionPad = 1;
 	inline function new(v:I64) this = v;
 }

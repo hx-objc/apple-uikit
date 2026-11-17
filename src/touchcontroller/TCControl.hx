@@ -4,25 +4,40 @@ package touchcontroller;
 import coregraphics.CGPoint;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("TCControl") extern interface TCControl extends NSObjectProtocol extends TCControlLayout {
+@:hxmc.objc("TCControl") @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern interface TCControl extends NSObjectProtocol extends TCControlLayout {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var label(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_label():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var colliderShape(get, never) : TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_colliderShape():TCColliderShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var pressed(get, never) : Bool;
 	@:selector("isPressed")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_pressed():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	var highlightDuration(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function get_highlightDuration():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function set_highlightDuration(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function handleTouchBeganAtPoint(point:CGPoint):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function handleTouchMovedAtPoint(point:CGPoint):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function handleTouchEndedAtPoint(point:CGPoint):Void;
 }

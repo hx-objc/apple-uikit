@@ -3,6 +3,7 @@ package accessibility;
 
 import objc.NSObject;
 
-@:hxmc.framework("Accessibility") @:hxmc.objc extern class AXFeatureOverrideSession extends NSObject {
+@:hxmc.framework("Accessibility") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class AXFeatureOverrideSession extends NSObject {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():AXFeatureOverrideSession;
 }

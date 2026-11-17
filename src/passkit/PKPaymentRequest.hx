@@ -11,108 +11,207 @@ import hxmc.unsafe.Int16;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKPaymentRequest extends NSObject {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class PKPaymentRequest extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():PKPaymentRequest;
+	@:hxmc.available(macos >= 11.0)
 	var merchantIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_merchantIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function set_merchantIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 11.0, ios >= 26.0, maccatalyst >= 26.0)
 	var attributionIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_attributionIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_attributionIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var countryCode(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_countryCode():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function set_countryCode(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var supportedNetworks(get, set) : NSArray<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportedNetworks():NSArray<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	function set_supportedNetworks(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var unsupportedPrimaryAccountIdentifiers(get, set) : NSArray<NSString>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_unsupportedPrimaryAccountIdentifiers():NSArray<NSString>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_unsupportedPrimaryAccountIdentifiers(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	var merchantCapabilities(get, set) : PKMerchantCapability;
+	@:hxmc.available(macos >= 11.0)
 	function get_merchantCapabilities():PKMerchantCapability;
+	@:hxmc.available(macos >= 11.0)
 	function set_merchantCapabilities(v:PKMerchantCapability):PKMerchantCapability;
+	@:hxmc.available(macos >= 12.0)
 	var supportsCouponCode(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_supportsCouponCode():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_supportsCouponCode(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var couponCode(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	function get_couponCode():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	function set_couponCode(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var merchantCategoryCode(get, set) : Int16;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_merchantCategoryCode():Int16;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_merchantCategoryCode(v:Int16):Int16;
+	@:hxmc.available(macos >= 11.0)
 	var paymentSummaryItems(get, set) : NSArray<PKPaymentSummaryItem>;
+	@:hxmc.available(macos >= 11.0)
 	function get_paymentSummaryItems():NSArray<PKPaymentSummaryItem>;
+	@:hxmc.available(macos >= 11.0)
 	function set_paymentSummaryItems(v:NSArray<PKPaymentSummaryItem>):NSArray<PKPaymentSummaryItem>;
+	@:hxmc.available(macos >= 11.0)
 	var currencyCode(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_currencyCode():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function set_currencyCode(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var requiredBillingContactFields(get, set) : NSSet<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	function get_requiredBillingContactFields():NSSet<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	function set_requiredBillingContactFields(v:NSSet<NSString>):NSSet<NSString>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var requiredBillingAddressFields(get, set) : PKAddressField;
+	@:hxmc.available(macos >= 11.0)
 	function get_requiredBillingAddressFields():PKAddressField;
+	@:hxmc.available(macos >= 11.0)
 	function set_requiredBillingAddressFields(v:PKAddressField):PKAddressField;
+	@:hxmc.available(macos >= 11.0)
 	var billingContact(get, set) : Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	function get_billingContact():Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	function set_billingContact(v:Null<PKContact>):Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	var requiredShippingContactFields(get, set) : NSSet<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	function get_requiredShippingContactFields():NSSet<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	function set_requiredShippingContactFields(v:NSSet<NSString>):NSSet<NSString>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var requiredShippingAddressFields(get, set) : PKAddressField;
+	@:hxmc.available(macos >= 11.0)
 	function get_requiredShippingAddressFields():PKAddressField;
+	@:hxmc.available(macos >= 11.0)
 	function set_requiredShippingAddressFields(v:PKAddressField):PKAddressField;
+	@:hxmc.available(macos >= 11.0)
 	var shippingContact(get, set) : Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingContact():Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	function set_shippingContact(v:Null<PKContact>):Null<PKContact>;
+	@:hxmc.available(macos >= 11.0)
 	var shippingMethods(get, set) : Null<NSArray<PKShippingMethod>>;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingMethods():Null<NSArray<PKShippingMethod>>;
+	@:hxmc.available(macos >= 11.0)
 	function set_shippingMethods(v:Null<NSArray<PKShippingMethod>>):Null<NSArray<PKShippingMethod>>;
+	@:hxmc.available(macos >= 11.0)
 	var shippingType(get, set) : PKShippingType;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingType():PKShippingType;
+	@:hxmc.available(macos >= 11.0)
 	function set_shippingType(v:PKShippingType):PKShippingType;
+	@:hxmc.available(macos >= 12.0)
 	var shippingContactEditingMode(get, set) : PKShippingContactEditingMode;
+	@:hxmc.available(macos >= 12.0)
 	function get_shippingContactEditingMode():PKShippingContactEditingMode;
+	@:hxmc.available(macos >= 12.0)
 	function set_shippingContactEditingMode(v:PKShippingContactEditingMode):PKShippingContactEditingMode;
+	@:hxmc.available(macos >= 11.0)
 	var applicationData(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	function get_applicationData():Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	function set_applicationData(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 11.0)
 	var supportedCountries(get, set) : Null<NSSet<NSString>>;
+	@:hxmc.available(macos >= 11.0)
 	function get_supportedCountries():Null<NSSet<NSString>>;
+	@:hxmc.available(macos >= 11.0)
 	function set_supportedCountries(v:Null<NSSet<NSString>>):Null<NSSet<NSString>>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var shippingAddress(get, set) : Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function get_shippingAddress():Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function set_shippingAddress(v:Ptr):Ptr;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var billingAddress(get, set) : Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function get_billingAddress():Ptr;
+	@:hxmc.available(macos >= 11.0)
 	function set_billingAddress(v:Ptr):Ptr;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var multiTokenContexts(get, set) : NSArray<PKPaymentTokenContext>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_multiTokenContexts():NSArray<PKPaymentTokenContext>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_multiTokenContexts(v:NSArray<PKPaymentTokenContext>):NSArray<PKPaymentTokenContext>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var recurringPaymentRequest(get, set) : Null<PKRecurringPaymentRequest>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_recurringPaymentRequest():Null<PKRecurringPaymentRequest>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_recurringPaymentRequest(v:Null<PKRecurringPaymentRequest>):Null<PKRecurringPaymentRequest>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var automaticReloadPaymentRequest(get, set) : Null<PKAutomaticReloadPaymentRequest>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_automaticReloadPaymentRequest():Null<PKAutomaticReloadPaymentRequest>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_automaticReloadPaymentRequest(v:Null<PKAutomaticReloadPaymentRequest>):Null<PKAutomaticReloadPaymentRequest>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var deferredPaymentRequest(get, set) : Null<PKDeferredPaymentRequest>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_deferredPaymentRequest():Null<PKDeferredPaymentRequest>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_deferredPaymentRequest(v:Null<PKDeferredPaymentRequest>):Null<PKDeferredPaymentRequest>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var applePayLaterAvailability(get, set) : PKApplePayLaterAvailability;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_applePayLaterAvailability():PKApplePayLaterAvailability;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_applePayLaterAvailability(v:PKApplePayLaterAvailability):PKApplePayLaterAvailability;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var isDelegatedRequest(get, set) : Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_isDelegatedRequest():Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function set_isDelegatedRequest(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	static function availableNetworks():NSArray<NSString>;
+	@:hxmc.available(macos >= 11.0)
 	static function paymentContactInvalidErrorWithContactField(field:NSStringArg, localizedDescription:Null<NSStringArg>):NSError;
+	@:hxmc.available(macos >= 11.0)
 	static function paymentShippingAddressInvalidErrorWithKey(postalAddressKey:NSStringArg, localizedDescription:Null<NSStringArg>):NSError;
+	@:hxmc.available(macos >= 11.0)
 	static function paymentBillingAddressInvalidErrorWithKey(postalAddressKey:NSStringArg, localizedDescription:Null<NSStringArg>):NSError;
+	@:hxmc.available(macos >= 11.0)
 	static function paymentShippingAddressUnserviceableErrorWithLocalizedDescription(localizedDescription:Null<NSStringArg>):NSError;
+	@:hxmc.available(macos >= 12.0)
 	static function paymentCouponCodeInvalidErrorWithLocalizedDescription(localizedDescription:Null<NSStringArg>):NSError;
+	@:hxmc.available(macos >= 12.0)
 	static function paymentCouponCodeExpiredErrorWithLocalizedDescription(localizedDescription:Null<NSStringArg>):NSError;
+	@:hxmc.available(macos >= 11.0)
 	override function init():PKPaymentRequest;
 }

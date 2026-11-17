@@ -4,7 +4,9 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEKeyPressState(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Down = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Up = 2;
 	inline function new(v:I64) this = v;
 }

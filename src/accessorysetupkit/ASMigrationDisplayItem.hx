@@ -6,16 +6,27 @@ import foundation.NSUUID;
 import hxmc.I64;
 import uikit.UIImage;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASMigrationDisplayItem extends ASPickerDisplayItem {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASMigrationDisplayItem extends ASPickerDisplayItem {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASMigrationDisplayItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var peripheralIdentifier(get, set) : Null<NSUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_peripheralIdentifier():Null<NSUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_peripheralIdentifier(v:Null<NSUUID>):Null<NSUUID>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var hotspotSSID(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_hotspotSSID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_hotspotSSID(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var wifiAwarePairedDeviceID(get, set) : I64;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_wifiAwarePairedDeviceID():I64;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function set_wifiAwarePairedDeviceID(v:I64):I64;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithName(name:NSStringArg, productImage:UIImage, descriptor:ASDiscoveryDescriptor):ASMigrationDisplayItem;
 }

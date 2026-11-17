@@ -4,10 +4,15 @@ package screencapturekit;
 import avfoundation.AVCaptureDevice;
 import objc.NSObject;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCVideoEffectOutput extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class SCVideoEffectOutput extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():SCVideoEffectOutput;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var cameraDevice(get, set) : AVCaptureDevice;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_cameraDevice():AVCaptureDevice;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_cameraDevice(v:AVCaptureDevice):AVCaptureDevice;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithCameraDevice(device:AVCaptureDevice):SCVideoEffectOutput;
 }

@@ -4,7 +4,10 @@ package automaticassessmentconfiguration;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("AutomaticAssessmentConfiguration") extern class AutomaticAssessmentConfiguration {
+	@:hxmc.available(macos >= version("10.15.4"))
 	public static final AEAssessmentErrorDomain : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AENotInstalledParticipantsKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AERestrictedSystemParticipantsKey : NSString;
 }

@@ -7,22 +7,39 @@ import foundation.NSString;
 import foundation.NSURLRequest;
 import hxmc.I64;
 
-@:hxmc.framework("Photos") @:hxmc.objc extern class PHAssetResourceUploadJob extends PHObject {
+@:hxmc.framework("Photos") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0) extern class PHAssetResourceUploadJob extends PHObject {
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static function alloc():PHAssetResourceUploadJob;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static var jobLimit(get, never) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static function get_jobLimit():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	var resource(get, never) : PHAssetResource;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function get_resource():PHAssetResource;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	var destination(get, never) : NSURLRequest;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function get_destination():NSURLRequest;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	var responseHeaderFields(get, never) : Null<NSDictionary<NSString, NSString>>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	function get_responseHeaderFields():Null<NSDictionary<NSString, NSString>>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	var state(get, never) : PHAssetResourceUploadJobState;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function get_state():PHAssetResourceUploadJobState;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	var type(get, never) : PHAssetResourceUploadJobType;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function get_type():PHAssetResourceUploadJobType;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	var error(get, never) : Null<NSError>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	function get_error():Null<NSError>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static function fetchJobsWithAction(action:PHAssetResourceUploadJobAction, options:Null<PHFetchOptions>):PHFetchResult<PHAssetResourceUploadJob>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	override function init():PHAssetResourceUploadJob;
 }

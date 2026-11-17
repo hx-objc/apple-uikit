@@ -16,7 +16,9 @@ import objc.NSObject;
 	function removeConfigurationForSSID(SSID:NSStringArg):Void;
 	function removeConfigurationForHS20DomainName(domainName:NSStringArg):Void;
 	function getConfiguredSSIDsWithCompletionHandler(completionHandler:NSArray<NSString> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function joinAccessoryHotspot(accessory:ASAccessory, passphrase:NSStringArg, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function joinAccessoryHotspotWithoutSecurity(accessory:ASAccessory, completionHandler:Null<Null<NSError> -> Void>):Void;
 	override function init():NEHotspotConfigurationManager;
 }

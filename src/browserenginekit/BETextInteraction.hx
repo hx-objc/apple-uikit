@@ -13,33 +13,57 @@ import uikit.UIInteraction;
 import uikit.UITextSelectionDisplayInteraction;
 import uikit.UIView;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BETextInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BETextInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BETextInteraction;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var delegate(get, set) : Null<BETextInteractionDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_delegate():Null<BETextInteractionDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_delegate(v:Null<BETextInteractionDelegate>):Null<BETextInteractionDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var textSelectionDisplayInteraction(get, never) : UITextSelectionDisplayInteraction;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_textSelectionDisplayInteraction():UITextSelectionDisplayInteraction;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var contextMenuInteractionDelegate(get, set) : Null<UIContextMenuInteractionDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_contextMenuInteractionDelegate():Null<UIContextMenuInteractionDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_contextMenuInteractionDelegate(v:Null<UIContextMenuInteractionDelegate>):Null<UIContextMenuInteractionDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var contextMenuInteraction(get, never) : UIContextMenuInteraction;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_contextMenuInteraction():UIContextMenuInteraction;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addShortcutForText(text:NSStringArg, fromRect:CGRect):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function shareText(text:NSStringArg, fromRect:CGRect):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function showDictionaryForTextInContext(textWithContext:NSStringArg, definingTextInRange:NSRange, fromRect:CGRect):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function translateText(text:NSStringArg, fromRect:CGRect):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function showReplacementsForText(text:NSStringArg):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function transliterateChineseForText(text:NSStringArg):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function presentEditMenuForSelection():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function dismissEditMenuForSelection():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function editabilityChanged():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function refreshKeyboardUI():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectionChangedWithGestureAtPoint(point:CGPoint, gesture:BEGestureType, state:UIGestureRecognizerState, flags:BESelectionFlags):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectionBoundaryAdjustedToPoint(point:CGPoint, touchPhase:BESelectionTouchPhase, flags:BESelectionFlags):Void;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():BETextInteraction;
 }

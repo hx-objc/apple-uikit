@@ -7,13 +7,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AutomaticAssessmentConfiguration") @:hxmc.objc extern class AEAssessmentApplication extends NSObject implements NSCopying {
+@:hxmc.framework("AutomaticAssessmentConfiguration") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class AEAssessmentApplication extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():AEAssessmentApplication;
+	@:hxmc.available(macos >= 12.0, ios >= 17.5)
 	var bundleIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 12.0, ios >= 17.5)
 	function get_bundleIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 12.0, ios >= 27.0)
 	var teamIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0, ios >= 27.0)
 	function get_teamIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0, ios >= 17.5)
 	overload function initWithBundleIdentifier(bundleIdentifier:NSStringArg):AEAssessmentApplication;
+	@:hxmc.available(macos >= 12.0, ios >= 27.0)
 	overload function initWithBundleIdentifier(bundleIdentifier:NSStringArg, teamIdentifier:Null<NSStringArg>):AEAssessmentApplication;
 	function copyWithZone(zone:Ptr):Id;
 }

@@ -51,23 +51,37 @@ import iosurface.IOSurface;
 	var framebufferOnly(get, never) : Bool;
 	@:selector("isFramebufferOnly")
 	function get_framebufferOnly():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var firstMipmapInTail(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_firstMipmapInTail():I64;
+	@:hxmc.available(macos >= 11.0)
 	var tailSizeInBytes(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_tailSizeInBytes():I64;
+	@:hxmc.available(macos >= 11.0)
 	var isSparse(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_isSparse():Bool;
 	var allowGPUOptimizedContents(get, never) : Bool;
 	function get_allowGPUOptimizedContents():Bool;
+	@:hxmc.available(macos >= 12.5)
 	var compressionType(get, never) : MTLTextureCompressionType;
+	@:hxmc.available(macos >= 12.5)
 	function get_compressionType():MTLTextureCompressionType;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var gpuResourceID(get, never) : MTLResourceID;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_gpuResourceID():MTLResourceID;
 	var swizzle(get, never) : MTLTextureSwizzleChannels;
 	function get_swizzle():MTLTextureSwizzleChannels;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var sparseTextureTier(get, never) : MTLTextureSparseTier;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_sparseTextureTier():MTLTextureSparseTier;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var minLOD(get, never) : Float32;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_minLOD():Float32;
 	@:selector("getBytes:bytesPerRow:bytesPerImage:fromRegion:mipmapLevel:slice:")
 	function getBytesBytesPerRowBytesPerImageFromRegionMipmapLevelSlice(pixelBytes:Ptr, bytesPerRow:I64, bytesPerImage:I64, fromRegion:MTLRegion, mipmapLevel:I64, slice:I64):Void;
@@ -81,6 +95,7 @@ import iosurface.IOSurface;
 	@:selector("newTextureViewWithPixelFormat:textureType:levels:slices:")
 	function newTextureViewWithPixelFormatTextureTypeLevelsSlices(pixelFormat:MTLPixelFormat, textureType:MTLTextureType, levels:NSRange, slices:NSRange):Null<MTLTexture>;
 	function newSharedTextureHandle():Null<MTLSharedTextureHandle>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newTextureViewWithDescriptor(descriptor:MTLTextureViewDescriptor):Null<MTLTexture>;
 	@:selector("newTextureViewWithPixelFormat:textureType:levels:slices:swizzle:")
 	function newTextureViewWithPixelFormatTextureTypeLevelsSlicesSwizzle(pixelFormat:MTLPixelFormat, textureType:MTLTextureType, levels:NSRange, slices:NSRange, swizzle:MTLTextureSwizzleChannels):Null<MTLTexture>;

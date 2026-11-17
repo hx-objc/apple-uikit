@@ -4,11 +4,17 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITextFormattingViewControllerComponentSize(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Mini = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Small = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Regular = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Large = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ExtraLarge = 5;
 	inline function new(v:I64) this = v;
 }

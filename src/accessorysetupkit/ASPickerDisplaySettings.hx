@@ -3,15 +3,25 @@ package accessorysetupkit;
 
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASPickerDisplaySettings extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class ASPickerDisplaySettings extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():ASPickerDisplaySettings;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var defaultSettings(get, never) : ASPickerDisplaySettings;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_defaultSettings():ASPickerDisplaySettings;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var discoveryTimeout(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_discoveryTimeout():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_discoveryTimeout(v:Float):Float;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var options(get, set) : ASPickerDisplaySettingsOptions;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_options():ASPickerDisplaySettingsOptions;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function set_options(v:ASPickerDisplaySettingsOptions):ASPickerDisplaySettingsOptions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():ASPickerDisplaySettings;
 }

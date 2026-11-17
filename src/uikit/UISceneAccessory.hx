@@ -4,10 +4,15 @@ package uikit;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneAccessory extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class UISceneAccessory extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():UISceneAccessory;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static overload function externalNonInteractiveSceneAccessoryWithConfiguration(sceneConfiguration:UISceneConfiguration):UISceneAccessory;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static overload function externalNonInteractiveSceneAccessoryWithConfiguration(sceneConfiguration:UISceneConfiguration, userInfo:Id):UISceneAccessory;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static overload function cameraCaptureSceneAccessoryWithConfiguration(sceneConfiguration:UISceneConfiguration):UISceneAccessory;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static overload function cameraCaptureSceneAccessoryWithConfiguration(sceneConfiguration:UISceneConfiguration, userInfo:Id):UISceneAccessory;
 }

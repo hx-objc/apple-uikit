@@ -3,15 +3,25 @@ package fileprovider;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderTestingOperation") extern interface NSFileProviderTestingOperation extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderTestingOperation") @:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderTestingOperation extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var type(get, never) : NSFileProviderTestingOperationType;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_type():NSFileProviderTestingOperationType;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asIngestion():Null<NSFileProviderTestingIngestion>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asLookup():Null<NSFileProviderTestingLookup>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asCreation():Null<NSFileProviderTestingCreation>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asModification():Null<NSFileProviderTestingModification>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asDeletion():Null<NSFileProviderTestingDeletion>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asContentFetch():Null<NSFileProviderTestingContentFetch>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asChildrenEnumeration():Null<NSFileProviderTestingChildrenEnumeration>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function asCollisionResolution():Null<NSFileProviderTestingCollisionResolution>;
 }

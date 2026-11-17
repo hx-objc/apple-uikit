@@ -4,8 +4,11 @@ package browserkit;
 import hxmc.I64;
 
 enum abstract BEBrowserDataExchangeError(I64) to I64 {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var DataExchangeErrorUnknown = 0;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var DataExchangeErrorExport = 1;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var DataExchangeErrorImport = 2;
 	inline function new(v:I64) this = v;
 }

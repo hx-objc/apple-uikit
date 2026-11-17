@@ -4,8 +4,11 @@ package browserkit;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEAvailability extends NSObject {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class BEAvailability extends NSObject {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():BEAvailability;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function isEligibleForContext(context:BEEligibilityContext, completionHandler:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():BEAvailability;
 }

@@ -3,23 +3,38 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIUpdateInfo extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIUpdateInfo extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIUpdateInfo;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var modelTime(get, never) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_modelTime():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var completionDeadlineTime(get, never) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_completionDeadlineTime():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var estimatedPresentationTime(get, never) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_estimatedPresentationTime():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var immediatePresentationExpected(get, never) : Bool;
 	@:selector("isImmediatePresentationExpected")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_immediatePresentationExpected():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var lowLatencyEventDispatchConfirmed(get, never) : Bool;
 	@:selector("isLowLatencyEventDispatchConfirmed")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_lowLatencyEventDispatchConfirmed():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var performingLowLatencyPhases(get, never) : Bool;
 	@:selector("isPerformingLowLatencyPhases")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_performingLowLatencyPhases():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function currentUpdateInfoForWindowScene(windowScene:UIWindowScene):Null<UIUpdateInfo>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function currentUpdateInfoForView(view:UIView):Null<UIUpdateInfo>;
 }

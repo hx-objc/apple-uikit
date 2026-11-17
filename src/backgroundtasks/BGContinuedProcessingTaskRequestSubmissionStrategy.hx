@@ -4,7 +4,9 @@ package backgroundtasks;
 import hxmc.I64;
 
 enum abstract BGContinuedProcessingTaskRequestSubmissionStrategy(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Fail = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Queue = 1;
 	inline function new(v:I64) this = v;
 }

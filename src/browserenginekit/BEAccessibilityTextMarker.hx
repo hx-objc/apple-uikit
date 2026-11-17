@@ -8,12 +8,14 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEAccessibilityTextMarker extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class BEAccessibilityTextMarker extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():BEAccessibilityTextMarker;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	override function init():BEAccessibilityTextMarker;
 }

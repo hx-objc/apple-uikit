@@ -11,24 +11,36 @@ import uikit.UIViewController;
 
 @:hxmc.framework("Photos") @:hxmc.objc extern class PHPhotoLibrary extends NSObject {
 	static function alloc():PHPhotoLibrary;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	var uploadJobExtensionEnabled(get, never) : Bool;
 	@:selector("isUploadJobExtensionEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function get_uploadJobExtensionEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var uploadJobExtensionOptions(get, never) : Null<PHAssetResourceUploadJobOptions>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_uploadJobExtensionOptions():Null<PHAssetResourceUploadJobOptions>;
 	var unavailabilityReason(get, never) : Null<NSError>;
 	function get_unavailabilityReason():Null<NSError>;
+	@:hxmc.available(macos >= 13, ios >= 16, maccatalyst >= 16)
 	var currentChangeToken(get, never) : PHPersistentChangeToken;
+	@:hxmc.available(macos >= 13, ios >= 16, maccatalyst >= 16)
 	function get_currentChangeToken():PHPersistentChangeToken;
 	static function sharedPhotoLibrary():PHPhotoLibrary;
+	@:hxmc.available(macos >= 11)
 	static function authorizationStatusForAccessLevel(accessLevel:PHAccessLevel):PHAuthorizationStatus;
+	@:hxmc.available(macos >= 11)
 	static function requestAuthorizationForAccessLevel(accessLevel:PHAccessLevel, handler:PHAuthorizationStatus -> Void):Void;
 	static function authorizationStatus():PHAuthorizationStatus;
 	static function requestAuthorization(handler:PHAuthorizationStatus -> Void):Void;
 	@:deprecated
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function setUploadJobExtensionEnabled(enable:Bool, error:Ptr):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function enableUploadJobExtensionWithOptions(options:Null<PHAssetResourceUploadJobOptions>, error:Ptr):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function disableUploadJobExtensionWithError(error:Ptr):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function setUploadJobExtensionOptions(options:PHAssetResourceUploadJobOptions, error:Ptr):Bool;
 	function registerAvailabilityObserver(observer:PHPhotoLibraryAvailabilityObserver):Void;
 	function unregisterAvailabilityObserver(observer:PHPhotoLibraryAvailabilityObserver):Void;
@@ -36,11 +48,17 @@ import uikit.UIViewController;
 	function performChangesAndWait(changeBlock:() -> Void, error:Ptr):Bool;
 	function registerChangeObserver(observer:PHPhotoLibraryChangeObserver):Void;
 	function unregisterChangeObserver(observer:PHPhotoLibraryChangeObserver):Void;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function registerPersistentChangesObserver(observer:PHPhotoLibraryPersistentChangesObserver):Void;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function unregisterPersistentChangesObserver(observer:PHPhotoLibraryPersistentChangesObserver):Void;
+	@:hxmc.available(macos >= 13, ios >= 16, maccatalyst >= 16)
 	function fetchPersistentChangesSinceToken(token:PHPersistentChangeToken, error:Ptr):Null<PHPersistentChangeFetchResult>;
+	@:hxmc.available(macos >= 12)
 	function localIdentifierMappingsForCloudIdentifiers(cloudIdentifiers:NSArray<PHCloudIdentifier>):NSDictionary<PHCloudIdentifier, PHLocalIdentifierMapping>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function localIdentifierMappingsForSyncedCloudIdentifiers(cloudIdentifiers:NSArray<PHCloudIdentifier>):NSDictionary<PHCloudIdentifier, PHLocalIdentifierMapping>;
+	@:hxmc.available(macos >= 12)
 	function cloudIdentifierMappingsForLocalIdentifiers(localIdentifiers:NSArray<NSString>):NSDictionary<NSString, PHCloudIdentifierMapping>;
 	@:hxmc.framework("PhotosUI")
 	overload function presentLimitedLibraryPickerFromViewController(controller:UIViewController):Void;

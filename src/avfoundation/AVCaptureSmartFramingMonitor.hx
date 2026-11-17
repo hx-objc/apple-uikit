@@ -5,18 +5,30 @@ import foundation.NSArray;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVFoundation") @:hxmc.objc extern class AVCaptureSmartFramingMonitor extends NSObject {
+@:hxmc.framework("AVFoundation") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVCaptureSmartFramingMonitor extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVCaptureSmartFramingMonitor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var supportedFramings(get, never) : NSArray<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_supportedFramings():NSArray<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var enabledFramings(get, set) : NSArray<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_enabledFramings():NSArray<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_enabledFramings(v:NSArray<AVCaptureFraming>):NSArray<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var recommendedFraming(get, never) : Null<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_recommendedFraming():Null<AVCaptureFraming>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var monitoring(get, never) : Bool;
 	@:selector("isMonitoring")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_monitoring():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function startMonitoringWithError(outError:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function stopMonitoring():Void;
 }

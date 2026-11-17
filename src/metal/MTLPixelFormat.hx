@@ -7,6 +7,7 @@ enum abstract MTLPixelFormat(I64) to I64 {
 	var Invalid = 0;
 	var A8Unorm = 1;
 	var R8Unorm = 10;
+	@:hxmc.available(macos >= 11.0)
 	var R8Unorm_sRGB = 11;
 	var R8Snorm = 12;
 	var R8Uint = 13;
@@ -17,17 +18,26 @@ enum abstract MTLPixelFormat(I64) to I64 {
 	var R16Sint = 24;
 	var R16Float = 25;
 	var RG8Unorm = 30;
+	@:hxmc.available(macos >= 11.0)
 	var RG8Unorm_sRGB = 31;
 	var RG8Snorm = 32;
 	var RG8Uint = 33;
 	var RG8Sint = 34;
+	@:hxmc.available(macos >= 11.0)
 	var B5G6R5Unorm = 40;
+	@:hxmc.available(macos >= 11.0)
 	var A1BGR5Unorm = 41;
+	@:hxmc.available(macos >= 11.0)
 	var ABGR4Unorm = 42;
+	@:hxmc.available(macos >= 11.0)
 	var BGR5A1Unorm = 43;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB8Unorm = 45;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB8Snorm = 46;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB8Uint = 47;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB8Sint = 48;
 	var R32Uint = 53;
 	var R32Sint = 54;
@@ -49,12 +59,19 @@ enum abstract MTLPixelFormat(I64) to I64 {
 	var RG11B10Float = 92;
 	var RGB9E5Float = 93;
 	var BGR10A2Unorm = 94;
+	@:hxmc.available(macos >= 11.0)
 	var BGR10_XR = 554;
+	@:hxmc.available(macos >= 11.0)
 	var BGR10_XR_sRGB = 555;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB16Unorm = 95;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB16Snorm = 96;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB16Uint = 97;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB16Sint = 98;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB16Float = 99;
 	var RG32Uint = 103;
 	var RG32Sint = 104;
@@ -64,95 +81,174 @@ enum abstract MTLPixelFormat(I64) to I64 {
 	var RGBA16Uint = 113;
 	var RGBA16Sint = 114;
 	var RGBA16Float = 115;
+	@:hxmc.available(macos >= 11.0)
 	var BGRA10_XR = 552;
+	@:hxmc.available(macos >= 11.0)
 	var BGRA10_XR_sRGB = 553;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB32Uint = 120;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB32Sint = 121;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var RGB32Float = 122;
 	var RGBA32Uint = 123;
 	var RGBA32Sint = 124;
 	var RGBA32Float = 125;
+	@:hxmc.available(ios >= 16.4)
 	var BC1_RGBA = 130;
+	@:hxmc.available(ios >= 16.4)
 	var BC1_RGBA_sRGB = 131;
+	@:hxmc.available(ios >= 16.4)
 	var BC2_RGBA = 132;
+	@:hxmc.available(ios >= 16.4)
 	var BC2_RGBA_sRGB = 133;
+	@:hxmc.available(ios >= 16.4)
 	var BC3_RGBA = 134;
+	@:hxmc.available(ios >= 16.4)
 	var BC3_RGBA_sRGB = 135;
+	@:hxmc.available(ios >= 16.4)
 	var BC4_RUnorm = 140;
+	@:hxmc.available(ios >= 16.4)
 	var BC4_RSnorm = 141;
+	@:hxmc.available(ios >= 16.4)
 	var BC5_RGUnorm = 142;
+	@:hxmc.available(ios >= 16.4)
 	var BC5_RGSnorm = 143;
+	@:hxmc.available(ios >= 16.4)
 	var BC6H_RGBFloat = 150;
+	@:hxmc.available(ios >= 16.4)
 	var BC6H_RGBUfloat = 151;
+	@:hxmc.available(ios >= 16.4)
 	var BC7_RGBAUnorm = 152;
+	@:hxmc.available(ios >= 16.4)
 	var BC7_RGBAUnorm_sRGB = 153;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGB_2BPP = 160;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGB_2BPP_sRGB = 161;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGB_4BPP = 162;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGB_4BPP_sRGB = 163;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGBA_2BPP = 164;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGBA_2BPP_sRGB = 165;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGBA_4BPP = 166;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var PVRTC_RGBA_4BPP_sRGB = 167;
+	@:hxmc.available(macos >= 11.0)
 	var EAC_R11Unorm = 170;
+	@:hxmc.available(macos >= 11.0)
 	var EAC_R11Snorm = 172;
+	@:hxmc.available(macos >= 11.0)
 	var EAC_RG11Unorm = 174;
+	@:hxmc.available(macos >= 11.0)
 	var EAC_RG11Snorm = 176;
+	@:hxmc.available(macos >= 11.0)
 	var EAC_RGBA8 = 178;
+	@:hxmc.available(macos >= 11.0)
 	var EAC_RGBA8_sRGB = 179;
+	@:hxmc.available(macos >= 11.0)
 	var ETC2_RGB8 = 180;
+	@:hxmc.available(macos >= 11.0)
 	var ETC2_RGB8_sRGB = 181;
+	@:hxmc.available(macos >= 11.0)
 	var ETC2_RGB8A1 = 182;
+	@:hxmc.available(macos >= 11.0)
 	var ETC2_RGB8A1_sRGB = 183;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_4x4_sRGB = 186;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_5x4_sRGB = 187;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_5x5_sRGB = 188;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_6x5_sRGB = 189;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_6x6_sRGB = 190;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x5_sRGB = 192;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x6_sRGB = 193;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x8_sRGB = 194;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x5_sRGB = 195;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x6_sRGB = 196;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x8_sRGB = 197;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x10_sRGB = 198;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_12x10_sRGB = 199;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_12x12_sRGB = 200;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_4x4_LDR = 204;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_5x4_LDR = 205;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_5x5_LDR = 206;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_6x5_LDR = 207;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_6x6_LDR = 208;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x5_LDR = 210;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x6_LDR = 211;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x8_LDR = 212;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x5_LDR = 213;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x6_LDR = 214;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x8_LDR = 215;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x10_LDR = 216;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_12x10_LDR = 217;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_12x12_LDR = 218;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_4x4_HDR = 222;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_5x4_HDR = 223;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_5x5_HDR = 224;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_6x5_HDR = 225;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_6x6_HDR = 226;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x5_HDR = 228;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x6_HDR = 229;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_8x8_HDR = 230;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x5_HDR = 231;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x6_HDR = 232;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x8_HDR = 233;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_10x10_HDR = 234;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_12x10_HDR = 235;
+	@:hxmc.available(macos >= 11.0)
 	var ASTC_12x12_HDR = 236;
 	var GBGR422 = 240;
 	var BGRG422 = 241;
@@ -161,6 +257,7 @@ enum abstract MTLPixelFormat(I64) to I64 {
 	var Stencil8 = 253;
 	var Depth32Float_Stencil8 = 260;
 	var X32_Stencil8 = 261;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var Unspecialized = 263;
 	inline function new(v:I64) this = v;
 }

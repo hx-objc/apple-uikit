@@ -32,9 +32,11 @@ import uikit.UIViewControllerTransitionCoordinator;
 	@:optional
 	function playerViewControllerRestoreUserInterfaceForPictureInPictureStopWithCompletionHandler(playerViewController:AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:Bool -> Void):Void;
 	@:selector("playerViewController:willPresentInterstitialTimeRange:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function playerViewControllerWillPresentInterstitialTimeRange(playerViewController:AVPlayerViewController, willPresentInterstitialTimeRange:AVInterstitialTimeRange):Void;
 	@:selector("playerViewController:didPresentInterstitialTimeRange:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function playerViewControllerDidPresentInterstitialTimeRange(playerViewController:AVPlayerViewController, didPresentInterstitialTimeRange:AVInterstitialTimeRange):Void;
 }

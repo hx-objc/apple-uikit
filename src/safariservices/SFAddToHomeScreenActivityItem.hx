@@ -7,17 +7,25 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("SFAddToHomeScreenActivityItem") extern interface SFAddToHomeScreenActivityItem extends NSObjectProtocol {
+@:hxmc.objc("SFAddToHomeScreenActivityItem") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface SFAddToHomeScreenActivityItem extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var URL(get, never) : NSURL;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_URL():NSURL;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	var iconItemProvider(get, never) : Null<NSItemProvider>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function get_iconItemProvider():Null<NSItemProvider>;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	@:optional
 	function getWebAppManifestWithCompletionHandler(completionHandler:Null<BEWebAppManifest> -> Void):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function getHomeScreenWebAppInfoWithCompletionHandler(completionHandler:Null<SFAddToHomeScreenInfo> -> Void):Void;
 }

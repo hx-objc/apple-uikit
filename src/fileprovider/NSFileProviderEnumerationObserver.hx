@@ -7,12 +7,17 @@ import foundation.NSError;
 import hxmc.I64;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderEnumerationObserver") extern interface NSFileProviderEnumerationObserver extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderEnumerationObserver") @:hxmc.available(macos >= 11.0) extern interface NSFileProviderEnumerationObserver extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var suggestedPageSize(get, never) : I64;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_suggestedPageSize():I64;
+	@:hxmc.available(macos >= 11.0)
 	function didEnumerateItems(updatedItems:NSArray<NSFileProviderItem>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function finishEnumeratingUpToPage(nextPage:Null<NSData>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function finishEnumeratingWithError(error:NSError):Void;
 }

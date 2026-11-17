@@ -8,6 +8,7 @@ enum abstract MTLResourceOptions(I64) to I64 {
 	var CPUCacheModeWriteCombined = 1;
 	var StorageModeShared = 0;
 	var StorageModePrivate = 32;
+	@:hxmc.available(macos >= 11.0)
 	var StorageModeMemoryless = 48;
 	var HazardTrackingModeDefault = 0;
 	var HazardTrackingModeUntracked = 256;

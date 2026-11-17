@@ -3,9 +3,13 @@ package fileprovider;
 
 import foundation.NSStringArg;
 
-@:hxmc.objc("NSFileProviderTestingLookup") extern interface NSFileProviderTestingLookup extends NSFileProviderTestingOperation {
+@:hxmc.objc("NSFileProviderTestingLookup") @:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderTestingLookup extends NSFileProviderTestingOperation {
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var side(get, never) : NSFileProviderTestingOperationSide;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_side():NSFileProviderTestingOperationSide;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var itemIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_itemIdentifier():NSStringArg;
 }

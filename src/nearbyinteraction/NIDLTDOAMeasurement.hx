@@ -10,31 +10,56 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("NearbyInteraction") @:hxmc.objc extern class NIDLTDOAMeasurement extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("NearbyInteraction") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class NIDLTDOAMeasurement extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():NIDLTDOAMeasurement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var address(get, never) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_address():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var clusterInitiatorAddress(get, never) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_clusterInitiatorAddress():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var measurementType(get, never) : NIDLTDOAMeasurementType;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_measurementType():NIDLTDOAMeasurementType;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var transmitTime(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_transmitTime():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var rawTransmitTime(get, never) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_rawTransmitTime():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var receiveTime(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_receiveTime():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var rawReceiveTime(get, never) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_rawReceiveTime():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var signalStrength(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_signalStrength():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var carrierFrequencyOffset(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_carrierFrequencyOffset():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var responderClockFrequencyOffset(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_responderClockFrequencyOffset():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var coordinatesType(get, never) : NIDLTDOACoordinatesType;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_coordinatesType():NIDLTDOACoordinatesType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var floorElevation(get, never) : Null<NIDLTDOAMeasurementFloorElevation>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_floorElevation():Null<NIDLTDOAMeasurementFloorElevation>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

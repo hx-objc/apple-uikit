@@ -3,13 +3,19 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneAccessoryRegistration extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class UISceneAccessoryRegistration extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():UISceneAccessoryRegistration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var available(get, never) : Bool;
 	@:selector("isAvailable")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_available():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_enabled(v:Bool):Bool;
 }

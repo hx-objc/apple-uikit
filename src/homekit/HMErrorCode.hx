@@ -109,7 +109,9 @@ enum abstract HMErrorCode(I64) to I64 {
 	var AccessoryCommunicationFailure = 101;
 	var FailedToJoinNetwork = 102;
 	var AccessoryIsSuspended = 103;
+	@:hxmc.available(ios >= 17.4)
 	var PartialCommunicationFailure = 104;
+	@:hxmc.available(ios >= 18.4)
 	var HomeUpgradeRequired = 105;
 	inline function new(v:I64) this = v;
 }

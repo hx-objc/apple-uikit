@@ -14,8 +14,10 @@ import hxmc.objc.Id;
 	function start():Void;
 	function stopWithReason(reason:NEProviderStopReason, completionHandler:() -> Void):Void;
 	function reportIncomingCallWithUserInfo(userInfo:NSDictionary):Void;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function reportPushToTalkMessageWithUserInfo(userInfo:NSDictionary):Void;
 	function handleTimerEvent():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function unmatchEthernet():Void;
 	override function init():NEAppPushProvider;
 }

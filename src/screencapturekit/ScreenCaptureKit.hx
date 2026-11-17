@@ -4,11 +4,18 @@ package screencapturekit;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("ScreenCaptureKit") extern class ScreenCaptureKit {
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	public static final SCStreamFrameInfoContentRect : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	public static final SCStreamFrameInfoContentScale : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	public static final SCStreamFrameInfoDisplayTime : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	public static final SCStreamFrameInfoScaleFactor : NSString;
+	@:hxmc.available(macos >= 13.1, ios >= 27.0, maccatalyst >= 18.2)
 	public static final SCStreamFrameInfoScreenRect : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	public static final SCStreamFrameInfoStatus : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final SCStreamFrameInfoVideoOrientation : NSString;
 }

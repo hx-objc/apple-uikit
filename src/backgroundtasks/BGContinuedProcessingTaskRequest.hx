@@ -3,19 +3,33 @@ package backgroundtasks;
 
 import foundation.NSStringArg;
 
-@:hxmc.framework("BackgroundTasks") @:hxmc.objc extern class BGContinuedProcessingTaskRequest extends BGTaskRequest {
+@:hxmc.framework("BackgroundTasks") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class BGContinuedProcessingTaskRequest extends BGTaskRequest {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():BGContinuedProcessingTaskRequest;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitle(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitle():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitle(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var strategy(get, set) : BGContinuedProcessingTaskRequestSubmissionStrategy;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_strategy():BGContinuedProcessingTaskRequestSubmissionStrategy;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_strategy(v:BGContinuedProcessingTaskRequestSubmissionStrategy):BGContinuedProcessingTaskRequestSubmissionStrategy;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var requiredResources(get, set) : BGContinuedProcessingTaskRequestResources;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_requiredResources():BGContinuedProcessingTaskRequestResources;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_requiredResources(v:BGContinuedProcessingTaskRequestResources):BGContinuedProcessingTaskRequestResources;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithIdentifier(identifier:NSStringArg, title:NSStringArg, subtitle:NSStringArg):BGContinuedProcessingTaskRequest;
 }

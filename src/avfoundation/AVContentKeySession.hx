@@ -21,8 +21,11 @@ import objc.NSObject;
 	function get_storageURL():Null<NSURL>;
 	var keySystem(get, never) : NSStringArg;
 	function get_keySystem():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var supportsAdvisoryKeys(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_supportsAdvisoryKeys():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_supportsAdvisoryKeys(v:Bool):Bool;
 	var contentProtectionSessionIdentifier(get, never) : Null<NSData>;
 	function get_contentProtectionSessionIdentifier():Null<NSData>;

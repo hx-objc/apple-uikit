@@ -10,54 +10,101 @@ import metal.MTLDevice;
 import metal.MTLRenderCommandEncoder;
 import objc.NSObject;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCTouchController extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCTouchController extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCTouchController;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var supported(get, never) : Bool;
 	@:selector("isSupported")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_supported():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var device(get, never) : MTLDevice;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_device():MTLDevice;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var controls(get, never) : NSArray<TCControl>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_controls():NSArray<TCControl>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var buttons(get, never) : NSArray<TCButton>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_buttons():NSArray<TCButton>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var switches(get, never) : NSArray<TCSwitch>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_switches():NSArray<TCSwitch>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var thumbsticks(get, never) : NSArray<TCThumbstick>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_thumbsticks():NSArray<TCThumbstick>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var directionPads(get, never) : NSArray<TCDirectionPad>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_directionPads():NSArray<TCDirectionPad>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var throttles(get, never) : NSArray<TCThrottle>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_throttles():NSArray<TCThrottle>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var touchpads(get, never) : NSArray<TCTouchpad>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_touchpads():NSArray<TCTouchpad>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_size():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var drawableSize(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_drawableSize():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_drawableSize(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var connected(get, never) : Bool;
 	@:selector("isConnected")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_connected():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var controller(get, never) : GCController;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_controller():GCController;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithDescriptor(descriptor:TCTouchControllerDescriptor):TCTouchController;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function automaticallyLayoutControlsForLabels(labels:NSArray<TCControlLabel>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function addButtonWithDescriptor(descriptor:TCButtonDescriptor):TCButton;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function addSwitchWithDescriptor(descriptor:TCSwitchDescriptor):TCSwitch;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function addThumbstickWithDescriptor(descriptor:TCThumbstickDescriptor):TCThumbstick;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function addDirectionPadWithDescriptor(descriptor:TCDirectionPadDescriptor):TCDirectionPad;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function addThrottleWithDescriptor(descriptor:TCThrottleDescriptor):TCThrottle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function addTouchpadWithDescriptor(descriptor:TCTouchpadDescriptor):TCTouchpad;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function removeAllControls():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function removeControl(control:TCControl):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function controlAtPoint(point:CGPoint):Null<TCControl>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function handleTouchBeganAtPoint(point:CGPoint, index:I64):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function handleTouchMovedAtPoint(point:CGPoint, index:I64):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function handleTouchEndedAtPoint(point:CGPoint, index:I64):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function renderUsingRenderCommandEncoder(encoder:MTLRenderCommandEncoder):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function connect():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function disconnect():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():TCTouchController;
 }

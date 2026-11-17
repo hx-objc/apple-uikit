@@ -6,14 +6,21 @@ import foundation.NSURL;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEMediaEnvironment extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEMediaEnvironment extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEMediaEnvironment;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithWebPageURL(url:NSURL):BEMediaEnvironment;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithXPCRepresentation(xpcRepresentation:NSObject, error:Ptr):Null<BEMediaEnvironment>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function createXPCRepresentation():NSObject;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function activateWithError(error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function suspendWithError(error:Ptr):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function makeCaptureSessionWithError(error:Ptr):Null<AVCaptureSession>;
 }

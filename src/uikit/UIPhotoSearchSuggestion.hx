@@ -4,14 +4,23 @@ package uikit;
 import foundation.NSArray;
 import foundation.NSString;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPhotoSearchSuggestion extends UIInputSuggestion {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class UIPhotoSearchSuggestion extends UIInputSuggestion {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():UIPhotoSearchSuggestion;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var whoValues(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_whoValues():NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var whatValues(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_whatValues():NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var whereValues(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_whereValues():NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var whenValues(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_whenValues():NSArray<NSString>;
 }

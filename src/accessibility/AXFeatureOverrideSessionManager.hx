@@ -4,10 +4,15 @@ package accessibility;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Accessibility") @:hxmc.objc extern class AXFeatureOverrideSessionManager extends NSObject {
+@:hxmc.framework("Accessibility") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class AXFeatureOverrideSessionManager extends NSObject {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():AXFeatureOverrideSessionManager;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static var sharedInstance(get, never) : AXFeatureOverrideSessionManager;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function get_sharedInstance():AXFeatureOverrideSessionManager;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function beginOverrideSessionEnablingOptions(enableOptions:AXFeatureOverrideSessionOptions, disablingOptions:AXFeatureOverrideSessionOptions, error:Ptr):Null<AXFeatureOverrideSession>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function endOverrideSession(session:AXFeatureOverrideSession, error:Ptr):Bool;
 }

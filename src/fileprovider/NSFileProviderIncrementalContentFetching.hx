@@ -7,6 +7,7 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderIncrementalContentFetching") extern interface NSFileProviderIncrementalContentFetching extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderIncrementalContentFetching") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderIncrementalContentFetching extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function fetchContentsForItemWithIdentifier(itemIdentifier:NSStringArg, version:Null<NSFileProviderItemVersion>, usingExistingContentsAtURL:NSURL, existingVersion:NSFileProviderItemVersion, request:NSFileProviderRequest, completionHandler:(Null<NSURL>, Null<NSFileProviderItem>, Null<NSError>) -> Void):NSProgress;
 }

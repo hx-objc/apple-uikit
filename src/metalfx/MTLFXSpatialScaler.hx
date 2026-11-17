@@ -3,6 +3,7 @@ package metalfx;
 
 import metal.MTLCommandBuffer;
 
-@:hxmc.objc("MTLFXSpatialScaler") extern interface MTLFXSpatialScaler extends MTLFXSpatialScalerBase {
+@:hxmc.objc("MTLFXSpatialScaler") @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern interface MTLFXSpatialScaler extends MTLFXSpatialScalerBase {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function encodeToCommandBuffer(commandBuffer:MTLCommandBuffer):Void;
 }

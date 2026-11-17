@@ -5,13 +5,19 @@ import foundation.NSProgress;
 import foundation.NSProgressReporting;
 import foundation.NSStringArg;
 
-@:hxmc.framework("BackgroundTasks") @:hxmc.objc extern class BGContinuedProcessingTask extends BGTask implements NSProgressReporting {
+@:hxmc.framework("BackgroundTasks") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class BGContinuedProcessingTask extends BGTask implements NSProgressReporting {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():BGContinuedProcessingTask;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitle(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitle():NSStringArg;
 	var progress(get, never) : NSProgress;
 	function get_progress():NSProgress;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateTitle(title:NSStringArg, subtitle:NSStringArg):Void;
 }

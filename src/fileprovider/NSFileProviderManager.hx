@@ -13,38 +13,71 @@ import foundation.NSURLSessionTask;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("FileProvider") @:hxmc.objc extern class NSFileProviderManager extends NSObject {
+@:hxmc.framework("FileProvider") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class NSFileProviderManager extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():NSFileProviderManager;
+	@:hxmc.available(macos >= 11.0)
 	static var defaultManager(get, never) : NSFileProviderManager;
+	@:hxmc.available(macos >= 11.0)
 	static function get_defaultManager():NSFileProviderManager;
+	@:hxmc.available(macos >= 11.0)
 	var providerIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_providerIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var documentStorageURL(get, never) : NSURL;
+	@:hxmc.available(macos >= 11.0)
 	function get_documentStorageURL():NSURL;
+	@:hxmc.available(macos >= 11.0)
 	static function managerForDomain(domain:NSFileProviderDomain):Null<NSFileProviderManager>;
+	@:hxmc.available(macos >= 11.0)
 	function signalEnumeratorForContainerItemIdentifier(containerItemIdentifier:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function getUserVisibleURLForItemIdentifier(itemIdentifier:NSStringArg, completionHandler:(Null<NSURL>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function getIdentifierForUserVisibleFileAtURL(url:NSURL, completionHandler:(Null<NSString>, Null<NSString>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function registerURLSessionTask(task:NSURLSessionTask, forItemWithIdentifier:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function temporaryDirectoryURLWithError(error:Ptr):Null<NSURL>;
+	@:hxmc.available(macos >= 11.0)
 	static function writePlaceholderAtURL(placeholderURL:NSURL, withMetadata:NSFileProviderItem, error:Ptr):Bool;
+	@:hxmc.available(macos >= 11.0)
 	static function placeholderURLForURL(url:NSURL):NSURL;
+	@:hxmc.available(macos >= 11.0)
 	static function addDomain(domain:NSFileProviderDomain, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	static overload function removeDomain(domain:NSFileProviderDomain, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	static overload function removeDomain(domain:NSFileProviderDomain, mode:NSFileProviderDomainRemovalMode, completionHandler:(Null<NSURL>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	static function getDomainsWithCompletionHandler(completionHandler:(NSArray<NSFileProviderDomain>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	static function removeAllDomainsWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function signalErrorResolved(error:NSError, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function globalProgressForKind(kind:NSStringArg):NSProgress;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function enumeratorForMaterializedItems():NSFileProviderEnumerator;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function enumeratorForPendingItems():NSFileProviderPendingSetEnumerator;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function importDomain(domain:NSFileProviderDomain, fromDirectoryAtURL:NSURL, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function reimportItemsBelowItemWithIdentifier(itemIdentifier:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function requestModificationOfFields(fields:NSFileProviderItemFields, forItemWithIdentifier:NSStringArg, options:NSFileProviderModifyItemOptions, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function evictItemWithIdentifier(itemIdentifier:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function waitForChangesOnItemsBelowItemWithIdentifier(itemIdentifier:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function waitForStabilizationWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function getServiceWithName(serviceName:NSStringArg, itemIdentifier:NSStringArg, completionHandler:(Null<NSFileProviderService>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function listAvailableTestingOperationsWithError(error:Ptr):Null<NSArray<NSFileProviderTestingOperation>>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function runTestingOperations(operations:NSArray<NSFileProviderTestingOperation>, error:Ptr):Null<NSDictionary<NSFileProviderTestingOperation, NSError>>;
 }

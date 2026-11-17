@@ -19,8 +19,11 @@ import objc.NSObject;
 	var adCampaignIdentifier(get, set) : NSNumberArg;
 	function get_adCampaignIdentifier():NSNumberArg;
 	function set_adCampaignIdentifier(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var sourceIdentifier(get, set) : NSNumberArg;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_sourceIdentifier():NSNumberArg;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function set_sourceIdentifier(v:NSNumberArg):NSNumberArg;
 	var adImpressionIdentifier(get, set) : NSStringArg;
 	function get_adImpressionIdentifier():NSStringArg;
@@ -43,6 +46,7 @@ import objc.NSObject;
 	var version(get, set) : NSStringArg;
 	function get_version():NSStringArg;
 	function set_version(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithSourceAppStoreItemIdentifier(sourceAppStoreItemIdentifier:NSNumberArg, advertisedAppStoreItemIdentifier:NSNumberArg, adNetworkIdentifier:NSStringArg, adCampaignIdentifier:NSNumberArg, adImpressionIdentifier:NSStringArg, timestamp:NSNumberArg, signature:NSStringArg, version:NSStringArg):SKAdImpression;
 	override function init():SKAdImpression;
 }

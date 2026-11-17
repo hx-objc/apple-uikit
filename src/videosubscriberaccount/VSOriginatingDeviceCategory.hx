@@ -4,7 +4,9 @@ package videosubscriberaccount;
 import hxmc.I64;
 
 enum abstract VSOriginatingDeviceCategory(I64) to I64 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Mobile = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Other = 1;
 	inline function new(v:I64) this = v;
 }

@@ -6,15 +6,25 @@ import foundation.NSDate;
 import foundation.NSStringArg;
 import foundation.NSURL;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserDataReadingListItem extends BEBrowserData {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserDataReadingListItem extends BEBrowserData {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserDataReadingListItem;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var url(get, never) : NSURL;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_url():NSURL;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var dateOfLastVisit(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_dateOfLastVisit():Null<NSDate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithTitle(title:NSStringArg, url:NSURL, dateOfLastVisit:Null<NSDate>):BEBrowserDataReadingListItem;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithCoder(coder:NSCoder):Null<BEBrowserDataReadingListItem>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithSourceApplicationBundleIdentifier(sourceApplicationBundleIdentifier:Null<NSStringArg>, sourceApplicationLocalizedName:Null<NSStringArg>):BEBrowserDataReadingListItem;
 }

@@ -4,9 +4,13 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEWebContentFilterPermissionDecision(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Error = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Allowed = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Denied = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Pending = 3;
 	inline function new(v:I64) this = v;
 }

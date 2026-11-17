@@ -8,205 +8,382 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import foundation.NSURL;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Id;
 import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("ColorSync") extern class ColorSync {
 	public static function ColorSyncAPIVersion():Int;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncCreateCodeFragment(profileSequence:NSArray, options:NSDictionary):Id;
-	public static function ColorSyncIterateInstalledProfiles(callBack:Ptr, seed:Ptr, userInfo:Ptr, error:Ptr):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
+	@:hxmc.len(seed, 1)
+	public static function ColorSyncIterateInstalledProfiles(callBack:Ptr, seed:Span<Int>, userInfo:Ptr, error:Ptr):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function ColorSyncProfileContainsHeadroomAdaptiveGainCurve(profile:ColorSyncProfile):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileContainsTag(prof:ColorSyncProfile, signature:NSStringArg):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyData(prof:ColorSyncProfile, error:Ptr):NSData;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyDescriptionString(prof:ColorSyncProfile):Null<NSString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyHeader(prof:ColorSyncProfile):NSData;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyHeadroomAdaptiveGainCurveInfoDictionary(profile:ColorSyncProfile):Null<NSDictionary>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyHeadroomAdaptiveGainCurveMetadata(profile:ColorSyncProfile):Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyTag(prof:ColorSyncProfile, signature:NSStringArg):Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCopyTagSignatures(prof:ColorSyncProfile):Null<NSArray>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreate(data:NSData, error:Ptr):Null<ColorSyncProfile>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateCopyWithHeadroomAdaptiveGainCurveInfoDictionary(profile:ColorSyncProfile, info:NSDictionary):Null<ColorSyncProfile>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateCopyWithHeadroomAdaptiveGainCurveMetadata(profile:ColorSyncProfile, data:NSData, options:Null<NSDictionary>):Null<ColorSyncProfile>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateLink(profileInfo:NSArray, options:Null<NSDictionary>):Null<ColorSyncProfile>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateMutable():Null<ColorSyncMutableProfile>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateMutableCopy(prof:ColorSyncProfile):Null<ColorSyncMutableProfile>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateWithName(name:NSStringArg):Null<ColorSyncProfile>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateWithURL(url:NSURL, error:Ptr):Null<ColorSyncProfile>;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	@:hxmc.retained
 	public static function ColorSyncProfileCreateWithURLAndOptions(url:NSURL, options:Null<NSDictionary>, error:Ptr):Null<ColorSyncProfile>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	public static function ColorSyncProfileEstimateGamma(prof:ColorSyncProfile, error:Ptr):Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileGetTypeID():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileGetURL(prof:ColorSyncProfile, error:Ptr):NSURL;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileIsHLGBased(p0:ColorSyncProfile):Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileIsMatrixBased(p0:ColorSyncProfile):Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileIsPQBased(p0:ColorSyncProfile):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileIsWideGamut(p0:ColorSyncProfile):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileRemoveTag(prof:ColorSyncMutableProfile, signature:NSStringArg):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileSetHeader(prof:ColorSyncMutableProfile, header:NSData):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileSetTag(prof:ColorSyncMutableProfile, signature:NSStringArg, data:NSData):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncProfileVerify(prof:ColorSyncProfile, errors:Ptr, warnings:Ptr):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncTransformConvert(transform:ColorSyncTransform, width:I64, height:I64, dst:Ptr, dstDepth:ColorSyncDataDepth, dstLayout:Int, dstBytesPerRow:I64, src:Ptr, srcDepth:ColorSyncDataDepth, srcLayout:Int, srcBytesPerRow:I64, options:Null<NSDictionary>):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncTransformCopyProperty(transform:ColorSyncTransform, key:Id, options:Null<NSDictionary>):Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function ColorSyncTransformCreate(profileSequence:Null<NSArray>, options:Null<NSDictionary>):Null<ColorSyncTransform>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncTransformGetProfileSequence(transform:ColorSyncTransform):Null<NSArray>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncTransformGetTypeID():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function ColorSyncTransformSetProperty(transform:ColorSyncTransform, key:Id, property:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncACESCGLinearProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncAdobeRGB1998Profile : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncAlternateCurveCount : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncAlternateCurveHeadroomStops : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncAlternateGainCurveInfo : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncBaselineHeadroomStops : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncBestQuality : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncBlackPointCompensation : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCoefficientBlue : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCoefficientComponent : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCoefficientGreen : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCoefficientMaxRGB : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCoefficientMinRGB : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCoefficientRed : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCommonComponentMixing : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCommonCurveParameters : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncComponentCoefficients : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncComponentMix : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncControlPointSlopes : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncControlPointsX : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncControlPointsY : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversion1DLut : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversion3DLut : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionBPC : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionChannelID : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionGridPoints : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionInpChan : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionMatrix : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionNDLut : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionOutChan : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionParamCurve0 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionParamCurve1 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionParamCurve2 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionParamCurve3 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConversionParamCurve4 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConvertQuality : NSString;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncConvertUseExtendedRange : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncCustomHDRReferenceWhite : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncDCIP3Profile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncDisplayP3Profile : NSString;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	public static final kColorSyncDoNotSubstituteProfiles : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncDraftQuality : NSString;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncExtendedRange : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncFixedPointRange : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncGainCurveChromaticities : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncGenericCMYKProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncGenericGrayGamma22Profile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncGenericGrayProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncGenericLabProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncGenericRGBProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncGenericXYZProfile : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kColorSyncHDRDerivative : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kColorSyncHLGDerivative : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncHeadroomAdaptiveGainCurveApplicationVersion : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncHeadroomAdaptiveGainCurveColorVolumeTransform : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncHeadroomAdaptiveGainCurveInfo : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncHeadroomAdaptiveToneMappingInfo : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncITUR2020Profile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncITUR709Profile : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncInterpolateSlopes : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kColorSyncMaxControlPointIndex : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncNormalQuality : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kColorSyncPQDerivative : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfile : NSString;
 	public static final kColorSyncProfileCacheSeed : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileColorSpace : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileDescription : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileHeader : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileIsValid : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileMD5Digest : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfilePCS : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncProfileURL : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncROMMRGBProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncRenderingIntent : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncRenderingIntentAbsolute : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncRenderingIntentPerceptual : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncRenderingIntentRelative : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncRenderingIntentSaturation : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncRenderingIntentUseProfileHeader : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSRGBProfile : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigAToB0Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigAToB1Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigAToB2Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigAbstractClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigBToA0Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigBToA1Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigBToA2Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigBlueColorantTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigBlueTRCTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigCmykData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigColorSpaceClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigCopyrightTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigDeviceMfgDescTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigDeviceModelDescTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigDisplayClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigGamutTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigGrayData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigGrayTRCTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigGreenColorantTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigGreenTRCTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigInputClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigLabData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigLinkClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigMediaBlackPointTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigMediaWhitePointTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigNamedColor2Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigNamedColorClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigOutputClass : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigPreview0Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigPreview1Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigPreview2Tag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigProfileDescriptionTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigProfileSequenceDescTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigRedColorantTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigRedTRCTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigRgbData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigTechnologyTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigViewingCondDescTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigViewingConditionsTag : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncSigXYZData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformCodeFragmentMD5 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformCodeFragmentType : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformCreator : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformDeviceToDevice : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformDeviceToPCS : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformDstSpace : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformFullConversionData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformGamutCheck : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformInfo : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformPCSToDevice : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformPCSToPCS : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformParametricConversionData : NSString;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformProfileSequnce : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformSimplifiedConversionData : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformSrcSpace : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final kColorSyncTransformTag : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kColorSyncTransformUseITU709OETF : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final kColorSyncWebSafeColorsProfile : NSString;
 }

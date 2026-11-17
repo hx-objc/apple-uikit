@@ -6,13 +6,17 @@ import foundation.NSComparisonResult;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("FileProvider") @:hxmc.objc extern class NSFileProviderDomainVersion extends NSObject implements NSSecureCoding {
+@:hxmc.framework("FileProvider") @:hxmc.objc @:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0) extern class NSFileProviderDomainVersion extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():NSFileProviderDomainVersion;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function next():NSFileProviderDomainVersion;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function compare(otherVersion:NSFileProviderDomainVersion):NSComparisonResult;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<NSFileProviderDomainVersion>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():NSFileProviderDomainVersion;
 }

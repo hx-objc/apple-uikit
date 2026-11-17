@@ -8,13 +8,19 @@ import foundation.NSString;
 import hxmc.I64;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderChangeObserver") extern interface NSFileProviderChangeObserver extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderChangeObserver") @:hxmc.available(macos >= 11.0) extern interface NSFileProviderChangeObserver extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var suggestedBatchSize(get, never) : I64;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_suggestedBatchSize():I64;
+	@:hxmc.available(macos >= 11.0)
 	function didUpdateItems(updatedItems:NSArray<NSFileProviderItem>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function didDeleteItemsWithIdentifiers(deletedItemIdentifiers:NSArray<NSString>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function finishEnumeratingChangesUpToSyncAnchor(anchor:NSData, moreComing:Bool):Void;
+	@:hxmc.available(macos >= 11.0)
 	function finishEnumeratingWithError(error:NSError):Void;
 }

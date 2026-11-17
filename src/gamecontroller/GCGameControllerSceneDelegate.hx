@@ -4,6 +4,7 @@ package gamecontroller;
 import objc.NSObjectProtocol;
 import uikit.UIScene;
 
-@:hxmc.objc("GCGameControllerSceneDelegate") extern interface GCGameControllerSceneDelegate extends NSObjectProtocol {
+@:hxmc.objc("GCGameControllerSceneDelegate") @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern interface GCGameControllerSceneDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function scene(scene:UIScene, didActivateGameControllerWithContext:GCGameControllerActivationContext):Void;
 }

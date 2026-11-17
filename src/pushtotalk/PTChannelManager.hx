@@ -5,18 +5,31 @@ import foundation.NSError;
 import foundation.NSUUID;
 import objc.NSObject;
 
-@:hxmc.framework("PushToTalk") @:hxmc.objc extern class PTChannelManager extends NSObject {
+@:hxmc.framework("PushToTalk") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PTChannelManager extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PTChannelManager;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var activeChannelUUID(get, never) : Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_activeChannelUUID():Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function channelManagerWithDelegate(delegate:PTChannelManagerDelegate, restorationDelegate:PTChannelRestorationDelegate, completionHandler:(Null<PTChannelManager>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function requestJoinChannelWithUUID(channelUUID:NSUUID, descriptor:PTChannelDescriptor):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function requestBeginTransmittingWithChannelUUID(channelUUID:NSUUID):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function stopTransmittingWithChannelUUID(channelUUID:NSUUID):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function leaveChannelWithUUID(channelUUID:NSUUID):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setChannelDescriptor(channelDescriptor:PTChannelDescriptor, forChannelUUID:NSUUID, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setActiveRemoteParticipant(participant:Null<PTParticipant>, forChannelUUID:NSUUID, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setServiceStatus(status:PTServiceStatus, forChannelUUID:NSUUID, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setTransmissionMode(transmissionMode:PTTransmissionMode, forChannelUUID:NSUUID, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setAccessoryButtonEventsEnabled(enabled:Bool, forChannelUUID:NSUUID, completionHandler:Null<Null<NSError> -> Void>):Void;
 }

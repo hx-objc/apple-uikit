@@ -10,10 +10,12 @@ enum abstract NSFileProviderItemCapabilities(I64) to I64 {
 	var AllowsRenaming = 8;
 	var AllowsTrashing = 16;
 	var AllowsDeleting = 32;
+	@:hxmc.available(macos >= 11.0)
 	var AllowsEvicting = 64;
 	var AllowsAddingSubItems = 2;
 	var AllowsContentEnumerating = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var AllowsAll = 63;
 	inline function new(v:I64) this = v;
 	var None = 0;

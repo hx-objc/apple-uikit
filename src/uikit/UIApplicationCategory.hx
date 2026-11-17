@@ -4,6 +4,7 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIApplicationCategory(I64) to I64 {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var WebBrowser = 1;
 	inline function new(v:I64) this = v;
 }

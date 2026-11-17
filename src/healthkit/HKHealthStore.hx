@@ -13,52 +13,94 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.UIViewController;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKHealthStore extends NSObject {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKHealthStore extends NSObject {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKHealthStore;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var workoutSessionMirroringStartHandler(get, set) : HKWorkoutSession -> Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_workoutSessionMirroringStartHandler():HKWorkoutSession -> Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_workoutSessionMirroringStartHandler(v:HKWorkoutSession -> Void):HKWorkoutSession -> Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var authorizationViewControllerPresenter(get, set) : Null<UIViewController>;
 	@:hxmc.framework("HealthKitUI")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_authorizationViewControllerPresenter():Null<UIViewController>;
 	@:hxmc.framework("HealthKitUI")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_authorizationViewControllerPresenter(v:Null<UIViewController>):Null<UIViewController>;
+	@:hxmc.available(macos >= 13.0)
 	static function isHealthDataAvailable():Bool;
+	@:hxmc.available(macos >= 13.0)
 	function supportsHealthRecords():Bool;
+	@:hxmc.available(macos >= 13.0)
 	function authorizationStatusForType(type:HKObjectType):HKAuthorizationStatus;
+	@:hxmc.available(macos >= 13.0)
 	function requestAuthorizationToShareTypes(typesToShare:Null<NSSet<HKSampleType>>, readTypes:Null<NSSet<HKObjectType>>, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function requestPerObjectReadAuthorizationForType(objectType:HKObjectType, predicate:Null<NSPredicate>, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function getRequestStatusForAuthorizationToShareTypes(typesToShare:NSSet<HKSampleType>, readTypes:NSSet<HKObjectType>, completion:(HKAuthorizationRequestStatus, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function handleAuthorizationForExtensionWithCompletion(completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function earliestPermittedSampleDate():NSDate;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function getEarliestAuthorizedSampleDateForTypes(types:NSSet<HKObjectType>, completion:(Null<NSDictionary<HKObjectType, NSDate>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function saveObject(object:HKObject, withCompletion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function saveObjects(objects:NSArray<HKObject>, withCompletion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function deleteObject(object:HKObject, withCompletion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function deleteObjects(objects:NSArray<HKObject>, withCompletion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function deleteObjectsOfType(objectType:HKObjectType, predicate:NSPredicate, withCompletion:(Bool, I64, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function executeQuery(query:HKQuery):Void;
+	@:hxmc.available(macos >= 13.0)
 	function stopQuery(query:HKQuery):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	function splitTotalEnergy(totalEnergy:HKQuantity, startDate:NSDate, endDate:NSDate, resultsHandler:(Null<HKQuantity>, Null<HKQuantity>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	function dateOfBirthWithError(error:Ptr):Null<NSDate>;
+	@:hxmc.available(macos >= 13.0)
 	function dateOfBirthComponentsWithError(error:Ptr):Null<NSDateComponents>;
+	@:hxmc.available(macos >= 13.0)
 	function biologicalSexWithError(error:Ptr):Null<HKBiologicalSexObject>;
+	@:hxmc.available(macos >= 13.0)
 	function bloodTypeWithError(error:Ptr):Null<HKBloodTypeObject>;
+	@:hxmc.available(macos >= 13.0)
 	function fitzpatrickSkinTypeWithError(error:Ptr):Null<HKFitzpatrickSkinTypeObject>;
+	@:hxmc.available(macos >= 13.0)
 	function wheelchairUseWithError(error:Ptr):Null<HKWheelchairUseObject>;
+	@:hxmc.available(macos >= 13.0)
 	function activityMoveModeWithError(error:Ptr):Null<HKActivityMoveModeObject>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	function addSamples(samples:NSArray<HKSample>, toWorkout:HKWorkout, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function startWatchAppWithWorkoutConfiguration(workoutConfiguration:HKWorkoutConfiguration, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function recoverActiveWorkoutSessionWithCompletion(completion:(Null<HKWorkoutSession>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function enableBackgroundDeliveryForType(type:HKObjectType, frequency:HKUpdateFrequency, withCompletion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function disableBackgroundDeliveryForType(type:HKObjectType, withCompletion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function disableAllBackgroundDeliveryWithCompletion(completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function preferredUnitsForQuantityTypes(quantityTypes:NSSet<HKQuantityType>, completion:(NSDictionary<HKQuantityType, HKUnit>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	function recalibrateEstimatesForSampleType(sampleType:HKSampleType, atDate:NSDate, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function relateWorkoutEffortSample(sample:HKSample, withWorkout:HKWorkout, activity:Null<HKWorkoutActivity>, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function unrelateWorkoutEffortSample(sample:HKSample, fromWorkout:HKWorkout, activity:Null<HKWorkoutActivity>, completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0)
 	override function init():HKHealthStore;
 }

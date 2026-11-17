@@ -5,10 +5,15 @@ import foundation.NSData;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEDownloadMonitorLocation extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class BEDownloadMonitorLocation extends NSObject {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():BEDownloadMonitorLocation;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var url(get, never) : NSURL;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_url():NSURL;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var bookmarkData(get, never) : NSData;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_bookmarkData():NSData;
 }

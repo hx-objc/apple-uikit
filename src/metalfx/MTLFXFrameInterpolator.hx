@@ -3,6 +3,7 @@ package metalfx;
 
 import metal.MTLCommandBuffer;
 
-@:hxmc.objc("MTLFXFrameInterpolator") extern interface MTLFXFrameInterpolator extends MTLFXFrameInterpolatorBase {
+@:hxmc.objc("MTLFXFrameInterpolator") @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern interface MTLFXFrameInterpolator extends MTLFXFrameInterpolatorBase {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function encodeToCommandBuffer(commandBuffer:MTLCommandBuffer):Void;
 }

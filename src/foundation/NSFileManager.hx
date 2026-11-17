@@ -83,9 +83,13 @@ import objc.NSObject;
 	function evictUbiquitousItemAtURL(url:NSURL, error:Ptr):Bool;
 	function URLForUbiquityContainerIdentifier(containerIdentifier:Null<NSStringArg>):Null<NSURL>;
 	function URLForPublishingUbiquitousItemAtURL(url:NSURL, expirationDate:Ptr, error:Ptr):Null<NSURL>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function pauseSyncForUbiquitousItemAtURL(url:NSURL, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function resumeSyncForUbiquitousItemAtURL(url:NSURL, withBehavior:NSFileManagerResumeSyncBehavior, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function fetchLatestRemoteVersionOfItemAtURL(url:NSURL, completionHandler:(Null<NSFileVersion>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function uploadLocalVersionOfUbiquitousItemAtURL(url:NSURL, withConflictResolutionPolicy:NSFileManagerUploadLocalVersionConflictPolicy, completionHandler:(Null<NSFileVersion>, Null<NSError>) -> Void):Void;
 	function getFileProviderServicesForItemAtURL(url:NSURL, completionHandler:(Null<NSDictionary<NSString, NSFileProviderService>>, Null<NSError>) -> Void):Void;
 	function containerURLForSecurityApplicationGroupIdentifier(groupIdentifier:NSStringArg):Null<NSURL>;

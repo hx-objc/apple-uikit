@@ -5,6 +5,7 @@ import hxmc.unsafe.Ptr;
 
 @:hxmc.struct class SALResellerAccount {
 	public var _reserved : Ptr;
+	@:hxmc.unsafe
 	public inline function new(_reserved:Ptr) {
 		this._reserved = _reserved;
 	}

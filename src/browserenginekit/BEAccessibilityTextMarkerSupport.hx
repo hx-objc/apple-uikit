@@ -8,17 +8,29 @@ import foundation.NSString;
 import hxmc.I64;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("BEAccessibilityTextMarkerSupport") extern interface BEAccessibilityTextMarkerSupport extends NSObjectProtocol {
+@:hxmc.objc("BEAccessibilityTextMarkerSupport") @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern interface BEAccessibilityTextMarkerSupport extends NSObjectProtocol {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityBoundsForTextMarkerRange(range:BEAccessibilityTextMarkerRange):CGRect;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityContentForTextMarkerRange(range:BEAccessibilityTextMarkerRange):Null<NSString>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityTextMarkerRangeForCurrentSelection():Null<BEAccessibilityTextMarkerRange>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityTextMarkerRange():BEAccessibilityTextMarkerRange;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityNextTextMarker(marker:BEAccessibilityTextMarker):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityPreviousTextMarker(marker:BEAccessibilityTextMarker):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityLineEndMarkerForMarker(marker:BEAccessibilityTextMarker):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityLineStartMarkerForMarker(marker:BEAccessibilityTextMarker):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityMarkerForPoint(point:CGPoint):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityTextMarkerForPosition(position:I64):Null<BEAccessibilityTextMarker>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityTextMarkerRangeForRange(range:NSRange):Null<BEAccessibilityTextMarkerRange>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function accessibilityRangeForTextMarkerRange(range:BEAccessibilityTextMarkerRange):NSRange;
 }

@@ -32,10 +32,13 @@ import usernotifications.UNNotificationAction;
 	var widgetActiveDisplayMode(get, never) : NCWidgetDisplayMode;
 	@:hxmc.framework("NotificationCenter")
 	function get_widgetActiveDisplayMode():NCWidgetDisplayMode;
+	@:hxmc.available(macos >= 11.0)
 	var notificationActions(get, set) : NSArray<UNNotificationAction>;
 	@:hxmc.framework("UserNotificationsUI")
+	@:hxmc.available(macos >= 11.0)
 	function get_notificationActions():NSArray<UNNotificationAction>;
 	@:hxmc.framework("UserNotificationsUI")
+	@:hxmc.available(macos >= 11.0)
 	function set_notificationActions(v:NSArray<UNNotificationAction>):NSArray<UNNotificationAction>;
 	function completeRequestReturningItems(items:Null<NSArray>, completionHandler:Null<Bool -> Void>):Void;
 	function cancelRequestWithError(error:NSError):Void;
@@ -53,14 +56,19 @@ import usernotifications.UNNotificationAction;
 	overload function completeRequestWithBroadcastURL(broadcastURL:NSURL, broadcastConfiguration:RPBroadcastConfiguration, setupInfo:Null<NSDictionary<NSString, NSObject>>):Void;
 	@:hxmc.framework("ReplayKit")
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	overload function completeRequestWithBroadcastURL(broadcastURL:NSURL, setupInfo:Null<NSDictionary<NSString, NSObject>>):Void;
 	@:hxmc.framework("UserNotificationsUI")
+	@:hxmc.available(macos >= 11.0)
 	function performNotificationDefaultAction():Void;
 	@:hxmc.framework("UserNotificationsUI")
+	@:hxmc.available(macos >= 11.0)
 	function dismissNotificationContentExtension():Void;
 	@:hxmc.framework("UserNotificationsUI")
+	@:hxmc.available(macos >= 11.0)
 	function mediaPlayingStarted():Void;
 	@:hxmc.framework("UserNotificationsUI")
+	@:hxmc.available(macos >= 11.0)
 	function mediaPlayingPaused():Void;
 	override function init():NSExtensionContext;
 }

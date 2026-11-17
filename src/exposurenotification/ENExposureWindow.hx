@@ -18,7 +18,9 @@ import objc.NSObject;
 	var scanInstances(get, never) : NSArray<ENScanInstance>;
 	function get_scanInstances():NSArray<ENScanInstance>;
 	@:deprecated
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var variantOfConcernType(get, never) : ENVariantOfConcernType;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	function get_variantOfConcernType():ENVariantOfConcernType;
 	override function init():ENExposureWindow;
 }

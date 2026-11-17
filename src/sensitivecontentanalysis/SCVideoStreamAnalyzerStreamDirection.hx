@@ -4,7 +4,9 @@ package sensitivecontentanalysis;
 import hxmc.I64;
 
 enum abstract SCVideoStreamAnalyzerStreamDirection(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Outgoing = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Incoming = 2;
 	inline function new(v:I64) this = v;
 }

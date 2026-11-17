@@ -4,7 +4,9 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderTestingOperationSide(I64) to I64 {
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var Disk = 0;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var FileProvider = 1;
 	inline function new(v:I64) this = v;
 }

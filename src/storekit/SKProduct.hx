@@ -29,7 +29,9 @@ import objc.NSObject;
 	var isDownloadable(get, never) : Bool;
 	function get_isDownloadable():Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var isFamilyShareable(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_isFamilyShareable():Bool;
 	@:deprecated
 	var downloadContentLengths(get, never) : NSArray<NSNumber>;

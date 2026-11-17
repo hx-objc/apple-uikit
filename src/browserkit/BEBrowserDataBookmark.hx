@@ -5,19 +5,33 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import foundation.NSURL;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserDataBookmark extends BEBrowserData {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserDataBookmark extends BEBrowserData {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserDataBookmark;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var isFolder(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_isFolder():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var url(get, never) : Null<NSURL>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_url():Null<NSURL>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var parentIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_parentIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initAsFolder(isFolder:Bool, title:NSStringArg, identifier:NSStringArg, url:Null<NSURL>, parentIdentifier:Null<NSStringArg>):BEBrowserDataBookmark;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithCoder(coder:NSCoder):Null<BEBrowserDataBookmark>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithSourceApplicationBundleIdentifier(sourceApplicationBundleIdentifier:Null<NSStringArg>, sourceApplicationLocalizedName:Null<NSStringArg>):BEBrowserDataBookmark;
 }

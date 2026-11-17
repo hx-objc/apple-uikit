@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIMessageConversationEntryDataKind(I64) to I64 {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Text = 0;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Attachment = 1;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Other = 2;
 	inline function new(v:I64) this = v;
 }

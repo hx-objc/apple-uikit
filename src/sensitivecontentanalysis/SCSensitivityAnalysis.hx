@@ -5,18 +5,30 @@ import foundation.NSSet;
 import foundation.NSString;
 import objc.NSObject;
 
-@:hxmc.framework("SensitiveContentAnalysis") @:hxmc.objc extern class SCSensitivityAnalysis extends NSObject {
+@:hxmc.framework("SensitiveContentAnalysis") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class SCSensitivityAnalysis extends NSObject {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():SCSensitivityAnalysis;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var sensitive(get, never) : Bool;
 	@:selector("isSensitive")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_sensitive():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var detectedTypes(get, never) : NSSet<NSString>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_detectedTypes():NSSet<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var shouldInterruptVideo(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_shouldInterruptVideo():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var shouldIndicateSensitivity(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_shouldIndicateSensitivity():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var shouldMuteAudio(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_shouldMuteAudio():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function init():SCSensitivityAnalysis;
 }

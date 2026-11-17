@@ -6,11 +6,16 @@ import foundation.NSSecureCoding;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc extern class VSAutoSignInToken extends NSObject implements NSSecureCoding {
+@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern class VSAutoSignInToken extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():VSAutoSignInToken;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var authorization(get, never) : VSAutoSignInAuthorization;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_authorization():VSAutoSignInAuthorization;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var value(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_value():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

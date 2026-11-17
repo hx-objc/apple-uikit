@@ -4,7 +4,9 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderContentPolicy(I64) to I64 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var Inherited = 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var DownloadLazilyAndEvictOnRemoteUpdate = 2;
 	inline function new(v:I64) this = v;
 }

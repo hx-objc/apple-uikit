@@ -4,8 +4,11 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEAccessibilityOrientation(I64) to I64 {
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	var Unknown = 0;
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	var Vertical = 1;
+	@:hxmc.available(ios >= 27, maccatalyst >= 27)
 	var Horizontal = 2;
 	inline function new(v:I64) this = v;
 }

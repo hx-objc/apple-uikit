@@ -10,50 +10,92 @@ import metal.MTLDevice;
 import metal.MTLPixelFormat;
 import objc.NSObject;
 
-@:hxmc.framework("MetalFX") @:hxmc.objc extern class MTLFXFrameInterpolatorDescriptor extends NSObject implements NSCopying {
+@:hxmc.framework("MetalFX") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern class MTLFXFrameInterpolatorDescriptor extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():MTLFXFrameInterpolatorDescriptor;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var colorTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_colorTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_colorTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var outputTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_outputTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_outputTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var depthTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_depthTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_depthTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var motionTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_motionTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_motionTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var uiTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_uiTextureFormat():MTLPixelFormat;
 	@:selector("setUITextureFormat:")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_uiTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var scaler(get, set) : Null<MTLFXFrameInterpolatableScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_scaler():Null<MTLFXFrameInterpolatableScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_scaler(v:Null<MTLFXFrameInterpolatableScaler>):Null<MTLFXFrameInterpolatableScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var inputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_inputWidth():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_inputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var inputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_inputHeight():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_inputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var outputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_outputWidth():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_outputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var outputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_outputHeight():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_outputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var distortionTextureEnabled(get, set) : Bool;
 	@:selector("isDistortionTextureEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_distortionTextureEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_distortionTextureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var requiresPrevColorTexture(get, set) : Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_requiresPrevColorTexture():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_requiresPrevColorTexture(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function newFrameInterpolatorWithDevice(device:MTLDevice):Null<MTLFXFrameInterpolator>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function newFrameInterpolatorWithDevice(device:MTLDevice, compiler:MTL4Compiler):Null<MTL4FXFrameInterpolator>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function supportsMetal4FX(device:MTLDevice):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function supportsDevice(device:MTLDevice):Bool;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	override function init():MTLFXFrameInterpolatorDescriptor;
 }

@@ -4,7 +4,9 @@ package videosubscriberaccount;
 import hxmc.I64;
 
 enum abstract VSUserAccountQueryOptions(I64) to I64 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var None = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var AllDevices = 1;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

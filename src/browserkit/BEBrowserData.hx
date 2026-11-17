@@ -6,14 +6,20 @@ import foundation.NSSecureCoding;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserData extends NSObject implements NSSecureCoding {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserData extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserData;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var sourceApplicationBundleIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_sourceApplicationBundleIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var sourceApplicationLocalizedName(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_sourceApplicationLocalizedName():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithSourceApplicationBundleIdentifier(sourceApplicationBundleIdentifier:Null<NSStringArg>, sourceApplicationLocalizedName:Null<NSStringArg>):BEBrowserData;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BEBrowserData>;

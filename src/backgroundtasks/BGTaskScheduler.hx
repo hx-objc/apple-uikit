@@ -11,11 +11,14 @@ import objc.NSObject;
 	static function alloc():BGTaskScheduler;
 	static var sharedScheduler(get, never) : BGTaskScheduler;
 	static function get_sharedScheduler():BGTaskScheduler;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var supportedResources(get, never) : BGContinuedProcessingTaskRequestResources;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_supportedResources():BGContinuedProcessingTaskRequestResources;
 	function registerForTaskWithIdentifier(identifier:NSStringArg, usingQueue:Null<NSObject>, launchHandler:BGTask -> Void):Bool;
 	@:deprecated
 	overload function submitTaskRequest(taskRequest:BGTaskRequest, error:Ptr):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function submitTaskRequest(taskRequest:BGTaskRequest, completionHandler:Null<NSError> -> Void):Void;
 	function cancelTaskRequestWithIdentifier(identifier:NSStringArg):Void;
 	function cancelAllTaskRequests():Void;

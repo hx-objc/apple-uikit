@@ -3,9 +3,11 @@ package browserenginekit;
 
 import uikit.UIScrollViewDelegate;
 
-@:hxmc.objc("BEScrollViewDelegate") extern interface BEScrollViewDelegate extends UIScrollViewDelegate {
+@:hxmc.objc("BEScrollViewDelegate") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BEScrollViewDelegate extends UIScrollViewDelegate {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function scrollView(scrollView:BEScrollView, handleScrollUpdate:BEScrollViewScrollUpdate, completion:Bool -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function parentScrollViewForScrollView(scrollView:BEScrollView):Null<BEScrollView>;
 }

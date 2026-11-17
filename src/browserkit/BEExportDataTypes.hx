@@ -4,10 +4,15 @@ package browserkit;
 import hxmc.I64;
 
 enum abstract BEExportDataTypes(I64) to I64 {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var None = 0;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var Bookmarks = 1;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var ReadingList = 2;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var History = 4;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var Extensions = 8;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

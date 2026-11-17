@@ -11,85 +11,159 @@ import metal.MTLDevice;
 import metal.MTLPixelFormat;
 import objc.NSObject;
 
-@:hxmc.framework("MetalFX") @:hxmc.objc extern class MTLFXTemporalDenoisedScalerDescriptor extends NSObject implements NSCopying {
+@:hxmc.framework("MetalFX") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0) extern class MTLFXTemporalDenoisedScalerDescriptor extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():MTLFXTemporalDenoisedScalerDescriptor;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var colorTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_colorTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_colorTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var depthTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_depthTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_depthTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var motionTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_motionTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_motionTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var diffuseAlbedoTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_diffuseAlbedoTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_diffuseAlbedoTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var specularAlbedoTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_specularAlbedoTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_specularAlbedoTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var normalTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_normalTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_normalTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var roughnessTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_roughnessTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_roughnessTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var specularHitDistanceTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_specularHitDistanceTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_specularHitDistanceTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var denoiseStrengthMaskTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_denoiseStrengthMaskTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_denoiseStrengthMaskTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var transparencyOverlayTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_transparencyOverlayTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_transparencyOverlayTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var outputTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_outputTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_outputTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var inputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_inputWidth():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_inputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var inputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_inputHeight():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_inputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var outputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_outputWidth():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_outputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var outputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_outputHeight():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_outputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var requiresSynchronousInitialization(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_requiresSynchronousInitialization():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_requiresSynchronousInitialization(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var autoExposureEnabled(get, set) : Bool;
 	@:selector("isAutoExposureEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_autoExposureEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_autoExposureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var reactiveMaskTextureEnabled(get, set) : Bool;
 	@:selector("isReactiveMaskTextureEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_reactiveMaskTextureEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_reactiveMaskTextureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var reactiveMaskTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_reactiveMaskTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_reactiveMaskTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var specularHitDistanceTextureEnabled(get, set) : Bool;
 	@:selector("isSpecularHitDistanceTextureEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_specularHitDistanceTextureEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_specularHitDistanceTextureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var denoiseStrengthMaskTextureEnabled(get, set) : Bool;
 	@:selector("isDenoiseStrengthMaskTextureEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_denoiseStrengthMaskTextureEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_denoiseStrengthMaskTextureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var transparencyOverlayTextureEnabled(get, set) : Bool;
 	@:selector("isTransparencyOverlayTextureEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_transparencyOverlayTextureEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_transparencyOverlayTextureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function newTemporalDenoisedScalerWithDevice(device:MTLDevice):Null<MTLFXTemporalDenoisedScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function newTemporalDenoisedScalerWithDevice(device:MTLDevice, compiler:MTL4Compiler):Null<MTL4FXTemporalDenoisedScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function supportedInputContentMinScaleForDevice(device:MTLDevice):Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function supportedInputContentMaxScaleForDevice(device:MTLDevice):Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function supportsMetal4FX(device:MTLDevice):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function supportsDevice(device:MTLDevice):Bool;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function init():MTLFXTemporalDenoisedScalerDescriptor;
 }

@@ -3,9 +3,13 @@ package pushtotalk;
 
 import objc.NSObject;
 
-@:hxmc.framework("PushToTalk") @:hxmc.objc extern class PTPushResult extends NSObject {
+@:hxmc.framework("PushToTalk") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PTPushResult extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PTPushResult;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var leaveChannelPushResult(get, never) : PTPushResult;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_leaveChannelPushResult():PTPushResult;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function pushResultForActiveRemoteParticipant(participant:PTParticipant):PTPushResult;
 }

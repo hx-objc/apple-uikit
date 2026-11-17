@@ -175,11 +175,17 @@ final class AudioUnitParametersConstants {
 	public static inline var kRoundTripAACParam_Format : Int = 0;
 	public static inline var kRoundTripAACParam_EncodingStrategy : Int = 1;
 	public static inline var kRoundTripAACParam_RateOrQuality : Int = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static inline var kAUSoundIsolationParam_WetDryMixPercent : Int = 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static inline var kAUSoundIsolationParam_SoundToIsolate : Int = 1;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static inline var kAUSoundIsolationSoundType_HighQualityVoice : I64 = 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static inline var kAUSoundIsolationSoundType_Voice : I64 = 1;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static inline var kAUAudioMixParameter_Style : Int = 0;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static inline var kAUAudioMixParameter_RemixAmount : Int = 1;
 	public static inline var kRandomParam_BoundA : Int = 0;
 	public static inline var kRandomParam_BoundB : Int = 1;

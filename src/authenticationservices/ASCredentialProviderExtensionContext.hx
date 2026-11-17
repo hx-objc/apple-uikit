@@ -5,15 +5,25 @@ import foundation.NSArray;
 import foundation.NSExtensionContext;
 import foundation.NSStringArg;
 
-@:hxmc.framework("AuthenticationServices") @:hxmc.objc extern class ASCredentialProviderExtensionContext extends NSExtensionContext {
+@:hxmc.framework("AuthenticationServices") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class ASCredentialProviderExtensionContext extends NSExtensionContext {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():ASCredentialProviderExtensionContext;
+	@:hxmc.available(macos >= 11.0)
 	function completeRequestWithSelectedCredential(credential:ASPasswordCredential, completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0)
 	function completeAssertionRequestWithSelectedPasskeyCredential(credential:ASPasskeyAssertionCredential, completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0)
 	function completeRegistrationRequestWithSelectedPasskeyCredential(credential:ASPasskeyRegistrationCredential, completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0)
 	function completeOneTimeCodeRequestWithSelectedCredential(credential:ASOneTimeCodeCredential, completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 18.0)
 	function completeRequestWithTextToInsert(text:NSStringArg, completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2)
 	function completeSavePasswordRequestWithCompletionHandler(completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2)
 	function completeGeneratePasswordRequestWithResults(results:NSArray<ASGeneratedPassword>, completionHandler:Null<Bool -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function completeExtensionConfigurationRequest():Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():ASCredentialProviderExtensionContext;
 }

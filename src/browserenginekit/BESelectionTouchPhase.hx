@@ -4,11 +4,17 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BESelectionTouchPhase(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Started = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Moved = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Ended = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var EndedMovingForward = 3;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var EndedMovingBackward = 4;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var EndedNotMoving = 5;
 	inline function new(v:I64) this = v;
 }

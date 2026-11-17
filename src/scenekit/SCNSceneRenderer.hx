@@ -62,7 +62,9 @@ import spritekit.SKTransition;
 	function set_overlaySKScene(v:Null<SKScene>):Null<SKScene>;
 	var renderingAPI(get, never) : SCNRenderingAPI;
 	function get_renderingAPI():SCNRenderingAPI;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var workingColorSpace(get, never) : CGColorSpace;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_workingColorSpace():CGColorSpace;
 	var context(get, never) : Ptr;
 	function get_context():Ptr;

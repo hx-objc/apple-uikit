@@ -27,8 +27,10 @@ import hxmc.unsafe.UInt8;
 	function updateFence(fence:MTLFence):Void;
 	function waitForFence(fence:MTLFence):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function getTextureAccessCounters(texture:MTLTexture, region:MTLRegion, mipLevel:I64, slice:I64, resetCounters:Bool, countersBuffer:MTLBuffer, countersBufferOffset:I64):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function resetTextureAccessCounters(texture:MTLTexture, region:MTLRegion, mipLevel:I64, slice:I64):Void;
 	function optimizeContentsForGPUAccess(texture:MTLTexture):Void;
 	@:selector("optimizeContentsForGPUAccess:slice:level:")
@@ -42,7 +44,9 @@ import hxmc.unsafe.UInt8;
 	function sampleCountersInBuffer(sampleBuffer:MTLCounterSampleBuffer, atSampleIndex:I64, withBarrier:Bool):Void;
 	function resolveCounters(sampleBuffer:MTLCounterSampleBuffer, inRange:NSRange, destinationBuffer:MTLBuffer, destinationOffset:I64):Void;
 	@:selector("copyFromTensor:sourceOrigin:sourceDimensions:toTensor:destinationOrigin:destinationDimensions:")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function copyFromTensorSourceOriginSourceDimensionsToTensorDestinationOriginDestinationDimensions(sourceTensor:MTLTensor, sourceOrigin:MTLTensorExtents, sourceDimensions:MTLTensorExtents, toTensor:MTLTensor, destinationOrigin:MTLTensorExtents, destinationDimensions:MTLTensorExtents):Void;
 	@:selector("copyFromTensor:sourceOrigin:sourceDimensions:sourcePlane:toTensor:destinationOrigin:destinationDimensions:destinationPlane:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function copyFromTensorSourceOriginSourceDimensionsSourcePlaneToTensorDestinationOriginDestinationDimensionsDestinationPlane(sourceTensor:MTLTensor, sourceOrigin:MTLTensorExtents, sourceDimensions:MTLTensorExtents, sourcePlane:MTLTensorPlaneType, toTensor:MTLTensor, destinationOrigin:MTLTensorExtents, destinationDimensions:MTLTensorExtents, destinationPlane:MTLTensorPlaneType):Void;
 }

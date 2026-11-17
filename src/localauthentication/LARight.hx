@@ -7,18 +7,30 @@ import hxmc.I64;
 import objc.NSObject;
 import uikit.UIWindow;
 
-@:hxmc.framework("LocalAuthentication") @:hxmc.objc extern class LARight extends NSObject {
+@:hxmc.framework("LocalAuthentication") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class LARight extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():LARight;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var state(get, never) : LARightState;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_state():LARightState;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var tag(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_tag():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_tag(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():LARight;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function initWithRequirement(requirement:LAAuthenticationRequirement):LARight;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function authorizeWithLocalizedReason(localizedReason:NSStringArg, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function checkCanAuthorizeWithCompletion(handler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function deauthorizeWithCompletion(handler:() -> Void):Void;
 	@:hxmc.framework("LocalAuthenticationEmbeddedUI")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function authorizeWithLocalizedReason(localizedReason:NSStringArg, inPresentationContext:UIWindow, completion:Null<NSError> -> Void):Void;
 }

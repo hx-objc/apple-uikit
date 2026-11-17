@@ -7,25 +7,45 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIConversationEntry extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class UIConversationEntry extends NSObject {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():UIConversationEntry;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var text(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_text():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_text(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var senderIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_senderIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_senderIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var sentDate(get, set) : NSDate;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_sentDate():NSDate;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_sentDate(v:NSDate):NSDate;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var entryIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_entryIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_entryIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var replyThreadIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_replyThreadIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_replyThreadIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var primaryRecipientIdentifiers(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_primaryRecipientIdentifiers():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_primaryRecipientIdentifiers(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():UIConversationEntry;
 }

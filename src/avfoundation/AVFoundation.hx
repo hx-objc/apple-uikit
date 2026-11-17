@@ -13,13 +13,20 @@ import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("AVFoundation") extern class AVFoundation {
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static function AVCaptionDimensionMake(value:Float, units:AVCaptionUnitsType):AVCaptionDimension;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static function AVCaptionPointMake(x:AVCaptionDimension, y:AVCaptionDimension):AVCaptionPoint;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static function AVCaptionSizeMake(width:AVCaptionDimension, height:AVCaptionDimension):AVCaptionSize;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function AVCaptureReactionSystemImageNameForType(reactionType:NSStringArg):NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function AVCaptureTimecodeAdvancedByFrames(timecode:AVCaptureTimecode, framesToAdd:I64):AVCaptureTimecode;
 	public static function AVMakeRectWithAspectRatioInsideRect(aspectRatio:CGSize, boundingRect:CGRect):CGRect;
+	@:hxmc.available(macos >= 11.3)
 	public static function AVSampleBufferAttachContentKey(sbuf:CMSampleBuffer, contentKey:AVContentKey, outError:Ptr):Bool;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	public static function CMTagCollectionCreateWithVideoOutputPreset(allocator:Null<CFAllocator>, preset:CMTagCollectionVideoOutputPreset, newCollectionOut:Ptr):Int;
 	public static final AVAssetChapterMetadataGroupsDidChangeNotification : NSString;
 	public static final AVAssetContainsFragmentsDidChangeNotification : NSString;
@@ -30,10 +37,13 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static final AVAssetDownloadTaskMinimumRequiredMediaBitrateKey : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static final AVAssetDownloadTaskMinimumRequiredPresentationSizeKey : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static final AVAssetDownloadTaskPrefersHDRKey : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.3)
 	public static final AVAssetDownloadTaskPrefersLosslessAudioKey : NSString;
 	public static final AVAssetDownloadedAssetEvictionPriorityDefault : NSString;
 	public static final AVAssetDownloadedAssetEvictionPriorityImportant : NSString;
@@ -50,31 +60,47 @@ import hxmc.unsafe.Ptr;
 	public static final AVAssetExportPresetHEVC1920x1080WithAlpha : NSString;
 	public static final AVAssetExportPresetHEVC3840x2160 : NSString;
 	public static final AVAssetExportPresetHEVC3840x2160WithAlpha : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAssetExportPresetHEVC4320x2160 : NSString;
+	@:hxmc.available(macos >= 12.1, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAssetExportPresetHEVC7680x4320 : NSString;
 	public static final AVAssetExportPresetHEVCHighestQuality : NSString;
 	public static final AVAssetExportPresetHEVCHighestQualityWithAlpha : NSString;
 	public static final AVAssetExportPresetHighestQuality : NSString;
 	public static final AVAssetExportPresetLowQuality : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVAssetExportPresetMVHEVC1440x1440 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAssetExportPresetMVHEVC4320x4320 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAssetExportPresetMVHEVC7680x7680 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVAssetExportPresetMVHEVC960x960 : NSString;
 	public static final AVAssetExportPresetMediumQuality : NSString;
 	public static final AVAssetExportPresetPassthrough : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAssetExportSessionResumptionFailureReasonIncompatibleSessionSettings : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAssetExportSessionResumptionFailureReasonIncompatibleTemporaryDirectoryContents : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAssetExportSessionResumptionFailureReasonTemporaryDirectoryDoesNotExist : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAssetExportSessionResumptionFailureReasonUnsupportedForPresetOnPlatform : NSString;
 	public static final AVAssetImageGeneratorApertureModeCleanAperture : NSString;
 	public static final AVAssetImageGeneratorApertureModeEncodedPixels : NSString;
 	public static final AVAssetImageGeneratorApertureModeProductionAperture : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVAssetImageGeneratorDynamicRangePolicyForceSDR : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVAssetImageGeneratorDynamicRangePolicyMatchSource : NSString;
 	public static final AVAssetMediaSelectionGroupsDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAssetPlaybackConfigurationOptionNonRectilinearProjection : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVAssetPlaybackConfigurationOptionSpatialVideo : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAssetPlaybackConfigurationOptionStereoMultiviewVideo : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAssetPlaybackConfigurationOptionStereoVideo : NSString;
 	@:deprecated
 	public static final AVAssetResourceLoadingRequestStreamingContentKeyRequestRequiresPersistentKey : NSString;
@@ -84,69 +110,108 @@ import hxmc.unsafe.Ptr;
 	public static final AVAssetWasDefragmentedNotification : NSString;
 	public static final AVAssetWriterInputMediaDataLocationBeforeMainMediaDataNotInterleaved : NSString;
 	public static final AVAssetWriterInputMediaDataLocationInterleavedWithMainMediaData : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAssetWriterInputMediaDataLocationSparselyInterleavedWithMainMediaData : NSString;
 	@:deprecated
 	public static final AVAudioTimePitchAlgorithmLowQualityZeroLatency : NSString;
 	public static final AVAudioTimePitchAlgorithmSpectral : NSString;
 	public static final AVAudioTimePitchAlgorithmTimeDomain : NSString;
 	public static final AVAudioTimePitchAlgorithmVarispeed : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVCaptionConversionAdjustmentTypeTimeRange : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVCaptionConversionWarningTypeExcessMediaData : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVCaptionMediaSubTypeKey : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVCaptionMediaTypeKey : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVCaptionTimeCodeFrameDurationKey : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVCaptionUseDropFrameTimeCodeKey : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureAncillaryDataUserKeyRDD18InstanceUID : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureAncillaryDataUserKeyRDD18UDAMSetVersion : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureAncillaryDataUserKeyRDD18UserItems : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureAspectRatio16x9 : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureAspectRatio1x1 : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureAspectRatio3x4 : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureAspectRatio4x3 : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureAspectRatio9x16 : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureDeviceExposureSignalDocument : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureDeviceExposureSignalFlicker : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureDeviceExposureSignalGroupPhoto : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureDeviceExposureSignalStarburst : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureDeviceExposureSignalSubjectMotion : NSString;
 	public static final AVCaptureDeviceSubjectAreaDidChangeNotification : NSString;
 	public static final AVCaptureDeviceTypeBuiltInDualCamera : NSString;
 	public static final AVCaptureDeviceTypeBuiltInDualWideCamera : NSString;
 	@:deprecated
 	public static final AVCaptureDeviceTypeBuiltInDuoCamera : NSString;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	public static final AVCaptureDeviceTypeBuiltInInnerUltraWideCamera : NSString;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVCaptureDeviceTypeBuiltInLiDARDepthCamera : NSString;
 	@:deprecated
 	public static final AVCaptureDeviceTypeBuiltInMicrophone : NSString;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	public static final AVCaptureDeviceTypeBuiltInOuterUltraWideCamera : NSString;
 	public static final AVCaptureDeviceTypeBuiltInTelephotoCamera : NSString;
 	public static final AVCaptureDeviceTypeBuiltInTripleCamera : NSString;
 	public static final AVCaptureDeviceTypeBuiltInTrueDepthCamera : NSString;
 	public static final AVCaptureDeviceTypeBuiltInUltraWideCamera : NSString;
 	public static final AVCaptureDeviceTypeBuiltInWideAngleCamera : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureDeviceTypeContinuityCamera : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureDeviceTypeExternal : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureDeviceTypeMicrophone : NSString;
 	public static final AVCaptureDeviceWasConnectedNotification : NSString;
 	public static final AVCaptureDeviceWasDisconnectedNotification : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureExposureDurationAuto : CMTime;
 	public static final AVCaptureExposureDurationCurrent : CMTime;
 	public static final AVCaptureExposureTargetBiasCurrent : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureISOAuto : Float32;
 	public static final AVCaptureISOCurrent : Float32;
 	public static final AVCaptureInputPortFormatDescriptionDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureLensApertureAuto : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVCaptureLensApertureCurrent : Float32;
 	public static final AVCaptureLensPositionCurrent : Float32;
 	public static final AVCaptureMaxAvailableTorchLevel : Float32;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeBalloons : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeConfetti : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeFireworks : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeHeart : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeLasers : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeRain : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeThumbsDown : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVCaptureReactionTypeThumbsUp : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureSceneMonitoringStatusNotEnoughLight : NSString;
 	public static final AVCaptureSessionDidStartRunningNotification : NSString;
 	public static final AVCaptureSessionDidStopRunningNotification : NSString;
@@ -174,28 +239,41 @@ import hxmc.unsafe.Ptr;
 	public static final AVCaptureSystemPressureLevelSerious : NSString;
 	public static final AVCaptureSystemPressureLevelShutdown : NSString;
 	public static final AVCaptureWhiteBalanceGainsCurrent : AVCaptureWhiteBalanceGains;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureWhiteBalanceTemperatureAndTintValuesCloudy : AVCaptureWhiteBalanceTemperatureAndTintValues;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureWhiteBalanceTemperatureAndTintValuesDaylight : AVCaptureWhiteBalanceTemperatureAndTintValues;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureWhiteBalanceTemperatureAndTintValuesFluorescent : AVCaptureWhiteBalanceTemperatureAndTintValues;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureWhiteBalanceTemperatureAndTintValuesShadow : AVCaptureWhiteBalanceTemperatureAndTintValues;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVCaptureWhiteBalanceTemperatureAndTintValuesTungsten : AVCaptureWhiteBalanceTemperatureAndTintValues;
 	public static final AVContentKeyRequestProtocolVersionsKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVContentKeyRequestRandomDeviceIdentifierSeedKey : NSString;
 	public static final AVContentKeyRequestRequiresValidationDataInSecureTokenKey : NSString;
 	public static final AVContentKeyRequestRetryReasonReceivedObsoleteContentKey : NSString;
 	public static final AVContentKeyRequestRetryReasonReceivedResponseWithExpiredLease : NSString;
 	public static final AVContentKeyRequestRetryReasonTimedOut : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVContentKeyRequestShouldRandomizeDeviceIdentifierKey : NSString;
 	public static final AVContentKeySessionServerPlaybackContextOptionProtocolVersions : NSString;
 	public static final AVContentKeySessionServerPlaybackContextOptionServerChallenge : NSString;
 	public static final AVContentKeySystemAuthorizationToken : NSString;
 	public static final AVContentKeySystemClearKey : NSString;
 	public static final AVContentKeySystemFairPlayStreaming : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVCoordinatedPlaybackSuspensionReasonAudioSessionInterrupted : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVCoordinatedPlaybackSuspensionReasonCoordinatedPlaybackNotPossible : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVCoordinatedPlaybackSuspensionReasonPlayingInterstitial : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVCoordinatedPlaybackSuspensionReasonStallRecovery : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVCoordinatedPlaybackSuspensionReasonUserActionRequired : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVCoordinatedPlaybackSuspensionReasonUserIsChangingCurrentTime : NSString;
 	public static final AVCoreAnimationBeginTimeAtZero : Float;
 	public static final AVErrorDeviceKey : NSString;
@@ -208,13 +286,18 @@ import hxmc.unsafe.Ptr;
 	public static final AVErrorPresentationTimeStampKey : NSString;
 	public static final AVErrorRecordingSuccessfullyFinishedKey : NSString;
 	public static final AVErrorTimeKey : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVExternalStorageDeviceReasonNotRecommendedForCaptureUseEncrypted : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVExternalStorageDeviceReasonNotRecommendedForCaptureUseSlowWritingSpeed : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVExternalStorageDeviceReasonNotRecommendedForCaptureUseUnknownWritingSpeed : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVExternalStorageDeviceReasonNotRecommendedForCaptureUseUnsupportedFileSystem : NSString;
 	public static final AVFileType3GPP : NSString;
 	public static final AVFileType3GPP2 : NSString;
 	public static final AVFileTypeAC3 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVFileTypeAHAP : NSString;
 	public static final AVFileTypeAIFC : NSString;
 	public static final AVFileTypeAIFF : NSString;
@@ -222,8 +305,10 @@ import hxmc.unsafe.Ptr;
 	public static final AVFileTypeAVCI : NSString;
 	public static final AVFileTypeAppleM4A : NSString;
 	public static final AVFileTypeAppleM4V : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVFileTypeAppleiTT : NSString;
 	public static final AVFileTypeCoreAudioFormat : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVFileTypeDICOM : NSString;
 	public static final AVFileTypeDNG : NSString;
 	public static final AVFileTypeEnhancedAC3 : NSString;
@@ -232,10 +317,14 @@ import hxmc.unsafe.Ptr;
 	public static final AVFileTypeJPEG : NSString;
 	public static final AVFileTypeMPEG4 : NSString;
 	public static final AVFileTypeMPEGLayer3 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVFileTypeProfileMPEG4AppleHLS : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVFileTypeProfileMPEG4CMAFCompliant : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVFileTypeQuickTimeAudio : NSString;
 	public static final AVFileTypeQuickTimeMovie : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 18.0)
 	public static final AVFileTypeSCC : NSString;
 	public static final AVFileTypeSunAU : NSString;
 	public static final AVFileTypeTIFF : NSString;
@@ -250,32 +339,41 @@ import hxmc.unsafe.Ptr;
 	public static final AVLayerVideoGravityResizeAspect : NSString;
 	public static final AVLayerVideoGravityResizeAspectFill : NSString;
 	public static final AVMediaCharacteristicAudible : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVMediaCharacteristicCarriesVideoStereoMetadata : NSString;
 	public static final AVMediaCharacteristicContainsAlphaChannel : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMediaCharacteristicContainsHDRVideo : NSString;
 	public static final AVMediaCharacteristicContainsOnlyForcedSubtitles : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVMediaCharacteristicContainsStereoMultiviewVideo : NSString;
 	public static final AVMediaCharacteristicDescribesMusicAndSoundForAccessibility : NSString;
 	public static final AVMediaCharacteristicDescribesVideoForAccessibility : NSString;
 	public static final AVMediaCharacteristicDubbedTranslation : NSString;
 	public static final AVMediaCharacteristicEasyToRead : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVMediaCharacteristicEnhancesSpeechIntelligibility : NSString;
 	public static final AVMediaCharacteristicFrameBased : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVMediaCharacteristicIndicatesHorizontalFieldOfView : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMediaCharacteristicIndicatesNonRectilinearProjection : NSString;
 	public static final AVMediaCharacteristicIsAuxiliaryContent : NSString;
 	public static final AVMediaCharacteristicIsMainProgramContent : NSString;
 	public static final AVMediaCharacteristicIsOriginalContent : NSString;
 	public static final AVMediaCharacteristicLanguageTranslation : NSString;
 	public static final AVMediaCharacteristicLegible : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMediaCharacteristicMachineGenerated : NSString;
 	public static final AVMediaCharacteristicSignLanguageInterpretationForAccessibility : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVMediaCharacteristicTactileMinimal : NSString;
 	public static final AVMediaCharacteristicTranscribesSpokenDialogForAccessibility : NSString;
 	public static final AVMediaCharacteristicUsesWideGamutColorSpace : NSString;
 	public static final AVMediaCharacteristicVisual : NSString;
 	public static final AVMediaCharacteristicVoiceOverTranslation : NSString;
 	public static final AVMediaTypeAudio : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMediaTypeAuxiliaryPicture : NSString;
 	public static final AVMediaTypeClosedCaption : NSString;
 	public static final AVMediaTypeDepthData : NSString;
@@ -302,6 +400,7 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadata3GPUserDataKeyThumbnail : NSString;
 	public static final AVMetadata3GPUserDataKeyTitle : NSString;
 	public static final AVMetadata3GPUserDataKeyUserRating : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataCommonIdentifierAccessibilityDescription : NSString;
 	public static final AVMetadataCommonIdentifierAlbumName : NSString;
 	public static final AVMetadataCommonIdentifierArtist : NSString;
@@ -326,6 +425,7 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataCommonIdentifierSubject : NSString;
 	public static final AVMetadataCommonIdentifierTitle : NSString;
 	public static final AVMetadataCommonIdentifierType : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataCommonKeyAccessibilityDescription : NSString;
 	public static final AVMetadataCommonKeyAlbumName : NSString;
 	public static final AVMetadataCommonKeyArtist : NSString;
@@ -454,6 +554,7 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataID3MetadataKeyUserText : NSString;
 	public static final AVMetadataID3MetadataKeyUserURL : NSString;
 	public static final AVMetadataID3MetadataKeyYear : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataISOUserDataKeyAccessibilityDescription : NSString;
 	public static final AVMetadataISOUserDataKeyCopyright : NSString;
 	public static final AVMetadataISOUserDataKeyDate : NSString;
@@ -569,13 +670,16 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataIdentifierID3MetadataUserText : NSString;
 	public static final AVMetadataIdentifierID3MetadataUserURL : NSString;
 	public static final AVMetadataIdentifierID3MetadataYear : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataIdentifierISOUserDataAccessibilityDescription : NSString;
 	public static final AVMetadataIdentifierISOUserDataCopyright : NSString;
 	public static final AVMetadataIdentifierISOUserDataDate : NSString;
 	public static final AVMetadataIdentifierISOUserDataTaggedCharacteristic : NSString;
 	public static final AVMetadataIdentifierIcyMetadataStreamTitle : NSString;
 	public static final AVMetadataIdentifierIcyMetadataStreamURL : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataAIMEData : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataAccessibilityDescription : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataAlbum : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataArranger : NSString;
@@ -583,15 +687,23 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataIdentifierQuickTimeMetadataArtwork : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataAuthor : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataAutoLivePhoto : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraFocalLength35mmEquivalent : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraFrameReadoutTime : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraISOSensitivity : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraLensIrisFNumber : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraLensModel : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraShutterSpeedAngle : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraShutterSpeedTime : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCameraWhiteBalance : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataCinematicVideoIntent : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataCollectionUser : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataComment : NSString;
@@ -611,15 +723,18 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataIdentifierQuickTimeMetadataDirector : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataDisplayName : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataEncodedBy : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataFullFrameRatePlaybackIntent : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataGenre : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataInformation : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataIsMontage : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataKeywords : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataLivePhotoVitalityScore : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataLivePhotoVitalityScoringVersion : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataLocationBody : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataLocationDate : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataLocationHorizontalAccuracyInMeters : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataLocationISO6709 : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataLocationName : NSString;
@@ -631,6 +746,7 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataIdentifierQuickTimeMetadataPerformer : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataPhonogramRights : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataPreferredAffineTransform : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataPresentationImmersiveMedia : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataProducer : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataPublisher : NSString;
@@ -640,10 +756,13 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataIdentifierQuickTimeMetadataSpatialOverCaptureQualityScoringVersion : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataTitle : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataVideoOrientation : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataWhiteBalanceByCCTColorMatrices : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataIdentifierQuickTimeMetadataWhiteBalanceByCCTWhiteBalanceFactors : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataYear : NSString;
 	public static final AVMetadataIdentifierQuickTimeMetadataiXML : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataIdentifierQuickTimeUserDataAccessibilityDescription : NSString;
 	public static final AVMetadataIdentifierQuickTimeUserDataAlbum : NSString;
 	public static final AVMetadataIdentifierQuickTimeUserDataArranger : NSString;
@@ -742,8 +861,11 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataKeySpaceiTunes : NSString;
 	public static final AVMetadataObjectTypeAztecCode : NSString;
 	public static final AVMetadataObjectTypeCatBody : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataObjectTypeCatHead : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVMetadataObjectTypeCinematicVideoMetadata : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVMetadataObjectTypeCodabarCode : NSString;
 	public static final AVMetadataObjectTypeCode128Code : NSString;
 	public static final AVMetadataObjectTypeCode39Code : NSString;
@@ -751,39 +873,56 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataObjectTypeCode93Code : NSString;
 	public static final AVMetadataObjectTypeDataMatrixCode : NSString;
 	public static final AVMetadataObjectTypeDogBody : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataObjectTypeDogHead : NSString;
 	public static final AVMetadataObjectTypeEAN13Code : NSString;
 	public static final AVMetadataObjectTypeEAN8Code : NSString;
 	public static final AVMetadataObjectTypeFace : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVMetadataObjectTypeFocusTrackedObject : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVMetadataObjectTypeGS1DataBarCode : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVMetadataObjectTypeGS1DataBarExpandedCode : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVMetadataObjectTypeGS1DataBarLimitedCode : NSString;
 	public static final AVMetadataObjectTypeHumanBody : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVMetadataObjectTypeHumanFullBody : NSString;
 	public static final AVMetadataObjectTypeITF14Code : NSString;
 	public static final AVMetadataObjectTypeInterleaved2of5Code : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVMetadataObjectTypeMicroPDF417Code : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final AVMetadataObjectTypeMicroQRCode : NSString;
 	public static final AVMetadataObjectTypePDF417Code : NSString;
 	public static final AVMetadataObjectTypeQRCode : NSString;
 	public static final AVMetadataObjectTypeSalientObject : NSString;
 	public static final AVMetadataObjectTypeUPCECode : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataQuickTimeMetadataKeyAccessibilityDescription : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyAlbum : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyArranger : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyArtist : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyArtwork : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyAuthor : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraFocalLength35mmEquivalent : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyCameraFrameReadoutTime : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraISOSensitivity : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyCameraIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraLensIrisFNumber : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraLensModel : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraShutterSpeedAngle : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraShutterSpeedTime : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCameraWhiteBalance : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyCinematicVideoIntent : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyCollectionUser : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyComment : NSString;
@@ -798,9 +937,11 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataQuickTimeMetadataKeyDirector : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyDisplayName : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyEncodedBy : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVMetadataQuickTimeMetadataKeyFullFrameRatePlaybackIntent : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyGenre : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyInformation : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVMetadataQuickTimeMetadataKeyIsMontage : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyKeywords : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyLocationBody : NSString;
@@ -819,10 +960,13 @@ import hxmc.unsafe.Ptr;
 	public static final AVMetadataQuickTimeMetadataKeyRatingUser : NSString;
 	public static final AVMetadataQuickTimeMetadataKeySoftware : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyTitle : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyWhiteBalanceByCCTColorMatrices : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVMetadataQuickTimeMetadataKeyWhiteBalanceByCCTWhiteBalanceFactors : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyYear : NSString;
 	public static final AVMetadataQuickTimeMetadataKeyiXML : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVMetadataQuickTimeUserDataKeyAccessibilityDescription : NSString;
 	public static final AVMetadataQuickTimeUserDataKeyAlbum : NSString;
 	public static final AVMetadataQuickTimeUserDataKeyArranger : NSString;
@@ -922,47 +1066,86 @@ import hxmc.unsafe.Ptr;
 	public static final AVOutputSettingsPresetHEVC1920x1080WithAlpha : NSString;
 	public static final AVOutputSettingsPresetHEVC3840x2160 : NSString;
 	public static final AVOutputSettingsPresetHEVC3840x2160WithAlpha : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVOutputSettingsPresetHEVC4320x2160 : NSString;
+	@:hxmc.available(macos >= 12.1, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVOutputSettingsPresetHEVC7680x4320 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVOutputSettingsPresetMVHEVC1440x1440 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVOutputSettingsPresetMVHEVC4320x4320 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVOutputSettingsPresetMVHEVC7680x7680 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVOutputSettingsPresetMVHEVC960x960 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlaybackCoordinatorOtherParticipantsDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlaybackCoordinatorSuspensionReasonsDidChangeNotification : NSString;
 	@:deprecated
 	public static final AVPlayerAvailableHDRModesDidChangeNotification : NSString;
 	public static final AVPlayerEligibleForHDRPlaybackDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVPlayerIntegratedTimelineSnapshotsOutOfSyncNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVPlayerIntegratedTimelineSnapshotsOutOfSyncReasonCurrentSegmentChanged : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVPlayerIntegratedTimelineSnapshotsOutOfSyncReasonKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVPlayerIntegratedTimelineSnapshotsOutOfSyncReasonLoadedTimeRangesChanged : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVPlayerIntegratedTimelineSnapshotsOutOfSyncReasonSegmentsChanged : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVPlayerInterstitialEventJoinCue : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVPlayerInterstitialEventLeaveCue : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final AVPlayerInterstitialEventMonitorAssetListResponseStatusDidChangeErrorKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final AVPlayerInterstitialEventMonitorAssetListResponseStatusDidChangeEventKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final AVPlayerInterstitialEventMonitorAssetListResponseStatusDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final AVPlayerInterstitialEventMonitorAssetListResponseStatusDidChangeStatusKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventSkippableStateDidChangeEventKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventSkippableStateDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventSkippableStateDidChangeSkipControlLabelKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventSkippableStateDidChangeStateKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventSkippedEventKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorCurrentEventSkippedNotification : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerInterstitialEventMonitorEventsDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventDidFinishDidPlayEntireEventKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventDidFinishEventKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventDidFinishNotification : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventDidFinishPlayoutTimeKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventWasUnscheduledErrorKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventWasUnscheduledEventKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVPlayerInterstitialEventMonitorInterstitialEventWasUnscheduledNotification : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AVPlayerInterstitialEventMonitorScheduleRequestCompletedNotification : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AVPlayerInterstitialEventMonitorScheduleRequestErrorKey : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AVPlayerInterstitialEventMonitorScheduleRequestIdentifierKey : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AVPlayerInterstitialEventMonitorScheduleRequestResponseKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVPlayerInterstitialEventNoCue : NSString;
 	public static final AVPlayerItemDidPlayToEndTimeNotification : NSString;
 	public static final AVPlayerItemFailedToPlayToEndTimeErrorKey : NSString;
@@ -975,43 +1158,69 @@ import hxmc.unsafe.Ptr;
 	public static final AVPlayerItemPlaybackStalledNotification : NSString;
 	public static final AVPlayerItemRecommendedTimeOffsetFromLiveDidChangeNotification : NSString;
 	public static final AVPlayerItemTimeJumpedNotification : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerItemTimeJumpedOriginatingParticipantKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeOriginatingParticipantKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeReasonAppBackgrounded : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeReasonAudioSessionInterrupted : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeReasonKey : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AVPlayerRateDidChangeReasonPlayheadReachedLiveEdge : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final AVPlayerRateDidChangeReasonReversePlaybackReachedStartOfSeekableRange : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeReasonSetRateCalled : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerRateDidChangeReasonSetRateFailed : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerWaitingDuringInterstitialEventReason : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVPlayerWaitingForCoordinatedPlaybackReason : NSString;
 	public static final AVPlayerWaitingToMinimizeStallsReason : NSString;
 	public static final AVPlayerWaitingWhileEvaluatingBufferingRateReason : NSString;
 	public static final AVPlayerWaitingWithNoItemToPlayReason : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVProVideoStorageBusyReasonAdjustingCapacity : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVProVideoStorageBusyReasonCapturing : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVProVideoStorageBusyReasonReplenishing : NSString;
 	public static final AVRouteDetectorMultipleRoutesDetectedDidChangeNotification : NSString;
 	public static final AVSampleBufferAudioRendererFlushTimeKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVSampleBufferAudioRendererOutputConfigurationDidChangeNotification : NSString;
 	public static final AVSampleBufferAudioRendererWasFlushedAutomaticallyNotification : NSString;
 	public static final AVSampleBufferDisplayLayerFailedToDecodeNotification : NSString;
 	public static final AVSampleBufferDisplayLayerFailedToDecodeNotificationErrorKey : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final AVSampleBufferDisplayLayerOutputObscuredDueToInsufficientExternalProtectionDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final AVSampleBufferDisplayLayerReadyForDisplayDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVSampleBufferDisplayLayerRequiresFlushToResumeDecodingDidChangeNotification : NSString;
 	public static final AVSampleBufferRenderSynchronizerRateDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVSampleBufferVideoRendererDidFailToDecodeNotification : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVSampleBufferVideoRendererDidFailToDecodeNotificationErrorKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVSampleBufferVideoRendererRequiresFlushToResumeDecodingDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVSampleBufferVideoRendererRequiresFlushToResumeDecodingDidChangeNotificationRequiresFlushKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final AVSemanticSegmentationMatteTypeGlasses : NSString;
 	public static final AVSemanticSegmentationMatteTypeHair : NSString;
 	public static final AVSemanticSegmentationMatteTypeSkin : NSString;
 	public static final AVSemanticSegmentationMatteTypeTeeth : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVSpatialCaptureDiscomfortReasonNotEnoughLight : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVSpatialCaptureDiscomfortReasonSubjectTooClose : NSString;
 	public static final AVStreamingKeyDeliveryContentKeyType : NSString;
 	public static final AVStreamingKeyDeliveryPersistentContentKeyType : NSString;
@@ -1019,6 +1228,7 @@ import hxmc.unsafe.Ptr;
 	public static final AVTrackAssociationTypeChapterList : NSString;
 	public static final AVTrackAssociationTypeForcedSubtitlesOnly : NSString;
 	public static final AVTrackAssociationTypeMetadataReferent : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVTrackAssociationTypeRenderMetadataSource : NSString;
 	public static final AVTrackAssociationTypeSelectionFollower : NSString;
 	public static final AVTrackAssociationTypeTimecode : NSString;
@@ -1026,18 +1236,24 @@ import hxmc.unsafe.Ptr;
 	public static final AVURLAssetAllowsConstrainedNetworkAccessKey : NSString;
 	public static final AVURLAssetAllowsExpensiveNetworkAccessKey : NSString;
 	public static final AVURLAssetHTTPCookiesKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVURLAssetHTTPUserAgentKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVURLAssetOverrideMIMETypeKey : NSString;
 	public static final AVURLAssetPreferPreciseDurationAndTimingKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVURLAssetPrimarySessionIdentifierKey : NSString;
 	public static final AVURLAssetReferenceRestrictionsKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVURLAssetShouldParseExternalSphericalTagsKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVURLAssetURLRequestAttributionKey : NSString;
 	public static final AVVideoAllowFrameReorderingKey : NSString;
 	public static final AVVideoAllowWideColorKey : NSString;
 	public static final AVVideoApertureModeCleanAperture : NSString;
 	public static final AVVideoApertureModeEncodedPixels : NSString;
 	public static final AVVideoApertureModeProductionAperture : NSString;
+	@:hxmc.available(macos >= 11.1)
 	public static final AVVideoAppleProRAWBitDepthKey : NSString;
 	public static final AVVideoAverageBitRateKey : NSString;
 	public static final AVVideoAverageNonDroppableFrameRateKey : NSString;
@@ -1058,13 +1274,17 @@ import hxmc.unsafe.Ptr;
 	public static final AVVideoCodecTypeAppleProRes422LT : NSString;
 	public static final AVVideoCodecTypeAppleProRes422Proxy : NSString;
 	public static final AVVideoCodecTypeAppleProRes4444 : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVVideoCodecTypeAppleProRes4444XQ : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVVideoCodecTypeAppleProResRAW : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVVideoCodecTypeAppleProResRAWHQ : NSString;
 	public static final AVVideoCodecTypeH264 : NSString;
 	public static final AVVideoCodecTypeHEVC : NSString;
 	public static final AVVideoCodecTypeHEVCWithAlpha : NSString;
 	public static final AVVideoCodecTypeJPEG : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVVideoCodecTypeJPEGXL : NSString;
 	public static final AVVideoColorPrimariesKey : NSString;
 	public static final AVVideoColorPrimaries_ITU_R_2020 : NSString;
@@ -1072,17 +1292,23 @@ import hxmc.unsafe.Ptr;
 	public static final AVVideoColorPrimaries_P3_D65 : NSString;
 	public static final AVVideoColorPrimaries_SMPTE_C : NSString;
 	public static final AVVideoColorPropertiesKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVVideoCompositionPerFrameHDRDisplayMetadataPolicyGenerate : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVVideoCompositionPerFrameHDRDisplayMetadataPolicyPropagate : NSString;
 	public static final AVVideoCompressionPropertiesKey : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVVideoDecompressionPropertiesKey : NSString;
 	public static final AVVideoExpectedSourceFrameRateKey : NSString;
 	public static final AVVideoH264EntropyModeCABAC : NSString;
 	public static final AVVideoH264EntropyModeCAVLC : NSString;
 	public static final AVVideoH264EntropyModeKey : NSString;
 	public static final AVVideoHeightKey : NSString;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	public static final AVVideoLogTransferFunctionKey : NSString;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	public static final AVVideoLogTransferFunction_AppleLog : NSString;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	public static final AVVideoLogTransferFunction_AppleLog2 : NSString;
 	public static final AVVideoMaxKeyFrameIntervalDurationKey : NSString;
 	public static final AVVideoMaxKeyFrameIntervalKey : NSString;
@@ -1103,8 +1329,11 @@ import hxmc.unsafe.Ptr;
 	public static final AVVideoProfileLevelH264MainAutoLevel : NSString;
 	public static final AVVideoProfileLevelKey : NSString;
 	public static final AVVideoQualityKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVVideoRangeHLG : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVVideoRangePQ : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final AVVideoRangeSDR : NSString;
 	public static final AVVideoScalingModeFit : NSString;
 	public static final AVVideoScalingModeKey : NSString;
@@ -1112,9 +1341,11 @@ import hxmc.unsafe.Ptr;
 	public static final AVVideoScalingModeResizeAspect : NSString;
 	public static final AVVideoScalingModeResizeAspectFill : NSString;
 	public static final AVVideoTransferFunctionKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final AVVideoTransferFunction_IEC_sRGB : NSString;
 	public static final AVVideoTransferFunction_ITU_R_2100_HLG : NSString;
 	public static final AVVideoTransferFunction_ITU_R_709_2 : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVVideoTransferFunction_Linear : NSString;
 	public static final AVVideoTransferFunction_SMPTE_ST_2084_PQ : NSString;
 	public static final AVVideoWidthKey : NSString;

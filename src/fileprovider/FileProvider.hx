@@ -6,19 +6,31 @@ import foundation.NSString;
 import hxmc.I64;
 
 @:hxmc.c @:hxmc.framework("FileProvider") extern class FileProvider {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final NSFileProviderDomainDidChange : NSString;
 	@:deprecated
 	public static final NSFileProviderErrorCollidingItemKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderErrorDomain : NSString;
 	public static final NSFileProviderErrorItemKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderErrorNonExistentItemIdentifierKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderFavoriteRankUnranked : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderInitialPageSortedByDate : NSData;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderInitialPageSortedByName : NSData;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	public static final NSFileProviderMaterializedSetDidChange : NSString;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	public static final NSFileProviderPendingSetDidChange : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderRootContainerItemIdentifier : NSString;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final NSFileProviderTrashContainerItemIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final NSFileProviderUserInfoExperimentIDKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSFileProviderWorkingSetContainerItemIdentifier : NSString;
 }

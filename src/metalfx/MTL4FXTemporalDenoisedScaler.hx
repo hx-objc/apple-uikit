@@ -3,6 +3,7 @@ package metalfx;
 
 import metal.MTL4CommandBuffer;
 
-@:hxmc.objc("MTL4FXTemporalDenoisedScaler") extern interface MTL4FXTemporalDenoisedScaler extends MTLFXTemporalDenoisedScalerBase {
+@:hxmc.objc("MTL4FXTemporalDenoisedScaler") @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern interface MTL4FXTemporalDenoisedScaler extends MTLFXTemporalDenoisedScalerBase {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function encodeToCommandBuffer(commandBuffer:MTL4CommandBuffer):Void;
 }

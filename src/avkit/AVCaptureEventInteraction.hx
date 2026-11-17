@@ -5,18 +5,27 @@ import objc.NSObject;
 import uikit.UIInteraction;
 import uikit.UIView;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVCaptureEventInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 17.2, maccatalyst >= 17.2) extern class AVCaptureEventInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	static function alloc():AVCaptureEventInteraction;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var defaultCaptureSoundDisabled(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_defaultCaptureSoundDisabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function set_defaultCaptureSoundDisabled(v:Bool):Bool;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function initWithEventHandler(handler:AVCaptureEvent -> Void):AVCaptureEventInteraction;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function initWithPrimaryEventHandler(primaryHandler:AVCaptureEvent -> Void, secondaryEventHandler:AVCaptureEvent -> Void):AVCaptureEventInteraction;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

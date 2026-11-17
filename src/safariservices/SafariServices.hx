@@ -10,6 +10,7 @@ import foundation.NSString;
 	public static final SFContentBlockerErrorDomain : NSString;
 	public static final SFErrorDomain : NSString;
 	public static final SFExtensionMessageKey : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.1)
 	public static final SFExtensionProfileKey : NSString;
 	public static final SSReadingListErrorDomain : NSString;
 }

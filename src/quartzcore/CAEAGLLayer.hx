@@ -10,8 +10,11 @@ import opengles.EAGLDrawable;
 @:hxmc.framework("QuartzCore") @:hxmc.objc @:deprecated extern class CAEAGLLayer extends CALayer implements EAGLDrawable {
 	static function alloc():CAEAGLLayer;
 	static function layer():CAEAGLLayer;
+	@:hxmc.available(macos >= 11.0)
 	var presentsWithTransaction(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_presentsWithTransaction():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_presentsWithTransaction(v:Bool):Bool;
 	var drawableProperties(get, set) : Null<NSDictionary<NSString, Id>>;
 	function get_drawableProperties():Null<NSDictionary<NSString, Id>>;

@@ -9,12 +9,19 @@ import foundation.NSStringArg;
 import foundation.NSValue;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BETextDocumentContext extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BETextDocumentContext extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BETextDocumentContext;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var autocorrectedRanges(get, set) : NSArray<NSValue>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_autocorrectedRanges():NSArray<NSValue>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_autocorrectedRanges(v:NSArray<NSValue>):NSArray<NSValue>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithSelectedText(selectedText:Null<NSStringArg>, contextBefore:Null<NSStringArg>, contextAfter:Null<NSStringArg>, markedText:Null<NSStringArg>, selectedRangeInMarkedText:NSRange):BETextDocumentContext;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithAttributedSelectedText(selectedText:Null<NSAttributedString>, contextBefore:Null<NSAttributedString>, contextAfter:Null<NSAttributedString>, markedText:Null<NSAttributedString>, selectedRangeInMarkedText:NSRange):BETextDocumentContext;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addTextRect(rect:CGRect, forCharacterRange:NSRange):Void;
 }

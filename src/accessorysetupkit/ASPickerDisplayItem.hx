@@ -5,19 +5,33 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASPickerDisplayItem extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASPickerDisplayItem extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASPickerDisplayItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var name(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_name():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var productImage(get, never) : UIImage;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_productImage():UIImage;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var descriptor(get, never) : ASDiscoveryDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_descriptor():ASDiscoveryDescriptor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var renameOptions(get, set) : ASAccessoryRenameOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_renameOptions():ASAccessoryRenameOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_renameOptions(v:ASAccessoryRenameOptions):ASAccessoryRenameOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var setupOptions(get, set) : ASPickerDisplayItemSetupOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_setupOptions():ASPickerDisplayItemSetupOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_setupOptions(v:ASPickerDisplayItemSetupOptions):ASPickerDisplayItemSetupOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithName(name:NSStringArg, productImage:UIImage, descriptor:ASDiscoveryDescriptor):ASPickerDisplayItem;
 }

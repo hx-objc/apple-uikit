@@ -4,27 +4,37 @@ package browserenginekit;
 import uikit.UIColor;
 import uikit.UITextInputTraitsProtocol;
 
-@:hxmc.objc("BEExtendedTextInputTraits") extern interface BEExtendedTextInputTraits extends UITextInputTraitsProtocol {
+@:hxmc.objc("BEExtendedTextInputTraits") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BEExtendedTextInputTraits extends UITextInputTraitsProtocol {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	var singleLineDocument(get, never) : Bool;
 	@:selector("isSingleLineDocument")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function get_singleLineDocument():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	var typingAdaptationEnabled(get, never) : Bool;
 	@:selector("isTypingAdaptationEnabled")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function get_typingAdaptationEnabled():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	var insertionPointColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function get_insertionPointColor():Null<UIColor>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	var selectionHandleColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function get_selectionHandleColor():Null<UIColor>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	var selectionHighlightColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function get_selectionHighlightColor():Null<UIColor>;
 }

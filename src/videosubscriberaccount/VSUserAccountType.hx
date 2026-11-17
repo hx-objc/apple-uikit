@@ -4,7 +4,9 @@ package videosubscriberaccount;
 import hxmc.I64;
 
 enum abstract VSUserAccountType(I64) to I64 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Free = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Paid = 1;
 	inline function new(v:I64) this = v;
 }

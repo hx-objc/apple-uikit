@@ -8,30 +8,53 @@ import foundation.NSData;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("AuthenticationServices") @:hxmc.objc extern class ASCredentialProviderViewController extends UIViewController {
+@:hxmc.framework("AuthenticationServices") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class ASCredentialProviderViewController extends UIViewController {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():ASCredentialProviderViewController;
+	@:hxmc.available(macos >= 11.0)
 	overload function prepareCredentialListForServiceIdentifiers(serviceIdentifiers:NSArray<ASCredentialServiceIdentifier>):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0)
 	overload function prepareCredentialListForServiceIdentifiers(serviceIdentifiers:NSArray<ASCredentialServiceIdentifier>, requestParameters:ASPasskeyCredentialRequestParameters):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0)
 	function prepareOneTimeCodeCredentialListForServiceIdentifiers(serviceIdentifiers:NSArray<ASCredentialServiceIdentifier>):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 18.0)
 	function prepareInterfaceForUserChoosingTextToInsert():Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function provideCredentialWithoutUserInteractionForIdentity(credentialIdentity:ASPasswordCredentialIdentity):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0)
 	function provideCredentialWithoutUserInteractionForRequest(credentialRequest:ASCredentialRequest):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function prepareInterfaceToProvideCredentialForIdentity(credentialIdentity:ASPasswordCredentialIdentity):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0)
 	function prepareInterfaceToProvideCredentialForRequest(credentialRequest:ASCredentialRequest):Void;
+	@:hxmc.available(macos >= 11.0)
 	function prepareInterfaceForExtensionConfiguration():Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0)
 	function prepareInterfaceForPasskeyRegistration(registrationRequest:ASCredentialRequest):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0)
 	function performPasskeyRegistrationWithoutUserInteractionIfPossible(registrationRequest:ASPasskeyCredentialRequest):Void;
+	@:hxmc.available(macos >= 11.0)
 	function reportPublicKeyCredentialUpdateForRelyingParty(relyingParty:NSStringArg, userHandle:NSData, newName:NSStringArg):Void;
+	@:hxmc.available(macos >= 11.0)
 	function reportUnknownPublicKeyCredentialForRelyingParty(relyingParty:NSStringArg, credentialID:NSData):Void;
+	@:hxmc.available(macos >= 11.0)
 	function reportAllAcceptedPublicKeyCredentialsForRelyingParty(relyingParty:NSStringArg, userHandle:NSData, acceptedCredentialIDs:NSArray<NSData>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function reportUnusedPasswordCredentialForDomain(domain:NSStringArg, userName:NSStringArg):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2)
 	function performSavePasswordRequestWithoutUserInteractionIfPossible(savePasswordRequest:ASSavePasswordRequest):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2)
 	function prepareInterfaceForSavePasswordRequest(savePasswordRequest:ASSavePasswordRequest):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2)
 	function performGeneratePasswordsRequestWithoutUserInteraction(generatePasswordsRequest:ASGeneratePasswordsRequest):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2)
 	function prepareInterfaceForGeneratePasswordsRequest(generatePasswordsRequest:ASGeneratePasswordsRequest):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():ASCredentialProviderViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithCoder(coder:NSCoder):Null<ASCredentialProviderViewController>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):ASCredentialProviderViewController;
 }

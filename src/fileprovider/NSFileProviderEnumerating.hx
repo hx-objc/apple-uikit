@@ -5,6 +5,7 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderEnumerating") extern interface NSFileProviderEnumerating extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderEnumerating") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderEnumerating extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function enumeratorForContainerItemIdentifier(containerItemIdentifier:NSStringArg, request:NSFileProviderRequest, error:Ptr):Null<NSFileProviderEnumerator>;
 }

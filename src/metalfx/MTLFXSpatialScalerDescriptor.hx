@@ -10,33 +10,60 @@ import metal.MTLDevice;
 import metal.MTLPixelFormat;
 import objc.NSObject;
 
-@:hxmc.framework("MetalFX") @:hxmc.objc extern class MTLFXSpatialScalerDescriptor extends NSObject implements NSCopying {
+@:hxmc.framework("MetalFX") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class MTLFXSpatialScalerDescriptor extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MTLFXSpatialScalerDescriptor;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var colorTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_colorTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_colorTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var outputTextureFormat(get, set) : MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_outputTextureFormat():MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_outputTextureFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputWidth():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var inputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_inputHeight():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_inputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var outputWidth(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_outputWidth():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_outputWidth(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var outputHeight(get, set) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_outputHeight():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_outputHeight(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var colorProcessingMode(get, set) : MTLFXSpatialScalerColorProcessingMode;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_colorProcessingMode():MTLFXSpatialScalerColorProcessingMode;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_colorProcessingMode(v:MTLFXSpatialScalerColorProcessingMode):MTLFXSpatialScalerColorProcessingMode;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function newSpatialScalerWithDevice(device:MTLDevice):Null<MTLFXSpatialScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function newSpatialScalerWithDevice(device:MTLDevice, compiler:MTL4Compiler):Null<MTL4FXSpatialScaler>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function supportsMetal4FX(device:MTLDevice):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function supportsDevice(device:MTLDevice):Bool;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():MTLFXSpatialScalerDescriptor;
 }

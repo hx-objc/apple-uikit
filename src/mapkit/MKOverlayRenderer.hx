@@ -16,8 +16,11 @@ import objc.NSObject;
 	function set_alpha(v:Float):Float;
 	var contentScaleFactor(get, never) : Float;
 	function get_contentScaleFactor():Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var blendMode(get, set) : CGBlendMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_blendMode():CGBlendMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_blendMode(v:CGBlendMode):CGBlendMode;
 	function initWithOverlay(overlay:MKOverlay):MKOverlayRenderer;
 	function pointForMapPoint(mapPoint:MKMapPoint):CGPoint;

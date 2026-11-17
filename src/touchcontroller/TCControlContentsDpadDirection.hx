@@ -4,9 +4,13 @@ package touchcontroller;
 import hxmc.I64;
 
 enum abstract TCControlContentsDpadDirection(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Up = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Down = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Left = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Right = 3;
 	inline function new(v:I64) this = v;
 }

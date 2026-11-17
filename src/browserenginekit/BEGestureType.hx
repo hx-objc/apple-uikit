@@ -4,15 +4,25 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BEGestureType(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Loupe = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OneFingerTap = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var DoubleTapAndHold = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var DoubleTap = 3;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OneFingerDoubleTap = 8;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OneFingerTripleTap = 9;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var TwoFingerSingleTap = 10;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var TwoFingerRangedSelectGesture = 11;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var IMPhraseBoundaryDrag = 14;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ForceTouch = 15;
 	inline function new(v:I64) this = v;
 }

@@ -4,13 +4,21 @@ package screencapturekit;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCContentSharingPickerConfiguration<NSCopying:(Id)=Id> extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2) extern class SCContentSharingPickerConfiguration<NSCopying:(Id)=Id> extends NSObject {
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	static function alloc<NSCopying:(Id)>():SCContentSharingPickerConfiguration<NSCopying>;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var showsMicrophoneControl(get, set) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_showsMicrophoneControl():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_showsMicrophoneControl(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var showsCameraControl(get, set) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_showsCameraControl():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function set_showsCameraControl(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	override function init():SCContentSharingPickerConfiguration<NSCopying>;
 }

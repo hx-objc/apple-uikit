@@ -4,16 +4,27 @@ package avfoundation;
 import objc.NSObject;
 import quartzcore.CALayer;
 
-@:hxmc.framework("AVFoundation") @:hxmc.objc extern class AVCaptureDeviceRotationCoordinator extends NSObject {
+@:hxmc.framework("AVFoundation") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class AVCaptureDeviceRotationCoordinator extends NSObject {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():AVCaptureDeviceRotationCoordinator;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var device(get, never) : Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_device():Null<AVCaptureDevice>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var previewLayer(get, never) : Null<CALayer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_previewLayer():Null<CALayer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var videoRotationAngleForHorizonLevelPreview(get, never) : Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_videoRotationAngleForHorizonLevelPreview():Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var videoRotationAngleForHorizonLevelCapture(get, never) : Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_videoRotationAngleForHorizonLevelCapture():Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function initWithDevice(device:AVCaptureDevice, previewLayer:Null<CALayer>):AVCaptureDeviceRotationCoordinator;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 17.0)
 	function videoRotationAngleRelativeToDeviceOrientation(deviceOrientation:AVCaptureVideoOrientation):Float;
 }

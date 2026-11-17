@@ -6,22 +6,35 @@ import objc.NSObject;
 import uikit.UIInteraction;
 import uikit.UIView;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVInputPickerInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVInputPickerInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVInputPickerInteraction;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var delegate(get, set) : Null<AVInputPickerInteractionDelegate>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_delegate():Null<AVInputPickerInteractionDelegate>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_delegate(v:Null<AVInputPickerInteractionDelegate>):Null<AVInputPickerInteractionDelegate>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var presented(get, never) : Bool;
 	@:selector("isPresented")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_presented():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var audioSession(get, set) : AVAudioSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_audioSession():AVAudioSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_audioSession(v:AVAudioSession):AVAudioSession;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function present():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function dismiss():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():AVInputPickerInteraction;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithAudioSession(audioSession:Null<AVAudioSession>):AVInputPickerInteraction;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

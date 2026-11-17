@@ -42,11 +42,17 @@ import objc.NSObject;
 	function get_actionSets():NSArray<HMActionSet>;
 	var triggers(get, never) : NSArray<HMTrigger>;
 	function get_triggers():NSArray<HMTrigger>;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var matterControllerID(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_matterControllerID():NSStringArg;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var matterControllerXPCConnectBlock(get, never) : () -> NSXPCConnection;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_matterControllerXPCConnectBlock():() -> NSXPCConnection;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var matterStartupParametersXPCConnectBlock(get, never) : () -> NSXPCConnection;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_matterStartupParametersXPCConnectBlock():() -> NSXPCConnection;
 	function updateName(name:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
 	function addAccessory(accessory:HMAccessory, completionHandler:Null<NSError> -> Void):Void;

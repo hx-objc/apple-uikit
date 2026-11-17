@@ -4,7 +4,9 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderCreateItemOptions(I64) to I64 {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var MayAlreadyExist = 1;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var DeletionConflicted = 2;
 	inline function new(v:I64) this = v;
 	var None = 0;

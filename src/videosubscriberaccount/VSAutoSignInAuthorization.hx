@@ -4,8 +4,11 @@ package videosubscriberaccount;
 import hxmc.I64;
 
 enum abstract VSAutoSignInAuthorization(I64) to I64 {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var NotDetermined = 0;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var Granted = 1;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var Denied = 2;
 	inline function new(v:I64) this = v;
 }

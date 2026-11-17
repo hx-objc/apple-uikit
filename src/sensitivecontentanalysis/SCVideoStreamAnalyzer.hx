@@ -9,17 +9,29 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import videotoolbox.VTDecompressionSession;
 
-@:hxmc.framework("SensitiveContentAnalysis") @:hxmc.objc extern class SCVideoStreamAnalyzer extends NSObject {
+@:hxmc.framework("SensitiveContentAnalysis") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class SCVideoStreamAnalyzer extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():SCVideoStreamAnalyzer;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var analysis(get, never) : Null<SCSensitivityAnalysis>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_analysis():Null<SCSensitivityAnalysis>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var analysisChangedHandler(get, set) : Null<(Null<SCSensitivityAnalysis>, Null<NSError>) -> Void>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_analysisChangedHandler():Null<(Null<SCSensitivityAnalysis>, Null<NSError>) -> Void>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_analysisChangedHandler(v:Null<(Null<SCSensitivityAnalysis>, Null<NSError>) -> Void>):Null<(Null<SCSensitivityAnalysis>, Null<NSError>) -> Void>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithParticipantUUID(participantUUID:NSStringArg, streamDirection:SCVideoStreamAnalyzerStreamDirection, error:Ptr):Null<SCVideoStreamAnalyzer>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function analyzePixelBuffer(pixelBuffer:CVBuffer):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function beginAnalysisOfDecompressionSession(decompressionSession:VTDecompressionSession, error:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function beginAnalysisOfCaptureDeviceInput(captureDeviceInput:AVCaptureDeviceInput, error:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function endAnalysis():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function continueStream():Void;
 }

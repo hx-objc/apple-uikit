@@ -4,17 +4,29 @@ package browserkit;
 import foundation.NSCoder;
 import foundation.NSStringArg;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserDataExtension extends BEBrowserData {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserDataExtension extends BEBrowserData {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserDataExtension;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var displayName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_displayName():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var developerName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_developerName():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var storeIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_storeIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithDisplayName(displayName:NSStringArg, developerName:NSStringArg, identifier:NSStringArg, storeIdentifier:NSStringArg):BEBrowserDataExtension;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithCoder(coder:NSCoder):Null<BEBrowserDataExtension>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithSourceApplicationBundleIdentifier(sourceApplicationBundleIdentifier:Null<NSStringArg>, sourceApplicationLocalizedName:Null<NSStringArg>):BEBrowserDataExtension;
 }

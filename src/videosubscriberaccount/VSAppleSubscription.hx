@@ -6,13 +6,21 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc extern class VSAppleSubscription extends NSObject {
+@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc @:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4) extern class VSAppleSubscription extends NSObject {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():VSAppleSubscription;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var customerID(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_customerID():NSStringArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_customerID(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var productCodes(get, set) : NSArray<NSString>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_productCodes():NSArray<NSString>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_productCodes(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function initWithCustomerID(customerID:NSStringArg, productCodes:NSArray<NSString>):VSAppleSubscription;
 }

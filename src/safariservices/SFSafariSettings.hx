@@ -6,8 +6,11 @@ import foundation.NSError;
 import foundation.NSString;
 import objc.NSObject;
 
-@:hxmc.framework("SafariServices") @:hxmc.objc extern class SFSafariSettings extends NSObject {
+@:hxmc.framework("SafariServices") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 27.0) extern class SFSafariSettings extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 27.0)
 	static function alloc():SFSafariSettings;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 27.0)
 	static function openExportBrowsingDataSettingsWithCompletionHandler(completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 27.0)
 	static function openExtensionsSettingsForIdentifiers(extensionIdentifiers:NSArray<NSString>, completionHandler:Null<Null<NSError> -> Void>):Void;
 }

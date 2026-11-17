@@ -33,12 +33,17 @@ import hxmc.objc.Id;
 	@:selector("isHighResolutionStillImageOutputEnabled")
 	function get_highResolutionStillImageOutputEnabled():Bool;
 	function set_highResolutionStillImageOutputEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var cameraSensorOrientationCompensationSupported(get, never) : Bool;
 	@:selector("isCameraSensorOrientationCompensationSupported")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_cameraSensorOrientationCompensationSupported():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var cameraSensorOrientationCompensationEnabled(get, set) : Bool;
 	@:selector("isCameraSensorOrientationCompensationEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_cameraSensorOrientationCompensationEnabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_cameraSensorOrientationCompensationEnabled(v:Bool):Bool;
 	var capturingStillImage(get, never) : Bool;
 	@:selector("isCapturingStillImage")

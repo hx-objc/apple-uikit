@@ -3,8 +3,11 @@ package browserenginekit;
 
 import uikit.UIContextMenuConfiguration;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEContextMenuConfiguration extends UIContextMenuConfiguration {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEContextMenuConfiguration extends UIContextMenuConfiguration {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEContextMenuConfiguration;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function fulfillUsingConfiguration(configuration:Null<UIContextMenuConfiguration>):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():BEContextMenuConfiguration;
 }

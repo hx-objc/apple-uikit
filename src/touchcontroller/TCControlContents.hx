@@ -6,16 +6,27 @@ import foundation.NSArray;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCControlContents extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCControlContents extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var images(get, never) : NSArray<TCControlImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_images():NSArray<TCControlImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function contentsWithImages(images:NSArray<TCControlImage>):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function buttonContentsForSystemImageNamed(imageName:NSStringArg, size:CGSize, shape:TCControlContentsButtonShape, controller:TCTouchController):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function switchedOnContentsForSystemImageNamed(imageName:NSStringArg, size:CGSize, shape:TCControlContentsButtonShape, controller:TCTouchController):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function thumbstickStickContentsOfSize(size:CGSize, controller:TCTouchController):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function thumbstickBackgroundContentsOfSize(size:CGSize, controller:TCTouchController):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function throttleIndicatorContentsOfSize(size:CGSize, controller:TCTouchController):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function throttleBackgroundContentsOfSize(size:CGSize, controller:TCTouchController):TCControlContents;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function directionPadContentsForLabel(label:TCControlLabel, size:CGSize, style:TCControlContentsDpadElementStyle, direction:TCControlContentsDpadDirection, controller:TCTouchController):TCControlContents;
 }

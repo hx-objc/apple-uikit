@@ -8,18 +8,28 @@ import foundation.NSURL;
 import objc.NSObject;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderReplicatedExtension") extern interface NSFileProviderReplicatedExtension extends NSObjectProtocol extends NSFileProviderEnumerating {
+@:hxmc.objc("NSFileProviderReplicatedExtension") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderReplicatedExtension extends NSObjectProtocol extends NSFileProviderEnumerating {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function initWithDomain(domain:NSFileProviderDomain):NSObject;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function invalidate():Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function itemForIdentifier(identifier:NSStringArg, request:NSFileProviderRequest, completionHandler:(Null<NSFileProviderItem>, Null<NSError>) -> Void):NSProgress;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function fetchContentsForItemWithIdentifier(itemIdentifier:NSStringArg, version:Null<NSFileProviderItemVersion>, request:NSFileProviderRequest, completionHandler:(Null<NSURL>, Null<NSFileProviderItem>, Null<NSError>) -> Void):NSProgress;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function createItemBasedOnTemplate(itemTemplate:NSFileProviderItem, fields:NSFileProviderItemFields, contents:Null<NSURL>, options:NSFileProviderCreateItemOptions, request:NSFileProviderRequest, completionHandler:(Null<NSFileProviderItem>, NSFileProviderItemFields, Bool, Null<NSError>) -> Void):NSProgress;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function modifyItem(item:NSFileProviderItem, baseVersion:NSFileProviderItemVersion, changedFields:NSFileProviderItemFields, contents:Null<NSURL>, options:NSFileProviderModifyItemOptions, request:NSFileProviderRequest, completionHandler:(Null<NSFileProviderItem>, NSFileProviderItemFields, Bool, Null<NSError>) -> Void):NSProgress;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function deleteItemWithIdentifier(identifier:NSStringArg, baseVersion:NSFileProviderItemVersion, options:NSFileProviderDeleteItemOptions, request:NSFileProviderRequest, completionHandler:Null<NSError> -> Void):NSProgress;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function importDidFinishWithCompletionHandler(completionHandler:() -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function materializedItemsDidChangeWithCompletionHandler(completionHandler:() -> Void):Void;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function pendingItemsDidChangeWithCompletionHandler(completionHandler:() -> Void):Void;
 }

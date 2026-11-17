@@ -4,15 +4,25 @@ package browserenginekit;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEProcessCapability extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4) extern class BEProcessCapability extends NSObject {
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEProcessCapability;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function mediaPlaybackAndCaptureWithEnvironment(environment:BEMediaEnvironment):BEProcessCapability;
+	@:hxmc.available(macos >= 14.3, ios >= 27.0, maccatalyst >= 27.0)
 	static function screenCaptureWithEnvironment(environment:BEMediaEnvironment):BEProcessCapability;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function background():BEProcessCapability;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function foreground():BEProcessCapability;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function suspended():BEProcessCapability;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	function requestWithError(error:Ptr):BEProcessCapabilityGrant;
+	@:hxmc.available(macos >= 14.3, ios >= 27.0, maccatalyst >= 27.0)
 	function activateWithError(error:Ptr):Bool;
+	@:hxmc.available(macos >= 14.3, ios >= 27.0, maccatalyst >= 27.0)
 	function suspendWithError(error:Ptr):Bool;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	override function init():BEProcessCapability;
 }

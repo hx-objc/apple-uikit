@@ -5,14 +5,23 @@ import foundation.NSArray;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("LinkSecurity") @:hxmc.objc extern class LSLinkSecurityManager extends NSObject {
+@:hxmc.framework("LinkSecurity") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0) extern class LSLinkSecurityManager extends NSObject {
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():LSLinkSecurityManager;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static var sharedManager(get, never) : LSLinkSecurityManager;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static function get_sharedManager():LSLinkSecurityManager;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var hasFlaggedURLs(get, never) : Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_hasFlaggedURLs():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function addFlaggedURL(url:NSURL):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function addFlaggedURLs(urls:NSArray<NSURL>):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function checkIsFlaggedURL(url:NSURL, completion:Bool -> Void):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	override function init():LSLinkSecurityManager;
 }

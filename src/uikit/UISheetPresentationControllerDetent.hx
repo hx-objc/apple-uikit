@@ -6,13 +6,20 @@ import objc.NSObject;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UISheetPresentationControllerDetent extends NSObject {
 	static function alloc():UISheetPresentationControllerDetent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var backgroundEffect(get, set) : Null<UIVisualEffect>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_backgroundEffect():Null<UIVisualEffect>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function set_backgroundEffect(v:Null<UIVisualEffect>):Null<UIVisualEffect>;
 	static function mediumDetent():UISheetPresentationControllerDetent;
 	static function largeDetent():UISheetPresentationControllerDetent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function customDetentWithIdentifier(identifier:Null<NSStringArg>, resolver:UISheetPresentationControllerDetentResolutionContext -> Float):UISheetPresentationControllerDetent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function resolvedValueInContext(context:UISheetPresentationControllerDetentResolutionContext):Float;
 }

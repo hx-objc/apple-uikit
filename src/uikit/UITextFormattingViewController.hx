@@ -3,17 +3,29 @@ package uikit;
 
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextFormattingViewController extends UIViewController {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITextFormattingViewController extends UIViewController {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITextFormattingViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var configuration(get, never) : UITextFormattingViewControllerConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_configuration():UITextFormattingViewControllerConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var formattingDescriptor(get, set) : Null<UITextFormattingViewControllerFormattingDescriptor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_formattingDescriptor():Null<UITextFormattingViewControllerFormattingDescriptor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_formattingDescriptor(v:Null<UITextFormattingViewControllerFormattingDescriptor>):Null<UITextFormattingViewControllerFormattingDescriptor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var delegate(get, set) : Null<UITextFormattingViewControllerDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_delegate():Null<UITextFormattingViewControllerDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_delegate(v:Null<UITextFormattingViewControllerDelegate>):Null<UITextFormattingViewControllerDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UITextFormattingViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithConfiguration(configuration:UITextFormattingViewControllerConfiguration):UITextFormattingViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithCoder(coder:NSCoder):Null<UITextFormattingViewController>;
 }

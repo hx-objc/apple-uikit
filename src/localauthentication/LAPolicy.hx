@@ -6,7 +6,9 @@ import hxmc.I64;
 enum abstract LAPolicy(I64) to I64 {
 	var DeviceOwnerAuthenticationWithBiometrics = 1;
 	var DeviceOwnerAuthentication = 2;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var DeviceOwnerAuthenticationWithCompanion = 3;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var DeviceOwnerAuthenticationWithBiometricsOrCompanion = 4;
 	inline function new(v:I64) this = v;
 }

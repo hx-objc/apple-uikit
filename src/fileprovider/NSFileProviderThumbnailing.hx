@@ -9,6 +9,7 @@ import foundation.NSProgress;
 import foundation.NSString;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderThumbnailing") extern interface NSFileProviderThumbnailing extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderThumbnailing") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderThumbnailing extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function fetchThumbnailsForItemIdentifiers(itemIdentifiers:NSArray<NSString>, requestedSize:CGSize, perThumbnailCompletionHandler:(NSString, Null<NSData>, Null<NSError>) -> Void, completionHandler:Null<NSError> -> Void):NSProgress;
 }

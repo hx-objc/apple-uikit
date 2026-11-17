@@ -5,12 +5,19 @@ import coregraphics.CGPoint;
 import objc.NSObject;
 import uikit.UIView;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEScrollViewScrollUpdate extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEScrollViewScrollUpdate extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEScrollViewScrollUpdate;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var timestamp(get, never) : Float;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_timestamp():Float;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var phase(get, never) : BEScrollViewScrollUpdatePhase;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_phase():BEScrollViewScrollUpdatePhase;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function locationInView(view:Null<UIView>):CGPoint;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function translationInView(view:Null<UIView>):CGPoint;
 }

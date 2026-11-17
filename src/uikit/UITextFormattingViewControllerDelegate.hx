@@ -3,15 +3,19 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITextFormattingViewControllerDelegate") extern interface UITextFormattingViewControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("UITextFormattingViewControllerDelegate") @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern interface UITextFormattingViewControllerDelegate extends NSObjectProtocol {
 	@:selector("textFormattingViewController:didChangeValue:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function textFormattingViewControllerDidChangeValue(viewController:UITextFormattingViewController, didChangeValue:UITextFormattingViewControllerChangeValue):Void;
 	@:selector("textFormattingViewController:shouldPresentFontPicker:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textFormattingViewControllerShouldPresentFontPicker(viewController:UITextFormattingViewController, shouldPresentFontPicker:UIFontPickerViewController):Bool;
 	@:selector("textFormattingViewController:shouldPresentColorPicker:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textFormattingViewControllerShouldPresentColorPicker(viewController:UITextFormattingViewController, shouldPresentColorPicker:UIColorPickerViewController):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function textFormattingDidFinish(viewController:UITextFormattingViewController):Void;
 }

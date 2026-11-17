@@ -71,17 +71,23 @@ import uikit.UIOffset;
 	function decodeFloatForKey(key:NSStringArg):Float32;
 	function decodeDoubleForKey(key:NSStringArg):Float;
 	overload function decodeBytesForKey(key:NSStringArg, returnedLength:Ptr):Ptr;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function decodeBytesWithMinimumLength(length:I64):Ptr;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function decodeBytesForKey(key:NSStringArg, minimumLength:I64):Ptr;
 	function encodeInteger(value:I64, forKey:NSStringArg):Void;
 	function decodeIntegerForKey(key:NSStringArg):I64;
 	function decodeObjectOfClass(aClass:ObjCClass, forKey:NSStringArg):Null<Id>;
 	function decodeTopLevelObjectOfClass(aClass:ObjCClass, forKey:NSStringArg, error:Ptr):Null<Id>;
+	@:hxmc.available(macos >= 11.0)
 	function decodeArrayOfObjectsOfClass(cls:ObjCClass, forKey:NSStringArg):Null<NSArray>;
+	@:hxmc.available(macos >= 11.0)
 	function decodeDictionaryWithKeysOfClass(keyCls:ObjCClass, objectsOfClass:ObjCClass, forKey:NSStringArg):Null<NSDictionary>;
 	function decodeObjectOfClasses(classes:Null<NSSet>, forKey:NSStringArg):Null<Id>;
 	function decodeTopLevelObjectOfClasses(classes:Null<NSSet>, forKey:NSStringArg, error:Ptr):Null<Id>;
+	@:hxmc.available(macos >= 11.0)
 	function decodeArrayOfObjectsOfClasses(classes:NSSet, forKey:NSStringArg):Null<NSArray>;
+	@:hxmc.available(macos >= 11.0)
 	function decodeDictionaryWithKeysOfClasses(keyClasses:NSSet, objectsOfClasses:NSSet, forKey:NSStringArg):Null<NSDictionary>;
 	function decodePropertyListForKey(key:NSStringArg):Null<Id>;
 	function failWithError(error:NSError):Void;

@@ -7,11 +7,13 @@ import uikit.UIDragInteractionDelegate;
 import uikit.UIDragItem;
 import uikit.UIDragSession;
 
-@:hxmc.objc("BEDragInteractionDelegate") extern interface BEDragInteractionDelegate extends UIDragInteractionDelegate {
+@:hxmc.objc("BEDragInteractionDelegate") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BEDragInteractionDelegate extends UIDragInteractionDelegate {
 	@:selector("dragInteraction:prepareDragSession:completion:")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function dragInteractionPrepareDragSessionCompletion(dragInteraction:BEDragInteraction, prepareDragSession:UIDragSession, completion:() -> Bool):Void;
 	@:selector("dragInteraction:itemsForAddingToSession:forTouchAtPoint:completion:")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function dragInteractionItemsForAddingToSessionForTouchAtPointCompletion(dragInteraction:BEDragInteraction, itemsForAddingToSession:UIDragSession, forTouchAtPoint:CGPoint, completion:NSArray<UIDragItem> -> Bool):Void;
 }

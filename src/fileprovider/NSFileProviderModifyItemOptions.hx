@@ -4,8 +4,11 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderModifyItemOptions(I64) to I64 {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var MayAlreadyExist = 1;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var FailOnConflict = 2;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var IsImmediateUploadRequestByPresentingApplication = 4;
 	inline function new(v:I64) this = v;
 	var None = 0;

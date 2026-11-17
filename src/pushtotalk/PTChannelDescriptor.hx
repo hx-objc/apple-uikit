@@ -5,11 +5,17 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("PushToTalk") @:hxmc.objc extern class PTChannelDescriptor extends NSObject {
+@:hxmc.framework("PushToTalk") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PTChannelDescriptor extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PTChannelDescriptor;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var name(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_name():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var image(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithName(name:NSStringArg, image:Null<UIImage>):PTChannelDescriptor;
 }

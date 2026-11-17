@@ -6,15 +6,25 @@ import foundation.NSError;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc extern class VSUserAccountManager extends NSObject {
+@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class VSUserAccountManager extends NSObject {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():VSUserAccountManager;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static var sharedUserAccountManager(get, never) : VSUserAccountManager;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function get_sharedUserAccountManager():VSUserAccountManager;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function updateUserAccount(account:VSUserAccount, completion:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function queryUserAccountsWithOptions(options:VSUserAccountQueryOptions, completion:(Null<NSArray<VSUserAccount>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function queryAutoSignInTokenWithCompletionHandler(completion:(Null<VSAutoSignInToken>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 26.0, maccatalyst >= 26.0)
 	function requestAutoSignInAuthorizationWithCompletionHandler(completion:(Null<VSAutoSignInTokenUpdateContext>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 26.0, maccatalyst >= 26.0)
 	function updateAutoSignInToken(autoSignInToken:NSStringArg, updateContext:VSAutoSignInTokenUpdateContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function deleteAutoSignInTokenWithCompletionHandler(completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():VSUserAccountManager;
 }

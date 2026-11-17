@@ -19,7 +19,9 @@ import hxmc.I64;
 	function get_availablePhotoPixelFormatTypes():NSArray<NSNumber>;
 	var availablePhotoCodecTypes(get, never) : NSArray<NSString>;
 	function get_availablePhotoCodecTypes():NSArray<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var availableRawPhotoCodecTypes(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_availableRawPhotoCodecTypes():NSArray<NSString>;
 	var appleProRAWSupported(get, never) : Bool;
 	@:selector("isAppleProRAWSupported")
@@ -34,23 +36,37 @@ import hxmc.I64;
 	function get_availablePhotoFileTypes():NSArray<NSString>;
 	var availableRawPhotoFileTypes(get, never) : NSArray<NSString>;
 	function get_availableRawPhotoFileTypes():NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0)
 	var maxPhotoQualityPrioritization(get, set) : AVCapturePhotoQualityPrioritization;
+	@:hxmc.available(macos >= 13.0)
 	function get_maxPhotoQualityPrioritization():AVCapturePhotoQualityPrioritization;
+	@:hxmc.available(macos >= 13.0)
 	function set_maxPhotoQualityPrioritization(v:AVCapturePhotoQualityPrioritization):AVCapturePhotoQualityPrioritization;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var fastCapturePrioritizationSupported(get, set) : Bool;
 	@:selector("isFastCapturePrioritizationSupported")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_fastCapturePrioritizationSupported():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_fastCapturePrioritizationSupported(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var fastCapturePrioritizationEnabled(get, set) : Bool;
 	@:selector("isFastCapturePrioritizationEnabled")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_fastCapturePrioritizationEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_fastCapturePrioritizationEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0)
 	var autoDeferredPhotoDeliverySupported(get, never) : Bool;
 	@:selector("isAutoDeferredPhotoDeliverySupported")
+	@:hxmc.available(ios >= 17.0)
 	function get_autoDeferredPhotoDeliverySupported():Bool;
+	@:hxmc.available(ios >= 17.0)
 	var autoDeferredPhotoDeliveryEnabled(get, set) : Bool;
 	@:selector("isAutoDeferredPhotoDeliveryEnabled")
+	@:hxmc.available(ios >= 17.0)
 	function get_autoDeferredPhotoDeliveryEnabled():Bool;
+	@:hxmc.available(ios >= 17.0)
 	function set_autoDeferredPhotoDeliveryEnabled(v:Bool):Bool;
 	@:deprecated
 	var stillImageStabilizationSupported(get, never) : Bool;
@@ -85,7 +101,9 @@ import hxmc.I64;
 	var cameraCalibrationDataDeliverySupported(get, never) : Bool;
 	@:selector("isCameraCalibrationDataDeliverySupported")
 	function get_cameraCalibrationDataDeliverySupported():Bool;
+	@:hxmc.available(macos >= 13.0)
 	var supportedFlashModes(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(macos >= 13.0)
 	function get_supportedFlashModes():NSArray<NSNumber>;
 	var autoRedEyeReductionSupported(get, never) : Bool;
 	@:selector("isAutoRedEyeReductionSupported")
@@ -100,8 +118,11 @@ import hxmc.I64;
 	@:selector("isHighResolutionCaptureEnabled")
 	function get_highResolutionCaptureEnabled():Bool;
 	function set_highResolutionCaptureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var maxPhotoDimensions(get, set) : CMVideoDimensions;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_maxPhotoDimensions():CMVideoDimensions;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_maxPhotoDimensions(v:CMVideoDimensions):CMVideoDimensions;
 	var maxBracketedCapturePhotoCount(get, never) : I64;
 	function get_maxBracketedCapturePhotoCount():I64;
@@ -119,8 +140,11 @@ import hxmc.I64;
 	@:selector("isLivePhotoCaptureSuspended")
 	function get_livePhotoCaptureSuspended():Bool;
 	function set_livePhotoCaptureSuspended(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var preservesLivePhotoCaptureSuspendedOnSessionStop(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_preservesLivePhotoCaptureSuspendedOnSessionStop():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_preservesLivePhotoCaptureSuspendedOnSessionStop(v:Bool):Bool;
 	var livePhotoAutoTrimmingEnabled(get, set) : Bool;
 	@:selector("isLivePhotoAutoTrimmingEnabled")
@@ -135,38 +159,62 @@ import hxmc.I64;
 	@:selector("isContentAwareDistortionCorrectionEnabled")
 	function get_contentAwareDistortionCorrectionEnabled():Bool;
 	function set_contentAwareDistortionCorrectionEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var zeroShutterLagSupported(get, never) : Bool;
 	@:selector("isZeroShutterLagSupported")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_zeroShutterLagSupported():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var zeroShutterLagEnabled(get, set) : Bool;
 	@:selector("isZeroShutterLagEnabled")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_zeroShutterLagEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_zeroShutterLagEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var responsiveCaptureSupported(get, never) : Bool;
 	@:selector("isResponsiveCaptureSupported")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_responsiveCaptureSupported():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var responsiveCaptureEnabled(get, set) : Bool;
 	@:selector("isResponsiveCaptureEnabled")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_responsiveCaptureEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_responsiveCaptureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var captureReadiness(get, never) : AVCapturePhotoOutputCaptureReadiness;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_captureReadiness():AVCapturePhotoOutputCaptureReadiness;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorSupported(get, never) : Bool;
 	@:selector("isConstantColorSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorSupported():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorEnabled(get, set) : Bool;
 	@:selector("isConstantColorEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_constantColorEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var shutterSoundSuppressionSupported(get, never) : Bool;
 	@:selector("isShutterSoundSuppressionSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_shutterSoundSuppressionSupported():Bool;
+	@:hxmc.available(ios >= 26.0)
 	var cameraSensorOrientationCompensationSupported(get, never) : Bool;
 	@:selector("isCameraSensorOrientationCompensationSupported")
+	@:hxmc.available(ios >= 26.0)
 	function get_cameraSensorOrientationCompensationSupported():Bool;
+	@:hxmc.available(ios >= 26.0)
 	var cameraSensorOrientationCompensationEnabled(get, set) : Bool;
 	@:selector("isCameraSensorOrientationCompensationEnabled")
+	@:hxmc.available(ios >= 26.0)
 	function get_cameraSensorOrientationCompensationEnabled():Bool;
+	@:hxmc.available(ios >= 26.0)
 	function set_cameraSensorOrientationCompensationEnabled(v:Bool):Bool;
 	var depthDataDeliverySupported(get, never) : Bool;
 	@:selector("isDepthDataDeliverySupported")
@@ -196,6 +244,7 @@ import hxmc.I64;
 	static function isAppleProRAWPixelFormat(pixelFormat:Int):Bool;
 	function supportedPhotoPixelFormatTypesForFileType(fileType:NSStringArg):NSArray<NSNumber>;
 	function supportedPhotoCodecTypesForFileType(fileType:NSStringArg):NSArray<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function supportedRawPhotoCodecTypesForRawPhotoPixelFormatType(pixelFormatType:Int, fileType:NSStringArg):NSArray<NSString>;
 	function supportedRawPhotoPixelFormatTypesForFileType(fileType:NSStringArg):NSArray<NSNumber>;
 	@:deprecated

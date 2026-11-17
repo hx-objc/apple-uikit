@@ -6,20 +6,32 @@ import foundation.NSSecureCoding;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEExportMetadata extends NSObject implements NSSecureCoding {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEExportMetadata extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEExportMetadata;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var supportExportToFiles(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_supportExportToFiles():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var bookmarksCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_bookmarksCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var readingListCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_readingListCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var historyCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_historyCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var extensionsCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_extensionsCount():I64;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithSupportForExportToFiles(supportExportToFiles:Bool, bookmarksCount:I64, readingListCount:I64, historyCount:I64, extensionsCount:I64):BEExportMetadata;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<BEExportMetadata>;

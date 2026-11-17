@@ -26,107 +26,198 @@ import uikit.UITextSelectionRect;
 import uikit.UITextStorageDirection;
 import uikit.UIView;
 
-@:hxmc.objc("BETextInput") extern interface BETextInput extends UIKeyInput extends BETextSelectionDirectionNavigation extends BEResponderEditActions {
+@:hxmc.objc("BETextInput") @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern interface BETextInput extends UIKeyInput extends BETextSelectionDirectionNavigation extends BEResponderEditActions {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var asyncInputDelegate(get, set) : Null<BETextInputDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_asyncInputDelegate():Null<BETextInputDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_asyncInputDelegate(v:Null<BETextInputDelegate>):Null<BETextInputDelegate>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var editable(get, never) : Bool;
 	@:selector("isEditable")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_editable():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var automaticallyPresentEditMenu(get, never) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_automaticallyPresentEditMenu():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var extendedTextInputTraits(get, never) : Null<BEExtendedTextInputTraits>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_extendedTextInputTraits():Null<BEExtendedTextInputTraits>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var replaceAllowed(get, never) : Bool;
 	@:selector("isReplaceAllowed")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_replaceAllowed():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	var selectionContainerViewBelowText(get, never) : Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function get_selectionContainerViewBelowText():Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	var selectionContainerViewAboveText(get, never) : Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function get_selectionContainerViewAboveText():Null<UIView>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var selectedText(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_selectedText():Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var selectedTextRange(get, set) : Null<UITextRange>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_selectedTextRange():Null<UITextRange>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_selectedTextRange(v:Null<UITextRange>):Null<UITextRange>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var selectionAtDocumentStart(get, never) : Bool;
 	@:selector("isSelectionAtDocumentStart")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_selectionAtDocumentStart():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var markedText(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_markedText():Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var attributedMarkedText(get, never) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_attributedMarkedText():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var markedTextRange(get, never) : Null<UITextRange>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_markedTextRange():Null<UITextRange>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var hasMarkedText(get, never) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_hasMarkedText():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var textInputView(get, never) : UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_textInputView():UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var textFirstRect(get, never) : CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_textFirstRect():CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var textLastRect(get, never) : CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_textLastRect():CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var unobscuredContentRect(get, never) : CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_unobscuredContentRect():CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var unscaledView(get, never) : UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_unscaledView():UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var selectionClipRect(get, never) : CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_selectionClipRect():CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function canPerformAction(action:Selector, withSender:Null<Id>):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function handleKeyEntry(entry:BEKeyEntry, withCompletionHandler:(BEKeyEntry, Bool) -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function shiftKeyStateChangedFromState(oldState:BEKeyModifierFlags, toState:BEKeyModifierFlags):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function textInRange(range:UITextRange):Null<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function offsetFromPosition(from:UITextPosition, toPosition:UITextPosition):I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function setBaseWritingDirection(writingDirection:NSWritingDirection, forRange:UITextRange):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function deleteInDirection(direction:UITextStorageDirection, toGranularity:UITextGranularity):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function transposeCharactersAroundSelection():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function replaceText(originalText:NSStringArg, withText:NSStringArg, options:BETextReplacementOptions, completionHandler:NSArray<UITextSelectionRect> -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function requestTextContextForAutocorrectionWithCompletionHandler(completionHandler:BETextDocumentContext -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function requestTextRectsForString(input:NSStringArg, withCompletionHandler:NSArray<UITextSelectionRect> -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function requestPreferredArrowDirectionForEditMenuWithCompletionHandler(completionHandler:UIEditMenuArrowDirection -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function systemWillPresentEditMenuWithAnimator(animator:UIEditMenuInteractionAnimating):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function systemWillDismissEditMenuWithAnimator(animator:UIEditMenuInteractionAnimating):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function textStylingAtPosition(position:UITextPosition, inDirection:UITextStorageDirection):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function replaceSelectedText(text:NSStringArg, withText:NSStringArg):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function updateCurrentSelectionTo(point:CGPoint, fromGesture:BEGestureType, inState:UIGestureRecognizerState):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function setSelectionFromPoint(from:CGPoint, toPoint:CGPoint, gesture:BEGestureType, state:UIGestureRecognizerState):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function adjustSelectionBoundaryToPoint(point:CGPoint, touchPhase:BESelectionTouchPhase, baseIsStart:Bool, flags:BESelectionFlags):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function textInteractionGesture(gestureType:BEGestureType, shouldBeginAtPoint:CGPoint):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function caretRectForPosition(position:UITextPosition):CGRect;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectionRectsForRange(range:UITextRange):NSArray<UITextSelectionRect>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectWordForReplacement():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function updateSelectionWithExtentPoint(point:CGPoint, boundary:UITextGranularity, completionHandler:Bool -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectTextInGranularity(granularity:UITextGranularity, atPoint:CGPoint, completionHandler:() -> Void):Void;
 	@:selector("selectPositionAtPoint:completionHandler:")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectPositionAtPointCompletionHandler(point:CGPoint, completionHandler:() -> Void):Void;
 	@:selector("selectPositionAtPoint:withContextRequest:completionHandler:")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectPositionAtPointWithContextRequestCompletionHandler(point:CGPoint, withContextRequest:BETextDocumentRequest, completionHandler:BETextDocumentContext -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function adjustSelectionByRange(range:BEDirectionalTextRange, completionHandler:() -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function moveByOffset(offset:I64):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function moveSelectionAtBoundary(granularity:UITextGranularity, inStorageDirection:UITextStorageDirection, completionHandler:() -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function selectTextForEditMenuWithLocationInView(locationInView:CGPoint, completionHandler:(Bool, Null<NSString>, NSRange) -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function setMarkedText(markedText:Null<NSStringArg>, selectedRange:NSRange):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function setAttributedMarkedText(markedText:Null<NSAttributedString>, selectedRange:NSRange):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function unmarkText():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function isPointNearMarkedText(point:CGPoint):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function requestDocumentContext(request:BETextDocumentRequest, completionHandler:BETextDocumentContext -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function willInsertFinalDictationResult():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function replaceDictatedText(oldText:NSStringArg, withText:NSStringArg):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function didInsertFinalDictationResult():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function alternativesForSelectedText():Null<NSArray<BETextAlternatives>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addTextAlternatives(alternatives:BETextAlternatives):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function insertTextAlternatives(alternatives:BETextAlternatives):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function removeTextAlternatives():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function insertTextPlaceholderWithSize(size:CGSize, completionHandler:UITextPlaceholder -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function removeTextPlaceholder(placeholder:UITextPlaceholder, willInsertText:Bool, completionHandler:() -> Void):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function insertTextSuggestion(textSuggestion:BETextSuggestion):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function autoscrollToPoint(point:CGPoint):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function cancelAutoscroll():Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function keyboardWillDismiss():Void;
 }

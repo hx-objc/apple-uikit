@@ -3,6 +3,7 @@ package avsystemrouting;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVSystemRouteControllerObserver") extern interface AVSystemRouteControllerObserver extends NSObjectProtocol {
+@:hxmc.objc("AVSystemRouteControllerObserver") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVSystemRouteControllerObserver extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function systemRouteController(controller:AVSystemRouteController, handleEvent:AVSystemRouteEvent, completionHandler:Bool -> Void):Void;
 }

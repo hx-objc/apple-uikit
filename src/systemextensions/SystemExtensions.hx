@@ -4,7 +4,10 @@ package systemextensions;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("SystemExtensions") extern class SystemExtensions {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	public static final NSSystemExtensionUsageDescriptionKey : NSString;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	public static final OSBundleUsageDescriptionKey : NSString;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	public static final OSSystemExtensionErrorDomain : NSString;
 }

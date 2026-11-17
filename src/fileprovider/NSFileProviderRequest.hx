@@ -3,13 +3,21 @@ package fileprovider;
 
 import objc.NSObject;
 
-@:hxmc.framework("FileProvider") @:hxmc.objc extern class NSFileProviderRequest extends NSObject {
+@:hxmc.framework("FileProvider") @:hxmc.objc @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern class NSFileProviderRequest extends NSObject {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():NSFileProviderRequest;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var isSystemRequest(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_isSystemRequest():Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var isFileViewerRequest(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_isFileViewerRequest():Bool;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var domainVersion(get, never) : Null<NSFileProviderDomainVersion>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_domainVersion():Null<NSFileProviderDomainVersion>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():NSFileProviderRequest;
 }

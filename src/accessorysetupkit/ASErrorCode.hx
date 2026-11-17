@@ -4,17 +4,29 @@ package accessorysetupkit;
 import hxmc.I64;
 
 enum abstract ASErrorCode(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Success = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Unknown = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ActivationFailed = 100;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ConnectionFailed = 150;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var DiscoveryTimeout = 200;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ExtensionNotFound = 300;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Invalidated = 400;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var InvalidRequest = 450;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var PickerAlreadyActive = 500;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var PickerRestricted = 550;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var UserCancelled = 700;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var UserRestricted = 750;
 	inline function new(v:I64) this = v;
 }

@@ -25,11 +25,17 @@ import uikit.UIView;
 	var mapType(get, set) : MKMapType;
 	function get_mapType():MKMapType;
 	function set_mapType(v:MKMapType):MKMapType;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var preferredConfiguration(get, set) : MKMapConfiguration;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredConfiguration():MKMapConfiguration;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredConfiguration(v:MKMapConfiguration):MKMapConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectableMapFeatures(get, set) : MKMapFeatureOptions;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectableMapFeatures():MKMapFeatureOptions;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selectableMapFeatures(v:MKMapFeatureOptions):MKMapFeatureOptions;
 	var region(get, set) : MKCoordinateRegion;
 	function get_region():MKCoordinateRegion;
@@ -65,11 +71,17 @@ import uikit.UIView;
 	@:selector("isPitchEnabled")
 	function get_pitchEnabled():Bool;
 	function set_pitchEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var showsUserTrackingButton(get, set) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_showsUserTrackingButton():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_showsUserTrackingButton(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var pitchButtonVisibility(get, set) : MKFeatureVisibility;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_pitchButtonVisibility():MKFeatureVisibility;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_pitchButtonVisibility(v:MKFeatureVisibility):MKFeatureVisibility;
 	var showsCompass(get, set) : Bool;
 	function get_showsCompass():Bool;
@@ -95,8 +107,11 @@ import uikit.UIView;
 	function set_showsUserLocation(v:Bool):Bool;
 	var userLocation(get, never) : MKUserLocation;
 	function get_userLocation():MKUserLocation;
+	@:hxmc.available(macos >= 11.0)
 	var userTrackingMode(get, set) : MKUserTrackingMode;
+	@:hxmc.available(macos >= 11.0)
 	function get_userTrackingMode():MKUserTrackingMode;
+	@:hxmc.available(macos >= 11.0)
 	function set_userTrackingMode(v:MKUserTrackingMode):MKUserTrackingMode;
 	var userLocationVisible(get, never) : Bool;
 	@:selector("isUserLocationVisible")
@@ -126,6 +141,7 @@ import uikit.UIView;
 	function convertRegion(region:MKCoordinateRegion, toRectToView:Null<UIView>):CGRect;
 	@:selector("convertRect:toRegionFromView:")
 	function convertRectToRegionFromView(rect:CGRect, toRegionFromView:Null<UIView>):MKCoordinateRegion;
+	@:hxmc.available(macos >= 11.0)
 	function setUserTrackingMode(mode:MKUserTrackingMode, animated:Bool):Void;
 	function addAnnotation(annotation:MKAnnotation):Void;
 	function addAnnotations(annotations:NSArray<MKAnnotation>):Void;

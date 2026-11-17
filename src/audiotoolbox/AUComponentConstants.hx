@@ -12,7 +12,9 @@ final class AUComponentConstants {
 	public static inline var kAudioUnitType_Generator : Int = 1635084142;
 	public static inline var kAudioUnitType_OfflineEffect : Int = 1635086188;
 	public static inline var kAudioUnitType_MIDIProcessor : Int = 1635085673;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static inline var kAudioUnitType_SpeechSynthesizer : Int = 1635087216;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static inline var kAudioUnitType_HeadTrackingBinauralRenderer : Int = 1635084404;
 	public static inline var kAudioUnitType_RemoteEffect : Int = 1635086968;
 	public static inline var kAudioUnitType_RemoteGenerator : Int = 1635086951;
@@ -33,6 +35,7 @@ final class AUComponentConstants {
 	public static inline var kAudioUnitSubType_NewTimePitch : Int = 1853191280;
 	public static inline var kAudioUnitSubType_AUiPodTimeOther : Int = 1768977519;
 	public static inline var kAudioUnitSubType_RoundTripAAC : Int = 1918984547;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static inline var kAudioUnitSubType_AUAudioMix : Int = 1634560376;
 	public static inline var kAudioUnitSubType_TimePitch : Int = 1953329268;
 	@:deprecated
@@ -50,6 +53,7 @@ final class AUComponentConstants {
 	public static inline var kAudioUnitSubType_SampleDelay : Int = 1935961209;
 	public static inline var kAudioUnitSubType_NBandEQ : Int = 1851942257;
 	public static inline var kAudioUnitSubType_Reverb2 : Int = 1920361010;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static inline var kAudioUnitSubType_AUSoundIsolation : Int = 1987012979;
 	@:deprecated
 	public static inline var kAudioUnitSubType_AUiPodEQ : Int = 1768973681;

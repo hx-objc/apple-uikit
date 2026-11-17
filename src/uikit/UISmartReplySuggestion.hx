@@ -3,9 +3,13 @@ package uikit;
 
 import foundation.NSStringArg;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISmartReplySuggestion extends UIInputSuggestion {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class UISmartReplySuggestion extends UIInputSuggestion {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():UISmartReplySuggestion;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var smartReply(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_smartReply():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():UISmartReplySuggestion;
 }

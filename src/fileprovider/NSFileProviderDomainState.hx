@@ -4,9 +4,13 @@ package fileprovider;
 import foundation.NSDictionary;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderDomainState") extern interface NSFileProviderDomainState extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderDomainState") @:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderDomainState extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var domainVersion(get, never) : NSFileProviderDomainVersion;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_domainVersion():NSFileProviderDomainVersion;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var userInfo(get, never) : NSDictionary;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_userInfo():NSDictionary;
 }

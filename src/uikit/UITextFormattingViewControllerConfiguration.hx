@@ -9,19 +9,30 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextFormattingViewControllerConfiguration extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITextFormattingViewControllerConfiguration extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITextFormattingViewControllerConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var groups(get, never) : NSArray<UITextFormattingViewControllerComponentGroup>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_groups():NSArray<UITextFormattingViewControllerComponentGroup>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var formattingStyles(get, set) : Null<NSArray<UITextFormattingViewControllerFormattingStyle>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_formattingStyles():Null<NSArray<UITextFormattingViewControllerFormattingStyle>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_formattingStyles(v:Null<NSArray<UITextFormattingViewControllerFormattingStyle>>):Null<NSArray<UITextFormattingViewControllerFormattingStyle>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var fontPickerConfiguration(get, set) : Null<UIFontPickerViewControllerConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_fontPickerConfiguration():Null<UIFontPickerViewControllerConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_fontPickerConfiguration(v:Null<UIFontPickerViewControllerConfiguration>):Null<UIFontPickerViewControllerConfiguration>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UITextFormattingViewControllerConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithGroups(groups:NSArray<UITextFormattingViewControllerComponentGroup>):UITextFormattingViewControllerConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

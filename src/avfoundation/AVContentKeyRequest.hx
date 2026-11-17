@@ -23,17 +23,26 @@ import objc.NSObject;
 	function get_options():NSDictionary<NSString, Id>;
 	var canProvidePersistableContentKey(get, never) : Bool;
 	function get_canProvidePersistableContentKey():Bool;
+	@:hxmc.available(macos >= 11.3)
 	var contentKeySpecifier(get, never) : AVContentKeySpecifier;
+	@:hxmc.available(macos >= 11.3)
 	function get_contentKeySpecifier():AVContentKeySpecifier;
+	@:hxmc.available(macos >= 11.3)
 	var contentKey(get, never) : Null<AVContentKey>;
+	@:hxmc.available(macos >= 11.3)
 	function get_contentKey():Null<AVContentKey>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var originatingRecipient(get, never) : Null<AVContentKeyRecipient>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_originatingRecipient():Null<AVContentKeyRecipient>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var canBeFulfilledWithAdvisoryKey(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_canBeFulfilledWithAdvisoryKey():Bool;
 	var renewsExpiringResponseData(get, never) : Bool;
 	function get_renewsExpiringResponseData():Bool;
 	function makeStreamingContentKeyRequestDataForApp(appIdentifier:NSData, contentIdentifier:Null<NSData>, options:Null<NSDictionary<NSString, Id>>, completionHandler:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function makeOptionalStreamingContentKeyRequestDataForApp(appIdentifier:NSData, contentIdentifier:Null<NSData>, options:Null<NSDictionary<NSString, Id>>, completionHandler:(Null<NSData>, Null<NSError>) -> Void):Void;
 	function processContentKeyResponse(keyResponse:AVContentKeyResponse):Void;
 	function processContentKeyResponseError(error:NSError):Void;

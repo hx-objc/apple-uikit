@@ -11,19 +11,32 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRFaceMetrics extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class SRFaceMetrics extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():SRFaceMetrics;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var version(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_version():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sessionIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sessionIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var context(get, never) : SRFaceMetricsContext;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_context():SRFaceMetricsContext;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var faceAnchor(get, never) : ARFaceAnchor;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_faceAnchor():ARFaceAnchor;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var wholeFaceExpressions(get, never) : NSArray<SRFaceMetricsExpression>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_wholeFaceExpressions():NSArray<SRFaceMetricsExpression>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var partialFaceExpressions(get, never) : NSArray<SRFaceMetricsExpression>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_partialFaceExpressions():NSArray<SRFaceMetricsExpression>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

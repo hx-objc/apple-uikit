@@ -3,19 +3,32 @@ package browserenginekit;
 
 import objc.NSObject;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEKeyEntryContext extends NSObject {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEKeyEntryContext extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEKeyEntryContext;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var keyEntry(get, never) : BEKeyEntry;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_keyEntry():BEKeyEntry;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var documentEditable(get, set) : Bool;
 	@:selector("isDocumentEditable")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_documentEditable():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_documentEditable(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var shouldInsertCharacter(get, set) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_shouldInsertCharacter():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_shouldInsertCharacter(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var shouldEvaluateForInputSystemHandling(get, set) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_shouldEvaluateForInputSystemHandling():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_shouldEvaluateForInputSystemHandling(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithKeyEntry(keyEntry:BEKeyEntry):BEKeyEntryContext;
 }

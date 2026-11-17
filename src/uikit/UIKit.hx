@@ -98,6 +98,7 @@ import hxmc.unsafe.Ptr;
 	public static function UIGraphicsSetPDFContextURLForRect(url:NSURL, rect:CGRect):Void;
 	public static function UIGuidedAccessConfigureAccessibilityFeatures(features:UIGuidedAccessAccessibilityFeature, enabled:Bool, completion:Block<(Bool, Null<NSError>) -> Void>):Void;
 	public static function UIGuidedAccessRestrictionStateForIdentifier(restrictionIdentifier:NSStringArg):UIGuidedAccessRestrictionState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static function UIImageHEICRepresentation(image:UIImage):Null<NSData>;
 	public static function UIImageJPEGRepresentation(image:UIImage, compressionQuality:Float):Null<NSData>;
 	public static function UIImagePNGRepresentation(image:UIImage):Null<NSData>;
@@ -111,7 +112,9 @@ import hxmc.unsafe.Ptr;
 	public static function UIRectFrameUsingBlendMode(rect:CGRect, blendMode:CGBlendMode):Void;
 	public static function UISaveVideoAtPathToSavedPhotosAlbum(videoPath:NSStringArg, completionTarget:Null<Id>, completionSelector:Selector, contextInfo:Ptr):Void;
 	public static function UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(videoPath:NSStringArg):Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static function UIWritingToolsCoordinatorTextAnimationDebugDescription(animationType:UIWritingToolsCoordinatorTextAnimation):NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSAdaptiveImageGlyphAttributeName : NSString;
 	public static final NSAttachmentAttributeName : NSString;
 	public static final NSBackgroundColorAttributeName : NSString;
@@ -122,6 +125,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSCocoaVersionDocumentAttribute : NSString;
 	public static final NSDefaultAttributesDocumentAttribute : NSString;
 	public static final NSDefaultAttributesDocumentOption : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSDefaultFontExcludedDocumentAttribute : NSString;
 	public static final NSDefaultTabIntervalDocumentAttribute : NSString;
 	public static final NSDirectionalEdgeInsetsZero : NSDirectionalEdgeInsets;
@@ -152,18 +156,29 @@ import hxmc.unsafe.Ptr;
 	public static final NSStrokeWidthAttributeName : NSString;
 	public static final NSTabColumnTerminatorsAttributeName : NSString;
 	public static final NSTargetTextScalingDocumentOption : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final NSTextContentStorageUnsupportedAttributeAddedNotification : NSString;
 	public static final NSTextEffectAttributeName : NSString;
 	public static final NSTextEffectLetterpressStyle : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemeAttributeName : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemeBlue : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemeDefault : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemeMint : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemeOrange : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemePink : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightColorSchemePurple : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightStyleAttributeName : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextHighlightStyleDefault : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSTextKit1ListMarkerFormatDocumentOption : NSString;
 	public static final NSTextLayoutSectionOrientation : NSString;
 	public static final NSTextLayoutSectionRange : NSString;
@@ -188,6 +203,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSTextScalingDocumentAttribute : NSString;
 	public static final NSTextStorageDidProcessEditingNotification : NSString;
 	public static final NSTextStorageWillProcessEditingNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSTrackingAttributeName : NSString;
 	public static final NSUnderlineColorAttributeName : NSString;
 	public static final NSUnderlineStyleAttributeName : NSString;
@@ -197,6 +213,7 @@ import hxmc.unsafe.Ptr;
 	public static final NSViewSizeDocumentAttribute : NSString;
 	public static final NSViewZoomDocumentAttribute : NSString;
 	public static final NSWritingDirectionAttributeName : NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static final NSWritingToolsExclusionAttributeName : NSString;
 	public static final UIAccessibilityAnnouncementDidFinishNotification : NSString;
 	public static final UIAccessibilityAnnouncementKeyStringValue : NSString;
@@ -208,6 +225,7 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static final UIAccessibilityButtonShapesEnabledStatusDidChangeNotification : NSString;
 	public static final UIAccessibilityClosedCaptioningStatusDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UIAccessibilityCustomActionCategoryEdit : NSString;
 	public static final UIAccessibilityDarkerSystemColorsStatusDidChangeNotification : NSString;
 	public static final UIAccessibilityElementFocusedNotification : NSString;
@@ -224,8 +242,11 @@ import hxmc.unsafe.Ptr;
 	public static final UIAccessibilityPageScrolledNotification : Int;
 	public static final UIAccessibilityPauseAssistiveTechnologyNotification : Int;
 	public static final UIAccessibilityPrefersCrossFadeTransitionsStatusDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIAccessibilityPriorityDefault : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIAccessibilityPriorityHigh : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIAccessibilityPriorityLow : NSString;
 	public static final UIAccessibilityReduceMotionStatusDidChangeNotification : NSString;
 	public static final UIAccessibilityReduceTransparencyStatusDidChangeNotification : NSString;
@@ -235,6 +256,7 @@ import hxmc.unsafe.Ptr;
 	public static final UIAccessibilityShouldDifferentiateWithoutColorDidChangeNotification : NSString;
 	public static final UIAccessibilitySpeakScreenStatusDidChangeNotification : NSString;
 	public static final UIAccessibilitySpeakSelectionStatusDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIAccessibilitySpeechAttributeAnnouncementPriority : NSString;
 	public static final UIAccessibilitySpeechAttributeIPANotation : NSString;
 	public static final UIAccessibilitySpeechAttributeLanguage : NSString;
@@ -269,8 +291,10 @@ import hxmc.unsafe.Ptr;
 	public static final UIAccessibilityTraitStartsMediaSession : I64;
 	public static final UIAccessibilityTraitStaticText : I64;
 	public static final UIAccessibilityTraitSummaryElement : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIAccessibilityTraitSupportsZoom : I64;
 	public static final UIAccessibilityTraitTabBar : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIAccessibilityTraitToggleButton : I64;
 	public static final UIAccessibilityTraitUpdatesFrequently : I64;
 	public static final UIAccessibilityUnfocusedElementKey : NSString;
@@ -278,25 +302,32 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static final UIAccessibilityVoiceOverStatusChanged : NSString;
 	public static final UIAccessibilityVoiceOverStatusDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final UIActionNewFromPasteboard : NSString;
 	public static final UIActionPaste : NSString;
 	public static final UIActionPasteAndGo : NSString;
 	public static final UIActionPasteAndMatchStyle : NSString;
 	public static final UIActionPasteAndSearch : NSString;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	public static final UIActivityItemsConfigurationInteractionCopy : NSString;
 	public static final UIActivityItemsConfigurationInteractionShare : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UIActivityItemsConfigurationMetadataKeyCollaborationModeRestrictions : NSString;
 	public static final UIActivityItemsConfigurationMetadataKeyLinkPresentationMetadata : NSString;
 	public static final UIActivityItemsConfigurationMetadataKeyMessageBody : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UIActivityItemsConfigurationMetadataKeyShareRecipients : NSString;
 	public static final UIActivityItemsConfigurationMetadataKeyTitle : NSString;
 	public static final UIActivityItemsConfigurationPreviewIntentFullSize : NSString;
 	public static final UIActivityItemsConfigurationPreviewIntentThumbnail : NSString;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	public static final UIActivityTypeAddToHomeScreen : NSString;
 	public static final UIActivityTypeAddToReadingList : NSString;
 	public static final UIActivityTypeAirDrop : NSString;
 	public static final UIActivityTypeAssignToContact : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIActivityTypeCollaborationCopyLink : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIActivityTypeCollaborationInviteWithLink : NSString;
 	public static final UIActivityTypeCopyToPasteboard : NSString;
 	public static final UIActivityTypeMail : NSString;
@@ -311,12 +342,16 @@ import hxmc.unsafe.Ptr;
 	public static final UIActivityTypePostToWeibo : NSString;
 	public static final UIActivityTypePrint : NSString;
 	public static final UIActivityTypeSaveToCameraRoll : NSString;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	public static final UIActivityTypeSharePlay : NSString;
 	public static final UIApplicationBackgroundFetchIntervalMinimum : Float;
 	public static final UIApplicationBackgroundFetchIntervalNever : Float;
 	public static final UIApplicationBackgroundRefreshStatusDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static final UIApplicationCategoryDefaultErrorDomain : NSString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static final UIApplicationCategoryDefaultRetryAvailabilityDateErrorKey : NSString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static final UIApplicationCategoryDefaultStatusLastProvidedDateErrorKey : NSString;
 	public static final UIApplicationDidBecomeActiveNotification : NSString;
 	@:deprecated
@@ -356,8 +391,10 @@ import hxmc.unsafe.Ptr;
 	public static final UIApplicationLaunchOptionsUserActivityDictionaryKey : NSString;
 	@:deprecated
 	public static final UIApplicationLaunchOptionsUserActivityTypeKey : NSString;
+	@:hxmc.available(ios >= 18.3, maccatalyst >= 18.3)
 	public static final UIApplicationOpenDefaultApplicationsSettingsURLString : NSString;
 	public static final UIApplicationOpenExternalURLOptionsEventAttributionKey : NSString;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	public static final UIApplicationOpenNotificationSettingsURLString : NSString;
 	public static final UIApplicationOpenSettingsURLString : NSString;
 	public static final UIApplicationOpenURLOptionUniversalLinksOnly : NSString;
@@ -380,6 +417,7 @@ import hxmc.unsafe.Ptr;
 	public static final UIApplicationStatusBarFrameUserInfoKey : NSString;
 	@:deprecated
 	public static final UIApplicationStatusBarOrientationUserInfoKey : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UIApplicationSystemPrefersReducedResourceUsageDidChangeNotification : NSString;
 	public static final UIApplicationUserDidTakeScreenshotNotification : NSString;
 	@:deprecated
@@ -390,14 +428,20 @@ import hxmc.unsafe.Ptr;
 	public static final UIApplicationWillResignActiveNotification : NSString;
 	public static final UIApplicationWillTerminateNotification : NSString;
 	public static final UIBackgroundTaskInvalid : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UIBarButtonItemVisibilityPriorityHigh : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UIBarButtonItemVisibilityPriorityLow : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UIBarButtonItemVisibilityPriorityStandard : I64;
 	public static final UICellAccessoryStandardDimension : Float;
 	public static final UICollectionElementKindSectionFooter : NSString;
 	public static final UICollectionElementKindSectionHeader : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UICollectionLayoutSectionOrthogonalScrollingDecelerationRateAutomatic : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UICollectionLayoutSectionOrthogonalScrollingDecelerationRateFast : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UICollectionLayoutSectionOrthogonalScrollingDecelerationRateNormal : Float;
 	public static final UICollectionViewFlowLayoutAutomaticSize : CGSize;
 	public static final UICollectionViewLayoutAutomaticDimension : Float;
@@ -422,8 +466,11 @@ import hxmc.unsafe.Ptr;
 	public static final UIDeviceOrientationDidChangeNotification : NSString;
 	public static final UIDeviceProximityStateDidChangeNotification : NSString;
 	public static final UIDocumentBrowserErrorDomain : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UIDocumentCreationIntentDefault : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final UIDocumentDidMoveToWritableLocationNotification : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final UIDocumentDidMoveToWritableLocationOldURLKey : NSString;
 	public static final UIDocumentStateChangedNotification : NSString;
 	public static final UIEdgeInsetsZero : UIEdgeInsets;
@@ -457,7 +504,9 @@ import hxmc.unsafe.Ptr;
 	public static final UIFontTextStyleCallout : NSString;
 	public static final UIFontTextStyleCaption1 : NSString;
 	public static final UIFontTextStyleCaption2 : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIFontTextStyleExtraLargeTitle : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIFontTextStyleExtraLargeTitle2 : NSString;
 	public static final UIFontTextStyleFootnote : NSString;
 	public static final UIFontTextStyleHeadline : NSString;
@@ -476,9 +525,13 @@ import hxmc.unsafe.Ptr;
 	public static final UIFontWeightThin : Float;
 	public static final UIFontWeightTrait : NSString;
 	public static final UIFontWeightUltraLight : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIFontWidthCompressed : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIFontWidthCondensed : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIFontWidthExpanded : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIFontWidthStandard : Float;
 	public static final UIFontWidthTrait : NSString;
 	public static final UIGuidedAccessErrorDomain : NSString;
@@ -542,6 +595,7 @@ import hxmc.unsafe.Ptr;
 	public static final UIMenuAbout : NSString;
 	public static final UIMenuAlignment : NSString;
 	public static final UIMenuApplication : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UIMenuAutoFill : NSString;
 	public static final UIMenuBringAllToFront : NSString;
 	public static final UIMenuClose : NSString;
@@ -555,10 +609,12 @@ import hxmc.unsafe.Ptr;
 	public static final UIMenuControllerWillHideMenuNotification : NSString;
 	@:deprecated
 	public static final UIMenuControllerWillShowMenuNotification : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIMenuDocument : NSString;
 	public static final UIMenuEdit : NSString;
 	public static final UIMenuFile : NSString;
 	public static final UIMenuFind : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final UIMenuFindPanel : NSString;
 	public static final UIMenuFont : NSString;
 	public static final UIMenuFormat : NSString;
@@ -568,6 +624,7 @@ import hxmc.unsafe.Ptr;
 	public static final UIMenuLearn : NSString;
 	public static final UIMenuLookup : NSString;
 	public static final UIMenuMinimizeAndZoom : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final UIMenuNewItem : NSString;
 	@:deprecated
 	public static final UIMenuNewScene : NSString;
@@ -649,6 +706,7 @@ import hxmc.unsafe.Ptr;
 	public static final UISceneDidDisconnectNotification : NSString;
 	public static final UISceneDidEnterBackgroundNotification : NSString;
 	public static final UISceneErrorDomain : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UISceneSystemProtectionDidChangeNotification : NSString;
 	public static final UISceneWillConnectNotification : NSString;
 	public static final UISceneWillDeactivateNotification : NSString;
@@ -660,12 +718,14 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static final UIScreenDidDisconnectNotification : NSString;
 	public static final UIScreenModeDidChangeNotification : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIScreenReferenceDisplayModeStatusDidChangeNotification : NSString;
 	public static final UIScrollViewDecelerationRateFast : Float;
 	public static final UIScrollViewDecelerationRateNormal : Float;
 	public static final UISheetPresentationControllerAutomaticDimension : Float;
 	public static final UISheetPresentationControllerDetentIdentifierLarge : NSString;
 	public static final UISheetPresentationControllerDetentIdentifierMedium : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UISheetPresentationControllerDetentInactive : Float;
 	public static final UISplitViewControllerAutomaticDimension : Float;
 	public static final UIStateRestorationViewControllerStoryboardKey : NSString;
@@ -683,25 +743,43 @@ import hxmc.unsafe.Ptr;
 	public static final UITextContentTypeAddressCity : NSString;
 	public static final UITextContentTypeAddressCityAndState : NSString;
 	public static final UITextContentTypeAddressState : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeBirthdate : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeBirthdateDay : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeBirthdateMonth : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeBirthdateYear : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final UITextContentTypeCellularEID : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final UITextContentTypeCellularIMEI : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UITextContentTypeCellularIMEI1 : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UITextContentTypeCellularIMEI2 : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final UITextContentTypeCellularNAL : NSString;
 	public static final UITextContentTypeCountryName : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardExpiration : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardExpirationMonth : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardExpirationYear : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardFamilyName : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardGivenName : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardMiddleName : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardName : NSString;
 	public static final UITextContentTypeCreditCardNumber : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardSecurityCode : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextContentTypeCreditCardType : NSString;
 	public static final UITextContentTypeDateTime : NSString;
 	public static final UITextContentTypeEmailAddress : NSString;
@@ -732,54 +810,103 @@ import hxmc.unsafe.Ptr;
 	public static final UITextFieldTextDidBeginEditingNotification : NSString;
 	public static final UITextFieldTextDidChangeNotification : NSString;
 	public static final UITextFieldTextDidEndEditingNotification : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerDecreaseFontSizeChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerDecreaseIndentationChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFontAttributesComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFontChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFontPickerComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFontPointSizeComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFontSizeChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFontSizeComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFormattingStyleChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerFormattingStylesComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightBlue : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightDefault : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightMint : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightOrange : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightPickerComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightPink : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerHighlightPurple : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerIncreaseFontSizeChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerIncreaseIndentationChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerLineHeightComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerLineHeightPointSizeChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerListStylesComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerRemoveBoldChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerRemoveItalicChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerRemoveStrikethroughChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerRemoveUnderlineChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerSetBoldChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerSetItalicChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerSetStrikethroughChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerSetUnderlineChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentAndJustificationComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentCenter : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentJustified : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentLeft : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentNatural : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextAlignmentRight : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextColorChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextColorComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextIndentationComponentKey : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextListChangeType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextListDecimal : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextListDisc : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextListHyphen : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerTextListOther : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final UITextFormattingViewControllerUndefinedChangeType : NSString;
 	public static final UITextInputCurrentInputModeDidChangeNotification : NSString;
 	@:deprecated
@@ -788,6 +915,7 @@ import hxmc.unsafe.Ptr;
 	public static final UITextInputTextColorKey : NSString;
 	@:deprecated
 	public static final UITextInputTextFontKey : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final UITextItemTagAttributeName : NSString;
 	public static final UITextViewTextDidBeginEditingNotification : NSString;
 	public static final UITextViewTextDidChangeNotification : NSString;
@@ -812,9 +940,12 @@ import hxmc.unsafe.Ptr;
 	public static final UIWindowLevelNormal : Float;
 	public static final UIWindowLevelStatusBar : Float;
 	public static final UIWindowSceneSessionRoleApplication : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final UIWindowSceneSessionRoleAssistiveAccessApplication : NSString;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	public static final UIWindowSceneSessionRoleCameraCaptureAccessory : NSString;
 	@:deprecated
 	public static final UIWindowSceneSessionRoleExternalDisplay : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final UIWindowSceneSessionRoleExternalDisplayNonInteractive : NSString;
 }

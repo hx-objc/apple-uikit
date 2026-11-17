@@ -4,41 +4,77 @@ package touchcontroller;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCControlLabel extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCControlLabel extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonA(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonA():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonB(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonB():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonX(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonX():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonY(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonY():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonMenu(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonMenu():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonOptions(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonOptions():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonLeftShoulder(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonLeftShoulder():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonLeftTrigger(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonLeftTrigger():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonRightShoulder(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonRightShoulder():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var buttonRightTrigger(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_buttonRightTrigger():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var leftThumbstick(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_leftThumbstick():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var leftThumbstickButton(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_leftThumbstickButton():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var rightThumbstick(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_rightThumbstick():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var rightThumbstickButton(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_rightThumbstickButton():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var directionPad(get, never) : TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_directionPad():TCControlLabel;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var name(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_name():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var role(get, never) : TCControlLabelRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_role():TCControlLabelRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithName(name:NSStringArg, role:TCControlLabelRole):TCControlLabel;
 }

@@ -5,18 +5,28 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import foundation.NSUUID;
 
-@:hxmc.framework("CallKit") @:hxmc.objc extern class CXSetTranslatingCallAction extends CXCallAction {
+@:hxmc.framework("CallKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CXSetTranslatingCallAction extends CXCallAction {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CXSetTranslatingCallAction;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var isTranslating(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_isTranslating():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var localLanguage(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_localLanguage():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var remoteLanguage(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_remoteLanguage():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	@:selector("initWithCallUUID:isTranslating:localLanguage:remoteLanguage:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithCallUUIDIsTranslatingLocalLanguageRemoteLanguage(uuid:NSUUID, isTranslating:Bool, localLanguage:NSStringArg, remoteLanguage:NSStringArg):CXSetTranslatingCallAction;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithCoder(aDecoder:NSCoder):Null<CXSetTranslatingCallAction>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function fulfillUsingTranslationEngine(translationEngine:CXTranslationEngine):Void;
 }

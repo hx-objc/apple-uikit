@@ -9,13 +9,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SafariServices") @:hxmc.objc extern class SFAddToHomeScreenInfo extends NSObject implements NSCopying {
+@:hxmc.framework("SafariServices") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class SFAddToHomeScreenInfo extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():SFAddToHomeScreenInfo;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var manifest(get, never) : BEWebAppManifest;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_manifest():BEWebAppManifest;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var websiteCookies(get, set) : NSArray<NSHTTPCookie>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_websiteCookies():NSArray<NSHTTPCookie>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_websiteCookies(v:NSArray<NSHTTPCookie>):NSArray<NSHTTPCookie>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function initWithManifest(manifest:BEWebAppManifest):SFAddToHomeScreenInfo;
 	function copyWithZone(zone:Ptr):Id;
 }

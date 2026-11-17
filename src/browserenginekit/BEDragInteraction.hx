@@ -4,7 +4,9 @@ package browserenginekit;
 import uikit.UIDragInteraction;
 import uikit.UIDragInteractionDelegate;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEDragInteraction extends UIDragInteraction {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEDragInteraction extends UIDragInteraction {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEDragInteraction;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithDelegate(delegate:UIDragInteractionDelegate):BEDragInteraction;
 }

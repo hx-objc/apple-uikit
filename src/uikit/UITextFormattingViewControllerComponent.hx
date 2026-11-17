@@ -9,14 +9,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextFormattingViewControllerComponent extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITextFormattingViewControllerComponent extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITextFormattingViewControllerComponent;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var componentKey(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_componentKey():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var preferredSize(get, never) : UITextFormattingViewControllerComponentSize;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_preferredSize():UITextFormattingViewControllerComponentSize;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithComponentKey(componentKey:NSStringArg, preferredSize:UITextFormattingViewControllerComponentSize):UITextFormattingViewControllerComponent;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

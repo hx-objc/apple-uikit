@@ -5,9 +5,13 @@ import foundation.NSDictionary;
 import foundation.NSString;
 import foundation.NSStringArg;
 
-@:hxmc.framework("BrowserEngineKit") @:hxmc.objc extern class BEAutoFillTextSuggestion extends BETextSuggestion {
+@:hxmc.framework("BrowserEngineKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class BEAutoFillTextSuggestion extends BETextSuggestion {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():BEAutoFillTextSuggestion;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var contents(get, never) : NSDictionary<NSString, NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_contents():NSDictionary<NSString, NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithInputText(inputText:NSStringArg):BEAutoFillTextSuggestion;
 }

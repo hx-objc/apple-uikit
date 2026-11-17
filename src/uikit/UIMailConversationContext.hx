@@ -5,16 +5,27 @@ import foundation.NSSet;
 import foundation.NSString;
 import foundation.NSStringArg;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIMailConversationContext extends UIConversationContext {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class UIMailConversationContext extends UIConversationContext {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():UIMailConversationContext;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var responseSubject(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_responseSubject():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_responseSubject(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var responseHasCustomSignature(get, set) : Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_responseHasCustomSignature():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_responseHasCustomSignature(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var responseSecondaryRecipientIdentifiers(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_responseSecondaryRecipientIdentifiers():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_responseSecondaryRecipientIdentifiers(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():UIMailConversationContext;
 }

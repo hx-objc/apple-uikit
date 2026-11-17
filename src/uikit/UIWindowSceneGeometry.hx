@@ -7,17 +7,26 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uiutilities.UICoordinateSpace;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIWindowSceneGeometry extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIWindowSceneGeometry extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIWindowSceneGeometry;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var coordinateSpace(get, never) : UICoordinateSpace;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_coordinateSpace():UICoordinateSpace;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var interfaceOrientation(get, never) : UIInterfaceOrientation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_interfaceOrientation():UIInterfaceOrientation;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var interfaceOrientationLocked(get, never) : Bool;
 	@:selector("isInterfaceOrientationLocked")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_interfaceOrientationLocked():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var interactivelyResizing(get, never) : Bool;
 	@:selector("isInteractivelyResizing")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_interactivelyResizing():Bool;
 	function copyWithZone(zone:Ptr):Id;
 }

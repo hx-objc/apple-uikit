@@ -4,11 +4,17 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIMailConversationEntryKind(I64) to I64 {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var None = 0;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Personal = 1;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Promotion = 2;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Social = 3;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var Transaction = 4;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var News = 5;
 	inline function new(v:I64) this = v;
 }

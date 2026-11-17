@@ -3,15 +3,25 @@ package fileprovider;
 
 import foundation.NSStringArg;
 
-@:hxmc.objc("NSFileProviderTestingDeletion") extern interface NSFileProviderTestingDeletion extends NSFileProviderTestingOperation {
+@:hxmc.objc("NSFileProviderTestingDeletion") @:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderTestingDeletion extends NSFileProviderTestingOperation {
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var targetSide(get, never) : NSFileProviderTestingOperationSide;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_targetSide():NSFileProviderTestingOperationSide;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var sourceItemIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_sourceItemIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var targetItemIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_targetItemIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var targetItemBaseVersion(get, never) : NSFileProviderItemVersion;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_targetItemBaseVersion():NSFileProviderItemVersion;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var domainVersion(get, never) : Null<NSFileProviderDomainVersion>;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_domainVersion():Null<NSFileProviderDomainVersion>;
 }

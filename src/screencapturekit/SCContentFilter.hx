@@ -5,19 +5,31 @@ import coregraphics.CGRect;
 import hxmc.unsafe.Float32;
 import objc.NSObject;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCContentFilter extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2) extern class SCContentFilter extends NSObject {
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	static function alloc():SCContentFilter;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var style(get, never) : SCShareableContentStyle;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_style():SCShareableContentStyle;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var pointPixelScale(get, never) : Float32;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_pointPixelScale():Float32;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	var contentRect(get, never) : CGRect;
+	@:hxmc.available(macos >= 14.0, ios >= 27.0, maccatalyst >= 18.2)
 	function get_contentRect():CGRect;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var microphoneEnabled(get, never) : Bool;
 	@:selector("isMicrophoneEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_microphoneEnabled():Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	var cameraEnabled(get, never) : Bool;
 	@:selector("isCameraEnabled")
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	function get_cameraEnabled():Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 27.0, maccatalyst >= 18.2)
 	override function init():SCContentFilter;
 }

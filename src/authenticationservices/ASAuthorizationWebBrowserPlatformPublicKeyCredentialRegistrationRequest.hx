@@ -3,10 +3,15 @@ package authenticationservices;
 
 import foundation.NSArray;
 
-@:hxmc.objc("ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest") extern interface ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest extends hxmc.objc.Id {
+@:hxmc.objc("ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest") @:hxmc.available(macos >= 13.5, ios >= 17.4, maccatalyst >= 16.6) extern interface ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest extends hxmc.objc.Id {
+	@:hxmc.available(macos >= 13.5, ios >= 17.4, maccatalyst >= 16.6)
 	var clientData(get, never) : Null<ASPublicKeyCredentialClientData>;
+	@:hxmc.available(macos >= 13.5, ios >= 17.4, maccatalyst >= 16.6)
 	function get_clientData():Null<ASPublicKeyCredentialClientData>;
+	@:hxmc.available(macos >= 13.5, ios >= 17.4, maccatalyst >= 16.6)
 	var excludedCredentials(get, set) : Null<NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>>;
+	@:hxmc.available(macos >= 13.5, ios >= 17.4, maccatalyst >= 16.6)
 	function get_excludedCredentials():Null<NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>>;
+	@:hxmc.available(macos >= 13.5, ios >= 17.4, maccatalyst >= 16.6)
 	function set_excludedCredentials(v:Null<NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>>):Null<NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>>;
 }

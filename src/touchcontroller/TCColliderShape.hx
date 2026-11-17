@@ -4,9 +4,13 @@ package touchcontroller;
 import hxmc.I64;
 
 enum abstract TCColliderShape(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Circle = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Rect = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var LeftSide = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var RightSide = 3;
 	inline function new(v:I64) this = v;
 }

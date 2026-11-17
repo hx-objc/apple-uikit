@@ -12,22 +12,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMWaterSubmersionMeasurement extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("CoreMotion") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class CMWaterSubmersionMeasurement extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():CMWaterSubmersionMeasurement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var date(get, never) : NSDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_date():NSDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var depth(get, never) : Null<NSMeasurement<NSUnitLength>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_depth():Null<NSMeasurement<NSUnitLength>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var pressure(get, never) : Null<NSMeasurement<NSUnitPressure>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_pressure():Null<NSMeasurement<NSUnitPressure>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var surfacePressure(get, never) : NSMeasurement<NSUnitPressure>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_surfacePressure():NSMeasurement<NSUnitPressure>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var submersionState(get, never) : CMWaterSubmersionDepthState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_submersionState():CMWaterSubmersionDepthState;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CMWaterSubmersionMeasurement>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():CMWaterSubmersionMeasurement;
 }

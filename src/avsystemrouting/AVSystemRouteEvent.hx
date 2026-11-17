@@ -3,10 +3,15 @@ package avsystemrouting;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVSystemRouting") @:hxmc.objc extern class AVSystemRouteEvent extends NSObject {
+@:hxmc.framework("AVSystemRouting") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVSystemRouteEvent extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVSystemRouteEvent;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var reason(get, never) : AVSystemRouteEventReason;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_reason():AVSystemRouteEventReason;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var route(get, never) : AVSystemRoute;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_route():AVSystemRoute;
 }

@@ -5,15 +5,25 @@ import foundation.NSData;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASAccessorySettings extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASAccessorySettings extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASAccessorySettings;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static var defaultSettings(get, never) : ASAccessorySettings;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function get_defaultSettings():ASAccessorySettings;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SSID(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_SSID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_SSID(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bluetoothTransportBridgingIdentifier(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bluetoothTransportBridgingIdentifier():Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bluetoothTransportBridgingIdentifier(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():ASAccessorySettings;
 }

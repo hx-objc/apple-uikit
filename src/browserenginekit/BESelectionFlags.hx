@@ -4,9 +4,13 @@ package browserenginekit;
 import hxmc.I64;
 
 enum abstract BESelectionFlags(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var SelectionFlagsNone = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var WordIsNearTap = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var SelectionFlipped = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var PhraseBoundaryChanged = 4;
 	inline function new(v:I64) this = v;
 	var None = 0;

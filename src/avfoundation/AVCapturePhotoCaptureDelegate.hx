@@ -21,6 +21,7 @@ import objc.NSObjectProtocol;
 	@:optional
 	function captureOutputDidFinishProcessingPhotoError(output:AVCapturePhotoOutput, didFinishProcessingPhoto:AVCapturePhoto, error:Null<NSError>):Void;
 	@:selector("captureOutput:didFinishCapturingDeferredPhotoProxy:error:")
+	@:hxmc.available(ios >= 17.0)
 	@:optional
 	function captureOutputDidFinishCapturingDeferredPhotoProxyError(output:AVCapturePhotoOutput, didFinishCapturingDeferredPhotoProxy:Null<AVCaptureDeferredPhotoProxy>, error:Null<NSError>):Void;
 	@:selector("captureOutput:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:")

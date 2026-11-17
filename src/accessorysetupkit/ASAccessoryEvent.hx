@@ -4,12 +4,19 @@ package accessorysetupkit;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASAccessoryEvent extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASAccessoryEvent extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASAccessoryEvent;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var eventType(get, never) : ASAccessoryEventType;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_eventType():ASAccessoryEventType;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessory(get, never) : Null<ASAccessory>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessory():Null<ASAccessory>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var error(get, never) : Null<NSError>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_error():Null<NSError>;
 }

@@ -14,7 +14,9 @@ import objc.NSObject;
 	static function alloc():UNNotificationSound;
 	static var defaultSound(get, never) : UNNotificationSound;
 	static function get_defaultSound():UNNotificationSound;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	static var defaultRingtoneSound(get, never) : UNNotificationSound;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	static function get_defaultRingtoneSound():UNNotificationSound;
 	static var defaultCriticalSound(get, never) : UNNotificationSound;
 	static function get_defaultCriticalSound():UNNotificationSound;
@@ -22,6 +24,7 @@ import objc.NSObject;
 	static function get_supportsSecureCoding():Bool;
 	static function defaultCriticalSoundWithAudioVolume(volume:Float32):UNNotificationSound;
 	static function soundNamed(name:NSStringArg):UNNotificationSound;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	static function ringtoneSoundNamed(name:NSStringArg):UNNotificationSound;
 	static overload function criticalSoundNamed(name:NSStringArg):UNNotificationSound;
 	static overload function criticalSoundNamed(name:NSStringArg, withAudioVolume:Float32):UNNotificationSound;

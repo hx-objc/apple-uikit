@@ -3,11 +3,17 @@ package avkit;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVCaptureEvent extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 17.2, maccatalyst >= 17.2) extern class AVCaptureEvent extends NSObject {
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	static function alloc():AVCaptureEvent;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var phase(get, never) : AVCaptureEventPhase;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function get_phase():AVCaptureEventPhase;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var shouldPlaySound(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_shouldPlaySound():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function playSound(sound:AVCaptureEventSound):Bool;
 }

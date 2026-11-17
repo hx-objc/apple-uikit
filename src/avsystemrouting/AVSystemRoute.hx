@@ -5,16 +5,27 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("AVSystemRouting") @:hxmc.objc extern class AVSystemRoute extends NSObject {
+@:hxmc.framework("AVSystemRouting") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVSystemRoute extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVSystemRoute;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var protocolType(get, never) : UTType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_protocolType():UTType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var routeSymbolName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_routeSymbolName():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var routeDisplayName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_routeDisplayName():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var routeDataChannel(get, never) : AVSystemRouteDataChannel;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_routeDataChannel():AVSystemRouteDataChannel;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function addSession(session:AVSystemRouteSession):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function removeSession(session:AVSystemRouteSession):Void;
 }

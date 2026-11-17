@@ -4,7 +4,9 @@ package pushtotalk;
 import hxmc.I64;
 
 enum abstract PTChannelJoinReason(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var DeveloperRequest = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ChannelRestoration = 1;
 	inline function new(v:I64) this = v;
 }

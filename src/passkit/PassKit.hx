@@ -8,18 +8,28 @@ import hxmc.objc.Block;
 import hxmc.unsafe.Int16;
 
 @:hxmc.c @:hxmc.framework("PassKit") extern class PassKit {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static function PKPayLaterValidateAmount(amount:NSDecimalNumber, currencyCode:NSStringArg, completion:Block<Bool -> Void>):Void;
 	public static final PKAddSecureElementPassErrorDomain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKContactFieldEmailAddress : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKContactFieldName : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKContactFieldPhoneNumber : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKContactFieldPhoneticName : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKContactFieldPostalAddress : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final PKDisbursementErrorContactFieldUserInfoKey : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final PKDisbursementErrorDomain : NSString;
 	public static final PKEncryptionSchemeECC_V2 : NSString;
 	public static final PKEncryptionSchemeRSA_V2 : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final PKIdentityErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final PKMerchantCategoryCodeNone : Int16;
 	public static final PKPassKitErrorDomain : NSString;
 	public static final PKPassLibraryAddedPassesUserInfoKey : NSString;
@@ -33,55 +43,100 @@ import hxmc.unsafe.Int16;
 	public static final PKPaymentErrorContactFieldUserInfoKey : NSString;
 	public static final PKPaymentErrorDomain : NSString;
 	public static final PKPaymentErrorPostalAddressUserInfoKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkAmex : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final PKPaymentNetworkBancomat : NSString;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final PKPaymentNetworkBancontact : NSString;
+	@:hxmc.available(macos >= 14.5, ios >= 17.5, maccatalyst >= 17.5)
 	public static final PKPaymentNetworkBankAxept : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkBarcode : NSString;
 	@:deprecated
 	public static final PKPaymentNetworkCarteBancaire : NSString;
 	@:deprecated
 	public static final PKPaymentNetworkCarteBancaires : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkCartesBancaires : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkChinaUnionPay : NSString;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	public static final PKPaymentNetworkConecs : NSString;
+	@:hxmc.available(macos >= 12.1, ios >= 15.1, maccatalyst >= 15.1)
 	public static final PKPaymentNetworkDankort : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkDiscover : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkEftpos : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final PKPaymentNetworkElCorteIngles : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkElcard : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkElectron : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkElo : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkGirocard : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final PKPaymentNetworkHimyan : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkHumo : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkIDCredit : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkInterac : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkJCB : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final PKPaymentNetworkJaywan : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkMaal : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkMada : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkMaestro : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkMasterCard : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final PKPaymentNetworkMeeza : NSString;
+	@:hxmc.available(macos >= 11.5)
 	public static final PKPaymentNetworkMir : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final PKPaymentNetworkMyDebit : NSString;
+	@:hxmc.available(macos >= 14.5, ios >= 17.5, maccatalyst >= 17.5)
 	public static final PKPaymentNetworkNAPAS : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final PKPaymentNetworkNanaco : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final PKPaymentNetworkPagoBancomat : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkPayPak : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final PKPaymentNetworkPostFinance : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkPrivateLabel : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkQuicPay : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkRuPay : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkSuica : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final PKPaymentNetworkTmoney : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkUzCard : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkVPay : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final PKPaymentNetworkVerve : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final PKPaymentNetworkVisa : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final PKPaymentNetworkWaon : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final PKShareSecureElementPassErrorDomain : NSString;
 	public static final PKStoredValuePassBalanceTypeCash : NSString;
 	public static final PKStoredValuePassBalanceTypeLoyaltyPoints : NSString;

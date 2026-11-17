@@ -41,22 +41,31 @@ import objc.NSObjectProtocol;
 	function get_smartInsertDeleteType():UITextSmartInsertDeleteType;
 	@:optional
 	function set_smartInsertDeleteType(v:UITextSmartInsertDeleteType):UITextSmartInsertDeleteType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	var inlinePredictionType(get, set) : UITextInlinePredictionType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function get_inlinePredictionType():UITextInlinePredictionType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function set_inlinePredictionType(v:UITextInlinePredictionType):UITextInlinePredictionType;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	var mathExpressionCompletionType(get, set) : UITextMathExpressionCompletionType;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function get_mathExpressionCompletionType():UITextMathExpressionCompletionType;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function set_mathExpressionCompletionType(v:UITextMathExpressionCompletionType):UITextMathExpressionCompletionType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	var grammarCheckingType(get, set) : UITextGrammarCheckingType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function get_grammarCheckingType():UITextGrammarCheckingType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function set_grammarCheckingType(v:UITextGrammarCheckingType):UITextGrammarCheckingType;
 	@:optional
@@ -102,28 +111,40 @@ import objc.NSObjectProtocol;
 	function get_passwordRules():Null<UITextInputPasswordRules>;
 	@:optional
 	function set_passwordRules(v:Null<UITextInputPasswordRules>):Null<UITextInputPasswordRules>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	var writingToolsBehavior(get, set) : UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function get_writingToolsBehavior():UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function set_writingToolsBehavior(v:UIWritingToolsBehavior):UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	var allowedWritingToolsResultOptions(get, set) : UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function get_allowedWritingToolsResultOptions():UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function set_allowedWritingToolsResultOptions(v:UIWritingToolsResultOptions):UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	var conversationContext(get, set) : Null<UIConversationContext>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function get_conversationContext():Null<UIConversationContext>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function set_conversationContext(v:Null<UIConversationContext>):Null<UIConversationContext>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	var allowsNumberPadPopover(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function get_allowsNumberPadPopover():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function set_allowsNumberPadPopover(v:Bool):Bool;
 }

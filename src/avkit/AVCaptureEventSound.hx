@@ -5,13 +5,21 @@ import foundation.NSURL;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVCaptureEventSound extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVCaptureEventSound extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var cameraShutterSound(get, never) : AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_cameraShutterSound():AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var beginVideoRecordingSound(get, never) : AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_beginVideoRecordingSound():AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var endVideoRecordingSound(get, never) : AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_endVideoRecordingSound():AVCaptureEventSound;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithURL(url:NSURL, error:Ptr):Null<AVCaptureEventSound>;
 }

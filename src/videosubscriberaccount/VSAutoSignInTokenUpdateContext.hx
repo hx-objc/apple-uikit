@@ -3,8 +3,11 @@ package videosubscriberaccount;
 
 import objc.NSObject;
 
-@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc extern class VSAutoSignInTokenUpdateContext extends NSObject {
+@:hxmc.framework("VideoSubscriberAccount") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class VSAutoSignInTokenUpdateContext extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():VSAutoSignInTokenUpdateContext;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var authorization(get, never) : VSAutoSignInAuthorization;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_authorization():VSAutoSignInAuthorization;
 }

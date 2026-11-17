@@ -4,5 +4,6 @@ package avsystemrouting;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("AVSystemRouting") extern class AVSystemRouting {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVSystemRoutingErrorDomain : NSString;
 }

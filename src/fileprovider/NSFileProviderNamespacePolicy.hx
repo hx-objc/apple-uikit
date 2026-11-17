@@ -4,8 +4,11 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderNamespacePolicy(I64) to I64 {
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var Inherited = 0;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var MaterializeLazily = 1;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var MaterializeEagerly = 2;
 	inline function new(v:I64) this = v;
 }

@@ -5,23 +5,41 @@ import foundation.NSArray;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("AccessorySetupKit") @:hxmc.objc extern class ASAccessorySession extends NSObject {
+@:hxmc.framework("AccessorySetupKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class ASAccessorySession extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():ASAccessorySession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessories(get, never) : NSArray<ASAccessory>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessories():NSArray<ASAccessory>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var pickerDisplaySettings(get, set) : Null<ASPickerDisplaySettings>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_pickerDisplaySettings():Null<ASPickerDisplaySettings>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_pickerDisplaySettings(v:Null<ASPickerDisplaySettings>):Null<ASPickerDisplaySettings>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function activateWithQueue(queue:NSObject, eventHandler:ASAccessoryEvent -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function invalidate():Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function showPickerWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function showPickerForDisplayItems(displayItems:NSArray<ASPickerDisplayItem>, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function finishAuthorization(accessory:ASAccessory, settings:ASAccessorySettings, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function failAuthorization(accessory:ASAccessory, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function removeAccessory(accessory:ASAccessory, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function renameAccessory(accessory:ASAccessory, options:ASAccessoryRenameOptions, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateAuthorization(accessory:ASAccessory, descriptor:ASDiscoveryDescriptor, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function updatePickerShowingDiscoveredDisplayItems(displayItems:NSArray<ASDiscoveredDisplayItem>, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function finishPickerDiscovery(completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():ASAccessorySession;
 }

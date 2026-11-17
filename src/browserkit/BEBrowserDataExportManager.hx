@@ -6,10 +6,15 @@ import foundation.NSUUID;
 import objc.NSObject;
 import uikit.UIWindowScene;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserDataExportManager extends NSObject {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserDataExportManager extends NSObject {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserDataExportManager;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithScene(scene:UIWindowScene):BEBrowserDataExportManager;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function requestExportForMetadata(metadata:BEExportMetadata, token:Null<NSUUID>, completionHandler:(Null<BEExportOptions>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function exportBrowserData(browserData:BEBrowserData, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function exportFinishedWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
 }

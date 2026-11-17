@@ -3,13 +3,20 @@ package avsystemrouting;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVSystemRouting") @:hxmc.objc extern class AVSystemRouteController extends NSObject {
+@:hxmc.framework("AVSystemRouting") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVSystemRouteController extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVSystemRouteController;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var sharedController(get, never) : AVSystemRouteController;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_sharedController():AVSystemRouteController;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var supportedExtensionAvailable(get, never) : Bool;
 	@:selector("isSupportedExtensionAvailable")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_supportedExtensionAvailable():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function addObserver(observer:AVSystemRouteControllerObserver):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function removeObserver(observer:AVSystemRouteControllerObserver):Void;
 }

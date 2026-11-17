@@ -4,6 +4,8 @@ package pushtotalk;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("PushToTalk") extern class PushToTalk {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final PTChannelErrorDomain : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final PTInstantiationErrorDomain : NSString;
 }

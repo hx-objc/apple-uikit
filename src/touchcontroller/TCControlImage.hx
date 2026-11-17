@@ -10,25 +10,45 @@ import metal.MTLTexture;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("TouchController") @:hxmc.objc extern class TCControlImage extends NSObject {
+@:hxmc.framework("TouchController") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TCControlImage extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TCControlImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var texture(get, set) : MTLTexture;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_texture():MTLTexture;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_texture(v:MTLTexture):MTLTexture;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var highlightTexture(get, set) : Null<MTLTexture>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_highlightTexture():Null<MTLTexture>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_highlightTexture(v:Null<MTLTexture>):Null<MTLTexture>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_size():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var offset(get, set) : CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_offset():CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_offset(v:CGPoint):CGPoint;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var tintColor(get, set) : CGColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_tintColor():CGColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_tintColor(v:CGColor):CGColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithTexture(texture:MTLTexture, size:CGSize):TCControlImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithTexture(texture:MTLTexture, size:CGSize, highlightTexture:Null<MTLTexture>, offset:CGPoint, tintColor:CGColor):TCControlImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithCGImage(cgImage:CGImage, size:CGSize, device:MTLDevice):Null<TCControlImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithUIImage(uiImage:UIImage, size:CGSize, device:MTLDevice):Null<TCControlImage>;
 }

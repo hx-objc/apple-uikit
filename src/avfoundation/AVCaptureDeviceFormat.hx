@@ -33,21 +33,33 @@ import objc.NSObject;
 	function get_videoMaxZoomFactor():Float;
 	var videoZoomFactorUpscaleThreshold(get, never) : Float;
 	function get_videoZoomFactorUpscaleThreshold():Float;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var systemRecommendedVideoZoomRange(get, never) : Null<AVZoomRange>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_systemRecommendedVideoZoomRange():Null<AVZoomRange>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var recommendedLensApertureStops(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_recommendedLensApertureStops():NSArray<NSNumber>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var minLensAperture(get, never) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_minLensAperture():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var maxLensAperture(get, never) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_maxLensAperture():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var defaultLensAperture(get, never) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_defaultLensAperture():Float32;
 	var minExposureDuration(get, never) : CMTime;
 	function get_minExposureDuration():CMTime;
 	var maxExposureDuration(get, never) : CMTime;
 	function get_maxExposureDuration():CMTime;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var systemRecommendedExposureBiasRange(get, never) : Null<AVExposureBiasRange>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_systemRecommendedExposureBiasRange():Null<AVExposureBiasRange>;
 	var minISO(get, never) : Float32;
 	function get_minISO():Float32;
@@ -62,8 +74,10 @@ import objc.NSObject;
 	@:deprecated
 	var highResolutionStillImageDimensions(get, never) : CMVideoDimensions;
 	function get_highResolutionStillImageDimensions():CMVideoDimensions;
+	@:hxmc.available(macos >= 12.0)
 	var highPhotoQualitySupported(get, never) : Bool;
 	@:selector("isHighPhotoQualitySupported")
+	@:hxmc.available(macos >= 12.0)
 	function get_highPhotoQualitySupported():Bool;
 	var highestPhotoQualitySupported(get, never) : Bool;
 	@:selector("isHighestPhotoQualitySupported")
@@ -79,22 +93,34 @@ import objc.NSObject;
 	var videoMaxZoomFactorForDepthDataDelivery(get, never) : Float;
 	function get_videoMaxZoomFactorForDepthDataDelivery():Float;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var supportedVideoZoomFactorsForDepthDataDelivery(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_supportedVideoZoomFactorsForDepthDataDelivery():NSArray<NSNumber>;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var supportedVideoZoomRangesForDepthDataDelivery(get, never) : NSArray<AVZoomRange>;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	function get_supportedVideoZoomRangesForDepthDataDelivery():NSArray<AVZoomRange>;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var zoomFactorsOutsideOfVideoZoomRangesForDepthDeliverySupported(get, never) : Bool;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	function get_zoomFactorsOutsideOfVideoZoomRangesForDepthDeliverySupported():Bool;
 	var supportedDepthDataFormats(get, never) : NSArray<AVCaptureDeviceFormat>;
 	function get_supportedDepthDataFormats():NSArray<AVCaptureDeviceFormat>;
 	var unsupportedCaptureOutputClasses(get, never) : NSArray;
 	function get_unsupportedCaptureOutputClasses():NSArray;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var supportedMaxPhotoDimensions(get, never) : NSArray<NSValue>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_supportedMaxPhotoDimensions():NSArray<NSValue>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var secondaryNativeResolutionZoomFactors(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_secondaryNativeResolutionZoomFactors():NSArray<NSNumber>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var autoVideoFrameRateSupported(get, never) : Bool;
 	@:selector("isAutoVideoFrameRateSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_autoVideoFrameRateSupported():Bool;
 	var portraitEffectsMatteStillImageDeliverySupported(get, never) : Bool;
 	@:selector("isPortraitEffectsMatteStillImageDeliverySupported")
@@ -102,75 +128,131 @@ import objc.NSObject;
 	var multiCamSupported(get, never) : Bool;
 	@:selector("isMultiCamSupported")
 	function get_multiCamSupported():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var spatialVideoCaptureSupported(get, never) : Bool;
 	@:selector("isSpatialVideoCaptureSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_spatialVideoCaptureSupported():Bool;
 	var geometricDistortionCorrectedVideoFieldOfView(get, never) : Float32;
 	function get_geometricDistortionCorrectedVideoFieldOfView():Float32;
+	@:hxmc.available(macos >= 12.3)
 	var centerStageSupported(get, never) : Bool;
 	@:selector("isCenterStageSupported")
+	@:hxmc.available(macos >= 12.3)
 	function get_centerStageSupported():Bool;
+	@:hxmc.available(macos >= 12.3)
 	var videoMinZoomFactorForCenterStage(get, never) : Float;
+	@:hxmc.available(macos >= 12.3)
 	function get_videoMinZoomFactorForCenterStage():Float;
+	@:hxmc.available(macos >= 12.3)
 	var videoMaxZoomFactorForCenterStage(get, never) : Float;
+	@:hxmc.available(macos >= 12.3)
 	function get_videoMaxZoomFactorForCenterStage():Float;
+	@:hxmc.available(macos >= 12.3)
 	var videoFrameRateRangeForCenterStage(get, never) : Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 12.3)
 	function get_videoFrameRateRangeForCenterStage():Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 12.0)
 	var portraitEffectSupported(get, never) : Bool;
 	@:selector("isPortraitEffectSupported")
+	@:hxmc.available(macos >= 12.0)
 	function get_portraitEffectSupported():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var videoFrameRateRangeForPortraitEffect(get, never) : Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 12.0)
 	function get_videoFrameRateRangeForPortraitEffect():Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var studioLightSupported(get, never) : Bool;
 	@:selector("isStudioLightSupported")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_studioLightSupported():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var videoFrameRateRangeForStudioLight(get, never) : Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_videoFrameRateRangeForStudioLight():Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var reactionEffectsSupported(get, never) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_reactionEffectsSupported():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var videoFrameRateRangeForReactionEffectsInProgress(get, never) : Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_videoFrameRateRangeForReactionEffectsInProgress():Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var backgroundReplacementSupported(get, never) : Bool;
 	@:selector("isBackgroundReplacementSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_backgroundReplacementSupported():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var videoFrameRateRangeForBackgroundReplacement(get, never) : Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_videoFrameRateRangeForBackgroundReplacement():Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var edgeLightSupported(get, never) : Bool;
 	@:selector("isEdgeLightSupported")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_edgeLightSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cinematicVideoCaptureSupported(get, never) : Bool;
 	@:selector("isCinematicVideoCaptureSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cinematicVideoCaptureSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var defaultSimulatedAperture(get, never) : Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_defaultSimulatedAperture():Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var minSimulatedAperture(get, never) : Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_minSimulatedAperture():Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var maxSimulatedAperture(get, never) : Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_maxSimulatedAperture():Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var videoMinZoomFactorForCinematicVideo(get, never) : Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_videoMinZoomFactorForCinematicVideo():Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var videoMaxZoomFactorForCinematicVideo(get, never) : Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_videoMaxZoomFactorForCinematicVideo():Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var videoFrameRateRangeForCinematicVideo(get, never) : Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_videoFrameRateRangeForCinematicVideo():Null<AVFrameRateRange>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var cinematicVideoMetadataCaptureSupported(get, never) : Bool;
 	@:selector("isCinematicVideoMetadataCaptureSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_cinematicVideoMetadataCaptureSupported():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var supportedDynamicAspectRatios(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_supportedDynamicAspectRatios():NSArray<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var smartFramingSupported(get, never) : Bool;
 	@:selector("isSmartFramingSupported")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_smartFramingSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cameraLensSmudgeDetectionSupported(get, never) : Bool;
 	@:selector("isCameraLensSmudgeDetectionSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cameraLensSmudgeDetectionSupported():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var continuousAutoFocusTrackingSupported(get, never) : Bool;
 	@:selector("isContinuousAutoFocusTrackingSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_continuousAutoFocusTrackingSupported():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var lowLightVideoNoiseReductionSupported(get, never) : Bool;
 	@:selector("isLowLightVideoNoiseReductionSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_lowLightVideoNoiseReductionSupported():Bool;
 	function isVideoStabilizationModeSupported(videoStabilizationMode:AVCaptureVideoStabilizationMode):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function supportsExposureModeCustomWithLensAperture(lensAperture:Float32, duration:CMTime, ISO:Float32):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function videoFieldOfViewForAspectRatio(aspectRatio:NSStringArg, geometricDistortionCorrected:Bool):Float32;
 }

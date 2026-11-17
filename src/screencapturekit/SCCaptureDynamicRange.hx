@@ -4,7 +4,9 @@ package screencapturekit;
 import hxmc.I64;
 
 enum abstract SCCaptureDynamicRange(I64) to I64 {
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	var SDR = 0;
+	@:hxmc.available(macos >= 15.0, ios >= 27.0, maccatalyst >= 18.2)
 	var HDRCanonicalDisplay = 2;
 	inline function new(v:I64) this = v;
 }

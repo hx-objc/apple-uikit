@@ -4,11 +4,15 @@ package fileprovider;
 import foundation.NSData;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSFileProviderEnumerator") extern interface NSFileProviderEnumerator extends NSObjectProtocol {
+@:hxmc.objc("NSFileProviderEnumerator") @:hxmc.available(macos >= 11.0) extern interface NSFileProviderEnumerator extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0)
 	function invalidate():Void;
+	@:hxmc.available(macos >= 11.0)
 	function enumerateItemsForObserver(observer:NSFileProviderEnumerationObserver, startingAtPage:NSData):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function enumerateChangesForObserver(observer:NSFileProviderChangeObserver, fromSyncAnchor:NSData):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function currentSyncAnchorWithCompletionHandler(completionHandler:Null<NSData> -> Void):Void;
 }

@@ -57,22 +57,29 @@ import opengles.EAGLContext;
 	overload function createCGImage(image:CIImage, fromRect:CGRect):Null<CGImage>;
 	overload function createCGImage(image:CIImage, fromRect:CGRect, format:Int, colorSpace:Null<CGColorSpace>):Null<CGImage>;
 	overload function createCGImage(image:CIImage, fromRect:CGRect, format:Int, colorSpace:Null<CGColorSpace>, deferred:Bool):Null<CGImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function createCGImage(image:CIImage, fromRect:CGRect, format:Int, colorSpace:Null<CGColorSpace>, deferred:Bool, calculateHDRStats:Bool):Null<CGImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function calculateHDRStatsForIOSurface(surface:IOSurface):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function calculateHDRStatsForCVPixelBuffer(buffer:CVBuffer):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function calculateHDRStatsForCGImage(cgimage:CGImage):CGImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function calculateHDRStatsForImage(image:CIImage):Null<CIImage>;
 	function TIFFRepresentationOfImage(image:CIImage, format:Int, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>):Null<NSData>;
 	function JPEGRepresentationOfImage(image:CIImage, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>):Null<NSData>;
 	function HEIFRepresentationOfImage(image:CIImage, format:Int, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>):Null<NSData>;
 	function HEIF10RepresentationOfImage(image:CIImage, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>, error:Ptr):Null<NSData>;
 	function PNGRepresentationOfImage(image:CIImage, format:Int, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>):Null<NSData>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function OpenEXRRepresentationOfImage(image:CIImage, options:NSDictionary<NSString, Id>, error:Ptr):Null<NSData>;
 	function writeTIFFRepresentationOfImage(image:CIImage, toURL:NSURL, format:Int, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>, error:Ptr):Bool;
 	function writePNGRepresentationOfImage(image:CIImage, toURL:NSURL, format:Int, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>, error:Ptr):Bool;
 	function writeJPEGRepresentationOfImage(image:CIImage, toURL:NSURL, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>, error:Ptr):Bool;
 	function writeHEIFRepresentationOfImage(image:CIImage, toURL:NSURL, format:Int, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>, error:Ptr):Bool;
 	function writeHEIF10RepresentationOfImage(image:CIImage, toURL:NSURL, colorSpace:CGColorSpace, options:NSDictionary<NSString, Id>, error:Ptr):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function writeOpenEXRRepresentationOfImage(image:CIImage, toURL:NSURL, options:NSDictionary<NSString, Id>, error:Ptr):Bool;
 	function depthBlurEffectFilterForImageURL(url:NSURL, options:Null<NSDictionary>):Null<CIFilter>;
 	function depthBlurEffectFilterForImageData(data:NSData, options:Null<NSDictionary>):Null<CIFilter>;
@@ -82,6 +89,7 @@ import opengles.EAGLContext;
 	overload function startTaskToRender(image:CIImage, fromRect:CGRect, toDestination:CIRenderDestination, atPoint:CGPoint, error:Ptr):Null<CIRenderTask>;
 	overload function startTaskToRender(image:CIImage, toDestination:CIRenderDestination, error:Ptr):Null<CIRenderTask>;
 	function prepareRender(image:CIImage, fromRect:CGRect, toDestination:CIRenderDestination, atPoint:CGPoint, error:Ptr):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function estimateRender(image:CIImage, fromRect:CGRect, toDestination:CIRenderDestination, atPoint:CGPoint, error:Ptr):Null<CIRenderTask>;
 	function startTaskToClear(destination:CIRenderDestination, error:Ptr):Null<CIRenderTask>;
 }

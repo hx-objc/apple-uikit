@@ -7,29 +7,53 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import hxmc.I64;
 
-@:hxmc.framework("BrowserKit") @:hxmc.objc extern class BEBrowserDataHistoryVisit extends BEBrowserData {
+@:hxmc.framework("BrowserKit") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class BEBrowserDataHistoryVisit extends BEBrowserData {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():BEBrowserDataHistoryVisit;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var url(get, never) : NSURL;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_url():NSURL;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var dateOfLastVisit(get, never) : NSDate;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_dateOfLastVisit():NSDate;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var title(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var loadedSuccessfully(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_loadedSuccessfully():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var httpGet(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_httpGet():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var redirectSourceURL(get, never) : Null<NSURL>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_redirectSourceURL():Null<NSURL>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var redirectSourceDateOfVisit(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_redirectSourceDateOfVisit():Null<NSDate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var redirectDestinationURL(get, never) : Null<NSURL>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_redirectDestinationURL():Null<NSURL>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var redirectDestinationDateOfVisit(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_redirectDestinationDateOfVisit():Null<NSDate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var visitCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_visitCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithURL(url:NSURL, dateOfLastVisit:NSDate, title:Null<NSStringArg>, loadedSuccessfully:Bool, httpGet:Bool, redirectSourceURL:Null<NSURL>, redirectSourceDateOfVisit:Null<NSDate>, redirectDestinationURL:Null<NSURL>, redirectDestinationDateOfVisit:Null<NSDate>, visitCount:I64):BEBrowserDataHistoryVisit;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithCoder(coder:NSCoder):Null<BEBrowserDataHistoryVisit>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithSourceApplicationBundleIdentifier(sourceApplicationBundleIdentifier:Null<NSStringArg>, sourceApplicationLocalizedName:Null<NSStringArg>):BEBrowserDataHistoryVisit;
 }

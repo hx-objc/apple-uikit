@@ -4,13 +4,21 @@ package uikit;
 import foundation.NSSet;
 import foundation.NSString;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIMailConversationEntry extends UIConversationEntry {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class UIMailConversationEntry extends UIConversationEntry {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():UIMailConversationEntry;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var kind(get, set) : UIMailConversationEntryKind;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_kind():UIMailConversationEntryKind;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_kind(v:UIMailConversationEntryKind):UIMailConversationEntryKind;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var responseSecondaryRecipientIdentifiers(get, set) : NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_responseSecondaryRecipientIdentifiers():NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_responseSecondaryRecipientIdentifiers(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():UIMailConversationEntry;
 }

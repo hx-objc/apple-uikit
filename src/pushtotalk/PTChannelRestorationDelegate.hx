@@ -4,6 +4,7 @@ package pushtotalk;
 import foundation.NSUUID;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("PTChannelRestorationDelegate") extern interface PTChannelRestorationDelegate extends NSObjectProtocol {
+@:hxmc.objc("PTChannelRestorationDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface PTChannelRestorationDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelDescriptorForRestoredChannelUUID(channelUUID:NSUUID):PTChannelDescriptor;
 }

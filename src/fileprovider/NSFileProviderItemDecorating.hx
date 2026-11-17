@@ -4,7 +4,9 @@ package fileprovider;
 import foundation.NSArray;
 import foundation.NSString;
 
-@:hxmc.objc("NSFileProviderItemDecorating") extern interface NSFileProviderItemDecorating extends NSFileProviderItem {
+@:hxmc.objc("NSFileProviderItemDecorating") @:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0) extern interface NSFileProviderItemDecorating extends NSFileProviderItem {
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var decorations(get, never) : Null<NSArray<NSString>>;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_decorations():Null<NSArray<NSString>>;
 }

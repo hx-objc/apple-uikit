@@ -4,7 +4,9 @@ package backgroundtasks;
 import hxmc.I64;
 
 enum abstract BGContinuedProcessingTaskRequestResources(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Default = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var GPU = 1;
 	inline function new(v:I64) this = v;
 	var None = 0;

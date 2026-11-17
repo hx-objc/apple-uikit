@@ -2,6 +2,7 @@
 package xpc;
 
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.unsafe.CString;
 import hxmc.unsafe.Ptr;
@@ -14,13 +15,15 @@ import objc.NSObject;
 	public static function xpc_array_create(objects:Ptr, count:I64):NSObject;
 	@:hxmc.retained
 	public static function xpc_array_create_connection(xarray:NSObject, index:I64):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function xpc_array_create_empty():NSObject;
 	public static function xpc_array_dup_fd(xarray:NSObject, index:I64):Int;
 	public static function xpc_array_get_array(xarray:NSObject, index:I64):Null<NSObject>;
 	public static function xpc_array_get_bool(xarray:NSObject, index:I64):Bool;
 	public static function xpc_array_get_count(xarray:NSObject):I64;
-	public static function xpc_array_get_data(xarray:NSObject, index:I64, length:Ptr):Ptr;
+	@:hxmc.len(length, 1)
+	public static function xpc_array_get_data(xarray:NSObject, index:I64, length:Span<I64>):Ptr;
 	public static function xpc_array_get_date(xarray:NSObject, index:I64):I64;
 	public static function xpc_array_get_dictionary(xarray:NSObject, index:I64):Null<NSObject>;
 	public static function xpc_array_get_double(xarray:NSObject, index:I64):Float;
@@ -45,6 +48,7 @@ import objc.NSObject;
 	public static function xpc_bool_get_value(xbool:NSObject):Bool;
 	public static function xpc_connection_activate(connection:NSObject):Void;
 	public static function xpc_connection_cancel(connection:NSObject):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function xpc_connection_copy_invalidation_reason(connection:NSObject):Ptr;
 	@:hxmc.retained
 	public static function xpc_connection_create(name:CString, targetq:Null<NSObject>):NSObject;
@@ -63,11 +67,17 @@ import objc.NSObject;
 	public static function xpc_connection_set_context(connection:NSObject, context:Ptr):Void;
 	public static function xpc_connection_set_event_handler(connection:NSObject, handler:Block<NSObject -> Void>):Void;
 	public static function xpc_connection_set_finalizer_f(connection:NSObject, finalizer:Ptr):Void;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function xpc_connection_set_peer_entitlement_exists_requirement(connection:NSObject, entitlement:CString):Int;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function xpc_connection_set_peer_entitlement_matches_value_requirement(connection:NSObject, entitlement:CString, value:NSObject):Int;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function xpc_connection_set_peer_lightweight_code_requirement(connection:NSObject, lwcr:NSObject):Int;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function xpc_connection_set_peer_platform_identity_requirement(connection:NSObject, signing_identifier:CString):Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function xpc_connection_set_peer_requirement(connection:NSObject, peer_requirement:NSObject):Void;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function xpc_connection_set_peer_team_identity_requirement(connection:NSObject, signing_identifier:CString):Int;
 	public static function xpc_connection_set_target_queue(connection:NSObject, targetq:Null<NSObject>):Void;
 	public static function xpc_connection_suspend(connection:NSObject):Void;
@@ -86,13 +96,15 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function xpc_date_create_from_current():NSObject;
 	public static function xpc_date_get_value(xdate:NSObject):I64;
-	public static function xpc_debugger_api_misuse_info():CString;
+	@:hxmc.safe
+	public static function xpc_debugger_api_misuse_info():String;
 	public static function xpc_dictionary_apply(xdict:NSObject, applier:Block<(CString, NSObject) -> Bool>):Bool;
 	public static function xpc_dictionary_copy_mach_send(xdict:NSObject, key:CString):Int;
 	@:hxmc.retained
 	public static function xpc_dictionary_create(keys:Ptr, values:Ptr, count:I64):NSObject;
 	@:hxmc.retained
 	public static function xpc_dictionary_create_connection(xdict:NSObject, key:CString):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function xpc_dictionary_create_empty():NSObject;
 	@:hxmc.retained
@@ -101,7 +113,8 @@ import objc.NSObject;
 	public static function xpc_dictionary_get_array(xdict:NSObject, key:CString):Null<NSObject>;
 	public static function xpc_dictionary_get_bool(xdict:NSObject, key:CString):Bool;
 	public static function xpc_dictionary_get_count(xdict:NSObject):I64;
-	public static function xpc_dictionary_get_data(xdict:NSObject, key:CString, length:Ptr):Ptr;
+	@:hxmc.len(length, 1)
+	public static function xpc_dictionary_get_data(xdict:NSObject, key:CString, length:Span<I64>):Ptr;
 	public static function xpc_dictionary_get_date(xdict:NSObject, key:CString):I64;
 	public static function xpc_dictionary_get_dictionary(xdict:NSObject, key:CString):Null<NSObject>;
 	public static function xpc_dictionary_get_double(xdict:NSObject, key:CString):Float;
@@ -137,35 +150,52 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function xpc_int64_create(value:I64):NSObject;
 	public static function xpc_int64_get_value(xint:NSObject):I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function xpc_listener_set_peer_requirement(listener:NSObject, requirement:NSObject):Void;
 	@:hxmc.retained
 	public static function xpc_null_create():NSObject;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function xpc_peer_requirement_create_entitlement_exists(entitlement:CString, error_out:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function xpc_peer_requirement_create_entitlement_matches_value(entitlement:CString, value:NSObject, error_out:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function xpc_peer_requirement_create_lwcr(lwcr:NSObject, error_out:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function xpc_peer_requirement_create_platform_identity(signing_identifier:CString, error_out:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	@:hxmc.retained
 	public static function xpc_peer_requirement_create_team_identity(signing_identifier:CString, error_out:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function xpc_peer_requirement_match_received_message(peer_requirement:NSObject, message:NSObject, error_out:Ptr):Bool;
 	public static function xpc_release(object:NSObject):Void;
 	public static function xpc_retain(object:NSObject):NSObject;
 	public static function xpc_rich_error_can_retry(error:NSObject):Bool;
 	public static function xpc_rich_error_copy_description(error:NSObject):Ptr;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function xpc_session_activate(session:NSObject, error_out:Ptr):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function xpc_session_cancel(session:NSObject):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function xpc_session_copy_description(session:NSObject):Ptr;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function xpc_session_send_message(session:NSObject, message:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function xpc_session_send_message_with_reply_async(session:NSObject, message:NSObject, reply_handler:Block<(Null<NSObject>, Null<NSObject>) -> Void>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function xpc_session_send_message_with_reply_sync(session:NSObject, message:NSObject, error_out:Ptr):Null<NSObject>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function xpc_session_set_cancel_handler(session:NSObject, cancel_handler:Block<NSObject -> Void>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function xpc_session_set_incoming_message_handler(session:NSObject, handler:Block<NSObject -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function xpc_session_set_peer_requirement(session:NSObject, requirement:NSObject):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function xpc_session_set_target_queue(session:NSObject, target_queue:Null<NSObject>):Void;
 	@:hxmc.retained
 	public static function xpc_shmem_create(region:Ptr, length:I64):NSObject;

@@ -4,25 +4,45 @@ package fileprovider;
 import hxmc.I64;
 
 enum abstract NSFileProviderErrorCode(I64) to I64 {
+	@:hxmc.available(macos >= 11.0)
 	var NotAuthenticated = -1000;
+	@:hxmc.available(macos >= 11.0)
 	var FilenameCollision = -1001;
+	@:hxmc.available(macos >= 11.0)
 	var SyncAnchorExpired = -1002;
+	@:hxmc.available(macos >= 11.0)
 	var PageExpired = -1002;
+	@:hxmc.available(macos >= 11.0)
 	var InsufficientQuota = -1003;
+	@:hxmc.available(macos >= 11.0)
 	var ServerUnreachable = -1004;
+	@:hxmc.available(macos >= 11.0)
 	var NoSuchItem = -1005;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var DeletionRejected = -1006;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var DirectoryNotEmpty = -1007;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var ProviderNotFound = -2001;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var CannotSynchronize = -2005;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var NonEvictableChildren = -2006;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var UnsyncedEdits = -2007;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var NonEvictable = -2008;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var ExcludedFromSync = -2010;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var DomainDisabled = -2011;
+	@:hxmc.available(macos >= 14.1, ios >= 17.1, maccatalyst >= 17.1)
 	var ProviderDomainTemporarilyUnavailable = -2012;
+	@:hxmc.available(macos >= 14.1, ios >= 17.1, maccatalyst >= 17.1)
 	var ProviderDomainNotFound = -2013;
+	@:hxmc.available(macos >= 14.1, ios >= 17.1, maccatalyst >= 17.1)
 	var ApplicationExtensionNotFound = -2014;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var LocalVersionConflictingWithServer = -2015;
 	inline function new(v:I64) this = v;
 }

@@ -9,12 +9,17 @@ import hxmc.unsafe.Ptr;
 @:hxmc.objc("MTLBuffer") extern interface MTLBuffer extends MTLResource {
 	var length(get, never) : I64;
 	function get_length():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var gpuAddress(get, never) : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_gpuAddress():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var sparseBufferTier(get, never) : MTLBufferSparseTier;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_sparseBufferTier():MTLBufferSparseTier;
 	function contents():Ptr;
 	function newTextureWithDescriptor(descriptor:MTLTextureDescriptor, offset:I64, bytesPerRow:I64):Null<MTLTexture>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function newTensorWithDescriptor(descriptor:MTLTensorDescriptor, offset:I64, error:Ptr):Null<MTLTensor>;
 	function addDebugMarker(marker:NSStringArg, range:NSRange):Void;
 	function removeAllDebugMarkers():Void;

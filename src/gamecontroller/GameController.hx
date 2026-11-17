@@ -4,379 +4,734 @@ package gamecontroller;
 import foundation.NSData;
 import foundation.NSString;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.unsafe.Float32;
-import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("GameController") extern class GameController {
 	@:deprecated
-	public static function GCExtendedGamepadSnapShotDataV100FromNSData(snapshotData:Ptr, data:Null<NSData>):Bool;
+	@:hxmc.len(snapshotData, 1)
+	public static function GCExtendedGamepadSnapShotDataV100FromNSData(snapshotData:Span<GCExtendedGamepadSnapShotDataV100>, data:Null<NSData>):Bool;
 	@:deprecated
-	public static function GCExtendedGamepadSnapshotDataFromNSData(snapshotData:Ptr, data:Null<NSData>):Bool;
+	@:hxmc.len(snapshotData, 1)
+	public static function GCExtendedGamepadSnapshotDataFromNSData(snapshotData:Span<GCExtendedGamepadSnapshotData>, data:Null<NSData>):Bool;
 	@:deprecated
-	public static function GCGamepadSnapShotDataV100FromNSData(snapshotData:Ptr, data:Null<NSData>):Bool;
+	@:hxmc.len(snapshotData, 1)
+	public static function GCGamepadSnapShotDataV100FromNSData(snapshotData:Span<GCGamepadSnapShotDataV100>, data:Null<NSData>):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function GCInputArcadeButtonName(row:I64, column:I64):NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function GCInputBackLeftButton(position:I64):NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static function GCInputBackRightButton(position:I64):NSString;
 	@:deprecated
-	public static function GCMicroGamepadSnapShotDataV100FromNSData(snapshotData:Ptr, data:Null<NSData>):Bool;
+	@:hxmc.len(snapshotData, 1)
+	public static function GCMicroGamepadSnapShotDataV100FromNSData(snapshotData:Span<GCMicroGamepadSnapShotDataV100>, data:Null<NSData>):Bool;
 	@:deprecated
-	public static function GCMicroGamepadSnapshotDataFromNSData(snapshotData:Ptr, data:Null<NSData>):Bool;
+	@:hxmc.len(snapshotData, 1)
+	public static function GCMicroGamepadSnapshotDataFromNSData(snapshotData:Span<GCMicroGamepadSnapshotData>, data:Null<NSData>):Bool;
 	@:deprecated
-	public static function NSDataFromGCExtendedGamepadSnapShotDataV100(snapshotData:Ptr):Null<NSData>;
+	@:hxmc.len(snapshotData, 1)
+	public static function NSDataFromGCExtendedGamepadSnapShotDataV100(snapshotData:Span<GCExtendedGamepadSnapShotDataV100>):Null<NSData>;
 	@:deprecated
-	public static function NSDataFromGCExtendedGamepadSnapshotData(snapshotData:Ptr):Null<NSData>;
+	@:hxmc.len(snapshotData, 1)
+	public static function NSDataFromGCExtendedGamepadSnapshotData(snapshotData:Span<GCExtendedGamepadSnapshotData>):Null<NSData>;
 	@:deprecated
-	public static function NSDataFromGCGamepadSnapShotDataV100(snapshotData:Ptr):Null<NSData>;
+	@:hxmc.len(snapshotData, 1)
+	public static function NSDataFromGCGamepadSnapShotDataV100(snapshotData:Span<GCGamepadSnapShotDataV100>):Null<NSData>;
 	@:deprecated
-	public static function NSDataFromGCMicroGamepadSnapShotDataV100(snapshotData:Ptr):Null<NSData>;
+	@:hxmc.len(snapshotData, 1)
+	public static function NSDataFromGCMicroGamepadSnapShotDataV100(snapshotData:Span<GCMicroGamepadSnapShotDataV100>):Null<NSData>;
 	@:deprecated
-	public static function NSDataFromGCMicroGamepadSnapshotData(snapshotData:Ptr):Null<NSData>;
+	@:hxmc.len(snapshotData, 1)
+	public static function NSDataFromGCMicroGamepadSnapshotData(snapshotData:Span<GCMicroGamepadSnapshotData>):Null<NSData>;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	public static function NSStringFromGCPoint2(point:GCPoint2):NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCControllerDidBecomeCurrentNotification : NSString;
 	public static final GCControllerDidConnectNotification : NSString;
 	public static final GCControllerDidDisconnectNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCControllerDidStopBeingCurrentNotification : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final GCControllerUserCustomizationsDidChangeNotification : NSString;
 	@:deprecated
 	public static final GCCurrentExtendedGamepadSnapshotDataVersion : GCExtendedGamepadSnapshotDataVersion;
 	@:deprecated
 	public static final GCCurrentMicroGamepadSnapshotDataVersion : GCMicroGamepadSnapshotDataVersion;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticDurationInfinite : Float32;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityAll : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityDefault : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityHandles : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityLeftHandle : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityLeftTrigger : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityRightHandle : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityRightTrigger : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCHapticsLocalityTriggers : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonA : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonB : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonHome : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonMenu : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonOptions : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputButtonShare : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonX : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputButtonY : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputDirectionPad : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final GCInputDirectionalCardinalDpad : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputDirectionalCenterButton : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final GCInputDirectionalDpad : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputDirectionalTouchSurfaceButton : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputDualShockTouchpadButton : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputDualShockTouchpadOne : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputDualShockTouchpadTwo : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final GCInputGripButton : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final GCInputLeftBumper : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputLeftShoulder : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final GCInputLeftSideButton : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputLeftThumbstick : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputLeftThumbstickButton : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputLeftTrigger : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputMicroGamepadButtonA : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputMicroGamepadButtonMenu : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputMicroGamepadButtonX : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCInputMicroGamepadDpad : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final GCInputRightBumper : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputRightShoulder : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final GCInputRightSideButton : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputRightThumbstick : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputRightThumbstickButton : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputRightTrigger : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final GCInputThumbstick : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final GCInputThumbstickButton : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final GCInputTrigger : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputXboxPaddleFour : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputXboxPaddleOne : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputXboxPaddleThree : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCInputXboxPaddleTwo : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyA : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyApplication : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyB : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyBackslash : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyC : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCapsLock : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCloseBracket : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeApplication : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeBackslash : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeCapsLock : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeCloseBracket : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeComma : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeDeleteForward : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeDeleteOrBackspace : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeDownArrow : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeEight : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeEnd : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeEqualSign : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeEscape : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF1 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF10 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF11 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF12 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF13 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF14 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF15 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF16 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF17 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF18 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF19 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF2 : I64;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyCodeF20 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF3 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF4 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF5 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF6 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF7 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF8 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeF9 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeFive : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeFour : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeGraveAccentAndTilde : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeHome : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeHyphen : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInsert : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational1 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational2 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational3 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational4 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational5 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational6 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational7 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational8 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeInternational9 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyA : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyB : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyC : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyD : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyE : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyF : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyG : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyH : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyI : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyJ : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyK : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyL : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyM : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyN : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyO : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyP : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyQ : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyR : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyS : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyT : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyU : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyV : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyW : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyX : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyY : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeyZ : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad0 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad1 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad2 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad3 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad4 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad5 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad6 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad7 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad8 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypad9 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadAsterisk : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadEnter : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadEqualSign : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadHyphen : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadNumLock : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadPeriod : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadPlus : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeKeypadSlash : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG1 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG2 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG3 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG4 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG5 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG6 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG7 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG8 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLANG9 : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLeftAlt : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLeftArrow : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLeftControl : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLeftGUI : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeLeftShift : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeNine : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeNonUSBackslash : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeNonUSPound : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeOne : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeOpenBracket : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodePageDown : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodePageUp : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodePause : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodePeriod : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodePower : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodePrintScreen : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeQuote : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeReturnOrEnter : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeRightAlt : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeRightArrow : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeRightControl : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeRightGUI : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeRightShift : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeScrollLock : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeSemicolon : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeSeven : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeSix : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeSlash : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeSpacebar : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeTab : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeThree : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeTwo : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeUpArrow : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyCodeZero : I64;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyComma : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyD : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyDeleteForward : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyDeleteOrBackspace : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyDownArrow : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyE : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyEight : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyEnd : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyEqualSign : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyEscape : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF1 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF10 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF11 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF12 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF13 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF14 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF15 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF16 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF17 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF18 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF19 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF2 : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCKeyF20 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF3 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF4 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF5 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF6 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF7 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF8 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyF9 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyFive : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyFour : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyG : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyGraveAccentAndTilde : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyH : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyHome : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyHyphen : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyI : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInsert : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational1 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational2 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational3 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational4 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational5 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational6 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational7 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational8 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyInternational9 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyJ : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyK : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad0 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad1 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad2 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad3 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad4 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad5 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad6 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad7 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad8 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypad9 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadAsterisk : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadEnter : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadEqualSign : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadHyphen : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadNumLock : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadPeriod : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadPlus : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyKeypadSlash : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyL : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG1 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG2 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG3 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG4 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG5 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG6 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG7 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG8 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLANG9 : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLeftAlt : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLeftArrow : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLeftControl : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLeftGUI : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyLeftShift : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyM : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyN : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyNine : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyNonUSBackslash : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyNonUSPound : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyO : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyOne : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyOpenBracket : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyP : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyPageDown : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyPageUp : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyPause : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyPeriod : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyPower : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyPrintScreen : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyQ : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyQuote : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyR : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyReturnOrEnter : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyRightAlt : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyRightArrow : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyRightControl : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyRightGUI : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyRightShift : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyS : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyScrollLock : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeySemicolon : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeySeven : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeySix : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeySlash : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeySpacebar : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyT : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyTab : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyThree : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyTwo : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyU : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyUpArrow : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyV : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyW : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyX : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyY : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyZ : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyZero : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyboardDidConnectNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCKeyboardDidDisconnectNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCMouseDidBecomeCurrentNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCMouseDidConnectNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCMouseDidDisconnectNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final GCMouseDidStopBeingCurrentNotification : NSString;
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	public static final GCPoint2Zero : GCPoint2;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final GCProductCategoryArcadeStick : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryCoalescedRemote : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryControlCenterRemote : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryDualSense : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryDualShock4 : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final GCProductCategoryHID : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryKeyboard : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryMFi : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryMouse : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategorySiriRemote1stGen : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategorySiriRemote2ndGen : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final GCProductCategorySpatialController : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryUniversalElectronicsRemote : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final GCProductCategoryXboxOne : NSString;
 }

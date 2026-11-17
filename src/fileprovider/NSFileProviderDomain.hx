@@ -5,28 +5,50 @@ import foundation.NSData;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("FileProvider") @:hxmc.objc extern class NSFileProviderDomain extends NSObject {
+@:hxmc.framework("FileProvider") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class NSFileProviderDomain extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():NSFileProviderDomain;
+	@:hxmc.available(macos >= 11.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var displayName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_displayName():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var pathRelativeToDocumentStorage(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_pathRelativeToDocumentStorage():NSStringArg;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	var userEnabled(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_userEnabled():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var replicated(get, never) : Bool;
 	@:selector("isReplicated")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_replicated():Bool;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	var testingModes(get, set) : NSFileProviderDomainTestingModes;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function get_testingModes():NSFileProviderDomainTestingModes;
+	@:hxmc.available(macos >= 11.3, ios >= 16.0, maccatalyst >= 16.0)
 	function set_testingModes(v:NSFileProviderDomainTestingModes):NSFileProviderDomainTestingModes;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	var backingStoreIdentity(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_backingStoreIdentity():Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 18.0, maccatalyst >= 18.0)
 	var supportsSyncingTrash(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_supportsSyncingTrash():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_supportsSyncingTrash(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithIdentifier(identifier:NSStringArg, displayName:NSStringArg, pathRelativeToDocumentStorage:NSStringArg):NSFileProviderDomain;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithIdentifier(identifier:NSStringArg, displayName:NSStringArg):NSFileProviderDomain;
+	@:hxmc.available(macos >= 11.0)
 	override function init():NSFileProviderDomain;
 }

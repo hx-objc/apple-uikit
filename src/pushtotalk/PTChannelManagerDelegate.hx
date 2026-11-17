@@ -11,34 +11,47 @@ import hxmc.I64;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("PTChannelManagerDelegate") extern interface PTChannelManagerDelegate extends NSObjectProtocol {
+@:hxmc.objc("PTChannelManagerDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface PTChannelManagerDelegate extends NSObjectProtocol {
 	@:selector("channelManager:didJoinChannelWithUUID:reason:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerDidJoinChannelWithUUIDReason(channelManager:PTChannelManager, didJoinChannelWithUUID:NSUUID, reason:PTChannelJoinReason):Void;
 	@:selector("channelManager:didLeaveChannelWithUUID:reason:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerDidLeaveChannelWithUUIDReason(channelManager:PTChannelManager, didLeaveChannelWithUUID:NSUUID, reason:PTChannelLeaveReason):Void;
 	@:selector("channelManager:channelUUID:didBeginTransmittingFromSource:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerChannelUUIDDidBeginTransmittingFromSource(channelManager:PTChannelManager, channelUUID:NSUUID, didBeginTransmittingFromSource:PTChannelTransmitRequestSource):Void;
 	@:selector("channelManager:channelUUID:didEndTransmittingFromSource:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerChannelUUIDDidEndTransmittingFromSource(channelManager:PTChannelManager, channelUUID:NSUUID, didEndTransmittingFromSource:PTChannelTransmitRequestSource):Void;
 	@:selector("channelManager:receivedEphemeralPushToken:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerReceivedEphemeralPushToken(channelManager:PTChannelManager, receivedEphemeralPushToken:NSData):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function incomingPushResultForChannelManager(channelManager:PTChannelManager, channelUUID:NSUUID, pushPayload:NSDictionary<NSString, Id>):PTPushResult;
 	@:selector("channelManager:didActivateAudioSession:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerDidActivateAudioSession(channelManager:PTChannelManager, didActivateAudioSession:AVAudioSession):Void;
 	@:selector("channelManager:didDeactivateAudioSession:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function channelManagerDidDeactivateAudioSession(channelManager:PTChannelManager, didDeactivateAudioSession:AVAudioSession):Void;
 	@:selector("channelManager:failedToJoinChannelWithUUID:error:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function channelManagerFailedToJoinChannelWithUUIDError(channelManager:PTChannelManager, failedToJoinChannelWithUUID:NSUUID, error:NSError):Void;
 	@:selector("channelManager:failedToLeaveChannelWithUUID:error:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function channelManagerFailedToLeaveChannelWithUUIDError(channelManager:PTChannelManager, failedToLeaveChannelWithUUID:NSUUID, error:NSError):Void;
 	@:selector("channelManager:failedToBeginTransmittingInChannelWithUUID:error:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function channelManagerFailedToBeginTransmittingInChannelWithUUIDError(channelManager:PTChannelManager, failedToBeginTransmittingInChannelWithUUID:NSUUID, error:NSError):Void;
 	@:selector("channelManager:failedToStopTransmittingInChannelWithUUID:error:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function channelManagerFailedToStopTransmittingInChannelWithUUIDError(channelManager:PTChannelManager, failedToStopTransmittingInChannelWithUUID:NSUUID, error:NSError):Void;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	@:optional
 	function incomingServiceUpdatePushForChannelManager(channelManager:PTChannelManager, channelUUID:NSUUID, pushPayload:NSDictionary<NSString, Id>, isHighPriority:Bool, remainingHighPriorityBudget:I64, withCompletionHandler:() -> Void):Void;
 }
